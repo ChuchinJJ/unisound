@@ -1,0 +1,32 @@
+@media (max-width: 1262px) {
+
+	#mega_main_menu li.default_dropdown.submenu_full_width.drop_to_center > .mega_dropdown, #mega_main_menu li.default_dropdown.drop_to_right .mega_dropdown,
+	#mega_main_menu li.multicolumn_dropdown.submenu_full_width.drop_to_center > .mega_dropdown, #mega_main_menu li.multicolumn_dropdown.drop_to_right > .mega_dropdown {
+		left: auto;
+		right: 0;
+	}
+}
+
+@media (max-width: 1023px) {
+	#mega_main_menu.mega_menu.mobile_minimized-enable > .menu_holder > .menu_inner > .nav_logo > .logo_link, #mega_main_menu.mega_menu.mobile_minimized-enable > .menu_holder > .menu_inner > .nav_logo > .mobile_toggle > .mobile_button {
+		height: 79px;
+		line-height: 79px;
+	}
+
+	span.symbol_menu {
+		font-size: 1.2em;
+	}
+
+	span.symbol_cross {
+		font-size: 0.7em;
+	}
+
+	#mega_main_menu li.tabs_dropdown.columns5 > .mega_dropdown > li > .mega_dropdown {
+		min-height: 50px !important;
+	}
+
+	.mega_menu ul.mega_main_menu_ul > li.tabs_dropdown > ul > li > ul {
+		padding: 10px 0 !important;
+	}
+}
+/*This file was exported by "Export WP Page to Static HTML" plugin which created by ReCorp (https://myrecorp.com) */
