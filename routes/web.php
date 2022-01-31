@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\ProductoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,9 @@ Route::get('/product', function () {
     return view('pages.product');
 });
 
-Route::get('/shop', function () {
+Route::resource('/shop', ShopController::class);
+Route::resource('/product', ProductoController::class);
+
+/*Route::get('/shop', function () {
     return view('pages.shop');
-});
+});*/
