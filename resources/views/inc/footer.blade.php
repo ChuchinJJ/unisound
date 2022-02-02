@@ -5,23 +5,27 @@
 		<div class="content_wrap">
 			<div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small">
 				<div class="sc_socials_item">
-					<a href="https://business.facebook.com/ThemeRexStudio/" target="_blank" class="social_icons social_facebook"><span class="icon-facebook"></span></a>
+					<a href="https://www.facebook.com/Unisound.Imusa0/" target="_blank" class="social_icons social_facebook"><span class="icon-facebook"></span></a>
 				</div>
 				<div class="sc_socials_item">
-					<a href="https://twitter.com/ThemeREX_net" target="_blank" class="social_icons social_twitter"><span class="icon-twitter"></span></a>
+					<a href="https://twitter.com/Unisound_Imusa" target="_blank" class="social_icons social_twitter"><span class="icon-twitter"></span></a>
 				</div>
 				<div class="sc_socials_item">
-					<a href="https://www.instagram.com/themerex_net/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
+					<a href="https://www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
 				</div>
 			</div>
 			<ul id="menu_footer" class="menu_footer_nav">
-				<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462"><a href="http://localhost/wordpress/about-us-style-1/"><span>Ubicación</span></a></li>
-				<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="http://localhost/wordpress/our-services/"><span>Nuestros Servicios</span></a></li>
-				<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-466"><a href="http://localhost/wordpress/shop/"><span>Ver todos</span></a></li>
-				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="http://localhost/wordpress/contacts/"><span>Contactos</span></a></li>
+				<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462">
+					<a href="https://www.google.com.mx/maps/place/UNISOUND-IMUSA/@16.9069301,-92.0919553,18z/data=!4m12!1m6!3m5!1s0x85f2ea741cb142fb:0xa2649e90379bc202!2sUNISOUND-IMUSA!8m2!3d16.9067941!4d-92.0908556!3m4!1s0x85f2ea741cb142fb:0xa2649e90379bc202!8m2!3d16.9067941!4d-92.0908556">
+						<span>Ubicación</span>
+					</a>
+				</li>
+				<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="#"><span>Nuestros Servicios</span></a></li>
+				<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-466"><a href="/shop/"><span>Ver todos</span></a></li>
+				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="#"><span>Contactos</span></a></li>
 			</ul>
 			<div class="copyright_text">
-				<p><a href="http://themerex.net/" target="_blank" rel="noopener">AppArte</a> © 2022, Derechos Reservados.</p>
+				<p><a href="http://www.apparte.com.mx/" target="_blank" rel="noopener">AppArte</a> © 2022, Derechos Reservados.</p>
 			</div>
 		</div>
 	</div>
