@@ -11,7 +11,7 @@
 					<a href="https://twitter.com/Unisound_Imusa" target="_blank" class="social_icons social_twitter"><span class="icon-twitter"></span></a>
 				</div>
 				<div class="sc_socials_item">
-					<a href="https://www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
+					<a href="https//www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
 				</div>
 			</div>
 			<ul id="menu_footer" class="menu_footer_nav">
@@ -20,9 +20,9 @@
 						<span>Ubicación</span>
 					</a>
 				</li>
-				<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="#"><span>Nuestros Servicios</span></a></li>
+				<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="#"><span> Servicios</span></a></li>
 				<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-466"><a href="/shop/"><span>Ver todos</span></a></li>
-				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="#"><span>Contactos</span></a></li>
+				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="/contact"><span>Contactos</span></a></li>
 			</ul>
 			<div class="copyright_text">
 				<p><a href="http://www.apparte.com.mx/" target="_blank" rel="noopener">AppArte</a> © 2022, Derechos Reservados.</p>

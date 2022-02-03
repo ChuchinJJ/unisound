@@ -19,12 +19,17 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/product', function () {
-    return view('pages.product');
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
+Route::get('/about', function () {
+    return view('pages.about');
 });
 
 Route::resource('/shop', ShopController::class);
 Route::resource('/product', ProductoController::class);
+
 
 /*Route::get('/shop', function () {
     return view('pages.shop');

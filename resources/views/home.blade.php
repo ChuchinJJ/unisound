@@ -7,22 +7,22 @@
 			<rs-module id="rev_slider_1_1" style="" data-version="6.3.5">
 				<rs-slides>
 
-					<!-- PRimera Foto-->
+					<!-- Primera Foto-->
 					<rs-slide data-key="rs-1" data-title="Slide" data-thumb="/img/Ellipse-6-copy-9-100x50.png" data-duration="15950" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-						<img src="/img/sliders/violin.jpg" title="Home 1" data-parallax="off" class="rev-slidebg" data-no-retina>
+						<img src="/img/sliders/niño.jpg" title="Home 1" data-parallax="off" class="rev-slidebg" data-no-retina>
 							
 					</rs-slide>
 					
-					<!-- segunda foto-->
+					<!-- Segunda foto-->
 						<rs-slide data-key="rs-2" data-title="Slide" data-duration="40400" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-							<img src="/img/sliders/musico2.jpg" alt="Slide" title="Home 1" data-bg="c:#fafafa;" data-parallax="off" class="rev-slidebg" data-no-retina>
+							<img src="/img/sliders/guitarraBocina.jpg" alt="Slide" title="Home 1" data-bg="c:#fafafa;" data-parallax="off" class="rev-slidebg" data-no-retina>
 							
 						</rs-slide>
 
 					<!--Tercera Foto-->
 
 						<rs-slide data-key="rs-3" data-title="Slide" data-thumb="//localhost/wordpress/wp-content/uploads/revslider/home-1/g-clef-musical-note-100x50.jpg" data-duration="40550" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-							<img src="/img/sliders/guitarra.jpg" title="Home 1" data-parallax="off" class="rev-slidebg" data-no-retina>
+							<img src="/img/sliders/bateria.jpg" title="Home 1" data-parallax="off" class="rev-slidebg" data-no-retina>
 							
 						</rs-slide>
 						
@@ -2503,7 +2503,7 @@ if (document.readyState === "loading") document.addEventListener('readystatechan
 									<div class="content_wrap">
 										<div class="columns_wrap">
 											
-	<aside id="woocommerce_products-2" class="widget_number_1 widget  column-1_4 woocommerce widget_products">
+	<aside id="woocommerce_products-2" class="widget_number_1 widget  column-1_3 woocommerce widget_products">
 		<h5 class="widget_title">Mas destacados</h5>
 		<ul class="product_list_widget">
 			<li>
@@ -2528,7 +2528,7 @@ if (document.readyState === "loading") document.addEventListener('readystatechan
 		</ul>
 	</aside>
 
-	<aside id="woocommerce_recent_reviews-2" class="widget_number_2 widget  column-1_4 woocommerce widget_recent_reviews">
+	<aside id="woocommerce_recent_reviews-2" class="widget_number_2 widget  column-1_3 woocommerce widget_recent_reviews">
 		<h5 class="widget_title">Vistos Recientes</h5>
 		<ul class="product_list_widget">
 			<li>
@@ -2559,42 +2559,27 @@ if (document.readyState === "loading") document.addEventListener('readystatechan
 		</ul>
 	</aside>
 
-		<aside id="woocommerce_products-3" class="widget_number_3 widget  column-1_4 woocommerce widget_products">
-			<h5 class="widget_title">Productos Nuevos</h5>
-			<ul class="product_list_widget">
-				<li>
-					<a href="http://localhost/wordpress/product/digital-conversion-turntable/">
-						<img width="300" height="400" src="/img/20-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />
-						<span class="product-title">Digital Conversion Turntable</span>
-					</a>
-					<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>118.00</bdi></span>
-				</li>
+				<aside id="woocommerce_products-3" class="widget_number_3 widget  column-1_3 woocommerce widget_products">
+					<h5 class="widget_title">Productos Nuevos</h5>
+					<ul class="product_list_widget">
+						<li>
+							<a href="http://localhost/wordpress/product/digital-conversion-turntable/">
+								<img width="300" height="400" src="/img/20-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />
+								<span class="product-title">Digital Conversion Turntable</span>
+							</a>
+							<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>118.00</bdi></span>
+						</li>
 
-				<li>
-					<a href="#">
-						<img width="300" height="400" src="/img/18-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
-						<span class="product-title">Crosley CR8005A-CB Cruiser Portable Turntable</span>
-					</a>
-					<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>350.75</bdi></span>
-				</li>
-			</ul>
-		</aside>
+						<li>
+							<a href="#">
+								<img width="300" height="400" src="/img/18-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
+								<span class="product-title">Crosley CR8005A-CB Cruiser Portable Turntable</span>
+							</a>
+							<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>350.75</bdi></span>
+						</li>
+					</ul>
+				</aside>
 
-			<aside id="text-4" class="widget_number_4 widget  column-1_4 widget_text">	
-						<div class="textwidget">
-							<div data-href="/product-category/dj-karaoke/headphones/" class="sc_intro sc_intro_position_bottom_left"data-style="1" 
-								style="height:260px;background: url(/img/Depositphotos_28403683_original-1-e1470064557853.jpg);">
-							<div class="sc_intro_inner  sc_intro_style_1">
-							<div class="sc_intro_content">
-								<h6 class="sc_intro_subtitle">Comprar Ahora!!!</h6>
-								<h2 class="sc_intro_title">
-									<span class="title" href="/shop/">Microfonos Profecionales</span>
-								</h2>
-							</div>
-						</div>
-					</div>
-				</div>
-			</aside>
 			</div>
 		</div>
 	</div>

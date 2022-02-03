@@ -54,7 +54,7 @@
                                     </li>
 
                                     <li id="menu-item-1133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145">
-                                        <a href="/product-category/recording/"><span>Acerca de</span></a>
+                                        <a href="/about"><span>Acerca de</span></a>
                                     </li>
                                 </ul>
                             </nav>
