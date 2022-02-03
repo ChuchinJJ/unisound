@@ -5,11 +5,7 @@
 <div class="top_panel_title top_panel_style_6  title_present navi_present breadcrumbs_present scheme_original">
     <div class="top_panel_title_inner top_panel_inner_style_6  title_present_inner breadcrumbs_present_inner">
         <div class="content_wrap">
-            <div class="post_navi">
-                <span class="post_navi_item post_navi_prev"><a href="#" rel="prev">MicroMall(TM) Paint Gold Drop B</a></span>
-                <span class="post_navi_item post_navi_next"><a href="http://localhost/wordpress/product/hercules-ds513bb-2-trumpet/" rel="next">Hercules DS513BB 2 Trumpet</a></span>
-            </div>
-            <div class="breadcrumbs">
+            <div class="breadcrumbs" style="text-align: left;">
                 <a class="breadcrumbs_item home" href="/">Home</a>
                 <span class="breadcrumbs_delimiter"></span>
                 <a class="breadcrumbs_item all" href="/shop">Tienda</a>
@@ -73,7 +69,7 @@
                     <div class="summary entry-summary">
                         <h1 class="product_title entry-title">{{ $producto->nombre }}</h1>
                         <p class="price">
-                            @if (count($colores) > 1)
+                            @if (count($colores) > 1 && $colores[0]->precio != $colores[count($colores)-1]->precio)
                                 <span class="woocommerce-Price-amount amount">
                                     <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->precio }}</bdi>
                                 </span> &ndash; 
@@ -89,28 +85,49 @@
                         <div itemprop="description">
                             <p>{{ $producto->descripcion_general }}</p>
                         </div>
-                        <form class="variations_form cart" action="?" method="post" enctype='multipart/form-data' data-product_id="1053" data-product_variations="[{&quot;attributes&quot;:{&quot;attribute_pa_color&quot;:&quot;red&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/D&quot;,&quot;display_price&quot;:280,&quot;display_regular_price&quot;:280,&quot;image&quot;:{&quot;title&quot;:&quot;horn&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg&quot;,&quot;srcset&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg 600w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-232x300.jpg 232w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg 656w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;full_src_w&quot;:656,&quot;full_src_h&quot;:850,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-100x100.jpg&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-300x400.jpg&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:400,&quot;src_w&quot;:600,&quot;src_h&quot;:777},&quot;image_id&quot;:1069,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;280.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1054,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/D&quot;},{&quot;attributes&quot;:{&quot;attribute_pa_color&quot;:&quot;brown&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/D&quot;,&quot;display_price&quot;:280,&quot;display_regular_price&quot;:280,&quot;image&quot;:{&quot;title&quot;:&quot;horn&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg&quot;,&quot;srcset&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg 600w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-232x300.jpg 232w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg 656w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;full_src_w&quot;:656,&quot;full_src_h&quot;:850,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-100x100.jpg&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-300x400.jpg&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:400,&quot;src_w&quot;:600,&quot;src_h&quot;:777},&quot;image_id&quot;:1069,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;280.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1055,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/D&quot;},{&quot;attributes&quot;:{&quot;attribute_pa_color&quot;:&quot;blue&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/D&quot;,&quot;display_price&quot;:350.75,&quot;display_regular_price&quot;:350.75,&quot;image&quot;:{&quot;title&quot;:&quot;horn&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg&quot;,&quot;srcset&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg 600w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-232x300.jpg 232w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg 656w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;full_src_w&quot;:656,&quot;full_src_h&quot;:850,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-100x100.jpg&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-300x400.jpg&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:400,&quot;src_w&quot;:600,&quot;src_h&quot;:777},&quot;image_id&quot;:1069,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;350.75&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1056,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/D&quot;}]">
-                            <table class="variations" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <th class="label"><label for="pa_color">Color</label></th>
-                                        <td class="value">
-                                            <select id="pa_color" class="" name="attribute_pa_color" data-attribute_name="attribute_pa_color" data-show_option_none="yes">
-                                                <option value="" selected='selected'>Elige una opción</option>
-                                                @foreach( $colores as $color )
-                                                    <option value="blue">{{ $color->color }}</option>
-                                                @endforeach
-                                            </select>
-                                            <a class="reset_variations" href="#">Limpiar</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <form class="variations_form cart" action="?" method="post" enctype='multipart/form-data' data-product_id="1053">
+                            @if (count($colores) > 1)
+                                <table class="variations" cellspacing="0">
+                                    <tbody>
+                                        <tr>
+                                            <th class="label"><label for="pa_color">Color</label></th>
+                                            <td class="value">
+                                                <select id="pa_color" class="" name="color" data-attribute_name="color" data-show_option_none="yes" required onchange="cambiarColor(this.value)">
+                                                    <option value="" selected='selected'>Elige una opción</option>
+                                                    @foreach( $colores as $color )
+                                                        <option value="{{ $color->id_color }}">{{ $color->color }}</option>
+                                                    @endforeach
+                                                </select>
+                                                <a class="reset_variations" href="#">Limpiar</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    @foreach( $colores as $color )
+                                        <input type="hidden" id="{{ $color->id_color }}" value="{{ $color->precio }}" />
+                                    @endforeach
+                                </table>
+                                @if($colores[0]->precio != $colores[count($colores)-1]->precio)
+                                <div class="single_variation_wrap">
+                                    <div class="woocommerce-variation single_variation">
+                                        <div class="woocommerce-variation-description"></div>
+                                        <div class="woocommerce-variation-price">
+                                            <span class="price">
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <bdi id="priceByColor"></bdi>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                            @else
+                                <input type="hidden" name="color" value="{{ $colores[0]->id_color }}" />
+                            @endif
                             <div class="single_variation_wrap">
                                 <div class="woocommerce-variation single_variation"></div>
                                 <div class="woocommerce-variation-add-to-cart variations_button">
                                     <div class="quantity">
-                                        <label class="screen-reader-text" for="quantity_61e094d825320">Barrington BR FR401 Double French Horn cantidad</label>
+                                        <label class="screen-reader-text" for="quantity_61e094d825320">{{ $producto->nombre }} cantidad</label>
                                         <input type="number" id="quantity_61e094d825320" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric" autocomplete="off"/>
                                     </div>
                                     <button type="submit" class="single_add_to_cart_button button alt">Añadir al carrito</button>
@@ -176,7 +193,7 @@
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Sé el primero en valorar &ldquo;Barrington BR FR401 Double French Horn&rdquo; <small><a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress/product/barrington-br-fr401-double-french-horn/#respond" style="display:none;">Cancelar respuesta</a></small></span>
+                                            <span id="reply-title" class="comment-reply-title">Sé el primero en valorar &ldquo;{{ $producto->nombre }}&rdquo;</span>
                                             <form action="#comentarios" method="post" id="commentform" class="comment-form">
                                                 <p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p>
                                                 <div class="comment-form-rating">
@@ -224,4 +241,10 @@
         </div>
     </div>
 </div>
+<script>
+    function cambiarColor(val){
+        var precio = document.getElementById(val).value;
+        document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+    }
+</script>
 @endsection

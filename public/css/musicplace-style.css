@@ -467,6 +467,34 @@ svg:not(:root) {
   overflow: hidden;
 }
 
+.search_form .search_send {
+	color: #141618;
+	font-size: small;
+	position: absolute;
+    right: 5px;
+    top: 25%;
+    padding: 0;
+    margin: 0;
+	display: inline-block;
+    text-align: center;
+	font-weight: normal;
+	background-color: #00000000;
+}
+
+.search_form .search_send:hover{
+	background-color: #00000000 !important;
+}
+
+.search_form .search_input {
+	padding: 8.5px 1rem;
+	line-height: 1em !important;
+}
+
+.search_form .search_input:focus {
+	background-color: #e21818 !important;
+	color: #ffff !important;
+}
+
 /* Audio and Video */
 audio,
 canvas,
@@ -4264,8 +4292,16 @@ li.opened > a > .open_child_menu:before {
 .top_panel_style_5 .search_form_wrap,
 .top_panel_style_6 .search_form_wrap,
 .top_panel_style_7 .search_form_wrap {
+<<<<<<< HEAD
   width: 100%;
   overflow: hidden;
+=======
+	width: 100%;
+	overflow: hidden;
+	border: solid 1px;
+    border-color: #b5b5b5;
+    border-radius: 5px;
+>>>>>>> f5837c6e092a584e9d3261d4731226d77237982d
 }
 
 .top_panel_style_5 .search_results,
@@ -4308,6 +4344,14 @@ li.opened > a > .open_child_menu:before {
   -ms-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+.search_form:hover .search_input{
+	background-color: #e21818 ;
+}
+
+.search_form:hover .search_send{
+	color: #ffff ;
 }
 
 .search_style_fullscreen .search_form {
@@ -5556,9 +5600,15 @@ li.opened > a > .open_child_menu:before {
 }
 
 .top_panel_title_inner {
+<<<<<<< HEAD
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 4.33em 0;
+=======
+	overflow: hidden;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding: 3.0em 0;
+>>>>>>> f5837c6e092a584e9d3261d4731226d77237982d
 }
 
 .top_panel_title .page_title {
