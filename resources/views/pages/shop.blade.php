@@ -101,10 +101,10 @@
 				</ul>
 				<nav id="pagination" class="pagination_wrap pagination_pages">
 					<span class="pager_current active ">1</span>
-					<a href="http://localhost/wordpress/shop/page/2/" class="">2</a>
-					<a href="http://localhost/wordpress/shop/page/3/" class="">3</a>
-					<a href="http://localhost/wordpress/shop/page/2/" class="pager_next "></a>
-					<a href="http://localhost/wordpress/shop/page/3/" class="pager_last "></a>
+					<a href="#" class="">2</a>
+					<a href="#" class="">3</a>
+					<a href="#" class="pager_next "></a>
+					<a href="#" class="pager_last "></a>
 				</nav>
 			</div>
 		</div>
@@ -149,12 +149,12 @@
 				</aside>
 
 				<aside id="woocommerce_products-4" class="widget_number_5 widget woocommerce widget_products">
-					<h5 class="widget_title">Featured Products</h5>
+					<h5 class="widget_title">Productos destacados</h5>
 					<ul class="product_list_widget">
 						<li>
-							<a href="http://localhost/wordpress/product/tama-s-l-p-big-black-steel-snare-drum/">
+							<a href="/product/2">
 								<img width="300" height="400"
-									src="http://localhost/wordpress/wp-content/uploads/2016/07/1-1-300x400.jpg"
+									src="/img/1-1-300x400.jpg"
 									class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
 									loading="lazy" /> 
 								<span class="product-title">Tama S.L.P. Big Black Steel Snare Drum</span>
@@ -167,9 +167,9 @@
 							</span>
 						</li>
 						<li>
-							<a href="http://localhost/wordpress/product/crosley-cruiser-portable-3-speed-turntable/">
+							<a href="/product/2">
 								<img width="300" height="400"
-									src="http://localhost/wordpress/wp-content/uploads/2016/07/7_4-300x400.jpg"
+									src="/img/7_4-300x400.jpg"
 									class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
 									loading="lazy" />
 								<span class="product-title">Crosley Cruiser Portable 3-Speed Turntable</span>
@@ -182,9 +182,9 @@
 							</span>
 						</li>
 						<li>
-							<a href="http://localhost/wordpress/product/meinl-cymbals-arena-marching-cymbals-pair/">
+							<a href="/product/2">
 								<img width="300" height="400"
-									src="http://localhost/wordpress/wp-content/uploads/2016/07/2-300x400.jpg"
+									src="/img/2-300x400.jpg"
 									class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
 									loading="lazy" />
 								<span class="product-title">Meinl Cymbals Arena Marching Cymbals Pair</span>

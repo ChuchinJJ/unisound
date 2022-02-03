@@ -16,7 +16,7 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        return view('pages.shop');
+        return redirect('/shop');
     }
 
     /**
@@ -51,7 +51,7 @@ class ProductoController extends Controller
         $producto = Producto::find($id);
         $categoria = Producto::getCategoria($producto->id_categoria);
         $colores = Color::orderBy('precio','asc')->where('id_producto', $producto->id_producto)->get();
-        return view('pages.product')->with(['producto'=>$producto,'colores' => $colores, 'categoria' => $categoria]);
+        return view('pages.product')->with(['producto'=>$producto, 'colores' => $colores, 'categoria' => $categoria]);
     }
 
     /**

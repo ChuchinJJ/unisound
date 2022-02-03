@@ -1076,8 +1076,8 @@ if (document.readyState === "loading") document.addEventListener('readystatechan
 		<span class="vc_empty_space_inner"></span>
 		</div>
 	</div>
-</div>
-</div>
+		</div>
+	</div>
 </div>
 
 		<div class="vc_row wpb_row vc_row-fluid">
@@ -1089,54 +1089,56 @@ if (document.readyState === "loading") document.addEventListener('readystatechan
 							<div class="sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_controls_side" data-interval="5220" data-slides-per-view="6" data-slides-space="30" data-slides-min-width="140">
 								<div class="slides swiper-wrapper">
 									<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
-									<div id="sc_clients_780989574_1" class="sc_clients_item sc_clients_item_1 odd first">
-									<div class="sc_client_image">
-									<img class="wp-post-image" width="180" height="72" alt="Client 2" src="/img/1-1.png"></div>
-							</div>
-						</div>
-		<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
-			<div id="sc_clients_780989574_2" class="sc_clients_item sc_clients_item_2 even">
-				<div class="sc_client_image">
-					<img class="wp-post-image" width="180" height="72" alt="Client 3" src="/img/3-1.png">
-				</div>
-			</div>
-		</div>
-		<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
-			<div id="sc_clients_780989574_3" class="sc_clients_item sc_clients_item_3 odd">
-				<div class="sc_client_image">
-					<img class="wp-post-image" width="180" height="72" alt="Client 4" src="/img/5-1.png">
-				</div>
-							
-			</div>
-		</div>
-		<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
-			<div id="sc_clients_780989574_4" class="sc_clients_item sc_clients_item_4 even">
-				<div class="sc_client_image">
-					<img class="wp-post-image" width="180" height="72" alt="Client 5" src="/img/2-1.png">
-				</div>
-			</div>
-		</div>
-		<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
-			<div id="sc_clients_780989574_5" class="sc_clients_item sc_clients_item_5 odd">
-				<div class="sc_client_image">
-					<img class="wp-post-image" width="180" height="72" alt="Client 6" src="/img/4-1.png">
-				</div>
-			</div>
-		</div>
-		<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
-			<div id="sc_clients_780989574_6" class="sc_clients_item sc_clients_item_6 even">
-				<div class="sc_client_image">
-					<img class="wp-post-image" width="180" height="72" alt="Client 7" src="/img/6-1.png">
-				</div>
-			</div>
-		</div>
-	</div>
-		
-		
-			<div class="sc_slider_pagination_wrap"></div>
-			</div>
-			</div><!-- /.sc_clients -->
-			</div><!-- /.sc_clients_wrap -->
+										<div id="sc_clients_780989574_1" class="sc_clients_item sc_clients_item_1 odd first">
+											<div class="sc_client_image">
+												<img class="wp-post-image" width="180" height="72" alt="Client 2" src="/img/1-1.png"></div>
+											</div>
+										</div>
+										<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+											<div id="sc_clients_780989574_2" class="sc_clients_item sc_clients_item_2 even">
+												<div class="sc_client_image">
+													<img class="wp-post-image" width="180" height="72" alt="Client 3" src="/img/3-1.png">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+											<div id="sc_clients_780989574_3" class="sc_clients_item sc_clients_item_3 odd">
+												<div class="sc_client_image">
+													<img class="wp-post-image" width="180" height="72" alt="Client 4" src="/img/5-1.png">
+												</div>
+															
+											</div>
+										</div>
+										<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+											<div id="sc_clients_780989574_4" class="sc_clients_item sc_clients_item_4 even">
+												<div class="sc_client_image">
+													<img class="wp-post-image" width="180" height="72" alt="Client 5" src="/img/2-1.png">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+											<div id="sc_clients_780989574_5" class="sc_clients_item sc_clients_item_5 odd">
+												<div class="sc_client_image">
+													<img class="wp-post-image" width="180" height="72" alt="Client 6" src="/img/4-1.png">
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+											<div id="sc_clients_780989574_6" class="sc_clients_item sc_clients_item_6 even">
+												<div class="sc_client_image">
+													<img class="wp-post-image" width="180" height="72" alt="Client 7" src="/img/6-1.png">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sc_slider_controls_wrap">
+										<a class="sc_slider_prev" href="#"></a>
+										<a class="sc_slider_next" href="#"></a>
+									</div>
+									<div class="sc_slider_pagination_wrap"></div>
+								</div>
+							</div><!-- /.sc_clients -->
+						</div><!-- /.sc_clients_wrap -->
 			
 			<div class="vc_empty_space"   style="height: 4.8em">
 			<span class="vc_empty_space_inner">

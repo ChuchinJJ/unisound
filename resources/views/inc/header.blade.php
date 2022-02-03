@@ -9,7 +9,7 @@
                     <div class="content_wrap columns_wrap no_margins">
                         <div class="contact_logo column-1_5">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="/img/logo.png" class="logo_main" alt="Logo" width="108" height="35">
                                     <img src="/img/logo.png" class="logo_fixed" alt="Logo" width="108" height="35">
                                 </a>
@@ -86,17 +86,15 @@
                                 </a>
                             </div> 
 
-                            <div style="width:auto; margin-right: 10px; " class="search_wrap search_style_fullscreen  top_panel_icon  search_state_open">
+                            <div style="width:auto; margin-right: 10px; " class="search_wrap search_style_fullscreen top_panel_icon  search_state_open">
                                 <div class="search_form_wrap">
                                     <form role="search" method="get" class="search_form" action="?">
-                                        <button style="font-size:small; margin-top:1px; margin-right: 2px;" type="submit" class="search_submit icon-search-1" title="Open search"></button>
-                                        <input style="padding:8.5px 1rem; border:solid 1px; border-color: #b5b5b5;  border-radius:5px; " 
-                                        type="text" class="search_field" placeholder="Buscar" value="" name="s" />
+                                        <button type="submit" class="search_send icon-search-1" title="Open search"></button>
+                                        <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="s" />
                                     </form>
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -107,8 +105,8 @@
             <div class="content_wrap">
                 <div class="menu_button icon-menu"></div>
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo.png" class="logo_main" alt="Logo" width="216" height="79">
+                    <a href="/">
+                        <img src="/img/logo.png" class="logo_main" alt="Logo" width="216" height="79">
                     </a>
                 </div>
                 <div class="menu_main_cart top_panel_icon">
@@ -188,7 +186,7 @@
 
                     <div class="search_wrap search_style_ search_state_fixed search_ajax">
                         <div class="search_form_wrap">
-                            <form role="search" method="get" class="search_form" action="http://localhost/wordpress/">
+                            <form role="search" method="get" class="search_form" action="?">
                                 <button type="submit" class="search_submit icon-search-1" title="Start search"></button>
                                 <input type="text" class="search_field" placeholder="Search" value="" name="s" />
                             </form>
