@@ -90,7 +90,7 @@
                                 <div class="search_form_wrap">
                                     <form role="search" method="get" class="search_form" action="?">
                                         <button type="submit" class="search_send icon-search-1" title="Open search"></button>
-                                        <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="s" />
+                                        <input style="color:black;" type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="s" />
                                     </form>
                                 </div>
                             </div>
