@@ -26,6 +26,10 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
+Route::get('/proximo', function () {
+    return view('pages.proximo');
+});
+
 Route::resource('/shop', ShopController::class);
 Route::resource('/product', ProductoController::class);
 

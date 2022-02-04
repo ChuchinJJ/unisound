@@ -54,7 +54,7 @@
 												<strong>Direccón:</strong> Calle Tercera Ote. Sur 119, Candelaria 29950, Ocosingo, Chiapas.<br />
 												<strong>Horarios:</strong> Abierto los 7 dias de la semana. <br> De 8am a 6pm.<br />
 												<strong>Llamar:</strong> <a href="tel:+55 919 673 0629">+55 919 673 0629</a><br />
-												<strong>Email:</strong> <a href="#">unisound@gmail.com</a>
+												<strong>Email:</strong> <a href="#">unisoundcorp@gmail.com</a>
 											</p>
 										</div>
 									</div>

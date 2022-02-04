@@ -11,7 +11,7 @@
 					<a href="https://twitter.com/Unisound_Imusa" target="_blank" class="social_icons social_twitter"><span class="icon-twitter"></span></a>
 				</div>
 				<div class="sc_socials_item">
-					<a href="https//www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
+					<a href="https://www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
 				</div>
 			</div>
 			<ul id="menu_footer" class="menu_footer_nav">
