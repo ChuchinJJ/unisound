@@ -305,7 +305,7 @@
 																	<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																		<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																			<div class="esg-bottom eg-post-272 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="272" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-272 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="272" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-272 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -318,7 +318,7 @@
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-272 eg-jason-musicplace-element-0-a">
 																				<a class="eg-jason-musicplace-element-0 eg-post-272" 
-																					href="/product/1" target="_self">
+																					href="/proximo" target="_self">
 																					Handcrafted Wood Acoustic Violin
 																				</a>
 																			</div>
@@ -351,7 +351,7 @@
 																		<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																		</div>
 																		<div class="esg-bottom eg-post-273 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a href="/product/1" rel="nofollow" data-product_id="273" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-273 button add_to_cart_button  product_type_variable">
+																			<a href="/proximo" rel="nofollow" data-product_id="273" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-273 button add_to_cart_button  product_type_variable">
 																				Seleccionar opciones
 																			</a>
 																		</div>
@@ -362,7 +362,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																		<div class="esg-content eg-post-273 eg-jason-musicplace-element-0-a">
-																			<a class="eg-jason-musicplace-element-0 eg-post-273" href="/product/1" target="_self">
+																			<a class="eg-jason-musicplace-element-0 eg-post-273" href="/proximo" target="_self">
 																				Plastic Trumpet, White
 																			</a>
 																		</div>
@@ -389,7 +389,7 @@
 																		<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																				<div class="esg-bottom eg-post-274 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="274" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-274 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="274" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-274 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																					</a>
 																				</div>
@@ -402,7 +402,7 @@
 
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-274 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-274" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-274" href="/proximo" target="_self">
 																					Gibson 2016 T Les Paul Studio 50's Tribute
 																				</a>
 																			</div>
@@ -431,7 +431,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-275 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="275" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-275 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																				<a href="/proximo" rel="nofollow" data-product_id="275" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-275 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-275 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-275 esgbox" data-thumb="/img/2.jpg" href="/img/2.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
@@ -441,7 +441,7 @@
 
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-275 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-275" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-275" href="/proximo" target="_self">
 																					Meinl Cymbals Arena Marching Cymbals Pair
 																				</a>
 																			</div>
@@ -470,7 +470,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-276 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="276" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-276 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="276" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-276 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -483,7 +483,7 @@
 
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-276 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-276" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-276" href="/proximo" target="_self">
 																					Crosley Cruiser Portable 3-Speed Turntable
 																				</a>
 																			</div>
@@ -506,7 +506,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-277 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="277" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-277 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="277" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-277 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -518,7 +518,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-277 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-277" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-277" href="/proximo" target="_self">
 																					Soyuz Tube Condenser Microphone
 																				</a>
 																			</div>
@@ -541,7 +541,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																			<div class="esg-bottom eg-post-278 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="278" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-278 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="278" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-278 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -550,7 +550,7 @@
 																	</div>
 																	<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-278 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-278" href="/product/1" target="_self">Gibson Custom L5 Premier Acoustic Guitar</a></div>
+																				<a class="eg-jason-musicplace-element-0 eg-post-278" href="/proximo" target="_self">Gibson Custom L5 Premier Acoustic Guitar</a></div>
 																			<div class="esg-content eg-post-278 eg-jason-musicplace-element-30">
 																				<div class="esg-starring">
 																					<div class="star-rating" role="img" aria-label="Valorado en 4.00 de 5">
@@ -577,7 +577,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-279 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="279" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-279 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="279" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-279 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -589,7 +589,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-279 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-279" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-279" href="/proximo" target="_self">
 																					Tama S.L.P. Big Black Steel Snare Drum</a></div>
 																			<div class="esg-content eg-post-279 eg-jason-musicplace-element-30">
 																				<div class="esg-starring">
@@ -616,13 +616,13 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																			<div class="esg-bottom eg-post-361 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1/" rel="nofollow" data-product_id="361" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-361 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																				<a href="/proximo/" rel="nofollow" data-product_id="361" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-361 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-361 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-361 esgbox" data-thumb="/img/4_1.jpg" href="/img/4_1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-361 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-361" href="/product/1/" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-361" href="/proximo/" target="_self">
 																					MXX V22R Large  Capsule Condenser Microphone
 																				</a>
 																			</div>
@@ -650,13 +650,13 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-362 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="362" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-362 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																				<a href="/proximo" rel="nofollow" data-product_id="362" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-362 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-362 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-362 esgbox" data-thumb="/img/3_2.jpg" href="/img/3_2.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-362 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-362" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-362" href="/proximo" target="_self">
 																					Custom Zone 6-String Full-Size Electric Guitar
 																				</a>
 																			</div>
@@ -684,7 +684,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-671 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="671" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-671 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="671" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-671 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -696,7 +696,7 @@
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-671 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-671" href="/product/1" target="_self">Handcrafted Blue Acoustic Violin</a></div>
+																				<a class="eg-jason-musicplace-element-0 eg-post-671" href="/proximo" target="_self">Handcrafted Blue Acoustic Violin</a></div>
 																			<div class="esg-content eg-post-671 eg-jason-musicplace-element-25">
 																				<span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>850.75</bdi></span> &ndash; <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>950.75</bdi>
 																				</span>
@@ -712,7 +712,7 @@
 																		<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																			<div class="esg-bottom eg-post-1013 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1013" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1013 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1013" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1013 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -723,7 +723,7 @@
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1013 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1013" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1013" href="/proximo" target="_self">
 																					New Trumpet Gig Bag Case with Nylon
 																				</a>
 																			</div>
@@ -743,7 +743,7 @@
 																		<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																			<div class="esg-bottom eg-post-1017 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1017" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1017 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1017" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1017 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -755,7 +755,7 @@
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1017 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1017" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1017" href="/proximo" target="_self">
 																					Gator Trombone Case
 																				</a>
 																			</div>
@@ -777,7 +777,7 @@
 
 																			</div>
 																			<div class="esg-bottom eg-post-1021 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1021" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1021 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1021" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1021 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -790,7 +790,7 @@
 
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1021 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1021" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1021" href="/proximo" target="_self">
 																					Protec Deluxe Trumpet Bag Instrument Case
 																				</a>
 																			</div>
@@ -811,7 +811,7 @@
 																	<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																		<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																		<div class="esg-bottom eg-post-1045 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a href="/product/1" rel="nofollow" data-product_id="1045" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1045 button add_to_cart_button  product_type_variable">
+																			<a href="/proximo" rel="nofollow" data-product_id="1045" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1045 button add_to_cart_button  product_type_variable">
 																				Seleccionar opciones
 																			</a>
 																		</div>
@@ -823,7 +823,7 @@
 																	</div>
 																	<div class="esg-entry-content eg-jason-musicplace-content">
 																		<div class="esg-content eg-post-1045 eg-jason-musicplace-element-0-a">
-																			<a class="eg-jason-musicplace-element-0 eg-post-1045" href="/product/1" target="_self">
+																			<a class="eg-jason-musicplace-element-0 eg-post-1045" href="/proximo" target="_self">
 																				Tromba Pro Professional Plastic Bb
 																			</a>
 																		</div>
@@ -843,7 +843,7 @@
 																	<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																		<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																		<div class="esg-bottom eg-post-1049 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a href="/product/1" rel="nofollow" data-product_id="1049" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1049 button add_to_cart_button  product_type_variable">
+																			<a href="/proximo" rel="nofollow" data-product_id="1049" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1049 button add_to_cart_button  product_type_variable">
 																				Seleccionar opciones
 																			</a>
 																		</div>
@@ -855,7 +855,7 @@
 																	</div>
 																	<div class="esg-entry-content eg-jason-musicplace-content">
 																		<div class="esg-content eg-post-1049 eg-jason-musicplace-element-0-a">
-																			<a class="eg-jason-musicplace-element-0 eg-post-1049" href="/product/1" target="_self">
+																			<a class="eg-jason-musicplace-element-0 eg-post-1049" href="/proximo" target="_self">
 																				MicroMall(TM) Paint Gold Drop B
 																			</a>
 																		</div>
@@ -874,7 +874,7 @@
 																		<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1053" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1053 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1053" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1053 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1053 esgbox" 
@@ -884,7 +884,7 @@
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1053 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1053" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1053" href="/proximo" target="_self">
 																					Barrington BR FR401 Double French Horn
 																				</a>
 																			</div>
@@ -904,7 +904,7 @@
 																	<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																		<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																		<div class="esg-bottom eg-post-1057 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a href="/product/1" rel="nofollow" data-product_id="1057" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1057 button add_to_cart_button  product_type_variable">
+																			<a href="/proximo" rel="nofollow" data-product_id="1057" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1057 button add_to_cart_button  product_type_variable">
 																				Seleccionar opciones
 																			</a>
 																		</div>
@@ -916,7 +916,7 @@
 																</div>
 																	<div class="esg-entry-content eg-jason-musicplace-content">
 																		<div class="esg-content eg-post-1057 eg-jason-musicplace-element-0-a">
-																			<a class="eg-jason-musicplace-element-0 eg-post-1057" href="/product/1" target="_self">
+																			<a class="eg-jason-musicplace-element-0 eg-post-1057" href="/proximo" target="_self">
 																				Hercules DS513BB 2 Trumpet
 																			</a>
 																		</div>
@@ -1757,7 +1757,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																				<div class="esg-bottom eg-post-1057 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="1057" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1057 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="1057" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1057 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -1771,7 +1771,7 @@
 
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-1057 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-1057" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-1057" href="/proximo" target="_self">
 																						Hercules DS513BB 2 Trumpet
 																					</a>
 																				</div>
@@ -1797,7 +1797,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1053" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1053 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1053" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1053 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -1810,7 +1810,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1053 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1053" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1053" href="/proximo" target="_self">
 																					Barrington BR FR401 Double French Horn
 																				</a>
 																			</div>
@@ -1837,7 +1837,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																		
 																			<div class="esg-bottom eg-post-1049 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1049" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1049 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1049" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1049 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -1850,7 +1850,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1049 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1049" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1049" href="/proximo" target="_self">
 																					MicroMall(TM) Paint Gold Drop B
 																				</a>
 																			</div>
@@ -1870,7 +1870,7 @@
 																		<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																			<div class="esg-bottom eg-post-1045 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1045" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1045 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1045" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1045 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones</a>
 																			</div>
 																			<div class="esg-bottom eg-post-1045 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
@@ -1882,7 +1882,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1045 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1045" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1045" href="/proximo" target="_self">
 																					Tromba Pro Professional Plastic Bb</a>
 																			</div>
 																			<div class="esg-content eg-post-1045 eg-jason-musicplace-element-25">
@@ -1905,7 +1905,7 @@
 																		</div>
 
 																		<div class="esg-bottom eg-post-1021 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a href="/product/1" rel="nofollow" data-product_id="1021" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1021 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																			<a href="/proximo" rel="nofollow" data-product_id="1021" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1021 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																		<div class="esg-bottom eg-post-1021 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																			<a class="eg-jason-musicplace-element-32 eg-post-1021 esgbox" 
 																				data-thumb="/img/7.jpg" href="/img/7.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i></a></div>
@@ -1913,7 +1913,7 @@
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 
 																			<div class="esg-content eg-post-1021 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1021" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1021" href="/proximo" target="_self">
 																					Protec Deluxe Trumpet Bag Instrument Case</a>
 																			</div>
 																			<div class="esg-content eg-post-1021 eg-jason-musicplace-element-25">
@@ -1932,7 +1932,7 @@
 																		<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																			<div class="esg-bottom eg-post-1017 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1017" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1017 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="1017" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1017 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -1945,7 +1945,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1017 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1017" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1017" href="/proximo" target="_self">
 																					Gator Trombone Case
 																				</a>
 																			</div>
@@ -1967,7 +1967,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-1013 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="1013" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1013 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																				<a href="/proximo" rel="nofollow" data-product_id="1013" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1013 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-1013 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1013 esgbox" 
 																					data-thumb="/img/6.jpg" href="/img/6.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i></a></div>
@@ -1975,7 +1975,7 @@
 
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-1013 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-1013" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1013" href="/proximo" target="_self">
 																					New Trumpet Gig Bag Case with Nylon
 																				</a>
 																			</div>
@@ -1997,7 +1997,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																				</div>
 																				<div class="esg-bottom eg-post-671 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="671" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-671 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="671" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-671 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2011,7 +2011,7 @@
 
 																				<div class="esg-entry-content eg-jason-musicplace-content">
 																					<div class="esg-content eg-post-671 eg-jason-musicplace-element-0-a">
-																						<a class="eg-jason-musicplace-element-0 eg-post-671" href="/product/1" target="_self">
+																						<a class="eg-jason-musicplace-element-0 eg-post-671" href="/proximo" target="_self">
 																							Handcrafted Blue Acoustic Violin
 																						</a>
 																					</div>
@@ -2032,7 +2032,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																				</div>
 																				<div class="esg-bottom eg-post-362 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="362" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-362 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="362" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-362 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2046,7 +2046,7 @@
 
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-362 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-362" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-362" href="/proximo" target="_self">
 																						Custom Zone 6-String Full-Size Electric Guitar
 																					</a>
 																				</div>
@@ -2076,7 +2076,7 @@
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
 																			<div class="esg-bottom eg-post-361 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a href="/product/1" rel="nofollow" data-product_id="361" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-361 button add_to_cart_button  product_type_variable">
+																				<a href="/proximo" rel="nofollow" data-product_id="361" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-361 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
@@ -2089,7 +2089,7 @@
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-361 eg-jason-musicplace-element-0-a">
-																				<a class="eg-jason-musicplace-element-0 eg-post-361" href="/product/1" target="_self">
+																				<a class="eg-jason-musicplace-element-0 eg-post-361" href="/proximo" target="_self">
 																					MXX V22R Large  Capsule Condenser Microphone
 																				</a>
 																			</div>
@@ -2121,14 +2121,14 @@
 																				</div>
 
 																				<div class="esg-bottom eg-post-279 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="279" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-279 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																					<a href="/proximo" rel="nofollow" data-product_id="279" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-279 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																				<div class="esg-bottom eg-post-279 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-279 esgbox" 
 																						data-thumb="/img/1-1.jpg" href="/img/1-1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-279 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-279" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-279" href="/proximo" target="_self">
 																						Tama S.L.P. Big Black Steel Snare Drum</a>
 																				</div>
 																				<div class="esg-content eg-post-279 eg-jason-musicplace-element-30">
@@ -2157,7 +2157,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																				<div class="esg-bottom eg-post-278 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="278" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-278 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="278" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-278 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2167,7 +2167,7 @@
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-278 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-278" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-278" href="/proximo" target="_self">
 																					Gibson Custom L5 Premier Acoustic Guitar
 																					</a>
 																				</div>
@@ -2197,7 +2197,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																				<div class="esg-bottom eg-post-277 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="277" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-277 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="277" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-277 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2207,7 +2207,7 @@
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-277 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-277" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-277" href="/proximo" target="_self">
 																						Soyuz Tube Condenser Microphone
 																					</a>
 																				</div>
@@ -2224,7 +2224,7 @@
 																			<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																				<div class="esg-bottom eg-post-276 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="276" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-276 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="276" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-276 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2235,7 +2235,7 @@
 
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-276 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-276" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-276" href="/proximo" target="_self">
 																						Crosley Cruiser Portable 3-Speed Turntable
 																					</a>
 																				</div>
@@ -2253,7 +2253,7 @@
 																			<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 																				<div class="esg-bottom eg-post-275 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="275" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-275 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="275" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-275 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2263,7 +2263,7 @@
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-275 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-275" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-275" href="/proximo" target="_self">
 																						Meinl Cymbals Arena Marching Cymbals Pair
 																					</a>
 																				</div>
@@ -2291,7 +2291,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																				<div class="esg-bottom eg-post-274 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="274" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-274 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="274" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-274 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2301,7 +2301,7 @@
 																			</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-274 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-274" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-274" href="/proximo" target="_self">
 																						Gibson 2016 T Les Paul Studio 50's Tribute
 																					</a>
 																				</div>
@@ -2322,7 +2322,7 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																				<div class="esg-bottom eg-post-273 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="273" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-273 button add_to_cart_button  product_type_variable">
+																					<a href="/proximo" rel="nofollow" data-product_id="273" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-273 button add_to_cart_button  product_type_variable">
 																						Seleccionar opciones
 																					</a>
 																				</div>
@@ -2332,7 +2332,7 @@
 																			</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-273 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-273" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-273" href="/proximo" target="_self">
 																						Plastic Trumpet, White
 																					</a>
 																				</div>
@@ -2354,13 +2354,13 @@
 																				<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade"></div>
 
 																				<div class="esg-bottom eg-post-272 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a href="/product/1" rel="nofollow" data-product_id="272" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-272 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
+																					<a href="/proximo" rel="nofollow" data-product_id="272" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-272 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																				<div class="esg-bottom eg-post-272 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-272 esgbox" data-thumb="/img/1.jpg" href="/img/1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																			</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-272 eg-jason-musicplace-element-0-a">
-																					<a class="eg-jason-musicplace-element-0 eg-post-272" href="/product/1" target="_self">
+																					<a class="eg-jason-musicplace-element-0 eg-post-272" href="/proximo" target="_self">
 																						Handcrafted Wood Acoustic Violin
 																					</a>
 																				</div>
@@ -2550,7 +2550,7 @@
 																						</h5>
 																						<ul class="product_list_widget">
 																							<li>
-																								<a href="/product/1">
+																								<a href="/proximo">
 																									<img width="300" height="400" src="/img/1-1-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
 																									<span class="product-title">Tama S.L.P. Big Black Steel Snare Drum</span>
 																								</a>
@@ -2561,7 +2561,7 @@
 																							</li>
 
 																							<li>
-																								<a href="/product/1">
+																								<a href="/proximo">
 																									<img width="300" height="400" src="/img/7_4-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
 																									<span class="product-title">Crosley Cruiser Portable 3-Speed Turntable</span>
 																								</a>
@@ -2577,7 +2577,7 @@
 																						</h5>
 																						<ul class="product_list_widget">
 																							<li>
-																								<a href="/product/1">
+																								<a href="/proximo">
 																									<img width="300" height="400" src="/img/3_2-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
 																									<span class="product-title">Custom Zone 6-String Full-Size Electric Guitar</span>
 																								</a>
@@ -2589,7 +2589,7 @@
 																							</li>
 
 																							<li>
-																								<a href="/product/1#comment-18">
+																								<a href="/proximo#comment-18">
 																									<img width="300" height="400" src="/img/3_4-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
 																									<span class="product-title">Gibson Custom L5 Premier Acoustic Guitar</span>
 																								</a>
@@ -2610,7 +2610,7 @@
 																						</h5>
 																						<ul class="product_list_widget">
 																							<li>
-																								<a href="/product/1">
+																								<a href="/proximo">
 																									<img width="300" height="400" src="/img/20-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />
 																									<span class="product-title">
 																										Digital Conversion Turntable
@@ -2620,7 +2620,7 @@
 																							</li>
 
 																							<li>
-																								<a href="/product/1">
+																								<a href="/proximo">
 																									<img width="300" height="400" src="/img/18-300x400.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />		
 																									<span class="product-title">
 																										Crosley CR8005A-CB Cruiser Portable Turntable

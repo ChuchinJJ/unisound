@@ -4,13 +4,10 @@
 	<title>Unisound</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<<<<<<< HEAD
 	<link rel="icon" href="/img/icon.ico" sizes="32x32" />
 	<link rel="icon" href="/img/icon.ico" sizes="192x192" />
-=======
 	<link rel="icon" href="/img/icono-unisound.png" sizes="32x32" />
 	<link rel="icon" href="/img/icono-unisound.png" sizes="192x192" />
->>>>>>> 609601dab1dadaaf68fd4010827830666b2d58fa
 	<link rel="apple-touch-icon" href="img/cropped-favicon-300x300.png" />
 	<link rel='stylesheet' id='photoswipe-default-skin-css'  href='/css/default-skin.min.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='woocommerce-layout-css'  href='/css/woocommerce-layout.css' type='text/css' media='all' />
