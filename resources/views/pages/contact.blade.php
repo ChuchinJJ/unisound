@@ -44,6 +44,7 @@
 											<div class="sc_line sc_line_position_center_center sc_line_style_solid" style="margin-top:0px;margin-bottom:1.1em;border-top-style:solid;border-top-color:#e21818;">
 										</div>
 
+<<<<<<< HEAD
 										<div class="wpb_text_column wpb_content_element " >
 											<div class="wpb_wrapper">
 												<p>
@@ -53,6 +54,16 @@
 													<strong>Email:</strong> <a href="#">unisound@gmail.com</a>
 												</p>
 											</div>
+=======
+									<div class="wpb_text_column wpb_content_element " >
+										<div class="wpb_wrapper">
+											<p>
+												<strong>Direccón:</strong> Calle Tercera Ote. Sur 119, Candelaria 29950, Ocosingo, Chiapas.<br />
+												<strong>Horarios:</strong> Abierto los 7 dias de la semana. <br> De 8am a 6pm.<br />
+												<strong>Llamar:</strong> <a href="tel:+55 919 673 0629">+55 919 673 0629</a><br />
+												<strong>Email:</strong> <a href="#">unisoundcorp@gmail.com</a>
+											</p>
+>>>>>>> 609601dab1dadaaf68fd4010827830666b2d58fa
 										</div>
 
 										<div class="vc_empty_space" style="height: 2em"> <span class="vc_empty_space_inner"></span></div>
