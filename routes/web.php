@@ -18,9 +18,8 @@ use App\Http\Controllers\SliderController;
 
 Route::get('/', [SliderController::class, "index"]);
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+Route::get('/contact', function () { return view('pages.contact'); });
+Route::post('/contact', function () { return view('pages.contact'); });
 
 Route::get('/about', function () {
     return view('pages.about');

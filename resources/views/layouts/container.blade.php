@@ -4,8 +4,8 @@
 	<title>Unisound</title>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="icon" href="/img/cropped-favicon-100x100.png" sizes="32x32" />
-	<link rel="icon" href="/img/cropped-favicon-300x300.png" sizes="192x192" />
+	<link rel="icon" href="/img/icon.ico" sizes="32x32" />
+	<link rel="icon" href="/img/icon.ico" sizes="192x192" />
 	<link rel="apple-touch-icon" href="img/cropped-favicon-300x300.png" />
 	<link rel='stylesheet' id='photoswipe-default-skin-css'  href='/css/default-skin.min.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='woocommerce-layout-css'  href='/css/woocommerce-layout.css' type='text/css' media='all' />
@@ -15,6 +15,7 @@
 	    .woocommerce form .form-row .required { visibility: visible; }
 	</style>
 	<link rel='stylesheet' id='musicplace-font-google-fonts-style-css'  href='//fonts.googleapis.com/css?family=Hind:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&#038;subset=latin,latin-ext' type='text/css' media='all' />
+	<link rel='stylesheet' id='tp-fontello-css'  href='/css/fontello-esg.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='fontello-style-css'  href='/css/fontello.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='essential-grid-plugin-settings-css'  href='/css/settings.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='musicplace-main-style-css'  href='/css/musicplace-style.css' type='text/css' media='all' />
@@ -29,6 +30,7 @@
 	<link rel='stylesheet' id='rs-plugin-settings-css'  href='/css/rs6.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='js_composer_front-css'  href='/css/js_composer.min.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='swiperslider-style-css'  href='/css/swiper.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='themepunchboxextcss-css'  href='/css/jquery.esgbox.min.css' type='text/css' media='all' />
 	<script type='text/javascript' src='/js/rbtools.min.js' id='tp-tools-js'></script>
 	<script type='text/javascript' src='/js/rs6.min.js' id='revmin-js'></script>
 	<script type="text/javascript">function setREVStartSize(e){
@@ -108,6 +110,7 @@
 	<script type='text/javascript' src='/js/add-to-cart-variation.min.js' id='wc-add-to-cart-variation-js'></script>
 	<script type='text/javascript' src='/js/theme.shortcodes.js' id='musicplace-shortcodes-script-js'></script>
 	<script type='text/javascript' src='/js/esg.min.js' id='essential-grid-essential-grid-script-js'></script>
+	<script type='text/javascript' src='/js/esgbox.min.js' id='themepunchboxext-js'></script>
 	<script type='text/javascript' src='/js/swiper.js' id='swiperslider-script-js'></script>
 	<script type='text/javascript' src='/js/core.min.js' id='jquery-ui-core-js'></script>
 	<script type='text/javascript' src='/js/mouse.min.js' id='jquery-ui-mouse-js'></script>

@@ -310,7 +310,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-272 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-272 esgbox" data-thumb="/img/1-200x259.jpg" href="/img/1.jpg" data-width="987"  data-height="1280" >
+																				<a class="eg-jason-musicplace-element-32 eg-post-272 esgbox" data-thumb="/img/1.jpg" href="/img/1.jpg" data-width="987" data-height="1280">
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -356,7 +356,7 @@
 																			</a>
 																		</div>
 																		<div class="esg-bottom eg-post-273 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a class="eg-jason-musicplace-element-32 eg-post-273 esgbox" data-thumb="/img/3-e1470062679810.jpg" data-width="759"  data-height="987" ><i class="eg-icon-resize-full-alt"></i>
+																			<a class="eg-jason-musicplace-element-32 eg-post-273 esgbox" data-thumb="/img/3-e1470062679810.jpg" href="/img/3-e1470062679810.jpg" data-width="759"  data-height="987" ><i class="eg-icon-resize-full-alt"></i>
 																			</a>
 																		</div>
 																		</div>
@@ -394,7 +394,7 @@
 																					</a>
 																				</div>
 																				<div class="esg-bottom eg-post-274 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a class="eg-jason-musicplace-element-32 eg-post-274 esgbox" data-thumb="/img/f-200x259.jpg" href="/img/f.jpg" data-width="987"  data-height="1280" >
+																					<a class="eg-jason-musicplace-element-32 eg-post-274 esgbox" data-thumb="/img/f.jpg" href="/img/f.jpg" data-width="987"  data-height="1280" >
 																						<i class="eg-icon-resize-full-alt"></i>
 																					</a>
 																				</div>
@@ -433,7 +433,7 @@
 																			<div class="esg-bottom eg-post-275 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a href="/product/1" rel="nofollow" data-product_id="275" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-275 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-275 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-275 esgbox" data-thumb="/img/2-200x259.jpg" href="/img/2.jpg" data-width="987"  data-height="1280" >
+																				<a class="eg-jason-musicplace-element-32 eg-post-275 esgbox" data-thumb="/img/2.jpg" href="/img/2.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -475,7 +475,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-276 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-276 esgbox" data-thumb="/img/7_4-200x259.jpg" href="/img/7_4.jpg" data-width="987"  data-height="1280" >
+																				<a class="eg-jason-musicplace-element-32 eg-post-276 esgbox" data-thumb="/img/7_4.jpg" href="/img/7_4.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -511,7 +511,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-277 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-277 esgbox" data-thumb="/img/4-200x259.jpg" href="/img/4.jpg" data-width="987"  data-height="1280" >
+																				<a class="eg-jason-musicplace-element-32 eg-post-277 esgbox" data-thumb="/img/4.jpg" href="/img/4.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -546,7 +546,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-278 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-278 esgbox" data-thumb="/img/3_4-200x259.jpg" href="/img/3_4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																				<a class="eg-jason-musicplace-element-32 eg-post-278 esgbox" data-thumb="/img/3_4.jpg" href="/img/3_4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																	</div>
 																	<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-278 eg-jason-musicplace-element-0-a">
@@ -582,7 +582,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-279 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-279 esgbox" data-thumb="/img/1-1-200x259.jpg" href="/img/1-1.jpg" data-width="987"  data-height="1280" >
+																				<a class="eg-jason-musicplace-element-32 eg-post-279 esgbox" data-thumb="/img/1-1.jpg" href="/img/1-1.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -618,7 +618,7 @@
 																			<div class="esg-bottom eg-post-361 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a href="/product/1/" rel="nofollow" data-product_id="361" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-361 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-361 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-361 esgbox" data-thumb="/img/4_1-200x259.jpg" href="/img/4_1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																				<a class="eg-jason-musicplace-element-32 eg-post-361 esgbox" data-thumb="/img/4_1.jpg" href="/img/4_1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-361 eg-jason-musicplace-element-0-a">
@@ -652,7 +652,7 @@
 																			<div class="esg-bottom eg-post-362 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a href="/product/1" rel="nofollow" data-product_id="362" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-362 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-362 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-362 esgbox" data-thumb="/img/3_2-200x259.jpg" href="/img/3_2.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																				<a class="eg-jason-musicplace-element-32 eg-post-362 esgbox" data-thumb="/img/3_2.jpg" href="/img/3_2.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																	</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 																			<div class="esg-content eg-post-362 eg-jason-musicplace-element-0-a">
@@ -689,7 +689,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-671 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-671 esgbox" data-thumb="/img/j-200x259.jpg" href="/img/j.jpg" data-width="987"  data-height="1280" >
+																				<a class="eg-jason-musicplace-element-32 eg-post-671 esgbox" data-thumb="/img/j.jpg" href="/img/j.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -717,7 +717,7 @@
 																				</a>
 																			</div>
 																			<div class="esg-bottom eg-post-1013 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-1013 esgbox" data-thumb="/img/6-200x259.jpg" href="/img/6.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																				<a class="eg-jason-musicplace-element-32 eg-post-1013 esgbox" data-thumb="/img/6.jpg" href="/img/6.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
 																	</div>
@@ -749,7 +749,7 @@
 																			</div>
 																			<div class="esg-bottom eg-post-1017 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1017 esgbox" 
-																					data-thumb="/img/5-200x259.jpg" href="/img/5.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																					data-thumb="/img/5.jpg" href="/img/5.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
 																	</div>
@@ -783,7 +783,7 @@
 																			</div>
 																			<div class="esg-bottom eg-post-1021 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1021 esgbox" 
-																					data-thumb="/img/7-200x259.jpg" href="/img/7.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																					data-thumb="/img/7.jpg" href="/img/7.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
 																	</div>
@@ -817,7 +817,7 @@
 																		</div>
 																		<div class="esg-bottom eg-post-1045 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																			<a class="eg-jason-musicplace-element-32 eg-post-1045 esgbox" 
-																				data-thumb="/img/1-1-200x259.jpg" href="/img/1-1.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																				data-thumb="/img/1-1.jpg" href="/img/1-1.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																			</a>
 																		</div>
 																	</div>
@@ -849,7 +849,7 @@
 																		</div>
 																		<div class="esg-bottom eg-post-1049 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																			<a class="eg-jason-musicplace-element-32 eg-post-1049 esgbox" 
-																				data-thumb="/img/2-1-200x259.jpg" href="/img/2-1.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																				data-thumb="/img/2-1.jpg" href="/img/2-1.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																			</a>
 																		</div>
 																	</div>
@@ -878,7 +878,7 @@
 																					Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1053 esgbox" 
-																					data-thumb="/img/horn-200x259.jpg" href="/img/horn.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																					data-thumb="/img/horn.jpg" href="/img/horn.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
 																	</div>
@@ -910,7 +910,7 @@
 																		</div>
 																		<div class="esg-bottom eg-post-1057 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																			<a class="eg-jason-musicplace-element-32 eg-post-1057 esgbox" 
-																				data-thumb="/img/4-1-200x259.jpg" href="/img/4-1.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
+																				data-thumb="/img/4-1.jpg" href="/img/4-1.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i>
 																			</a>
 																		</div>
 																</div>
@@ -1763,7 +1763,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-1057 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-1057 esgbox" 
-																						data-thumb="/img/4-1-200x259.jpg" href="/img/4-1.jpg" data-width="656"  data-height="850" >
+																						data-thumb="/img/4-1.jpg" href="/img/4-1.jpg" data-width="656"  data-height="850" >
 																						<i class="eg-icon-resize-full-alt"></i>
 																					</a>
 																				</div>
@@ -1789,45 +1789,41 @@
 
 																<li id="eg-3-post-id-1053" data-skin="jason-musicplace" class="filterall filter-variable filter-band-orchestra filter-mouthpieces filter-concept filter-creative filter-blue filter-brown filter-red eg-jason-musicplace-wrapper eg-post-id-1053" data-date="1470750862" data-title="barrington">
 																	<div class="esg-media-cover-wrapper">
-																			<div class="esg-entry-media">
-																				<img src="/img/horn.jpg" data-no-lazy="1" alt="" width="656" height="850">
-																			</div>
+																		<div class="esg-entry-media">
+																			<img src="/img/horn.jpg" data-no-lazy="1" alt="" width="656" height="850">
+																		</div>
 
 																		<div class="esg-entry-cover esg-transition" data-delay="0" data-duration="deafult" data-transition="esg-fade">
 																			<div class="esg-overlay esg-transition eg-jason-musicplace-container" data-delay="0" data-duration="default" data-transition="esg-fade">
 																			</div>
-
 																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a href="/product/1" rel="nofollow" data-product_id="1053" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1053 button add_to_cart_button  product_type_variable">
 																					Seleccionar opciones
 																				</a>
 																			</div>
-
-																		<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																			<a class="eg-jason-musicplace-element-32 eg-post-1053 esgbox" 
-																				data-thumb="/img/horn-200x259.jpg" href="/img/horn.jpg" data-width="656"  data-height="850" >
-																				<i class="eg-icon-resize-full-alt"></i>
-																			</a>
+																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
+																				<a class="eg-jason-musicplace-element-32 eg-post-1053 esgbox"
+																					data-thumb="/img/horn-200x259.jpg" href="/img/horn.jpg" data-width="656"  data-height="850" >
+																					<i class="eg-icon-resize-full-alt"></i>
+																				</a>
+																			</div>
+																		</div>
+																		<div class="esg-entry-content eg-jason-musicplace-content">
+																			<div class="esg-content eg-post-1053 eg-jason-musicplace-element-0-a">
+																				<a class="eg-jason-musicplace-element-0 eg-post-1053" href="/product/1" target="_self">
+																					Barrington BR FR401 Double French Horn
+																				</a>
+																			</div>
+																			<div class="esg-content eg-post-1053 eg-jason-musicplace-element-25">
+																				<span class="woocommerce-Price-amount amount">
+																					<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>280.00</bdi>
+																				</span> &ndash; 
+																				<span class="woocommerce-Price-amount amount">
+																					<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>350.75</bdi>
+																				</span>
+																			</div>
 																		</div>
 																	</div>
-
-																	<div class="esg-entry-content eg-jason-musicplace-content">
-																		<div class="esg-content eg-post-1053 eg-jason-musicplace-element-0-a">
-																			<a class="eg-jason-musicplace-element-0 eg-post-1053" href="/product/1" target="_self">
-																				Barrington BR FR401 Double French Horn
-																			</a>
-																		</div>
-
-																		<div class="esg-content eg-post-1053 eg-jason-musicplace-element-25">
-																			<span class="woocommerce-Price-amount amount">
-																				<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>280.00</bdi>
-																			</span> &ndash; 
-																			<span class="woocommerce-Price-amount amount">
-																				<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>350.75</bdi>
-																			</span>
-																		</div>
-																	</div>
-
 																</li>
 
 
@@ -1842,12 +1838,12 @@
 																		
 																			<div class="esg-bottom eg-post-1049 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a href="/product/1" rel="nofollow" data-product_id="1049" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1049 button add_to_cart_button  product_type_variable">
-																					Seleccionar opciones</a>
+																					Seleccionar opciones
+																				</a>
 																			</div>
-
-																			<div class="esg-bottom eg-post-1049 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																				<a class="eg-jason-musicplace-element-32 eg-post-1049 esgbox" 
-																					data-thumb="/img/2-1-200x259.jpg" href="/img/2-1.jpg" data-width="656"  data-height="850" >
+																			<div class="esg-bottom eg-post-1053 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
+																				<a class="eg-jason-musicplace-element-32 eg-post-1053 esgbox" 
+																					data-thumb="/img/2-1.jpg" href="/img/2-1.jpg" data-width="656"  data-height="850" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -1879,7 +1875,7 @@
 																			</div>
 																			<div class="esg-bottom eg-post-1045 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1045 esgbox" 
-																					data-thumb="/img/1-1-200x259.jpg" href="/img/1-1.jpg" data-width="656"  data-height="850" >
+																					data-thumb="/img/1-1.jpg" href="/img/1-1.jpg" data-width="656"  data-height="850" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -1912,7 +1908,7 @@
 																			<a href="/product/1" rel="nofollow" data-product_id="1021" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1021 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																		<div class="esg-bottom eg-post-1021 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																			<a class="eg-jason-musicplace-element-32 eg-post-1021 esgbox" 
-																				data-thumb="/img/7-200x259.jpg" href="/img/7.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																				data-thumb="/img/7.jpg" href="/img/7.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 																		<div class="esg-entry-content eg-jason-musicplace-content">
 
@@ -1942,7 +1938,7 @@
 																			</div>
 																			<div class="esg-bottom eg-post-1017 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1017 esgbox" 
-																					data-thumb="/img/5-200x259.jpg" href="/img/5.jpg" data-width="656"  data-height="850" >
+																					data-thumb="/img/5.jpg" href="/img/5.jpg" data-width="656"  data-height="850" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -1974,7 +1970,7 @@
 																				<a href="/product/1" rel="nofollow" data-product_id="1013" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-1013 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																			<div class="esg-bottom eg-post-1013 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-1013 esgbox" 
-																					data-thumb="/img/6-200x259.jpg" href="/img/6.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																					data-thumb="/img/6.jpg" href="/img/6.jpg" data-width="656"  data-height="850" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 
 																		<div class="esg-entry-content eg-jason-musicplace-content">
@@ -2007,7 +2003,7 @@
 																				</div>
 																					<div class="esg-bottom eg-post-671 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																						<a class="eg-jason-musicplace-element-32 eg-post-671 esgbox" 
-																							data-thumb="/img/j-200x259.jpg" href="/img/j.jpg" data-width="987"  data-height="1280" >
+																							data-thumb="/img/j.jpg" href="/img/j.jpg" data-width="987"  data-height="1280" >
 																							<i class="eg-icon-resize-full-alt"></i>
 																						</a>
 																					</div>
@@ -2042,7 +2038,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-362 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-362 esgbox" 
-																						data-thumb="/img/3_2-200x259.jpg" href="/img/3_2.jpg" data-width="987"  data-height="1280" >
+																						data-thumb="/img/3_2.jpg" href="/img/3_2.jpg" data-width="987"  data-height="1280" >
 																						<i class="eg-icon-resize-full-alt"></i>
 																					</a>
 																				</div>
@@ -2086,7 +2082,7 @@
 																			</div>
 																			<div class="esg-bottom eg-post-361 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																				<a class="eg-jason-musicplace-element-32 eg-post-361 esgbox" 
-																					data-thumb="/img/4_1-200x259.jpg" href="/img/4_1.jpg" data-width="987"  data-height="1280" >
+																					data-thumb="/img/4_1.jpg" href="/img/4_1.jpg" data-width="987"  data-height="1280" >
 																					<i class="eg-icon-resize-full-alt"></i>
 																				</a>
 																			</div>
@@ -2128,7 +2124,7 @@
 																					<a href="/product/1" rel="nofollow" data-product_id="279" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-279 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																				<div class="esg-bottom eg-post-279 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-279 esgbox" 
-																						data-thumb="/img/1-1-200x259.jpg" href="/img/1-1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																						data-thumb="/img/1-1.jpg" href="/img/1-1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-279 eg-jason-musicplace-element-0-a">
@@ -2167,7 +2163,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-278 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-278 esgbox" 
-																						data-thumb="/img/3_4-200x259.jpg" href="/img/3_4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																						data-thumb="/img/3_4.jpg" href="/img/3_4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-278 eg-jason-musicplace-element-0-a">
@@ -2207,7 +2203,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-277 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-277 esgbox" 
-																						data-thumb="/img/4-200x259.jpg" href="/img/4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																						data-thumb="/img/4.jpg" href="/img/4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-277 eg-jason-musicplace-element-0-a">
@@ -2234,7 +2230,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-276 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-276 esgbox" 
-																						data-thumb="/img/7_4-200x259.jpg" href="/img/7_4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																						data-thumb="/img/7_4.jpg" href="/img/7_4.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																			</div>
 
 																			<div class="esg-entry-content eg-jason-musicplace-content">
@@ -2263,7 +2259,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-275 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-275 esgbox" 
-																						data-thumb="/img/2-200x259.jpg" href="/img/2.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																						data-thumb="/img/2.jpg" href="/img/2.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																		</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-275 eg-jason-musicplace-element-0-a">
@@ -2301,7 +2297,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-274 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-274 esgbox" 
-																					data-thumb="/img/f-200x259.jpg" href="/img/f.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																					data-thumb="/img/f.jpg" href="/img/f.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																			</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-274 eg-jason-musicplace-element-0-a">
@@ -2332,7 +2328,7 @@
 																				</div>
 																				<div class="esg-bottom eg-post-273 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a class="eg-jason-musicplace-element-32 eg-post-273 esgbox" 
-																						data-thumb="/img/3-e1470062679810-200x260.jpg" href="/img/3-e1470062679810.jpg" data-width="759"  data-height="987" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																						data-thumb="/img/3-e1470062679810.jpg" href="/img/3-e1470062679810.jpg" data-width="759"  data-height="987" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																			</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-273 eg-jason-musicplace-element-0-a">
@@ -2360,7 +2356,7 @@
 																				<div class="esg-bottom eg-post-272 eg-jason-musicplace-element-28-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
 																					<a href="/product/1" rel="nofollow" data-product_id="272" data-product_sku="" class="eg-jason-musicplace-element-28 eg-post-272 button add_to_cart_button  product_type_variable">Seleccionar opciones</a></div>
 																				<div class="esg-bottom eg-post-272 eg-jason-musicplace-element-32-a esg-transition" data-delay="0.1" data-duration="default" data-transition="esg-slide">
-																					<a class="eg-jason-musicplace-element-32 eg-post-272 esgbox" data-thumb="/img/1-200x259.jpg" href="/img/1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
+																					<a class="eg-jason-musicplace-element-32 eg-post-272 esgbox" data-thumb="/img/1.jpg" href="/img/1.jpg" data-width="987"  data-height="1280" ><i class="eg-icon-resize-full-alt"></i></a></div>
 																			</div>
 																			<div class="esg-entry-content eg-jason-musicplace-content">
 																				<div class="esg-content eg-post-272 eg-jason-musicplace-element-0-a">
