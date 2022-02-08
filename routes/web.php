@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,8 @@ use App\Http\Controllers\SliderController;
 
 Route::get('/', [SliderController::class, "index"]);
 
-Route::get('/contact', function () { return view('pages.contact'); });
-Route::post('/contact', function () { return view('pages.contact'); });
+Route::get('/contact', [ContactController::class, "index"]);
+Route::post('/contact', [ContactController::class, "send"]);
 
 Route::get('/about', function () {
     return view('pages.about');
