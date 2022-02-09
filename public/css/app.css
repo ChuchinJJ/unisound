@@ -1,3 +1,10 @@
+:root {
+  --dark: #16191c;
+  --dark-x: #1e2126;
+  --dark-y: #696c72;
+  --light: #ffffff;
+}
+
 body {
   background: rgb(250, 246, 246);
   margin: 0;
@@ -33,4 +40,48 @@ button {
   h1 {
     font-size: 16px;
   }
+}
+
+/*Estilos para el Login*/
+
+.bg-dark {
+  background-color: var(--dark) !important;
+}
+
+.letras {
+  font-family: "Spartan", sans-serif;
+  font-weight: 300;
+  color: var(--light);
+  font-weight: bold;
+  text-align: left;
+}
+
+.bg-dark-x {
+  background-color: var(--dark-x);
+}
+
+.form-control,
+btn {
+  min-height: 2.125rem;
+  line-height: initial;
+}
+
+.letra-boton {
+  font-size: 14px;
+}
+
+.text-p {
+  font-size: 14px;
+  color: var(--light);
+}
+
+.img-1 {
+  background-image: url(/img/login3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.img-2 {
+  background-image: url(/img/login2.jpg);
+  background-size: cover;
+  background-position: center;
 }

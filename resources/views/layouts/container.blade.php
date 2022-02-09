@@ -16,6 +16,16 @@
 	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo&family=Candal&family=Fjalla+One&family=IBM+Plex+Sans:wght@500&family=Kanit&family=Open+Sans:wght@600&family=Roboto+Mono:wght@300&family=Suez+One&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/img/404.jpg">
+	<!-- Bootstrap CSS y Estilos para el Login -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/css/app.css">
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo&family=Candal&family=Fjalla+One&family=IBM+Plex+Sans:wght@500&family=Kanit&family=Open+Sans:wght@600&family=Roboto+Mono:wght@300&family=Spartan:wght@300;600&family=Suez+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3bc4a52a4d.js" crossorigin="anonymous"></script>
+	
 	<style id='woocommerce-inline-inline-css' type='text/css'>
 	    .woocommerce form .form-row .required { visibility: visible; }
 	</style>

@@ -29,6 +29,16 @@ Route::get('/proximo', function () {
     return view('pages.proximo');
 });
 
+Route::get('/login', function () {
+    return view('pages.login');
+});
+Route::get('/login-registrarse', function () {
+    return view('pages.login-registrarse');
+});
+Route::get('/login-contrasena', function () {
+    return view('pages.login-contrasena');
+});
+
 Route::resource('/shop', ShopController::class);
 Route::resource('/product', ProductoController::class);
 

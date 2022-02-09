@@ -60,8 +60,8 @@
                             </nav>
 
                             <div class="menu_main_cart top_panel_icon">
-                                <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
-                                    <span  class="contact_icon icon-online-shopping-cart"></span>
+                                <a  class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
+                                    <span class="contact_icon icon-online-shopping-cart"></span>
                                     <span class="contact_label contact_cart_label">Your cart:</span>
                                     <span class="contact_cart_totals">
                                         <span class="cart_items">0 Items</span>
@@ -81,8 +81,8 @@
                                 </ul>
                             </div>
                             <div class="menu_main_cart top_panel_icon">
-                                <a class="top_panel_cart_button" href="?">
-                                    <span class="contact_icon icon-user"></span>
+                                <a href="/login" class="top_panel_cart_button" href="?">
+                                    <span  class="contact_icon icon-user"></span>
                                 </a>
                             </div> 
 
