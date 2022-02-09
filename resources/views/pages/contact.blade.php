@@ -5,10 +5,34 @@
 <div class="top_panel_title top_panel_style_6  title_present scheme_original" >
 	<div  class="top_panel_title_inner top_panel_inner_style_6  title_present_inner">
 		<div class="content_wrap">
-			<h5 class="page_title">Contactos</h5>						
+			<h5 class="page_title">Contacto</h5>						
 		</div>
 	</div>
 </div>
+
+@if(session()->has('message'))
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModal">Atención</h5>
+      </div>
+      <div class="modal-body">
+	  Su mensaje fue enviado con exito
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btna" onclick="cerrar()" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	function cerrar(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+</script>
+@endif
 
 <div class="page_content_wrap page_paddings_yes">
 	<div class="content_wrap">
@@ -43,8 +67,6 @@
 											<h5 class="sc_title sc_title_regular" style="margin-top:null;">Información de Contacto</h5>
 											<div class="sc_line sc_line_position_center_center sc_line_style_solid" style="margin-top:0px;margin-bottom:1.1em;border-top-style:solid;border-top-color:#e21818;">
 										</div>
-
-<<<<<<< HEAD
 										<div class="wpb_text_column wpb_content_element " >
 											<div class="wpb_wrapper">
 												<p>
@@ -54,18 +76,7 @@
 													<strong>Email:</strong> <a href="#">unisound@gmail.com</a>
 												</p>
 											</div>
-=======
-									<div class="wpb_text_column wpb_content_element " >
-										<div class="wpb_wrapper">
-											<p>
-												<strong>Direccón:</strong> Calle Tercera Ote. Sur 119, Candelaria 29950, Ocosingo, Chiapas.<br />
-												<strong>Horarios:</strong> Abierto los 7 dias de la semana. <br> De 8am a 6pm.<br />
-												<strong>Llamar:</strong> <a href="tel:+55 919 673 0629">+55 919 673 0629</a><br />
-												<strong>Email:</strong> <a href="#">unisoundcorp@gmail.com</a>
-											</p>
->>>>>>> 609601dab1dadaaf68fd4010827830666b2d58fa
 										</div>
-
 										<div class="vc_empty_space" style="height: 2em"> <span class="vc_empty_space_inner"></span></div>
 										
 										<h5 class="sc_title sc_title_regular" style="margin-top:null;">Información</h5>
@@ -112,7 +123,6 @@
 											</div>
 										</div>
 									</div>
-									<!--
 									<div class="column-2_3 sc_column_item sc_column_item_2 even span_2">
 										<div role="form" class="wpcf7" id="wpcf7-f1289-p220-o1" lang="en-US" dir="ltr">
 											<div class="screen-reader-response">
@@ -148,11 +158,9 @@
 													<input type="submit" value="Enviar mensaje" class="wpcf7-form-control has-spinner wpcf7-submit" />
 												</p>
 												<div class="wpcf7-response-output" aria-hidden="true"></div>
-
 											</form>
 										</div>
 									</div>
-									-->
 								</div>
 							</div>
 						</section>

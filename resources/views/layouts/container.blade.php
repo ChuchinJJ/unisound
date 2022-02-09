@@ -13,7 +13,7 @@
 	<link rel='stylesheet' id='woocommerce-layout-css'  href='/css/woocommerce-layout.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
 	<link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all' />
-	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo&family=Candal&family=Fjalla+One&family=IBM+Plex+Sans:wght@500&family=Kanit&family=Open+Sans:wght@600&family=Roboto+Mono:wght@300&family=Suez+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/bootstrap.css" type='text/css' media='all' />
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/img/404.jpg">
 	<!-- Bootstrap CSS y Estilos para el Login -->
