@@ -82,7 +82,7 @@
                             </div>
                             <div class="menu_main_cart top_panel_icon">
                                 <a href="/login" class="top_panel_cart_button" href="?">
-                                    <span  class="contact_icon icon-user"></span>
+                                    <span href="/login"  class="contact_icon icon-user"></span>
                                 </a>
                             </div> 
 
@@ -90,7 +90,7 @@
                                 <div class="search_form_wrap">
                                     <form role="search" method="get" class="search_form" action="?">
                                         <button type="submit" class="search_send icon-search-1" title="Open search"></button>
-                                        <input style="color:black;" type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="s" />
+                                        <input style="color:black;" type="text" class="search_input" placeholder="Buscar...." autocomplete="off" name="s" />
                                     </form>
                                 </div>
                             </div>
