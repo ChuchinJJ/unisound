@@ -44,6 +44,9 @@ Route::resource('/shop', ShopController::class);
 Route::resource('/product', ProductoController::class);
 
 
-/*Route::get('/shop', function () {
-    return view('pages.shop');
-});*/
+Route::get('/admin', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/admin/sliders', [SliderController::class, "indexAdmin"]);
+Route::get('/admin/addslider', [SliderController::class, "add"]);
