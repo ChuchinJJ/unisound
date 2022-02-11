@@ -31,14 +31,18 @@ Route::get('/proximo', function () {
 });
 
 Route::get('/login', function () {
-    return view('pages.login');
+    return view('login.login');
 });
-Route::get('/login-registrarse', function () {
-    return view('pages.login-registrarse');
+Route::get('/login/registrar', function () {
+    return view('login.registrar');
 });
-Route::get('/login-contrasena', function () {
-    return view('pages.login-contrasena');
+Route::get('/login/registrar2', function () {
+    return view('login.registrar2');
 });
+Route::get('/login/recuperar', function () {
+    return view('login.recuperar');
+});
+
 
 Route::resource('/shop', ShopController::class);
 Route::resource('/product', ProductoController::class);
