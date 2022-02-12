@@ -1,15 +1,11 @@
 @extends('layouts.container')
 @section('contenido')
-
-
     <div class="container"> 
-        <img src="/img/404.jpg" alt="">
-        <h1 style="font-size:30px;">¡¡¡PROXIMAMENTE!!!</h1>
+        <h1 style="font-size:50px;">¡¡¡PROXIMAMENTE!!!</h1>
         <div class="boton">
-            <button href="/">Unisound</button>
+            <a href="/" class="sc_button sc_button_square sc_button_style_filled sc_button_size_medium">Unisound</a>
         </div>
     </div>
-
     <style>
         @media screen and (max-width: 630px;) {
             h1{
@@ -17,8 +13,6 @@
             }    
         }
     </style>
-
-
 @endsection
 
 

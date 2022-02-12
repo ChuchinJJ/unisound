@@ -81,10 +81,10 @@
                                 </ul>
                             </div>
                             <div class="menu_main_cart top_panel_icon">
-                                <a href="/login" class="top_panel_cart_button" href="?">
-                                    <span href="/login"  class="contact_icon icon-user"></span>
+                                <a href="/login">
+                                    <span class="contact_icon icon-user"></span>
                                 </a>
-                            </div> 
+                            </div>
 
                             <div style="width:auto; margin-right: 10px; " class="search_wrap search_style_fullscreen top_panel_icon  search_state_open">
                                 <div class="search_form_wrap">
@@ -106,7 +106,7 @@
                 <div class="menu_button icon-menu"></div>
                 <div class="logo">
                     <a href="/">
-                        <img src="/img/logo.png" class="logo_main" alt="Logo" width="216" height="79">
+                        <img src="/img/logoUnisound.png" class="logo_main" alt="Logo" width="216" height="79"/>
                     </a>
                 </div>
                 <div class="menu_main_cart top_panel_icon">
@@ -143,45 +143,45 @@
                                 <ul class="sub-menu">
                                 <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                     <ul class="sub-menu">
-                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="http://localhost/wordpress/typography/"><span>De cuerda</span></a></li>
-                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="http://localhost/wordpress/shortcodes/"><span>De Percusion</span></a></li>
-                                        
+                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/proximo"><span>De cuerda</span></a></li>
+                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/proximo"><span>De Percusion</span></a></li>
                                     </ul>
                                 </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-534"><a href="http://localhost/wordpress/category/post-formats/"><span>Atriles y Soporte</span></a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="http://localhost/wordpress/blog-without-sidebar/"><span>Audio</span></a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="http://localhost/wordpress/all-posts/"><span>Iluminación</span></a></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-534"><a href="/proximo"><span>Atriles y Soporte</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="/proximo"><span>Audio</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="/proximo"><span>Iluminación</span></a></li>
                                             
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="http://localhost/wordpress/shop/"><span>Adaptadores</span></a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/product/barrington-br-fr401-double-french-horn/"><span>Accessorios</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/proximo"><span>Adaptadores</span></a></li>
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/proximo"><span>Accessorios</span></a></li>
                                             
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="#"><span>Ver todos</span></a>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/proximo"><span>Ver todos</span></a>
                                         <ul class="sub-menu">
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1127"><a href="/product-category/band-orchestra/"><span>Ofertas</span></a>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1127"><a href="/proximo"><span>Ofertas</span></a>
                             </li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1133"><a href="/product-category/recording/"><span>Acerca de</span></a>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1133"><a href="/about"><span>Acerca de</span></a>
                                 
                             </li>
                         
                             <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-442">
                                 <a><span>Cuenta</span></a>
                                 <ul class="sub-menu">
-                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a><span>Iniciar Sesión</span></a></li>
-                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a><span>Registrarse</span></a></li>
+                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login"><span>Iniciar Sesión</span></a></li>
+                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login/registrar"><span>Registrarse</span></a></li>
                                 </ul>
                             </li>
+                        </ul>
                     </nav>
 
                     <div class="search_wrap search_style_ search_state_fixed search_ajax">

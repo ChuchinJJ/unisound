@@ -13,7 +13,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .container {
-  height: 100vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -27,7 +27,7 @@ h1 {
   padding: 20px;
 }
 
-button {
+.boton a {
   margin-bottom: 70px;
   padding: 12px 22px;
   border-radius: 15px;
