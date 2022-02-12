@@ -53,4 +53,8 @@ Route::get('/admin', function () {
 });
 
 Route::get('/admin/sliders', [SliderController::class, "indexAdmin"]);
-Route::get('/admin/addslider', [SliderController::class, "add"]);
+Route::get('/admin/sliders/{id}', [SliderController::class, "destroy"]);
+Route::get('/admin/sliders/{id}/{value}', [SliderController::class, "update"]);
+Route::get('/admin/addslider', [SliderController::class, "addView"]);
+Route::post('/admin/addslider', [SliderController::class, "upload"]);
+Route::get('/admin/addslider/{horizontal}/{vertical}', [SliderController::class, "add"]);

@@ -99,7 +99,6 @@ btn {
   background-size: cover;
   background-position: center;
 }
-<<<<<<< HEAD
 
 .floating{
   position: fixed;
@@ -141,8 +140,8 @@ btn {
   padding-left: 5px;
 }
 
-.btn-save{
-  display: none;
+.btn-oculto{
+  display: none !important;
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -150,9 +149,15 @@ btn {
   z-index: 999999;
 }
 
-.btn-save a{
-  padding-left: 40px;
-  padding-right: 40px;
+.btn-save{
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+
+.btn-save i{
+  font-size: 20px;
+  padding-left: 10px;
 }
 
 .card-slider{
@@ -176,9 +181,53 @@ btn {
   margin-bottom: 2px;
 }
 
-=======
 .letra-slider {
   color: white !important;
   font-family: "Spartan", sans-serif !important;
 }
->>>>>>> ac6ae1d7c259b08b6b234e2f0e34d098fcf2108b
+
+.dropzone {
+    background: white;
+    border-radius: 5px;
+    border: 2px dashed rgb(0, 135, 247);
+    border-image: none;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slider-vertical{
+  display: 	none;
+}
+
+@media screen and (max-width: 630px) {
+  .slider-vertical {
+    display: block;
+  }
+
+  .slider-horizontal{
+    display: none;
+  }
+
+  .container-fluid .mb-2 .col-sm-6{
+    width: 50%;
+  }
+}
+
+.venobox img:hover{
+  filter: brightness(50%);
+  cursor: zoom-in;
+}
+
+.vbox-title{
+  font-size: 20px !important;
+  font-family: 'Source Sans Pro' !important;
+}
+
+@media screen and (max-width: 765px) {
+  .card-slider .custom-switch {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: -webkit-center;
+  }
+}

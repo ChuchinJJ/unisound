@@ -9,4 +9,5 @@ class Slider extends Model
 {
     use HasFactory;
     public $primaryKey = 'id_slider';
+    public $timestamps = false;
 }

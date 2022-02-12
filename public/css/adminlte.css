@@ -159,7 +159,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: #dc3545;
   text-decoration: none;
   background-color: transparent;
 }
@@ -21595,8 +21595,8 @@ body.text-sm .input-group-text {
 }
 
 .custom-switch.custom-switch-on-success .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #28a745;
-  border-color: #145523;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .custom-switch.custom-switch-on-success .custom-control-input:checked:focus ~ .custom-control-label::before {
@@ -21604,7 +21604,7 @@ body.text-sm .input-group-text {
 }
 
 .custom-switch.custom-switch-on-success .custom-control-input:checked ~ .custom-control-label::after {
-  background-color: #86e29b;
+  background-color: #dee2e6;
 }
 
 .custom-switch.custom-switch-off-info .custom-control-input ~ .custom-control-label::before {

@@ -1,22 +1,20 @@
 @extends('layouts.container')
 @section('contenido')
-<section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_home-1">
+<section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_home-1 slider-horizontal">
 	<!-- START Home 1 REVOLUTION SLIDER 6.3.5 -->
 	<p class="rs-p-wp-fix"></p>
 	<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;max-width:;">
 		<rs-module id="rev_slider_1_1" style="" data-version="6.3.5">
 			<rs-slides>
 				@foreach($sliders as $slider)
-				<rs-slide data-key="rs-{{ $slider->id_slider }}" data-title="Slide" data-thumb="{{ $slider->imagen }}" data-duration="15950" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-					<img src="{{ $slider->imagen }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>			
+				<rs-slide data-key="rs-{{ $slider->id_slider }}" data-title="Slide" data-thumb="/storage/img/sliders/{{ $slider->imagen }}" data-duration="15950" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+					<img src="/storage/img/sliders/{{ $slider->imagen }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>			
 				</rs-slide>
 				@endforeach	
 			</rs-slides>
 		</rs-module>
 
-
 		<script type="text/javascript">
-
 			setREVStartSize({c: 'rev_slider_1_1',rl:[1240,1024,778,480],el:[715,768,700,700],gw:[1170,1024,769,480],gh:[715,768,700,700],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
 			var	revapi1,tpj;
 			function revinit_revslider11() {
@@ -63,27 +61,70 @@
 			var once_revslider11 = false;
 			if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider11 ) { once_revslider11 = true; revinit_revslider11();}});} else {once_revslider11 = true; revinit_revslider11();}
 		</script>
-		<script>
-			var htmlDivCss = unescape("%23rev_slider_1_1_wrapper%20.custom.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3A%23000%3B%0A%09background%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A1000%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.custom.tparrows%3Ahover%20%7B%0A%09background%3A%23000%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.custom.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%27revicons%27%3B%0A%09font-size%3A15px%3B%0A%09color%3A%23fff%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%2040px%3B%0A%09text-align%3A%20center%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.custom.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce824%27%3B%0A%7D%0A%23rev_slider_1_1_wrapper%20.custom.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce825%27%3B%0A%7D%0A%0A%0A");
-			var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-			if(htmlDiv) {
-				htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-			}else{
-				var htmlDiv = document.createElement('div');
-				htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-				document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-			}
-		</script>
-		<script>
-			var htmlDivCss = unescape("%0A%0A%0A");
-			var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-			if(htmlDiv) {
-				htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-			}else{
-				var htmlDiv = document.createElement('div');
-				htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
-				document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-			}
+	</rs-module-wrap>
+	<!-- END REVOLUTION SLIDER -->
+</section>
+
+<section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_home-1 slider-vertical">
+	<!-- START Home 1 REVOLUTION SLIDER 6.3.5 -->
+	<p class="rs-p-wp-fix"></p>
+	<rs-module-wrap id="rev_slider_1_2_wrapper" data-source="gallery" style="background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;max-width:;">
+		<rs-module id="rev_slider_1_2" style="" data-version="6.3.5">
+			<rs-slides>
+				@foreach($sliders as $slider)
+				<rs-slide data-key="rs-{{ $slider->id_slider }}" data-title="Slide" data-thumb="/storage/img/sliders/{{ $slider->movil }}" data-duration="15950" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+					<img src="/storage/img/sliders/{{ $slider->movil }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>			
+				</rs-slide>
+				@endforeach	
+			</rs-slides>
+		</rs-module>
+
+		<script type="text/javascript">
+			setREVStartSize({c: 'rev_slider_1_2',rl:[1240,1024,778,480],el:[715,768,700,700],gw:[1170,1024,769,480],gh:[715,768,700,700],type:'standard',justify:'',layout:'fullwidth',mh:"0"});
+			var	revapi2,tpj;
+			function revinit_revslider12() {
+			jQuery(function() {
+				tpj = jQuery;
+				revapi2 = tpj("#rev_slider_1_2");
+				if(revapi2==undefined || revapi2.revolution == undefined){
+					revslider_showDoubleJqueryError("rev_slider_1_2");
+				}else{
+					revapi2.revolution({
+						visibilityLevels:"1240,1024,778,480",
+						gridwidth:"1170,1024,769,480",
+						gridheight:"715,768,700,700",
+						spinner:"spinner0",
+						perspective:600,
+						perspectiveType:"local",
+						editorheight:"715,768,700,700",
+						responsiveLevels:"1240,1024,778,480",
+						progressBar:{disableProgressBar:true},
+						navigation: {
+							mouseScrollNavigation:false,
+							wheelCallDelay:1000,
+							onHoverStop:false,
+							arrows: {
+								enable:true,
+								style:"custom",
+								hide_onleave:true,
+								left: {
+								},
+								right: {
+								}
+							}
+						},
+						parallax: {
+							levels:[3,5,7,20,25,30,35,40,45,46,47,48,49,50,51,55],
+							type:"mouse"
+						},
+						fallbacks: {
+							allowHTML5AutoPlayOnAndroid:true
+						},
+					});
+				}
+			});} // End of RevInitScript
+			var once_revslider12 = false;
+			if (document.readyState === "loading") {document.addEventListener('readystatechange',function() { if((document.readyState === "interactive" || document.readyState === "complete") && !once_revslider12 ) { once_revslider12 = true; revinit_revslider12();}});} else {once_revslider12 = true; revinit_revslider12();}
 		</script>
 	</rs-module-wrap>
 	<!-- END REVOLUTION SLIDER -->
