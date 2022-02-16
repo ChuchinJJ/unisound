@@ -13,6 +13,12 @@
 				<div class="sc_socials_item">
 					<a href="https://www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
 				</div>
+				<div class="sc_socials_item">
+					<a href="#" target="_blank" class="social_icons social_youtube"><span class="icon-youtube"></span></a>
+				</div>
+				<div class="sc_socials_item">
+					<a href="https://wa.me/529191007549" target="_blank" class="social_icons"><img src="/img/whats.jpg" width="99%" style="border-radius:5px;"></img></a>
+				</div>
 			</div>
 			<ul id="menu_footer" class="menu_footer_nav">
 				<li id="menu-item-462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462">
