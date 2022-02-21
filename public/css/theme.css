@@ -9732,7 +9732,7 @@ textarea {
 /* Main menu */
 .menu_main_nav > li > a {
   padding: 0.608em 3em 0.608em 0;
-  font-size: 1em;
+  font-size: 15px;
   line-height: 1.2857em;
 }
 .scheme_original .menu_main_nav > li > a {
@@ -16416,7 +16416,7 @@ textarea {
   background-color: #141618;
 }
 .scheme_original .top_panel_icon.search_wrap {
-  background-color: #fafafa;
+  background-color: #fafafa00 !important;
 }
 .scheme_brown .top_panel_icon.search_wrap {
   background-color: #fafafa;
@@ -18672,8 +18672,8 @@ textarea {
   padding-top: 0.608em;
 }
 .top_panel_fixed .top_panel_wrap .logo {
-  margin-top: 0.608em;
-  margin-bottom: 0.608em;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
 }
 /*---LESS_SEPARATOR---*/
 /* Header style 8 */

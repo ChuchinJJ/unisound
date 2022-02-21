@@ -1,13 +1,10 @@
-<a id="toc_home" class="sc_anchor" title="Home" data-description="&lt;i&gt;Return to Home&lt;/i&gt; - &lt;br&gt;navigate to home page of the site" data-icon="icon-home" data-url="http://localhost/wordpress/" data-separator="yes"></a><a id="toc_top" class="sc_anchor" title="To Top" data-description="&lt;i&gt;Back to top&lt;/i&gt; - &lt;br&gt;scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
 <div class="body_wrap">
     <div class="page_wrap">
-        <div class="top_panel_fixed_wrap"></div>
-
         <header class="top_panel_wrap top_panel_style_6 scheme_original">
             <div class="top_panel_wrap_inner top_panel_inner_style_6 top_panel_position_above">
                 <div class="top_panel_middle" >
-                    <div class="content_wrap columns_wrap no_margins">
-                        <div class="contact_logo column-1_5">
+                    <div class="columns_wrap no_margins header">
+                        <div class="contact_logo column-1_6">
                             <div class="logo">
                                 <a href="/">
                                     <img src="/img/logoUnisound.png" class="logo_main" alt="Logo" width="108" height="35">
@@ -15,7 +12,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="menu_main_wrap column-4_5">
+                        <div class="menu_main_wrap column-5_6">
                             <nav class="menu_main_nav_area menu_hover_fade">
                                 <ul id="menu_main" class="menu_main_nav">
                                     <li id="menu-item-439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1145">
@@ -59,9 +56,11 @@
                                 </ul>
                             </nav>
 
-                            <div class="menu_main_cart top_panel_icon">
-                                <a  class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
-                                    <span class="contact_icon icon-online-shopping-cart"></span>
+                            <div class="top_panel_icon head-cart">
+                                <a class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
+                                    <span class="icon-online-shopping-cart">
+                                        <div class="cart-number">0</div>
+                                    </span>
                                     <span class="contact_label contact_cart_label">Your cart:</span>
                                     <span class="contact_cart_totals">
                                         <span class="cart_items">0 Items</span>
@@ -74,23 +73,50 @@
                                     <li>
                                         <div  class="widget woocommerce widget_shopping_cart">
                                             <div class="hide_cart_widget_if_empty">
-                                                <div class="widget_shopping_cart_content"></div>
+                                                <div class="widget_shopping_cart_content">No hay productos</div>
                                             </div>
                                         </div>
                                     </li> 
                                 </ul>
                             </div>
-                            <div class="menu_main_cart top_panel_icon">
-                                <a href="/login">
-                                    <span class="contact_icon icon-user"></span>
+
+                            <div class="menu_main_cart top_panel_icon head-user">
+                                @if(Auth::check())
+                                <div class="head-name">{{ Auth::user()->usuario }}</div>
+                                <a class="cuenta" onclick="abrirMenu('usuario')" aria-hidden="true">Mi cuenta 
+                                    <i class="icon-down"></i>
                                 </a>
+                                <div class="menu-login" id="menu">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
+                                                onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                                Cerrar sesión
+                                        </a>
+                                    </form>
+                                </div>
+                                @else
+                                <div>Iniciar sesión</div>
+                                <a class="cuenta" onclick="abrirMenu('login')">Mi cuenta 
+                                    <i class="icon-down"></i>
+                                </a>
+                                <div class="menu-login" id="menu">
+                                    <a class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100" href="/login">
+                                        Iniciar sesión
+                                    </a>
+                                    <a class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100" href="/registrar">
+                                        Crear cuenta
+                                    </a>
+                                </div>
+                                @endif
                             </div>
 
                             <div style="width:auto; margin-right: 10px; " class="search_wrap search_style_fullscreen top_panel_icon  search_state_open">
                                 <div class="search_form_wrap">
-                                    <form role="search" method="get" class="search_form" action="?">
-                                        <button type="submit" class="search_send icon-search-1" title="Open search"></button>
-                                        <input style="color:black;" type="text" class="search_input" placeholder="Buscar...." autocomplete="off" name="s" />
+                                    <form role="search" method="get" class="search_form" action="/proximo">
+                                        <button type="submit" class="search_send icon-search-1" title="Buscar"></button>
+                                        <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="s" />
                                     </form>
                                 </div>
                             </div>
@@ -111,7 +137,9 @@
                 </div>
                 <div class="menu_main_cart top_panel_icon">
                     <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
-                        <span class="contact_icon icon-online-shopping-cart"></span>
+                        <span class="contact_icon icon-online-shopping-cart movil">
+                            <div class="cart-number">0</div>
+                        </span>
                         <span class="contact_label contact_cart_label">Your cart:</span>
                         <span class="contact_cart_totals">
                             <span class="cart_items">0 Items</span>
@@ -122,7 +150,7 @@
                     <ul class="widget_area sidebar_cart sidebar">
                         <li><div class="widget woocommerce widget_shopping_cart">
                             <div class="hide_cart_widget_if_empty">
-                                <div class="widget_shopping_cart_content"></div>
+                                <div class="widget_shopping_cart_content">No hay productos</div>
                             </div>
                         </div></li>
                     </ul>
@@ -175,10 +203,27 @@
                             </li>
                         
                             <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-442">
-                                <a><span>Cuenta</span></a>
+                                <a><span>
+                                    @if(Auth::check()){{ Auth::user()->usuario }}
+                                    @else Cuenta
+                                    @endif
+                                </span></a>
                                 <ul class="sub-menu">
+                                    @if(Auth::check())
+                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505">
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
+                                                onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                                <span>Cerrar sesión</span>
+                                            </a>
+                                        </form>
+                                    </li>
+                                    @else
                                     <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login"><span>Iniciar Sesión</span></a></li>
                                     <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login/registrar"><span>Registrarse</span></a></li>
+                                    @endif
                                 </ul>
                             </li>
                         </ul>
@@ -186,7 +231,7 @@
 
                     <div class="search_wrap search_style_ search_state_fixed search_ajax">
                         <div class="search_form_wrap">
-                            <form role="search" method="get" class="search_form" action="?">
+                            <form role="search" method="get" class="search_form" action="/proximo">
                                 <button type="submit" class="search_submit icon-search-1" title="Start search"></button>
                                 <input type="text" class="search_field" placeholder="Search" value="" name="s" />
                             </form>
@@ -204,3 +249,15 @@
         <!-- fin de header móvil -->
     </div>
 </div>
+<script>
+    function abrirMenu(opcion){
+        var menu = document.getElementById("menu");
+        if(menu.ariaHidden == "true"){
+            menu.ariaHidden = "false";
+            menu.style.display = "none";
+        }else{
+            menu.ariaHidden = "true";
+            menu.style.display = "block";
+        }
+    }
+</script>

@@ -16,16 +16,10 @@
 	<link rel="stylesheet" href="/css/bootstrap.css" type='text/css' media='all' />
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/img/404.jpg">
-	<!-- Bootstrap CSS y Estilos para el Login -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/css/app.css">
-	<!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Arvo&family=Candal&family=Fjalla+One&family=IBM+Plex+Sans:wght@500&family=Kanit&family=Open+Sans:wght@600&family=Roboto+Mono:wght@300&family=Spartan:wght@300;600&family=Suez+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/3bc4a52a4d.js" crossorigin="anonymous"></script>
-	
 	<style id='woocommerce-inline-inline-css' type='text/css'>
 	    .woocommerce form .form-row .required { visibility: visible; }
 	</style>
@@ -40,12 +34,14 @@
 	<link rel='stylesheet' id='musicplace-plugin-woocommerce-style-css'  href='/css/plugin.woocommerce.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='musicplace-responsive-style-css'  href='/css/responsive.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='musicplace-responsive-megamenu-css'  href='/css/responsive-megamenu.css' type='text/css' media='all' />
-    <script type='text/javascript' src='/js/jquery.min.js' id='jquery-core-js'></script>
+    <script type='text/javascript' src='/js/jquery-1.12.1.min.js'></script>
+	<script type='text/javascript' src='/js/jquery.min.js' id='jquery-core-js'></script>
 	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 	<link rel='stylesheet' id='rs-plugin-settings-css'  href='/css/rs6.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='js_composer_front-css'  href='/css/js_composer.min.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='swiperslider-style-css'  href='/css/swiper.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='themepunchboxextcss-css'  href='/css/jquery.esgbox.min.css' type='text/css' media='all' />
+	<script src="/js/bootstrap.bundle.js"></script>
 	<script type='text/javascript' src='/js/rbtools.min.js' id='tp-tools-js'></script>
 	<script type='text/javascript' src='/js/rs6.min.js' id='revmin-js'></script>
 	<script type="text/javascript">function setREVStartSize(e){
@@ -101,6 +97,7 @@
 		<div class="woocommerce-variation-price"></div>
 		<div class="woocommerce-variation-availability"></div>
 	</script>
+	<script type='text/javascript' src='/js/app.js' id='app'></script>
 	<script type='text/javascript' src='/js/jquery.zoom.min.js' id='zoom-js'></script>
 	<script type='text/javascript' src='/js/jquery.flexslider-min.js' id='flexslider-js'></script>
 	<script type='text/javascript' src='/js/photoswipe.min.js' id='photoswipe-js'></script>

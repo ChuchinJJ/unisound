@@ -17,44 +17,27 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [SliderController::class, "index"]);
+Route::get('/', [SliderController::class, "index"])->name("home");
 
-Route::get('/contact', [ContactController::class, "index"]);
-Route::post('/contact', [ContactController::class, "send"]);
+Route::get('contact', [ContactController::class, "index"]);
+Route::post('contact', [ContactController::class, "send"]);
 
-Route::get('/about', function () {
+Route::get('about', function () {
     return view('pages.about');
 });
 
-Route::get('/proximo', function () {
+Route::get('proximo', function () {
     return view('pages.proximo');
 });
 
-Route::get('/login', function () {
-    return view('login.login');
-});
-Route::get('/login/registrar', function () {
-    return view('login.registrar');
-});
-Route::get('/login/registrar2', function () {
-    return view('login.registrar2');
-});
-Route::get('/login/recuperar', function () {
-    return view('login.recuperar');
-});
+Route::resource('shop', ShopController::class);
+Route::resource('product', ProductoController::class);
 
+Route::get('admin/sliders', [SliderController::class, "indexAdmin"]);
+Route::get('admin/sliders/{id}', [SliderController::class, "destroy"]);
+Route::get('admin/sliders/{id}/{value}', [SliderController::class, "update"]);
+Route::get('admin/addslider', [SliderController::class, "addView"]);
+Route::post('admin/addslider', [SliderController::class, "upload"]);
+Route::get('admin/addslider/{horizontal}/{vertical}', [SliderController::class, "add"]);
 
-Route::resource('/shop', ShopController::class);
-Route::resource('/product', ProductoController::class);
-
-
-Route::get('/admin', function () {
-    return view('admin.dashboard');
-});
-
-Route::get('/admin/sliders', [SliderController::class, "indexAdmin"]);
-Route::get('/admin/sliders/{id}', [SliderController::class, "destroy"]);
-Route::get('/admin/sliders/{id}/{value}', [SliderController::class, "update"]);
-Route::get('/admin/addslider', [SliderController::class, "addView"]);
-Route::post('/admin/addslider', [SliderController::class, "upload"]);
-Route::get('/admin/addslider/{horizontal}/{vertical}', [SliderController::class, "add"]);
+require __DIR__.'/auth.php';

@@ -3,10 +3,8 @@
 <div class="content-wrapper">
   <div class="content-header">
     <div class="container-fluid">
-      <div class="row align-items-center">
-        <div class="col-sm-6">
-          <h1 class="m-0">Agregar Slider</h1>
-        </div>
+      <div class="m-3">
+        <h1 class="m-0">Agregar Slider</h1>
       </div>
     </div>
   </div>

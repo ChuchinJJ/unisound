@@ -114,7 +114,7 @@
           <div class="fa fa-user-alt"></div>
         </div>
         <div class="info">
-          <a href="#" class="d-block">Usuario@prueba.com</a>
+          <a href="#" class="d-block">{{ Auth::user()->email }}</a>
         </div>
       </div>
 

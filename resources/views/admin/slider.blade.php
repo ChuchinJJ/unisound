@@ -3,7 +3,7 @@
 <div class="content-wrapper">
     <div class="content-header">
       <div class="container-fluid">
-        <div class="row mb-2 align-items-center">
+        <div class="row m-3 align-items-center">
           <div class="col-sm-6">
             <h1 class="m-0">Sliders</h1>
           </div>
@@ -16,19 +16,19 @@
 
     @if(session()->has('success'))
     <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="myModal">Atención</h5>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModal">Atención</h5>
+                </div>
+                <div class="modal-body">
+                {{ session('success') }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="cerrar()" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-        {{ session('success') }}
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btna" onclick="cerrar()" data-dismiss="modal">Ok</button>
-        </div>
-        </div>
-    </div>
     </div>
     <script>
         function cerrar(){

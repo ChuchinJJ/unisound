@@ -21,7 +21,7 @@ Apple iPod Touch (5th generation)
 	}
 
 	.menu_main_nav > li > a {
-		padding-right: 3em;
+		padding-right: 2em;
 	}
 
 	/* Masonry */
@@ -333,7 +333,7 @@ Apple iPod Touch (5th generation)
 
 	/* Top Panel */
 	.menu_main_nav > li > a {
-		padding-right: 2.5em;
+		padding-right: 1.5em;
 	}
 
 	/* Post parts */
@@ -673,10 +673,6 @@ Samsung Galaxy
 		bottom: 1em;
 	}
 
-	.woocommerce table.cart td.actions .coupon .input-text {
-
-	}
-
 	.woocommerce table.cart td.actions .coupon .input-text + button.button {
 		float: none;
 		width: auto;
@@ -698,9 +694,6 @@ Samsung Galaxy
 		width: 280px !important;
 	}
 
-	.woocommerce table.cart td.actions .coupon .input-text {
-
-	}
 
 	.woocommerce table.cart td.actions .coupon .input-text + button.button {
 		float: none;
@@ -1031,11 +1024,6 @@ Samsung Galaxy
 	.row:not(.columns_fluid) > .column-4_6, .columns_wrap:not(.columns_fluid) > .column-4_6,
 	.row:not(.columns_fluid) > .column-5_6, .columns_wrap:not(.columns_fluid) > .column-5_6 {
 		width: 100%;
-	}
-
-	.row:not(.columns_fluid) > [class*="column-"]:nth-child(2n+3), .columns_wrap:not(.columns_fluid) > [class*="column-"]:nth-child(2n+3),
-	.row:not(.columns_fluid) > [class*="column-"]:nth-child(2n+4), .columns_wrap:not(.columns_fluid) > [class*="column-"]:nth-child(2n+4) {
-
 	}
 
 	.gallery.gallery-columns-9 .gallery-item {
@@ -1441,12 +1429,6 @@ Very common low res
 	.row.columns_fluid > .column-4_6, .columns_wrap.columns_fluid > .column-4_6,
 	.row.columns_fluid > .column-5_6, .columns_wrap.columns_fluid > .column-5_6 {
 		width: 100%;
-	}
-
-	.row:not(.columns_fluid) > [class*="column-"] + [class*="column-"], .columns_wrap:not(.columns_fluid) > [class*="column-"] + [class*="column-"],
-	.row.columns_fluid > [class*="column-"]:nth-child(2n+3), .columns_wrap.columns_fluid > [class*="column-"]:nth-child(2n+3),
-	.row.columns_fluid > [class*="column-"]:nth-child(2n+4), .columns_wrap.columns_fluid > [class*="column-"]:nth-child(2n+4) {
-
 	}
 
 	.gallery.gallery-columns-9 .gallery-item {

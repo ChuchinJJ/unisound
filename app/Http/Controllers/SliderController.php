@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Storage;
 
 class SliderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index'] ]);
+    }
+
     public function index()
     {
         $sliders = Slider::where('status', "1")->get();
@@ -52,13 +57,6 @@ class SliderController extends Controller
         }
 
         return $fileNameToStore;
-
-        /*$file = $request->file('file');
-        $path = public_path() . '/img/sliders';
-        $fileName = uniqid() . $file->getClientOriginalName();
-        $file->move($path, $fileName);
-
-        return $fileName;*/
     }
 
     public function add($horizontal, $vertical)

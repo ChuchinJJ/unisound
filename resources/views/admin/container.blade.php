@@ -28,7 +28,7 @@
         @include('admin.footer')
     
     </div>
-    <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="/js/jquery.overlayScrollbars.js"></script>
     <script type="text/javascript" src="/js/adminlte.js"></script>
 </body>
