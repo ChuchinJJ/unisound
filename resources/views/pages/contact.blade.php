@@ -72,8 +72,8 @@
 												<p>
 													<strong>Dirección:</strong> Calle Tercera Ote. Sur 119, Candelaria 29950, Ocosingo, Chiapas.<br />
 													<strong>Horarios:</strong> Abierto los 7 dias de la semana. <br> De 8am a 6pm.<br />
-													<strong>Llamar:</strong> <a href="tel:+55 919 673 0629">+55 919 673 0629</a><br />
-													<strong>Email:</strong> <a href="#">atencion@unisound.com.mx</a>
+													<strong>Llamar:</strong> <a href="tel:+55 919 673 0629"> (919) 673 0629</a><br />
+													<strong>Email:</strong> <a> atencion@unisound.com.mx</a>
 												</p>
 											</div>
 										</div>
@@ -86,8 +86,8 @@
 										<div class="wpb_text_column wpb_content_element " >
 											<div class="wpb_wrapper">
 												<p>UNISOUND, tienda de Instrumentos musicales. <br>
-													Es una empresa dedicada al servicio de ventas instrumentales y electronicas, contando con productos de la mas alta calidad, <br> 
-													en cada una de sus Categorias.
+													Es una empresa dedicada al servicio de ventas instrumentales y electronicas, contando con productos de la mas alta calidad,  
+													en cada una <br> de sus Categorias.
 												</p>
 											</div>
 										</div>
@@ -100,11 +100,15 @@
 				
 										<div class="wpb_text_column wpb_content_element " >
 											<div class="wpb_wrapper">
-												<p>UNISOUND cuenta con sucursales cercanas a ti. <br>
-												<strong>Suc. Ocosingo</strong> 3a. Sur Oriente #119 Barrio Candelaria. <br> Tel: (919)6730629 <br>
-												<strong>Suc. San Cristobal</strong> Carretera Panamericana #9 <br> Tel: (967)6881966 <br>
-												<strong>Suc. Yahalon</strong> Av. Central Poniente #22 <br> Tel:(919)6741900 <br>
-												<strong>Innotec Ocosingo</strong> 3a. Sur Oriente #137 <br> Barrio Candelaria. <br> Tel: (919)6880397
+												<p>SUCURSALES UNISOUND CERCANAS A TI!!!. <br>
+												<strong>Suc. Ocosingo</strong> 3a. Sur Oriente #119, Candelaria, 29950. <br> <strong>Tel: </strong> <a href="tel:+55 919 673 0629"> (919) 673 0629 </a> <br>
+												<strong>Ubicación:</strong> <a href="https://goo.gl/maps/EyvtNZgibwgWUzh48"> Ver mas...</a> <hr>
+												<strong>Suc. San Cristobal</strong> Carretera Panamericana #9, 29270.  <br> <strong>Tel: </strong> <a href="tel:+55 919 688 1966">  (967) 688 1966 </a> <br>
+												<strong>Ubicación:</strong> <a href="https://goo.gl/maps/SSzd59VFztC6exvV7"> Ver mas...</a>  <hr>
+												<strong>Suc. Yahalon</strong>  Av. Central Poniente #22, 29930. <br> <strong>Tel: </strong> <a href="tel:+55 919 674 1900">(919) 674 1900 </a> <br>
+												<strong>Ubicación:</strong> <a href="https://goo.gl/maps/xY9Mzo8ndegj2NXE9"> Ver mas...</a>  <hr>
+												<strong>Innotec Ocosingo</strong> 3a. Sur Oriente #137, <br> Barrio Candelaria, 29950. <br><strong>Tel. </strong> <a href="tel:+55 919 688 0397">(919) 688 0397 </a> <br>
+												<strong>Ubicación:</strong> <a href="https://goo.gl/maps/BpM87ygygS6GGHws8"> Ver mas...</a>
 												</p>
 											</div>
 										</div>
@@ -137,6 +141,21 @@
 											<div class="sc_socials_item">
 												<a href="https://www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm">
 													<span class="icon-instagramm"></span>
+												</a>
+											</div>
+											<div class="sc_socials_item">
+												<a href="" target="_blank" class="social_icons social_youtube">
+													<span class="icon-youtube"></span>
+												</a>
+											</div>
+											<div class="sc_socials_item">
+												<a href="#" target="_blank" class="social_icons">
+													<img src="/img/tiktok1.jpg" width="100%"></img>
+												</a>
+											</div>
+											<div class="sc_socials_item">
+												<a href="https://wa.me/529191007549" target="_blank" class="social_icons">
+													<img src="/img/whatsapp.jpg" width="99%"></img>
 												</a>
 											</div>
 										</div>
