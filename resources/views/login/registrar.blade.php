@@ -64,12 +64,12 @@
                     @csrf
                     <div class="mb-3">
                         <label for="email" class="form-label font-weight-bold letras ">Email</label>
-                        <input name="email" style="font-size:15px;" type="email" class="form-control bg-dark-x border-0" id="email" required placeholder="Ingrese un correo electrónico">
+                        <input name="email" style="font-size:15px;" type="email" class="form-control bg-dark-x border-0" value="{{old('email')}}" id="email" required placeholder="Ingrese un correo electrónico">
                     </div>
 
                     <div class="mb-3">
-                        <label for="user" class="form-label font-weight-bold letras ">Usuario</label>
-                        <input name="name" style="font-size:15px;" type="text" class="form-control bg-dark-x border-0" required id="user" placeholder="Ingrese un nombre de usuario">
+                        <label for="user" class="form-label font-weight-bold letras ">Nombre de usuario</label>
+                        <input name="name" style="font-size:15px;" type="text" class="form-control bg-dark-x border-0" value="{{old('name')}}" id="user" required placeholder="Ingrese un nombre de usuario">
                     </div>
 
                     <div class="mb-3 ">
