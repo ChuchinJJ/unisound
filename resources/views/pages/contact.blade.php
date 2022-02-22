@@ -144,18 +144,18 @@
 												</a>
 											</div>
 											<div class="sc_socials_item">
-												<a href="" target="_blank" class="social_icons social_youtube">
+												<a href="#" target="_blank" class="social_icons social_youtube">
 													<span class="icon-youtube"></span>
 												</a>
 											</div>
 											<div class="sc_socials_item">
-												<a href="#" target="_blank" class="social_icons">
-													<img src="/img/tiktok1.jpg" width="100%"></img>
+												<a href="https://wa.me/529191007549" target="_blank" class="social_icons">
+													<span class="fa fa-whatsapp"></span>
 												</a>
 											</div>
 											<div class="sc_socials_item">
-												<a href="https://wa.me/529191007549" target="_blank" class="social_icons">
-													<img src="/img/whatsapp.jpg" width="99%"></img>
+												<a href="#"  target="_blank" class="social_icons">
+												<span class="fab fa-tiktok"></span>
 												</a>
 											</div>
 										</div>

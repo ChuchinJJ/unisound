@@ -4689,7 +4689,7 @@ body.sidebar_hide .sc_recent_news_style_news-announce .post_size_small {
 }
 .sc_socials.sc_socials_size_small .social_icons span {
   font-size: 1.5em;
-  /* line-height:inherit; */
+  line-height:inherit !important;
 }
 .sc_socials.sc_socials_size_small a,
 .sc_socials.sc_socials_size_small a .sc_socials_hover {

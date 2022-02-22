@@ -26,6 +26,7 @@
 	<link rel='stylesheet' id='musicplace-font-google-fonts-style-css'  href='//fonts.googleapis.com/css?family=Hind:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&#038;subset=latin,latin-ext' type='text/css' media='all' />
 	<link rel='stylesheet' id='tp-fontello-css'  href='/css/fontello-esg.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='fontello-style-css'  href='/css/fontello.css' type='text/css' media='all' />
+	<link rel='stylesheet' id='fontawesome-all'  href='/css/fontawesome-all.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='essential-grid-plugin-settings-css'  href='/css/settings.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='musicplace-main-style-css'  href='/css/musicplace-style.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='musicplace-animation-style-css'  href='/css/core.animation.css' type='text/css' media='all' />
