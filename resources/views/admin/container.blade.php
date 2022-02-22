@@ -21,7 +21,7 @@
     <script type="text/javascript" src="/js/dropzone.js"></script>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="sidebar-mini layout-navbar-fixed">
     <div class="wrapper">
         @include('admin.menu')
         @yield('contenido')

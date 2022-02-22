@@ -83,7 +83,7 @@
                             <div class="menu_main_cart top_panel_icon head-user">
                                 @if(Auth::check())
                                 <div class="head-name">{{ Auth::user()->usuario }}</div>
-                                <a class="cuenta" onclick="abrirMenu('usuario')" aria-hidden="true">Mi cuenta 
+                                <a class="cuenta" onclick="abrirMenu()" aria-hidden="true">Mi cuenta 
                                     <i class="icon-down"></i>
                                 </a>
                                 <div class="menu-login" id="menu">
@@ -98,7 +98,7 @@
                                 </div>
                                 @else
                                 <div>Iniciar sesión</div>
-                                <a class="cuenta" onclick="abrirMenu('login')">Mi cuenta 
+                                <a class="cuenta" onclick="abrirMenu()">Mi cuenta 
                                     <i class="icon-down"></i>
                                 </a>
                                 <div class="menu-login" id="menu">
@@ -250,7 +250,7 @@
     </div>
 </div>
 <script>
-    function abrirMenu(opcion){
+    function abrirMenu(){
         var menu = document.getElementById("menu");
         if(menu.ariaHidden == "true"){
             menu.ariaHidden = "false";

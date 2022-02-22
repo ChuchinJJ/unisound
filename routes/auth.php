@@ -26,8 +26,5 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('admin', function () {
-        return view('admin.dashboard');
-    });
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 });

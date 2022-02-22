@@ -33,11 +33,22 @@ Route::get('proximo', function () {
 Route::resource('shop', ShopController::class);
 Route::resource('product', ProductoController::class);
 
-Route::get('admin/sliders', [SliderController::class, "indexAdmin"]);
-Route::get('admin/sliders/{id}', [SliderController::class, "destroy"]);
-Route::get('admin/sliders/{id}/{value}', [SliderController::class, "update"]);
-Route::get('admin/addslider', [SliderController::class, "addView"]);
-Route::post('admin/addslider', [SliderController::class, "upload"]);
-Route::get('admin/addslider/{horizontal}/{vertical}', [SliderController::class, "add"]);
+Route::group([
+        'middleware' => 'admin', 
+        'prefix' => 'admin',
+        'namespace' => 'Admin'
+    ], function () {   
+        Route::get('/', function () {
+            return view('admin.dashboard');
+        });
+
+        Route::get('sliders', [SliderController::class, "indexAdmin"]);
+        Route::get('sliders/{id}', [SliderController::class, "destroy"]);
+        Route::get('sliders/{id}/{value}', [SliderController::class, "update"]);
+        Route::get('addslider', [SliderController::class, "addView"]);
+        Route::post('addslider', [SliderController::class, "upload"]);
+        Route::get('addslider/{horizontal}/{vertical}', [SliderController::class, "add"]);
+    }
+);
 
 require __DIR__.'/auth.php';

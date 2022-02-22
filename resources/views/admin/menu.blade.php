@@ -12,7 +12,23 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" onclick="abrirMenu()" aria-hidden="true">
+          <span>{{ Auth::user()->email }} 
+            <i style="margin-left: 4px;top: 14px;position: absolute;" class="fa fa fa-angle-down"></i>
+          </span>
+        </a>
+        <div class="menu-login" id="menu" style="right: -47px;">
+          <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
+              onclick="event.preventDefault();
+              this.closest('form').submit();">
+                Cerrar sesión
+            </a>
+          </form>
+        </div>
+      </li>
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
@@ -114,7 +130,7 @@
           <div class="fa fa-user-alt"></div>
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{ Auth::user()->email }}</a>
+          <a class="d-block">{{ Auth::user()->usuario }}</a>
         </div>
       </div>
 
@@ -205,3 +221,15 @@
     </div>
     <!-- /.sidebar -->
 </aside>
+<script>
+    function abrirMenu(){
+        var menu = document.getElementById("menu");
+        if(menu.ariaHidden == "true"){
+            menu.ariaHidden = "false";
+            menu.style.display = "none";
+        }else{
+            menu.ariaHidden = "true";
+            menu.style.display = "block";
+        }
+    }
+</script>
