@@ -86,7 +86,7 @@ body {
 }
 
 .card-register .row{
-  margin-top: 90px;
+  margin-top: 70px;
   margin-right: 30px !important;
   margin-left: 30px !important;
 }
@@ -262,7 +262,7 @@ body {
   }
 
   .card-register .row{
-    margin-top: 70px;
+    margin-top: 60px;
     margin-right: 0px !important;
     margin-left: 0px !important;
   }
@@ -410,6 +410,24 @@ body {
 .modal-body li{
   list-style: none;
   font-size: 16px;
+}
+
+.card-register .require-label:after {
+  content:"*";
+  font-size: 20px;
+  color: #e21818;
+}
+
+.card-register .require-title{
+  margin-bottom: 20px;
+  color: #e21818;
+  font-size: 16px;
+}
+
+.card-register .require-title:before {
+  content:"*";
+  font-size: 20px;
+  color: #e21818;
 }
 
 /*

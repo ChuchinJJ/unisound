@@ -77,12 +77,12 @@
                   @csrf
                   <div class="mb-3">
                       <label for="email"  class="form-label font-weight-bold letras ">Correo </label>
-                      <input name="email" style="font-size:15px;" id="email" type="email" class="form-control bg-dark-x border-0" placeholder="Ingresa tu correo" required>
+                      <input name="email" style="font-size:15px;" id="email" type="email" class="form-control bg-dark-x border-0" value="{{old('email')}}" placeholder="Ingresa tu correo" required>
                   </div>
                   
                   <div class="mb-4">
                       <label for="pass" class="form-label font-weight-bold letras">Contraseña</label>
-                      <input name="password" style="font-size:15px;" type="password" class="form-control bg-dark-x border-0 mb-3" required placeholder="Ingresa tu contraseña" id="pass">
+                      <input name="password" style="font-size:15px;" type="password" class="form-control bg-dark-x border-0 mb-3" placeholder="Ingresa tu contraseña" id="pass" required>
                   </div>
                   
                   <div class="row">
