@@ -590,6 +590,16 @@ body {
   color: #e21818;
 }
 
+.vacio {
+  margin-top: 10%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.vacio i {
+  font-size: 120px;
+}
+
 /*
 ! tailwindcss v3.0.22 | MIT License | https://tailwindcss.com
 */ /*
@@ -1449,10 +1459,6 @@ select {
 }
 .list-disc {
   list-style-type: disc;
-}
-.columns-3 {
-  -moz-columns: 3;
-  columns: 3;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));

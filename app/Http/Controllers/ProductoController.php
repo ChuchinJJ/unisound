@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Producto;
 use App\Models\Color;
+use App\Models\Valoracion;
 
 class ProductoController extends Controller
 {
@@ -51,7 +52,15 @@ class ProductoController extends Controller
         $producto = Producto::find($id);
         $categoria = Producto::getCategoria($producto->id_categoria);
         $colores = Color::orderBy('precio','asc')->where('id_producto', $producto->id_producto)->get();
-        return view('pages.product')->with(['producto'=>$producto, 'colores' => $colores, 'categoria' => $categoria]);
+        $valoraciones = Valoracion::join('usuarios','usuarios.id_usuario', '=', 'valoraciones.id_usuario')
+        ->select('id_valoracion', 'comentario', 'puntuacion', 'fecha', 'email')
+        ->where('id_producto', $producto->id_producto)->get();
+        return view('pages.product')->with([
+            'producto'=>$producto, 
+            'colores' => $colores, 
+            'categoria' => $categoria,
+            'valoraciones' => $valoraciones
+        ]);
     }
 
     /**
