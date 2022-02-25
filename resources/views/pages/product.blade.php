@@ -85,14 +85,14 @@
                         <div itemprop="description">
                             <p>{{ $producto->descripcion_general }}</p>
                         </div>
-                        <form class="variations_form cart" action="?" method="post" enctype='multipart/form-data' data-product_id="1053">
+                        <form class="variations_form cart" action="/proximo" method="get" enctype='multipart/form-data' data-product_id="1053">
                             @if (count($colores) > 1)
                                 <table class="variations" cellspacing="0">
                                     <tbody>
                                         <tr>
                                             <th class="label"><label for="pa_color">Color</label></th>
                                             <td class="value">
-                                                <select id="pa_color" class="" name="color" data-attribute_name="color" data-show_option_none="yes" required onchange="cambiarColor(this.value)">
+                                                <select id="pa_color" style="border-style: none;" name="color" data-attribute_name="color" data-show_option_none="yes" required onchange="cambiarColor(this.value)">
                                                     <option value="" selected='selected'>Elige una opción</option>
                                                     @foreach( $colores as $color )
                                                         <option value="{{ $color->id_color }}">{{ $color->color }}</option>
@@ -151,7 +151,7 @@
                                 <a href="#tab-additional_information">Información adicional</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Valoraciones (0)</a>
+                                <a href="#tab-reviews">Valoraciones ({{ count($valoraciones) }})</a>
                             </li>
                         </ul>
 
@@ -187,14 +187,50 @@
                         <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
                             <div id="reviews" class="woocommerce-Reviews">
                                 <div id="comments">
+                                    @if(count($valoraciones)>0)
+                                    <h2 class="woocommerce-Reviews-title">
+                                        {{ count($valoraciones) }} valoración en <span>{{ $producto->nombre }}</span>
+                                    </h2>
+                                    <ol class="commentlist">
+                                        @foreach($valoraciones as $valoracion)
+                                        <li class="review byuser bypostauthor even thread-even depth-1" id="li-comment-17">
+                                            <div id="comment-17" class="comment_container">
+                                                <img alt="" src="http://2.gravatar.com/avatar/5cd0b6012e5c0b81a9a70035543643a3?s=60&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/5cd0b6012e5c0b81a9a70035543643a3?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy">
+                                                <div class="comment-text">
+                                                    <div class="star-rating" role="img" aria-label="Valorado en {{ $valoracion->puntuacion }} de 5"><span style="width:{{ $valoracion->puntuacion*20 }}%">Valorado en <strong class="rating">{{ $valoracion->puntuacion }}</strong> de 5</span></div>
+                                                        <p class="meta">
+                                                            <strong class="woocommerce-review__author">{{ $valoracion->email }} </strong>
+                                                            <span class="woocommerce-review__dash">-</span>
+                                                                <time class="woocommerce-review__published-date" datetime="{{ $valoracion->fecha }}">
+                                                                @php
+                                                                    setlocale(LC_TIME, "spanish");
+                                                                    $fecha_str = str_replace("/", "-", $valoracion->fecha);
+                                                                    $newDate = date("d-m-Y", strtotime($fecha_str));
+                                                                    $fecha = strftime("%d de %B, %Y", strtotime($newDate));
+                                                                @endphp
+                                                                {{ $fecha }}
+                                                                </time>
+                                                        </p>
+                                                    <div class="description"><p>{{ $valoracion->comentario }}</p></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        @endforeach
+			                        </ol>
+                                    @else
                                     <h2 class="woocommerce-Reviews-title">Valoraciones</h2>
                                     <p class="woocommerce-noreviews">No hay valoraciones aún.</p>
-                                </div>
+                                    @endif
+                                    </div>
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
+                                            @if(count($valoraciones)>0)
+                                            <span id="reply-title" class="comment-reply-title">Añadir una valoración</span>
+                                            @else
                                             <span id="reply-title" class="comment-reply-title">Sé el primero en valorar &ldquo;{{ $producto->nombre }}&rdquo;</span>
-                                            <form action="#comentarios" method="post" id="commentform" class="comment-form">
+                                            @endif
+                                            <form action="/proximo" method="get" id="commentform" class="comment-form">
                                                 <p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p>
                                                 <div class="comment-form-rating">
                                                     <label for="rating">Tu puntuación&nbsp;<span class="required">*</span></label>
@@ -218,10 +254,6 @@
                                                 <p class="comment-form-email">
                                                     <label for="email">Correo electrónico&nbsp;<span class="required">*</span></label>
                                                     <input id="email" name="email" type="email" value="" size="30" required />
-                                                </p>
-                                                <p class="comment-form-cookies-consent">
-                                                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
-                                                    <label for="wp-comment-cookies-consent">Guardar mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que haga un comentario.</label>
                                                 </p>
                                                 <p class="form-submit">
                                                     <input name="submit" type="submit" id="submit" class="submit" value="Enviar" />

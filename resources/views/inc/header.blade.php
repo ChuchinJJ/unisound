@@ -23,27 +23,27 @@
                                         <ul class="sub-menu">
                                             <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/proximo"><span>De cuerda</span></a></li>
-                                                    <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/proximo"><span>De Percusion</span></a></li>
+                                                    <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De cuerda</span></a></li>
+                                                    <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusion</span></a></li>
                                                     
                                                 </ul>
                                             </li>
                                             <li id="menu-item-934" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-534"><a href="/proximo"><span>Atriles y Soporte</span></a></li>
-                                                    <li id="menu-item-468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="/proximo"><span>Audio</span></a></li>
-                                                    <li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="/proximo"><span>Iluminación</span></a></li>
+                                                    <li id="menu-item-534" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-534"><a href="/shop/3"><span>Atriles y Soporte</span></a></li>
+                                                    <li id="menu-item-468" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="/shop/4"><span>Audio</span></a></li>
+                                                    <li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="/shop/5"><span>Iluminación</span></a></li>
                                                     
                                                 </ul>
                                             </li>
                                             <li id="menu-item-1124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/proximo"><span>Adaptadores</span></a></li>
-                                                    <li id="menu-item-1224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/proximo"><span>Accessorios</span></a></li>
+                                                    <li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/shop/6"><span>Adaptadores</span></a></li>
+                                                    <li id="menu-item-1224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/shop/7"><span>Accessorios</span></a></li>
                                                     
                                                 </ul>
                                             </li>
-                                            <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/proximo"><span>Ver todos</span></a>
+                                            <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
                                             </li>
                                         </ul>
                                     </li>
@@ -114,9 +114,9 @@
 
                             <div style="width:auto; margin-right: 10px; " class="search_wrap search_style_fullscreen top_panel_icon  search_state_open">
                                 <div class="search_form_wrap">
-                                    <form role="search" method="get" class="search_form" action="/proximo">
+                                    <form role="search" method="get" class="search_form" action="/shop">
                                         <button type="submit" class="search_send icon-search-1" title="Buscar"></button>
-                                        <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="s" />
+                                        <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="nombre"/>
                                     </form>
                                 </div>
                             </div>
@@ -171,26 +171,25 @@
                                 <ul class="sub-menu">
                                 <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                     <ul class="sub-menu">
-                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/proximo"><span>De cuerda</span></a></li>
-                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/proximo"><span>De Percusion</span></a></li>
+                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De cuerda</span></a></li>
+                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusion</span></a></li>
                                     </ul>
                                 </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-534"><a href="/proximo"><span>Atriles y Soporte</span></a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="/proximo"><span>Audio</span></a></li>
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="/proximo"><span>Iluminación</span></a></li>
+                                            <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-534"><a href="/shop/3"><span>Atriles y Soporte</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-468"><a href="/shop/4"><span>Audio</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="/shop/5"><span>Iluminación</span></a></li>
                                             
                                         </ul>
                                     </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/proximo"><span>Adaptadores</span></a></li>
-                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/proximo"><span>Accessorios</span></a></li>
-                                            
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/shop/6"><span>Adaptadores</span></a></li>
+                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/shop/7"><span>Accessorios</span></a></li>
                                         </ul>
                                     </li>
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/proximo"><span>Ver todos</span></a>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
                                         <ul class="sub-menu">
                                         </ul>
                                     </li>
@@ -198,11 +197,10 @@
                             </li>
                             <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1127"><a href="/proximo"><span>Ofertas</span></a>
                             </li>
-                            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1133"><a href="/about"><span>Acerca de</span></a>
-                                
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1133"><a href="/about"><span>Acerca de</span></a> 
                             </li>
                         
-                            <li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-442">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-442">
                                 <a><span>
                                     @if(Auth::check()){{ Auth::user()->usuario }}
                                     @else Cuenta
@@ -231,9 +229,10 @@
 
                     <div class="search_wrap search_style_ search_state_fixed search_ajax">
                         <div class="search_form_wrap">
-                            <form role="search" method="get" class="search_form" action="/proximo">
+                            <form role="search" method="post" class="search_form" action="/shop">
+                                @csrf
                                 <button type="submit" class="search_submit icon-search-1" title="Start search"></button>
-                                <input type="text" class="search_field" placeholder="Search" value="" name="s" />
+                                <input type="text" class="search_field" placeholder="Search" name="nombre" />
                             </form>
                         </div>
                         <div class="search_results widget_area scheme_original">

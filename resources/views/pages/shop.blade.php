@@ -10,123 +10,138 @@
 
 <div class="page_content_wrap page_paddings_yes">
 	<div class="content_wrap woocommerce sidebar_right sidebar_show">
-		<div class="content">
-			<div class="list_products shop_mode_thumbs">
-				<nav class="woocommerce-breadcrumb"><a href="/">Inicio</a>&nbsp;&#47;&nbsp;Shop
-				</nav>
-				<header class="woocommerce-products-header">
-				</header>
-				<div class="woocommerce-notices-wrapper"></div>
-				<div class="mode_buttons">
-					<form action="shop" method="post">
-						<input type="hidden" name="musicplace_shop_mode" value="thumbs" />
-						<a href="#" class="woocommerce_thumbs icon-th" title="Show products as thumbs"></a>
-						<a href="#" class="woocommerce_list icon-th-list" title="Show products as list"></a>
-					</form>
-				</div>
-				<p class="woocommerce-result-count">Mostrando 1&ndash;12 de 33 resultados</p>
-				<form class="woocommerce-ordering" method="get">
-					<select name="orderby" class="orderby" aria-label="Pedido de la tienda">
-						<option value="menu_order" selected='selected'>Orden por defecto</option>
-						<option value="popularity">Ordenar por popularidad</option>
-						<option value="rating">Ordenar por calificación media</option>
-						<option value="date">Ordenar por las últimas</option>
-						<option value="price">Ordenar por precio: bajo a alto</option>
-						<option value="price-desc">Ordenar por precio: alto a bajo</option>
-					</select>
-					<input type="hidden" name="paged" value="1" />
-				</form>
-				<ul class="products columns-3">
-					@foreach($productos as $producto)
-					<li class=" column-1_3 product type-product post-1053 status-publish instock product_cat-band-orchestra product_cat-mouthpieces product_tag-concept product_tag-creative has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
-						<div class="post_item_wrap">
-							<div class="post_featured">
-								<div class="post_thumb">
-									<a class="hover_icon hover_icon_link" href="/product/{{ $producto->id_producto }}">
-										<img width="300" height="400"
-											src="{{ $producto->imagen1 }}"
-											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-											loading="lazy"/> 
-									</a>
+		<form method="post" action="" id="formulario">
+			@csrf
+			<div class="content">
+				<div class="list_products {{ old('vista', 'shop_mode_thumbs') }}" id="shop_mode">
+					<nav class="woocommerce-breadcrumb"><a href="/">Inicio</a>&nbsp;&#47;&nbsp;Shop</nav>
+					<header class="woocommerce-products-header"></header>
+					<div class="woocommerce-notices-wrapper"></div>
+					<input type="hidden" id="vista" value="{{ old('vista') }}" name="vista"/>
+					<div class="mode_buttons">
+						<a href="#" class="woocommerce_thumbs icon-th" title="Mostrar productos como cuadrícula" onclick="cambiarModo('thumbs')"></a>
+						<a href="#" class="woocommerce_list icon-th-list" title="Mostrar productos como lista" onclick="cambiarModo('list')"></a>
+					</div>
+					<p class="woocommerce-result-count">Mostrando {{ $productos->firstItem() }}&ndash;{{ $productos->lastItem() }} de {{ $productos->total() }} resultados</p>
+					<div class="woocommerce-ordering">
+						<select name="order" class="orderby" aria-label="Pedido de la tienda" onchange="ordenar()">
+							<option value="nombre" @if(old('order') == "nombre") selected='selected' @endif>Orden por defecto</option>
+							<option value="nombre-desc" @if(old('order') == "nombre-desc") selected='selected' @endif>Ordenar decendentemente</option>
+							<option value="precio-desc" @if(old('order') == "precio-desc") selected='selected' @endif>Ordenar por precio: bajo a alto</option>
+							<option value="precio" @if(old('order') == "precio") selected='selected' @endif>Ordenar por precio: alto a bajo</option>
+							<option value="rating" @if(old('order') == "rating") selected='selected' @endif>Ordenar por calificación: alto a bajo</option>
+							<option value="rating-desc" @if(old('order') == "rating-desc") selected='selected' @endif>Ordenar por calificación: bajo a alto</option>
+						</select>
+					</div>
+					<ul class="products columns-3">
+						@if(count($productos) >0)
+						@foreach($productos as $producto)
+						<li class="column-1_3 product type-product post-1053 status-publish instock product_cat-band-orchestra product_cat-mouthpieces product_tag-concept product_tag-creative has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
+							<div class="post_item_wrap">
+								<div class="post_featured">
+									<div class="post_thumb">
+										<a class="hover_icon hover_icon_link" href="/product/{{ $producto->id_producto }}">
+											<img width="300" height="400"
+												src="{{ $producto->imagen1 }}"
+												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+												loading="lazy"/> 
+										</a>
+									</div>
 								</div>
-							</div>
-							<div class="post_content">
-								<h3>
-									<a href="/product/{{ $producto->id_producto }}">{{ $producto->nombre }}</a>
-								</h3>
-								<div class="star-rating" role="img" aria-label="Valorado en 4.50 de 5"><span
-										style="width:90%">Valorado en <strong class="rating">4.50</strong> de 5</span>
-								</div>
-								<span class="price">
+								<div class="post_content">
 									@php
-										$mi_color = array();
+										$mi_color = $colores->whereIn('id_producto', $producto->id_producto);
+										$mi_valoracion = $valoraciones->whereIn('id_producto', $producto->id_producto);
 									@endphp
-
-									@foreach($colores as $color)
-										@if($color->id_producto == $producto->id_producto)
-											@php
-												$mi_color[] = $color->precio;
-											@endphp
-										@endif
-									@endforeach
-
-									@if(count($mi_color)>1)
-										@if($mi_color[0] == $mi_color[count($mi_color)-1])
-										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color[0]}}</bdi>
-										</span>
+									<h3>
+										<a href="/product/{{ $producto->id_producto }}">{{ $producto->nombre }}</a>
+									</h3>
+									@if($mi_valoracion->first() != null)
+									<div class="star-rating" role="img" aria-label="Valorado en {{$mi_valoracion->first()->valoracion}} de 5"><span
+											style="width:{{$mi_valoracion->first()->valoracion*20}}%">Valorado en <strong class="rating">{{$mi_valoracion->first()->valoracion}}</strong> de 5</span>
+									</div>
+									@endif
+									<div class="description" @if(!old('order')) style="display:none" @endif id="descripcion">
+										<p>{{ $producto->descripcion_general }}</p>
+									</div>
+									<span class="price">
+										@if(count($mi_color)>1)
+											@if($mi_color->first() == $mi_color->last())
+											<span class="woocommerce-Price-amount amount">
+												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
+											</span>
+											@else
+											<span class="woocommerce-Price-amount amount">
+												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
+											</span>&ndash; 
+											<span class="woocommerce-Price-amount amount">
+												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->last()->precio}}</bdi>
+											</span>
+											@endif
 										@else
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color[0]}}</bdi>
-										</span>&ndash; 
-										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color[count($mi_color)-1]}}</bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
 										</span>
 										@endif
-									@else
-									<span class="woocommerce-Price-amount amount">
-										<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color[0]}}</bdi>
 									</span>
-									@endif
-								</span>
-								<a href="/product/{{ $producto->id_producto }}"
-									data-quantity="1" class="button product_type_variable add_to_cart_button"
-									data-product_id="1053" data-product_sku=""
-									aria-label="Elige las opciones para &ldquo;Barrington BR FR401 Double French Horn&rdquo;"
-									rel="nofollow">Seleccionar opciones</a>
+									<a href="/product/{{ $producto->id_producto }}"
+										data-quantity="1" class="button product_type_variable add_to_cart_button"
+										data-product_id="1053" data-product_sku=""
+										aria-label="Elige las opciones para &ldquo;{{ $producto->nombre }}&rdquo;"
+										rel="nofollow">Seleccionar opciones</a>
+								</div>
 							</div>
+						</li>
+						@endforeach
+
+						@else
+						<div class="vacio">
+							<p>Lo sentimos no se encontraron coincidencias</p>
+							<i class="fa fa-frown"></i>
 						</div>
-					</li>
-					@endforeach
-				</ul>
-				<nav id="pagination" class="pagination_wrap pagination_pages">
-					<span class="pager_current active ">1</span>
-					<a href="#" class="">2</a>
-					<a href="#" class="">3</a>
-					<a href="#" class="pager_next "></a>
-					<a href="#" class="pager_last "></a>
-				</nav>
+						@endif
+					</ul>
+					<nav id="pagination" class="pagination_wrap pagination_pages">
+						@if(!$productos->onFirstPage())
+							<a href="?page=1" class="pager_first "></a>
+							<a href="{{ $productos->previousPageUrl() }}" class="pager_prev"></a>
+							@if($productos->currentPage() == $productos->lastPage() && $productos->lastPage()>2)
+								<a href="{{ $productos->url($productos->currentPage()-2) }}">{{ $productos->currentPage()-2 }}</a>
+							@endif
+							<a href="{{ $productos->previousPageUrl() }}">{{ $productos->currentPage()-1 }}</a>
+						@endif
+						<span class="pager_current active ">{{ $productos->currentPage() }}</span>
+						@if($productos->currentPage() != $productos->lastPage())
+							<a href="{{ $productos->nextPageUrl() }}">{{ $productos->currentPage()+1 }}</a>
+							@if($productos->onFirstPage() && $productos->lastPage()>2)
+								<a href="{{ $productos->url($productos->currentPage()+2) }}" >{{ $productos->currentPage()+2 }}</a>
+							@endif
+							<a href="{{ $productos->nextPageUrl() }}" class="pager_next "></a>
+							<a href="{{ $productos->url($productos->lastPage()) }}" class="pager_last "></a>
+						@endif
+					</nav>
+				</div>
 			</div>
-		</div>
 
-		<div class="sidebar widget_area scheme_original" role="complementary">
-			<div class="sidebar_inner widget_area_inner">
-				<aside id="woocommerce_widget_cart-2" class="widget_number_1 widget woocommerce widget_shopping_cart">
-					<h5 class="widget_title">Carrito de compras</h5>
-					<div class="widget_shopping_cart_content">
-						<p class="woocommerce-mini-cart__empty-message">No hay productos en el carrito.</p>
-					</div>
-				</aside>
+			<div class="sidebar widget_area scheme_original" role="complementary">
+				<div class="sidebar_inner widget_area_inner">
+					<aside id="woocommerce_product_search-2"
+						class="widget_number_3 widget woocommerce widget_product_search">
+						<div class="search_form">
+							<input type="text" class="search_field" placeholder="Buscar producto" value="{{old('nombre')}}"
+								name="nombre" title="Buscar producto:" />
+							<button class="search_button icon-search" id="buscar-nombre"></button>
+						</div>
+					</aside>
 
-				<aside id="woocommerce_price_filter-2" class="widget_number_2 widget woocommerce widget_price_filter">
-					<h5 class="widget_title">Filtrar por precio</h5>
-					<form method="get" action="/shop">
+					<aside id="woocommerce_price_filter-2" class="widget_number_2 widget woocommerce widget_price_filter">
+						<h5 class="widget_title">Filtrar por precio</h5>
 						<div class="price_slider_wrapper">
 							<div class="price_slider" style="display:none;"></div>
 							<div class="price_slider_amount" data-step="1">
-								<input type="text" id="min_price" name="min_price" value="47" data-min="47"
+								<input type="text" id="min_price" name="min_precio" value="{{old('min_precio', 47)}}" data-min="47"
 									placeholder="Precio mínimo" />
-								<input type="text" id="max_price" name="max_price" value="1330" data-max="1330"
+								<input type="text" id="max_price" name="max_precio" value="{{old('max_precio', 90000)}}" data-max="90330"
 									placeholder="Precio máximo" />
 								<button type="submit" class="button">Filtrar</button>
 								<div class="price_label" style="display:none;">
@@ -135,74 +150,104 @@
 								<div class="clear"></div>
 							</div>
 						</div>
-					</form>
-				</aside>
+					</aside>
 
-				<aside id="woocommerce_product_search-2"
-					class="widget_number_3 widget woocommerce widget_product_search">
-					<form role="search" method="get" class="search_form" action="/shop">
-						<input type="text" class="search_field" placeholder="Search for products &hellip;" value=""
-							name="s" title="Search for products:" />
-						<button class="search_button icon-search" type="submit"></button>
-						<input type="hidden" name="post_type" value="product" />
-					</form>
-				</aside>
+					<aside id="woocommerce_widget_cart-2" class="widget_number_1 widget woocommerce widget_shopping_cart">
+						<h5 class="widget_title">Carrito de compras</h5>
+						<div class="widget_shopping_cart_content">
+							<p class="woocommerce-mini-cart__empty-message">No hay productos en el carrito.</p>
+						</div>
+					</aside>
 
-				<aside id="woocommerce_products-4" class="widget_number_5 widget woocommerce widget_products">
-					<h5 class="widget_title">Productos destacados</h5>
-					<ul class="product_list_widget">
-						<li>
-							<a href="/product/2">
-								<img width="300" height="400"
-									src="/img/1-1-300x400.jpg"
-									class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-									loading="lazy" /> 
-								<span class="product-title">Tama S.L.P. Big Black Steel Snare Drum</span>
-							</a>
-							<div class="star-rating" role="img" aria-label="Valorado en 5.00 de 5">
-								<span style="width:100%">Valorado en <strong class="rating">5.00</strong> de 5</span>
-							</div>
-							<span class="woocommerce-Price-amount amount">
-								<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>249.99</bdi>
-							</span>
-						</li>
-						<li>
-							<a href="/product/2">
-								<img width="300" height="400"
-									src="/img/7_4-300x400.jpg"
-									class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-									loading="lazy" />
-								<span class="product-title">Crosley Cruiser Portable 3-Speed Turntable</span>
-							</a>
-							<span class="woocommerce-Price-amount amount">
-								<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>349.99</bdi>
-							</span> &ndash;
-							<span class="woocommerce-Price-amount amount">
-								<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>449.99</bdi>
-							</span>
-						</li>
-						<li>
-							<a href="/product/2">
-								<img width="300" height="400"
-									src="/img/2-300x400.jpg"
-									class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-									loading="lazy" />
-								<span class="product-title">Meinl Cymbals Arena Marching Cymbals Pair</span>
-							</a>
-							<div class="star-rating" role="img" aria-label="Valorado en 4.00 de 5">
-								<span style="width:80%">Valorado en <strong class="rating">4.00</strong> de 5</span>
-							</div>
-							<span class="woocommerce-Price-amount amount">
-								<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>349.99</bdi>
-							</span> &ndash;
-							<span class="woocommerce-Price-amount amount">
-								<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>369.99</bdi>
-							</span>
-						</li>
-					</ul>
-				</aside>
+					<aside id="woocommerce_products-4" class="widget_number_5 widget woocommerce widget_products">
+						<h5 class="widget_title">Productos destacados</h5>
+						<ul class="product_list_widget">
+							<li>
+								<a href="/product/2">
+									<img width="300" height="400"
+										src="/img/1-1-300x400.jpg"
+										class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+										loading="lazy" /> 
+									<span class="product-title">Tama S.L.P. Big Black Steel Snare Drum</span>
+								</a>
+								<div class="star-rating" role="img" aria-label="Valorado en 5.00 de 5">
+									<span style="width:100%">Valorado en <strong class="rating">5.00</strong> de 5</span>
+								</div>
+								<span class="woocommerce-Price-amount amount">
+									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>249.99</bdi>
+								</span>
+							</li>
+							<li>
+								<a href="/product/2">
+									<img width="300" height="400"
+										src="/img/7_4-300x400.jpg"
+										class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+										loading="lazy" />
+									<span class="product-title">Crosley Cruiser Portable 3-Speed Turntable</span>
+								</a>
+								<span class="woocommerce-Price-amount amount">
+									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>349.99</bdi>
+								</span> &ndash;
+								<span class="woocommerce-Price-amount amount">
+									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>449.99</bdi>
+								</span>
+							</li>
+							<li>
+								<a href="/product/2">
+									<img width="300" height="400"
+										src="/img/2-300x400.jpg"
+										class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+										loading="lazy" />
+									<span class="product-title">Meinl Cymbals Arena Marching Cymbals Pair</span>
+								</a>
+								<div class="star-rating" role="img" aria-label="Valorado en 4.00 de 5">
+									<span style="width:80%">Valorado en <strong class="rating">4.00</strong> de 5</span>
+								</div>
+								<span class="woocommerce-Price-amount amount">
+									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>349.99</bdi>
+								</span> &ndash;
+								<span class="woocommerce-Price-amount amount">
+									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>369.99</bdi>
+								</span>
+							</li>
+						</ul>
+					</aside>
+				</div>
 			</div>
-		</div>
+		</form>
 	</div>
 </div>
+<script>
+	function ordenar(){
+		document.getElementById("formulario").submit();
+	}
+
+	function cambiarModo(modo){
+		var shop_mode = document.getElementById("shop_mode");
+		var vista = document.getElementById("vista");
+		var descripcion = document.getElementsByClassName("description");
+		if(modo == "list"){
+			shop_mode.classList.remove('shop_mode_thumbs');
+			vista.value='shop_mode_list';
+			shop_mode.classList.add('shop_mode_list');
+			for (var i = 0; i<descripcion.length; i++) {
+				descripcion[i].style.display = "block";
+			}
+		}else{
+			shop_mode.classList.remove('shop_mode_list');
+			vista.value='shop_mode_thumbs';
+			shop_mode.classList.add('shop_mode_thumbs');
+			for (var i = 0; i<descripcion.length; i++) {
+				descripcion[i].style.display = "none";
+			}
+		}
+	}
+	
+	document.getElementById('buscar-nombre').addEventListener('click', (e) => {
+		e.preventDefault();
+		var formulario = document.getElementById("formulario");
+		formulario.setAttribute('action', '/shop');
+		formulario.submit()
+	});
+</script>
 @endsection

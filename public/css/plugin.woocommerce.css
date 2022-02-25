@@ -11,7 +11,7 @@
 }
 
 .woocommerce .woocommerce-ordering, .woocommerce .woocommerce-result-count {
-	width: 13em;
+	width: 17em;
 }
 
 .woocommerce .pp_gallery {
@@ -810,7 +810,7 @@ div.woocommerce form.woocommerce-cart-form div.quantity input[type="number"],
 }
 
 .woocommerce #reviews #comments ol.commentlist li {
-	margin-bottom: 0;
+	margin-bottom: 30px;
 }
 
 .woocommerce .woocommerce-tabs .form-submit {
