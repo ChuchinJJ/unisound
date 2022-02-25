@@ -30,6 +30,8 @@ Route::get('proximo', function () {
     return view('pages.proximo');
 });
 
+
+
 Route::resource('shop', ShopController::class);
 Route::resource('product', ProductoController::class);
 
@@ -48,6 +50,9 @@ Route::group([
         Route::get('addslider', [SliderController::class, "addView"]);
         Route::post('addslider', [SliderController::class, "upload"]);
         Route::get('addslider/{horizontal}/{vertical}', [SliderController::class, "add"]);
+        Route::get('productos', function () {
+            return view('admin.productos');
+        });
     }
 );
 
