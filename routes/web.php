@@ -30,16 +30,11 @@ Route::get('proximo', function () {
     return view('pages.proximo');
 });
 
-<<<<<<< HEAD
-
-
-Route::resource('shop', ShopController::class);
-=======
 Route::get('shop', [ShopController::class, 'index']);
 Route::post('shop', [ShopController::class, 'index']);
 Route::get('shop/{id}', [ShopController::class, 'show']);
 Route::post('shop/{id}', [ShopController::class, 'show']);
->>>>>>> bf6234a934b001c7f1ceb47a4bb3706e362e0872
+
 Route::resource('product', ProductoController::class);
 
 Route::group([
