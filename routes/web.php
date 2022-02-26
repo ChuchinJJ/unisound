@@ -54,9 +54,11 @@ Route::group([
         Route::get('productos', function () {
             return view('admin.productos');
         });
-        Route::get('/addproducto', function () {
+        Route::get('addproducto', function () {
             return view('admin.addProduct');
         });
+        Route::post('addproducto', [ProductoController::class, "addProducto"]);
+        Route::get('complete-product', [ProductoController::class, "complete"]);
     }
 );
 

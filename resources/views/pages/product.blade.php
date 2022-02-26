@@ -30,36 +30,36 @@
                 <div id="product-1053" class="product type-product post-1053 status-publish first instock product_cat-band-orchestra product_cat-mouthpieces product_tag-concept product_tag-creative has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
                     <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
                         <figure class="woocommerce-product-gallery__wrapper">
-                            <div data-thumb="{{ $producto->imagen1 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen1 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                 <a href="{{ $producto->imagen1 }}">
-                                    <img width="600" height="777" src="{{ $producto->imagen1 }}" class="wp-post-image" alt="" loading="lazy" title="1" data-caption="" data-src="{{ $producto->imagen1 }}" data-large_image="{{ $producto->imagen1 }}" data-large_image_width="656" data-large_image_height="850" srcset="{{ $producto->imagen1 }} 600w, {{ $producto->imagen1 }} 232w, {{ $producto->imagen1 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen1 }}" class="wp-post-image" alt="" loading="lazy" title="1" data-caption="" data-src="/storage/img/products/{{ $producto->imagen1 }}" data-large_image="/storage/img/products/{{ $producto->imagen1 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen1 }} 600w, /storage/img/products/{{ $producto->imagen1 }} 232w, /storage/img/products/{{ $producto->imagen1 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
                             @if($producto->imagen2)
-                            <div data-thumb="{{ $producto->imagen2 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen2 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                 <a href="{{ $producto->imagen2 }}">
-                                    <img width="600" height="777" src="{{ $producto->imagen2 }}" class="" alt="" loading="lazy" title="2" data-caption="" data-src="{{ $producto->imagen2 }}" data-large_image="{{ $producto->imagen2 }}" data-large_image_width="656" data-large_image_height="850" srcset="{{ $producto->imagen2 }} 600w, {{ $producto->imagen2 }} 232w, {{ $producto->imagen2 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen2 }}" class="" alt="" loading="lazy" title="2" data-caption="" data-src="/storage/img/products/{{ $producto->imagen2 }}" data-large_image="/storage/img/products/{{ $producto->imagen2 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen2 }} 600w, /storage/img/products/{{ $producto->imagen2 }} 232w, /storage/img/products/{{ $producto->imagen2 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
                             @endif
                             @if($producto->imagen3)
-                            <div data-thumb="{{ $producto->imagen3 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen3 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                 <a href="{{ $producto->imagen3 }}">
-                                    <img width="600" height="777" src="{{ $producto->imagen3 }}" class="" alt="" loading="lazy" title="3" data-caption="" data-src="{{ $producto->imagen3 }}" data-large_image="{{ $producto->imagen3 }}" data-large_image_width="656" data-large_image_height="850" srcset="{{ $producto->imagen3 }} 600w, {{ $producto->imagen3 }} 232w, {{ $producto->imagen3 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen3 }}" class="" alt="" loading="lazy" title="3" data-caption="" data-src="/storage/img/products/{{ $producto->imagen3 }}" data-large_image="/storage/img/products/{{ $producto->imagen3 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen3 }} 600w, /storage/img/products/{{ $producto->imagen3 }} 232w, /storage/img/products/{{ $producto->imagen3 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
                             @endif
                             @if($producto->imagen4)
-                            <div data-thumb="{{ $producto->imagen4 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen4 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                 <a href="{{ $producto->imagen4 }}">
-                                    <img width="600" height="777" src="{{ $producto->imagen4 }}" class="" alt="" loading="lazy" title="4" data-caption="" data-src="{{ $producto->imagen4 }}" data-large_image="{{ $producto->imagen4 }}" data-large_image_width="656" data-large_image_height="850" srcset="{{ $producto->imagen4 }} 600w, {{ $producto->imagen4 }} 232w, {{ $producto->imagen4 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen4 }}" class="" alt="" loading="lazy" title="4" data-caption="" data-src="/storage/img/products/{{ $producto->imagen4 }}" data-large_image="/storage/img/products/{{ $producto->imagen4 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen4 }} 600w, /storage/img/products/{{ $producto->imagen4 }} 232w, /storage/img/products/{{ $producto->imagen4 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
                             @endif
                             @if($producto->imagen5)
-                            <div data-thumb="{{ $producto->imagen5 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen5 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
                                 <a href="{{ $producto->imagen5 }}">
-                                    <img width="600" height="777" src="{{ $producto->imagen5 }}" class="" alt="" loading="lazy" title="5" data-caption="" data-src="{{ $producto->imagen5 }}" data-large_image="{{ $producto->imagen5 }}" data-large_image_width="656" data-large_image_height="850" srcset="{{ $producto->imagen5 }} 600w, {{ $producto->imagen5 }} 232w, {{ $producto->imagen5 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen5 }}" class="" alt="" loading="lazy" title="5" data-caption="" data-src="/storage/img/products/{{ $producto->imagen5 }}" data-large_image="/storage/img/products/{{ $producto->imagen5 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen5 }} 600w, /storage/img/products/{{ $producto->imagen5 }} 232w, /storage/img/products/{{ $producto->imagen5 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
                             @endif

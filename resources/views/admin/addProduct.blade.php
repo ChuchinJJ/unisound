@@ -11,7 +11,8 @@
 
     <section class="content">
         <div class="container-fluid">
-            <form>
+            <form action="/admin/addproducto" method="post" id="formulario">
+                @csrf
                 <div class="card">
                     <div class="card-slider">
                         <h4>General</h4>
@@ -23,7 +24,7 @@
                             <div class="col-md-5 mb-4">
                                 <label for="categoria" class="require-label" required>Categoría</label>
                                 <select id="categoria" name="categoria" class="form-control" required>
-                                    <option>Selecciona una categoría</option>
+                                    <option value="" selected='selected'>Selecciona una categoría</option>
                                     <option value="1">Cuerda</option>
                                     <option value="2">Percusión</option>
                                     <option value="3">Atriles y soporte</option>
@@ -38,8 +39,8 @@
                                 <textarea id="desc_general" rows="2" name="desc_general" class="form-control" required placeholder="Descripción general"></textarea>
                             </div>
                             <div class="col-md-12 mb-4">
-                                <label for="desc_especifica" class="require-label" required>Descripción específica</label>
-                                <textarea id="desc_especifica" rows="5" name="desc_especifica" class="form-control" required placeholder="Descripción específica"></textarea>
+                                <label for="desc_detallada" class="require-label" required>Descripción detallada</label>
+                                <textarea id="desc_detallada" rows="5" name="desc_detallada" class="form-control" required placeholder="Descripción detallada"></textarea>
                             </div>
                         </div>
                     </div>
@@ -49,7 +50,6 @@
                         <h4 class="require-label">Imagenes</h4>
                         <div class="row justify-center">
                             <div class="dropzone col-md-11" id="dropzone">
-                                {{ csrf_field() }}
                                 <div class="dz-message needsclick">Suelte el archivo aquí <br> o <br> haga click para cargar</div>
                             </div>
                         </div>
@@ -62,16 +62,16 @@
                             <div class="row row-color">
                                 <div class="col-md-4">
                                     <label for="color" required>Color</label>
-                                    <input class="form-control" placeholder="Color" id="color" value="Default">
+                                    <input class="form-control" placeholder="Color" name="color[]" id="color" value="Default" required>
                                 </div>
                                 <div class="col-md-8 inputs-color align-items-end">
                                     <div class="col-md-5">
-                                        <label for="precio" required>Precio</label>
-                                        <input type="number" class="form-control" placeholder="Precio" id="precio">
+                                        <label for="precio">Precio</label>
+                                        <input type="number" class="form-control" placeholder="Precio" name="precio[]" id="precio" required>
                                     </div>
                                     <div class="col-md-5">
-                                        <label for="cantidad" required>Cantidad</label>
-                                        <input type="number" class="form-control" placeholder="Cantidad" id="cantidad">
+                                        <label for="cantidad">Cantidad</label>
+                                        <input type="number" class="form-control" placeholder="Cantidad" name="cantidad[]" id="cantidad" required>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <button type="submit" id="submit" class="btn btn-danger btn-lg btn-save">Guardar <i class="fa fa-save"></i></button>
+                    <button type="submit" id="submit" class="btn btn-danger btn-lg btn-save" disabled>Guardar <i class="fa fa-save"></i></button>
                 </div>
             </form>
         </div>
@@ -91,19 +91,67 @@
 <script>
     document.getElementById('productos').classList.add('active');
     var dropzone = new Dropzone('#dropzone', {
-        parallelUploads: 2,
+        parallelUploads: 5,
         maxFiles: 5,
         url:"/admin/addproducto",
-        autoProcessQueue: false,
         addRemoveLinks: true,
         paramName: "file",
         maxFilesize: 3,
         filesizeBase: 1000,
+        uploadMultiple: true,
+        autoProcessQueue: false,
         init: function() {
-            this.on("success", function(file, response) {
+            this.on("addedfile", file => {
+                document.getElementById("submit").disabled = false;
+            });
+
+            this.on("sendingmultiple", function(data, xhr, formData) {
+                formData.append("_token", jQuery("input[name=_token]").val());
+                formData.append("nombre", jQuery("input[name=nombre]").val());
+                formData.append("categoria", jQuery("select[name=categoria]").val());
+                formData.append("desc_general", jQuery("textarea[name=desc_general]").val());
+                formData.append("desc_detallada", jQuery("textarea[name=desc_detallada]").val());
+                var countColores = document.getElementsByName("color[]").length;
+                for(i=0;i<countColores;i++){
+                    formData.append("color[]", document.getElementsByName("color[]")[i].value);
+                    formData.append("precio[]", document.getElementsByName("precio[]")[i].value);
+                    formData.append("cantidad[]", document.getElementsByName("cantidad[]")[i].value);
+                };
+            });
+            this.on("successmultiple", function(files, response) {
+                window.location.href='/admin/complete-product';
+            });
+            this.on("errormultiple", function(files, response) {
+                console.log(response);
             });
         }
     });
+
+    document.getElementById("submit").addEventListener("click", function(e) {
+        const nombre = document.getElementById("nombre");
+        const descripcion = document.getElementById("categoria");
+        const desc_general = document.getElementById("desc_general");
+        const desc_detallada = document.getElementById("desc_detallada");
+        if (nombre.checkValidity() && categoria.checkValidity() && desc_general.checkValidity() 
+            && desc_detallada.checkValidity() && validarColor()) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropzone.processQueue();
+        }
+    });
+
+    function validarColor(){
+        const color = document.getElementsByName("color[]");
+        const precio = document.getElementsByName("precio[]");
+        const cantidad = document.getElementsByName("cantidad[]");
+        var estado = true;
+        for(var i=0; i<color.length; i++){
+            if(!color[i].checkValidity() || !precio[i].checkValidity() || !cantidad[i].checkValidity()){
+                estado=false;
+            }
+        }
+        return estado;
+    }
 
     $(document).ready(function(){
         var addButton = $('#add_color');
@@ -113,17 +161,17 @@
                 +'<hr class="hr-color">'
                 +'<div class="row row-color">'
                     +'<div class="col-md-4">'
-                        +'<label for="color" required>Color</label>'
-                        +'<input class="form-control" placeholder="Color" id="color">'
+                        +'<label for="color">Color</label>'
+                        +'<input class="form-control" placeholder="Color" id="color" name="color[]" required>'
                     +'</div>'
                     +'<div class="col-md-8 inputs-color align-items-end">'
                         +'<div class="col-md-5">'
-                            +'<label for="precio" required>Precio</label>'
-                            +'<input type="number" class="form-control" placeholder="Precio" id="precio">'
+                            +'<label for="precio">Precio</label>'
+                            +'<input type="number" class="form-control" placeholder="Precio" id="precio" name="precio[]" required>'
                         +'</div>'
                         +'<div class="col-md-5">'
-                            +'<label for="cantidad" required>Cantidad</label>'
-                            +'<input type="number" class="form-control" placeholder="Cantidad" id="cantidad">'
+                            +'<label for="cantidad">Cantidad</label>'
+                            +'<input type="number" class="form-control" placeholder="Cantidad" id="cantidad" name="cantidad[]" required>'
                         +'</div>'
                         +'<div class="col-md-2 text-align-center" style="text-align: center">'
                             +'<a class="btn btn-danger remove_color"><i class="fa fa-trash"></i></a>'

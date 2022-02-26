@@ -9,6 +9,7 @@ class Producto extends Model
 {
     use HasFactory;
     public $primaryKey = 'id_producto';
+    public $timestamps = false;
 
     public function getCategoria($id){
         $categoria = Categoria::find($id);

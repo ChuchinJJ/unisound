@@ -9,11 +9,35 @@
             <h1 class="m-0">Productos</h1>
           </div>
           <div class="col-sm-6 btn-top">
-            <a class="btn btn-danger btn-lg" href="#">Agregar <i class="fa fa-plus"></i></a>
+            <a class="btn btn-danger btn-lg" href="/admin/addproducto">Agregar <i class="fa fa-plus"></i></a>
           </div>
         </div>
       </div>
     </div>
+    
+    @if(session()->has('success'))
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModal">Atención</h5>
+                </div>
+                <div class="modal-body">
+                {{ session('success') }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" onclick="cerrar()" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function cerrar(){
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+    @endif
 
     <div class="content">
         <div class="content-fluid">
@@ -82,5 +106,7 @@
         </div>
     </div>
 </div>
-
+<script>
+    document.getElementById('productos').classList.add('active');
+</script>
 @endsection

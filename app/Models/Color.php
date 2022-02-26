@@ -10,6 +10,7 @@ class Color extends Model
     use HasFactory;
     protected $table = 'colores';
     public $primaryKey = 'id_color';
+    public $timestamps = false;
 
     public function getColorByID($id){
         $colores = Color::orderBy('precio','asc')->where('id_producto', $id)->get();;

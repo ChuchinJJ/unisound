@@ -63,6 +63,65 @@ class ProductoController extends Controller
         ]);
     }
 
+    public function addProducto(Request $request)
+    {   
+        $nombreImagenes = [];
+        $count = 0;
+        if( $request->hasFile('file') ) {
+            $files = $request->file('file');
+            foreach($files as $file){
+                //Nombre de archivo con extension
+                $fileNameWithExt = $file->getClientOriginalName();
+                //Nombre de archivo sin extension
+                $fileName = pathInfo($fileNameWithExt, PATHINFO_FILENAME);
+                //Solo extension
+                $extension = $file->getClientOriginalExtension();
+                //Nombre de archivo a guardar
+                $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+                //Subir archivo al servidor
+                $path = $file->storeAs('public/img/products/', $fileNameToStore);
+                $nombreImagenes[$count] = $fileNameToStore;
+                $count++;
+            }
+        } else {
+            $nombreImagenes[0] = 'noimage.jpg';
+        }
+
+        $producto = new Producto;
+        $producto->nombre = $request->input('nombre');
+        $producto->descripcion_general = $request->input('desc_general');
+        $producto->descripcion_detallada = $request->input('desc_detallada');
+        $producto->id_categoria = $request->input('categoria');
+        for($i=0; $i<$count; $i++){
+            if($i==0){
+                $producto->imagen1 = $nombreImagenes[$i];
+            }else if($i==1){
+                $producto->imagen2 = $nombreImagenes[$i];
+            }else if($i==2){
+                $producto->imagen3 = $nombreImagenes[$i];
+            }else if($i==3){
+                $producto->imagen4 = $nombreImagenes[$i];
+            }else if($i==4){
+                $producto->imagen5 = $nombreImagenes[$i];
+            }
+        }
+        $producto->save();
+
+        $countColores = count($request->input('color'));
+        for($i=0; $i<$countColores; $i++){
+            $color = new Color();
+            $color->color = $request->input('color')[$i];
+            $color->precio = $request->input('precio')[$i];
+            $color->cantidad = $request->input('cantidad')[$i];
+            $color->id_producto = $producto->id_producto;
+            $color->save();
+        }  
+    }
+
+    public function complete(){
+        return redirect('/admin/productos')->with('success', 'El Producto ha sido agregado con exito');
+    }
+
     /**
      * Show the form for editing the specified resource.
      *

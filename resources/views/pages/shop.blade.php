@@ -42,7 +42,7 @@
 									<div class="post_thumb">
 										<a class="hover_icon hover_icon_link" href="/product/{{ $producto->id_producto }}">
 											<img width="300" height="400"
-												src="{{ $producto->imagen1 }}"
+												src="/storage/img/products/{{ $producto->imagen1 }}"
 												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
 												loading="lazy"/> 
 										</a>
