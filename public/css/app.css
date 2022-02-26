@@ -72,7 +72,7 @@ body {
   background-color: var(--dark-x);
 }
 
-.form-control{
+.fondo-login .form-control{
   min-height: 2.125rem;
   line-height: initial !important;
   padding: 10px !important;
@@ -133,6 +133,10 @@ body {
   background-image: url(/img/bateria.jpg);
   background-size: cover;
   background-position: center;
+}
+
+.content-header h1{
+  text-shadow: 1px 1px 4px white;
 }
 
 .floating{
@@ -275,6 +279,11 @@ body {
   .title-register h1{
     font-size: 20px;
   }
+  
+  .hr-color{
+    display: block !important;
+    margin-bottom: 5px;
+  }
 }
 
 .venobox img:hover{
@@ -412,19 +421,19 @@ body {
   font-size: 16px;
 }
 
-.card-register .require-label:after {
+.require-label:after {
   content:"*";
   font-size: 20px;
   color: #e21818;
 }
 
-.card-register .require-title{
+.require-title{
   margin-bottom: 20px;
   color: #e21818;
   font-size: 16px;
 }
 
-.card-register .require-title:before {
+.require-title:before {
   content:"*";
   font-size: 20px;
   color: #e21818;
@@ -438,6 +447,24 @@ body {
 
 .vacio i{
   font-size: 120px;
+}
+
+.row-color{
+  margin-bottom: 15px;
+}
+
+.row-color label{
+  margin-bottom: auto;
+}
+
+.hr-color{
+  display: none;
+}
+
+.inputs-color{
+  display: flex;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
 }
 
 /*
@@ -633,6 +660,16 @@ button,
   -webkit-appearance: button; /* 1 */
   background-color: transparent; /* 2 */
   background-image: none; /* 2 */
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 
 /*

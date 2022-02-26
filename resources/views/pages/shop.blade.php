@@ -17,7 +17,7 @@
 					<nav class="woocommerce-breadcrumb"><a href="/">Inicio</a>&nbsp;&#47;&nbsp;Shop</nav>
 					<header class="woocommerce-products-header"></header>
 					<div class="woocommerce-notices-wrapper"></div>
-					<input type="hidden" id="vista" value="{{ old('vista') }}" name="vista"/>
+					<input type="hidden" id="vista" value="{{ old('vista','shop_mode_thumbs') }}" name="vista"/>
 					<div class="mode_buttons">
 						<a href="#" class="woocommerce_thumbs icon-th" title="Mostrar productos como cuadrícula" onclick="cambiarModo('thumbs')"></a>
 						<a href="#" class="woocommerce_list icon-th-list" title="Mostrar productos como lista" onclick="cambiarModo('list')"></a>

@@ -22,7 +22,7 @@
 			</div>
 			<ul id="menu_footer" class="menu_footer_nav">
 				<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="/contact"><span> Servicios</span></a></li>
-				<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-466"><a href="/proximo"><span>Ver todos</span></a></li>
+				<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-466"><a href="/shop"><span>Ver todos</span></a></li>
 				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="/contact"><span>Contactanos</span></a></li>
 			</ul>
 			<div class="copyright_text">

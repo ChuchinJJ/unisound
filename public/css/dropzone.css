@@ -245,9 +245,12 @@
   display: inline-block;
   vertical-align: top;
   margin: 16px;
+  
+  min-height: 100px;
+}
+.slider .dz-preview {
   width: 90%;
   height: 100%;
-  min-height: 100px;
 }
 .dropzone .dz-preview:hover {
   z-index: 1000;
@@ -331,8 +334,6 @@
   filter: blur(8px);
 }
 .dropzone .dz-preview .dz-image {
-  width: 100% !important;
-  height: 100% !important;
   border-radius: 20px;
   overflow: hidden;
   width: 120px;
@@ -340,6 +341,10 @@
   position: relative;
   display: block;
   z-index: 10;
+}
+.slider .dz-preview .dz-image {
+  width: 100% !important;
+  height: 100% !important;
 }
 .dropzone .dz-preview .dz-image img {
   display: block;

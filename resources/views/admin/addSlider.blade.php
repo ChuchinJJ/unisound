@@ -19,7 +19,7 @@
                 <h3 class="card-title">Orientación horizontal</h3>
               </div>
               <div class="card-body">
-                <form method="POST" class="dropzone" id="horizontal">
+                <form method="POST" class="dropzone slider" id="horizontal">
                 {{ csrf_field() }}
                   <div class="dz-message needsclick">Suelte el archivo aquí <br> o <br> haga click para cargar</div>
                 </form>
@@ -33,7 +33,7 @@
                 <h3 class="card-title">Orientación vertical</h3>
               </div>
               <div class="card-body">
-                <form method="POST" class="dropzone" id="vertical">
+                <form method="POST" class="dropzone slider" id="vertical">
                   {{ csrf_field() }}
                   <div class="dz-message needsclick">Suelte el archivo aquí <br> o <br> haga click para cargar</div>
                 </form>
