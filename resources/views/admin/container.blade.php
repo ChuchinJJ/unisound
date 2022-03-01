@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/css/fontawesome-all.css">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/app2.css">
     <link rel="stylesheet" href="/css/adminlte.css">
     <link rel="stylesheet" href="/css/venobox.css">
     <link rel="stylesheet" href="/css/OverlayScrollbars.css">

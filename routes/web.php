@@ -59,6 +59,9 @@ Route::group([
         });
         Route::post('addproducto', [ProductoController::class, "addProducto"]);
         Route::get('complete-product', [ProductoController::class, "complete"]);
+        Route::get('producto/{id}/edit', [ProductoController::class, "editProducto"]);
+        Route::post('producto/{id}/edit', [ProductoController::class, "update"]);
+        Route::post('producto/addimage', [ProductoController::class, "addImagen"]);
     }
 );
 
