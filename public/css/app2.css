@@ -1,0 +1,8 @@
+.row-imagenes-product .dropzone{
+    height: 90%;
+    padding: 10px 10px;
+}
+
+.row-imagenes-product .col-md-auto{
+    text-align: center;
+}
