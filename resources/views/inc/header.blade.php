@@ -45,6 +45,8 @@
                                             </li>
                                             <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
                                             </li>
+                                            <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="#"><span>Dark Mode</span></a>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-1127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1127"><a href="/proximo"><span>Ofertas</span></a>
@@ -56,6 +58,10 @@
                                 </ul>
                             </nav>
 
+                                <div class="tema">
+                                    <span><i class="fa fa-sun"></i></span>
+                                </div> 
+                            
                             <div class="top_panel_icon head-cart">
                                 <a class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
                                     <span class="icon-online-shopping-cart">
@@ -78,6 +84,7 @@
                                         </div>
                                     </li> 
                                 </ul>
+                                
                             </div>
 
                             <div class="menu_main_cart top_panel_icon head-user">
@@ -120,6 +127,8 @@
                                     </form>
                                 </div>
                             </div>
+
+                            
                         </div>
                     </div>
                 </div>

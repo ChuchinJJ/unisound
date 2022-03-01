@@ -156,6 +156,7 @@ body {
 }
 
 .select-admin {
+  cursor: pointer;
   border-radius: 10px;
   margin-left: 10px;
 }
@@ -185,6 +186,26 @@ body {
   border-color: #9aa5b8;
 }
 
+.icono-arrow2 {
+  cursor: pointer;
+  color: #5c5252a8;
+  font-size: 18px;
+  background: white;
+  padding: 5px;
+  width: 40px;
+  height: 25px;
+  text-align: center;
+  line-height: 14px;
+  border-radius: 14px;
+  border: 1px solid #3e3b3bad;
+}
+.icono-arrow2:hover {
+  background-color: #63676b;
+  color: white;
+  border: 1px solid #fafafa;
+  border-color: #9aa5b8;
+}
+
 .icono-x {
   font-size: 23px;
   cursor: pointer;
@@ -192,6 +213,19 @@ body {
   font-weight: 500;
 }
 
+/*Estilos para el  DARK MODE*/
+
+.tema {
+  color: yellow;
+  float: right;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.tema:hover {
+  color: rgb(210, 245, 83);
+}
 /*Estilos para el Login*/
 
 .bg-dark {
@@ -226,7 +260,6 @@ body {
 .bg-dark-x {
   background-color: var(--dark-x);
 }
-
 
 .fondo-login .form-control {
   min-height: 2.125rem;
@@ -291,7 +324,7 @@ body {
   background-position: center;
 }
 
-.content-header h1{
+.content-header h1 {
   text-shadow: 1px 1px 4px white;
 }
 
@@ -440,8 +473,8 @@ body {
   .title-register h1 {
     font-size: 20px;
   }
-  
-  .hr-color{
+
+  .hr-color {
     display: block !important;
     margin-bottom: 5px;
   }
@@ -486,7 +519,7 @@ body {
 .cart-number {
   display: inline-flex;
   position: absolute;
-  right: 3px;
+  right: 35px;
   top: -1px;
   padding-top: 1px;
   align-items: center;
@@ -582,7 +615,6 @@ body {
   font-size: 16px;
 }
 
-
 .require-label:after {
   content: "*";
   font-size: 20px;
@@ -611,19 +643,19 @@ body {
   font-size: 120px;
 }
 
-.row-color{
+.row-color {
   margin-bottom: 15px;
 }
 
-.row-color label{
+.row-color label {
   margin-bottom: auto;
 }
 
-.hr-color{
+.hr-color {
   display: none;
 }
 
-.inputs-color{
+.inputs-color {
   display: flex;
   padding-right: 0px !important;
   padding-left: 0px !important;
