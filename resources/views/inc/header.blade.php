@@ -6,10 +6,18 @@
                     <div class="columns_wrap no_margins header">
                         <div class="contact_logo column-1_6">
                             <div class="logo">
+                                <div class="logolight">
+                                    <a href="/">
+                                        <img src="/img/logoUnisound.png" class="logo_main " alt="Logo" width="108" height="35">
+                                        <img src="/img/logoUnisound.png" class="logo_fixed " alt="Logo" width="108" height="35">
+                                    </a>
+                                </div>
+                                <div class="logodark">
                                 <a href="/">
-                                    <img src="/img/logoUnisound.png" class="logo_main" alt="Logo" width="108" height="35">
-                                    <img src="/img/logoUnisound.png" class="logo_fixed" alt="Logo" width="108" height="35">
-                                </a>
+                                        <img src="/img/logoUnisoundDark.png" class="logo_main" alt="Logo" width="108" height="35">
+                                        <img src="/img/logoUnisoundDark.png" class="logo_fixed" alt="Logo" width="108" height="35">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="menu_main_wrap column-5_6">
@@ -45,8 +53,6 @@
                                             </li>
                                             <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
                                             </li>
-                                            <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="#"><span>Dark Mode</span></a>
-                                            </li>
                                         </ul>
                                     </li>
                                     <li id="menu-item-1127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1127"><a href="/proximo"><span>Ofertas</span></a>
@@ -58,8 +64,11 @@
                                 </ul>
                             </nav>
 
-                                <div class="tema">
-                                    <span><i class="fa fa-sun"></i></span>
+                                <div class="luna">
+                                    <span><i id="bdark-luna" class="fa fa-moon"></i></span>
+                                </div> 
+                                <div class="sol">
+                                    <span><i id="bdark-sol" class="fa fa-sun"></i></span>
                                 </div> 
                             
                             <div class="top_panel_icon head-cart">
@@ -257,6 +266,7 @@
         <!-- fin de header móvil -->
     </div>
 </div>
+
 <script>
     function abrirMenu(){
         var menu = document.getElementById("menu");

@@ -26,16 +26,17 @@
 									<div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
 										<div class="column-1_2 sc_column_item sc_column_item_1 odd first">
 											<figure class="sc_image  sc_image_shape_square">
-												<img src="/img/image-9.jpg" alt="" />
+												<img style="border-radius:6px;" src="/img/image-9.jpg" alt="" />
 											</figure>
 										</div><div class="column-1_2 sc_column_item sc_column_item_2 even">
 												<h5 class="sc_title sc_title_underline" style="margin-bottom:1.2em;">Somos UNISOUND.</h5>
 													<div class="wpb_text_column wpb_content_element " >
 														<div class="wpb_wrapper">
 															<p>
-																En Unisound tendras la mejor experiencia Musical de tu vida. <br>
+															<strong>En Unisound tendras la mejor experiencia Musical de tu vida. </strong>
 																Dedicados a ofrecer los mejores instrumentos musicales en la zona Regional de los
-																Altos de Chiapas. Con Sucursales en San Cristobal, Ocosingo, Yahalon etc.
+																Altos de Chiapas. <br> Con Sucursales en Ocosingo, Yahalon y San Cristobal de las Casas, Chiapas.
+																Contamos con instrumentos en todas las categorias musicales y de las mejores marcas- 
 															</p>
 
 														</div>
@@ -43,10 +44,11 @@
 											<div class="vc_empty_space"   style="height: 3.7em">
 												<span class="vc_empty_space_inner"></span>
 											</div>
+											<!--
 											<a href="#" class="sc_button sc_button_square sc_button_style_filled sc_button_size_medium">
 												<span class="text">Leer Mas</span>
 												<span class="icon icon-music-note-black-shape"></span>
-											</a>
+											</a> -->
 									</div>
 								</div>
 
@@ -137,7 +139,7 @@
 							<div class="wpb_wrapper">
 								<div id="sc_services_816713937_wrap" class="sc_services_wrap">
 									<div id="sc_services_816713937" class="sc_services sc_services_style_services-2 sc_services_type_icons " style="width:100%;">
-										<h2 class="sc_services_title sc_item_title sc_item_title_without_descr">
+										<h2 id="servicios" class="sc_services_title sc_item_title sc_item_title_without_descr">
 											<span class="title">¿Que hacemos?</span>
 										</h2>
 										<div class="sc_columns columns_wrap">
@@ -153,10 +155,7 @@
 														<div class="sc_services_item_description">
 															<p>Las Ventas en Linea han sido de mucha importancia para nuestras sucursales,
 																es por eso que te ofrecemos, pedidos y compras en linea a traves de nuestra pagina Web.
-															</p>
-															<a href="#" class="sc_services_item_readmore">
-																Ver mas<span class="icon-right"></span>
-															</a>					
+															</p>					
 														</div>
 													</div>
 												</div>
@@ -171,10 +170,8 @@
 															<a href="#">Instalaciones</a>
 														</h4>
 														<div class="sc_services_item_description">
-															<p>Hacemos las mejores instalaciones en pastillas, pedales, bocinas etc. Todo para tu equipo o instrumento.</p>
-															<a href="#" class="sc_services_item_readmore">
-																Leer Mas<span class="icon-right"></span>
-															</a>					
+															<p>Hacemos las mejores instalaciones en pastillas electronicas, pedales, bocinas y mucho mas. Todo para tu equipo e instrumento.</p>
+																				
 														</div>
 													</div>
 												</div>
@@ -188,10 +185,8 @@
 															<a href="#">Gran Sonido!!!</a>
 														</h4>
 														<div class="sc_services_item_description">
-															<p>Las mejores mezcladoras, cerebros, poderes y bocinas. Las encontraras aqui!!!.</p>
-															<a href="#" class="sc_services_item_readmore">Leer Mas
-																<span class="icon-right"></span>
-															</a>					
+															<p>Las mejores mezcladoras, poderes, cerebros, bocinas y mucho mas. Lo encontraras aqui en UNISOUND!!!</p>
+																				
 														</div>
 													</div>
 												</div>

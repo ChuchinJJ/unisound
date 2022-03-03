@@ -215,17 +215,29 @@ body {
 
 /*Estilos para el  DARK MODE*/
 
-.tema {
-  color: yellow;
+.luna {
+  transform: rotate(-7deg);
+  color: rgb(77, 77, 88);
   float: right;
   cursor: pointer;
   margin-top: 10px;
-  margin-left: 20px;
-  font-size: 20px;
+  margin-left: 22px;
+  font-size: 22px;
 }
-.tema:hover {
-  color: rgb(210, 245, 83);
+
+.luna:hover {
+  color: #1a1c1fe7;
 }
+
+.sol {
+  color: #ebcf09 !important;
+  float: right;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 22px;
+  font-size: 22px;
+}
+
 /*Estilos para el Login*/
 
 .bg-dark {
@@ -519,7 +531,7 @@ body {
 .cart-number {
   display: inline-flex;
   position: absolute;
-  right: 35px;
+  right: 44px;
   top: -1px;
   padding-top: 1px;
   align-items: center;
@@ -1117,53 +1129,8 @@ select {
   color-adjust: unset;
 }
 
-[type="checkbox"],
-[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  padding: 0;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
-  display: inline-block;
-  vertical-align: middle;
-  background-origin: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  flex-shrink: 0;
-  height: 1rem;
-  width: 1rem;
-  color: #2563eb;
-  background-color: #fff;
-  border-color: #6b7280;
-  border-width: 1px;
-  --tw-shadow: 0 0 #0000;
-}
-
-[type="checkbox"] {
-  border-radius: 0px;
-}
-
 [type="radio"] {
   border-radius: 100%;
-}
-
-[type="checkbox"]:focus,
-[type="radio"]:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
-  --tw-ring-offset-width: 2px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: #2563eb;
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
-    var(--tw-shadow);
 }
 
 [type="checkbox"]:checked,

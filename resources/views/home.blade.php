@@ -2746,4 +2746,5 @@ var sbiajaxurl = "http://localhost/wordpress/wp-admin/admin-ajax.php";
 		}
 	}
 </script>
+
 @endsection

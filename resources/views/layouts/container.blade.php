@@ -135,5 +135,40 @@
 		/* ]]> */
 	</script>
 	<script type='text/javascript' src='/js/price-slider.min.js' id='wc-price-slider-js'></script>
+
+	<script>
+		const bdark_luna = document.querySelector('#bdark-luna');
+		const bdark_sol = document.querySelector('#bdark-sol');
+		const body = document.querySelector('body');
+
+		load();
+		
+		bdark_luna.addEventListener('click', e =>{
+			body.classList.toggle('darkmode');
+			store(body.classList.contains('darkmode'));
+		});
+
+		bdark_sol.addEventListener('click', e =>{
+			body.classList.toggle('darkmode');
+			store(body.classList.contains('darkmode'));
+		});
+
+		function load(){
+			const darkmode = localStorage.getItem('darkmode');
+
+			if(!darkmode){
+				store('false');
+			} else if (darkmode == 'true'){
+				body.classList.add('darkmode');
+
+			}
+
+		}
+
+		function store(value){
+			localStorage.setItem('darkmode', value);
+		}
+	</script>
+
 </body>
 </html>
