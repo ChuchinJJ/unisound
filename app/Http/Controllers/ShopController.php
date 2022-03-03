@@ -15,28 +15,30 @@ class ShopController extends Controller
         $nombre = $request->input('nombre', '');
         $min_precio = $request->input('min_precio', '1');
         $max_precio = $request->input('max_precio', '900000');
-        $order = ["nombre", "ASC"];
+        $order = ["id_producto", "ASC"];
         if ($request->has('order')) {
             $filtro = $request->input('order');
-            if($filtro =="nombre-desc"){
+            if($filtro =="nombre"){
+                $order = ["nombre", "ASC"];
+            }else if($filtro =="nombre-desc"){
                 $order = ["nombre", "DESC"];
             }else if($filtro == "precio"){
                 $order = ["precio", "DESC"];
             }else if($filtro == "precio-desc"){
                 $order = ["precio", "ASC"];
-            }else if($filtro == "raiting"){
-                $order = ["raiting", "DESC"];
-            }else if($filtro == "raiting-desc"){
-                $order = ["raiting", "ASC"];
+            }else if($filtro == "rating"){
+                $order = ["rating", "DESC"];
+            }else if($filtro == "rating-desc"){
+                $order = ["rating", "ASC"];
             }
         }
         
-        if($order[0] == "raiting"){
+        if($order[0] == "rating"){
             $valoraciones  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')
                 ->orderBy("valoracion", $order[1]);
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
-                ->joinSub($valoraciones, 'valoraciones', function ($join){
+                ->leftJoinSub($valoraciones, 'valoraciones', function ($join){
                     $join->on('productos.id_producto', '=', 'valoraciones.id_producto');
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
@@ -45,8 +47,7 @@ class ShopController extends Controller
                 ->where('precio', '>', $min_precio)
                 ->where('precio', '<', $max_precio)
                 ->orderBy("valoracion", $order[1])
-                ->distinct(['productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
-                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion'])
+                ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }else{
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
@@ -56,8 +57,7 @@ class ShopController extends Controller
                 ->where('precio', '>', $min_precio)
                 ->where('precio', '<', $max_precio)
                 ->orderBy($order[0], $order[1])
-                ->distinct(['productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
-                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5'])
+                ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }
         $colores = Color::orderBy('precio','asc')->get();
@@ -75,28 +75,30 @@ class ShopController extends Controller
     {   
         $min_precio = $request->input('min_precio', '1');
         $max_precio = $request->input('max_precio', '900000');
-        $order = ["nombre", "ASC"];
+        $order = ["id_producto", "ASC"];
         if ($request->has('order')) {
             $filtro = $request->input('order');
-            if($filtro =="nombre-desc"){
+            if($filtro =="nombre"){
+                $order = ["nombre", "ASC"];
+            }else if($filtro =="nombre-desc"){
                 $order = ["nombre", "DESC"];
             }else if($filtro == "precio"){
                 $order = ["precio", "DESC"];
             }else if($filtro == "precio-desc"){
                 $order = ["precio", "ASC"];
-            }else if($filtro == "raiting"){
-                $order = ["raiting", "DESC"];
-            }else if($filtro == "raiting-desc"){
-                $order = ["raiting", "ASC"];
+            }else if($filtro == "rating"){
+                $order = ["rating", "DESC"];
+            }else if($filtro == "rating-desc"){
+                $order = ["rating", "ASC"];
             }
         }
         
-        if($order[0] == "raiting"){
+        if($order[0] == "rating"){
             $valoraciones  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')
                 ->orderBy("valoracion", $order[1]);
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
-                ->joinSub($valoraciones, 'valoraciones', function ($join){
+                ->leftJoinSub($valoraciones, 'valoraciones', function ($join){
                     $join->on('productos.id_producto', '=', 'valoraciones.id_producto');
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
@@ -105,8 +107,7 @@ class ShopController extends Controller
                 ->where('precio', '<', $max_precio)
                 ->where('id_categoria', $id)
                 ->orderBy("valoracion", $order[1])
-                ->distinct(['productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
-                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion'])
+                ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }else{
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
@@ -116,8 +117,7 @@ class ShopController extends Controller
                 ->where('precio', '<', $max_precio)
                 ->where('id_categoria', $id)
                 ->orderBy($order[0], $order[1])
-                ->distinct(['productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
-                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5'])
+                ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }
         $colores = Color::orderBy('precio','asc')->get();

@@ -25,8 +25,9 @@
 					<p class="woocommerce-result-count">Mostrando {{ $productos->firstItem() }}&ndash;{{ $productos->lastItem() }} de {{ $productos->total() }} resultados</p>
 					<div class="woocommerce-ordering">
 						<select name="order" class="orderby" aria-label="Pedido de la tienda" onchange="ordenar()">
-							<option value="nombre" @if(old('order') == "nombre") selected='selected' @endif>Orden por defecto</option>
-							<option value="nombre-desc" @if(old('order') == "nombre-desc") selected='selected' @endif>Ordenar decendentemente</option>
+							<option value="default" @if(old('order') == "default") selected='selected' @endif>Orden por defecto</option>
+							<option value="nombre" @if(old('order') == "nombre") selected='selected' @endif>Orden nombre: A-Z</option>
+							<option value="nombre-desc" @if(old('order') == "nombre-desc") selected='selected' @endif>Ordenar nombre: Z-A</option>
 							<option value="precio-desc" @if(old('order') == "precio-desc") selected='selected' @endif>Ordenar por precio: bajo a alto</option>
 							<option value="precio" @if(old('order') == "precio") selected='selected' @endif>Ordenar por precio: alto a bajo</option>
 							<option value="rating" @if(old('order') == "rating") selected='selected' @endif>Ordenar por calificación: alto a bajo</option>
@@ -61,7 +62,7 @@
 											style="width:{{$mi_valoracion->first()->valoracion*20}}%">Valorado en <strong class="rating">{{$mi_valoracion->first()->valoracion}}</strong> de 5</span>
 									</div>
 									@endif
-									<div class="description" @if(!old('order')) style="display:none" @endif id="descripcion">
+									<div class="description">
 										<p>{{ $producto->descripcion_general }}</p>
 									</div>
 									<span class="price">
@@ -230,16 +231,10 @@
 			shop_mode.classList.remove('shop_mode_thumbs');
 			vista.value='shop_mode_list';
 			shop_mode.classList.add('shop_mode_list');
-			for (var i = 0; i<descripcion.length; i++) {
-				descripcion[i].style.display = "block";
-			}
 		}else{
 			shop_mode.classList.remove('shop_mode_list');
 			vista.value='shop_mode_thumbs';
 			shop_mode.classList.add('shop_mode_thumbs');
-			for (var i = 0; i<descripcion.length; i++) {
-				descripcion[i].style.display = "none";
-			}
 		}
 	}
 	

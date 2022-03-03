@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="/css/venobox.css">
     <link rel="stylesheet" href="/css/OverlayScrollbars.css">
     <link rel="stylesheet" href="/css/dropzone.css" type="text/css" />
+    <link rel='stylesheet' id='fontello-style-css'  href='/css/fontello.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='musicplace-plugin-woocommerce-style-css'  href='/css/plugin.woocommerce.css' type='text/css' media='all' />
     <script type="text/javascript" src="/js/jquery-1.12.1.min.js"></script>
     <script type="text/javascript" src="/js/venobox.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>

@@ -100,6 +100,7 @@
         filesizeBase: 1000,
         uploadMultiple: true,
         autoProcessQueue: false,
+        acceptedFiles: "image/*",
         init: function() {
             this.on("addedfile", file => {
                 document.getElementById("submit").disabled = false;

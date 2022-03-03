@@ -163,7 +163,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="admin/productos" class="nav-link" id="productos">
+            <a href="/admin/productos" class="nav-link" id="productos">
               <i class="nav-icon fas fa-table"></i>
               <p>
                 Productos

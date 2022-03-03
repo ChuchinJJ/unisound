@@ -40,19 +40,21 @@
               </div>
             </div>
           </div>
-          <button type="submit" id="submit" class="btn btn-danger btn-lg btn-save">Guardar <i class="fa fa-save"></i></button>
+          <button type="submit" id="submit" class="btn btn-danger btn-lg btn-save" disabled>Guardar <i class="fa fa-save"></i></button>
         </div>
       </div>
   </section>
 </div>
 <script>
   document.getElementById('sliders').classList.add('active');
+  var addHorizontal = false;
+  var addVertical = false;
   var estadoHorizontal = false;
   var estadoVertical = false;
   var nombreVertical = "";
   var nombreHorizontal = "";
 
-  var dropzoneVertical = new Dropzone('#horizontal', {
+  new Dropzone('#horizontal', {
     parallelUploads: 2,
     maxFiles: 1,
     url:"/admin/addslider",
@@ -63,8 +65,21 @@
     thumbnailWidth: 200,
     maxFilesize: 3,
     filesizeBase: 1000,
+    acceptedFiles: "image/*",
     init: function() {
       myDropzoneHorizontal = this;
+
+      this.on("addedfile", file => {
+        addHorizontal = true;
+        if(addVertical){
+          document.getElementById("submit").disabled = false; 
+        }
+      });
+
+      this.on("removedfile", file => {
+        addHorizontal = false;
+        document.getElementById("submit").disabled = true;
+      });
 
       this.on("success", function(file, response) {
         estadoHorizontal = true;
@@ -76,7 +91,7 @@
     }
   });
 
-  var dropzoneVetical = new Dropzone('#vertical', {
+  new Dropzone('#vertical', {
     parallelUploads: 2,
     maxFiles: 1,
     url:"/admin/addslider",
@@ -87,8 +102,21 @@
     thumbnailWidth: 120,
     maxFilesize: 3,
     filesizeBase: 1000,
+    acceptedFiles: "image/*",
     init: function() {
       myDropzoneVertical = this;
+
+      this.on("addedfile", file => {
+        addVertical = true;
+        if(addHorizontal){
+          document.getElementById("submit").disabled = false;
+        }
+      });
+
+      this.on("removedfile", file => {
+        addVertical = false;
+        document.getElementById("submit").disabled = true;
+      });
 
       this.on("success", function(file, response) {
         estadoVertical = true;
