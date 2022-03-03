@@ -12,44 +12,71 @@ use DateTime;
 
 class ProductoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return redirect('/shop');
-    }
+    
+    public function index(Request $request)
+    {   
+        $nombre = $request->input('nombre', '');
+        $idCategoria = $request->input('categoria', '');
+        $order = ["id_producto", "ASC"];
+        if ($request->has('order')) {
+            $filtro = $request->input('order');
+            if($filtro =="nombre"){
+                $order = ["nombre", "ASC"];
+            }else if($filtro =="nombre-desc"){
+                $order = ["nombre", "DESC"];
+            }else if($filtro == "precio"){
+                $order = ["precio", "DESC"];
+            }else if($filtro == "precio-desc"){
+                $order = ["precio", "ASC"];
+            }else if($filtro == "rating"){
+                $order = ["rating", "DESC"];
+            }else if($filtro == "rating-desc"){
+                $order = ["rating", "ASC"];
+            }
+        }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        if($idCategoria == ""){
+            $categoria=["!=","0"];
+        }else{
+            $categoria=["=",$idCategoria];
+        }
+        
+        if($order[0] == "rating"){
+            $valoraciones = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
+                ->groupBy('id_producto')
+                ->orderBy("valoracion", $order[1]);
+            $productos = Producto::leftJoinSub($valoraciones, 'valoraciones', function ($join){
+                    $join->on('productos.id_producto', '=', 'valoraciones.id_producto');
+                })
+                ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
+                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion', 'productos.deleted_at')
+                ->where('nombre', 'like', '%'.$nombre.'%')
+                ->where('id_categoria', $categoria[0], $categoria[1])
+                ->orderBy("valoracion", $order[1])
+                ->distinct(['productos.id_producto'])
+                ->paginate(10);
+        }else{
+            $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
+                ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
+                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'productos.deleted_at')
+                ->where('nombre', 'like', '%'.$nombre.'%')
+                ->where('id_categoria', $categoria[0], $categoria[1])
+                ->orderBy($order[0], $order[1])
+                ->distinct(['productos.id_producto'])
+                ->paginate(10);
+        }
+        $colores = Color::orderBy('precio','asc')->get();
+        $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
+            ->groupBy('id_producto')->get();
+        $request->flash();
+        return view('admin.productos')->with([
+            'productos'=>$productos,
+            'colores'=>$colores,
+            'valoraciones' => $valoracion
+        ]);
     }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    
+    public function showShop($id)
     {
         $producto = Producto::find($id);
         $categoria = Producto::getCategoria($producto->id_categoria);
@@ -63,6 +90,11 @@ class ProductoController extends Controller
             'categoria' => $categoria,
             'valoraciones' => $valoraciones
         ]);
+    }
+
+    public function indexAddProducto(Request $request)
+    {
+        return view('admin.addProduct');
     }
 
     public function addProducto(Request $request)
@@ -218,23 +250,22 @@ class ProductoController extends Controller
         }
 
         //eliminar colores
-        foreach($request->input('color_delete') as $ColorDelete){
-            $color = Color::find($ColorDelete);
-            $color->delete_at = new DateTime();
-            $color->save();
+        if ($request->has('color_delete')) {
+            foreach($request->input('color_delete') as $ColorDelete){
+                $color = Color::find($ColorDelete);
+                $color->deleted_at = new DateTime();
+                $color->save();
+            }
         }
 
         return redirect('/admin/productos')->with('success', 'El Producto ha sido editado con exito');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        $producto = Producto::find($id);
+        $producto->deleted_at = new DateTime();
+        $producto->save();        
+        return redirect('/admin/productos')->with('success', 'El Producto ha sido eliminado con exito');
     }
 }
