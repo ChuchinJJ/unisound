@@ -244,6 +244,10 @@ body {
   background-image: url("/img/background.png");
 }
 
+.darkmode .fondo-login {
+  background-image: url("/img/background-dark.png");
+}
+
 .fondo-login button {
   text-transform: none;
 }
@@ -263,6 +267,92 @@ body {
   color: #1a1c1f !important;
   font-weight: bold;
   text-align: center;
+}
+
+.darkmode .fondo-login a {
+  color: white;
+}
+
+.darkmode .fondo-login h1, .darkmode .fondo-login p, .darkmode .fondo-login label{
+  color: white !important;
+}
+
+.darkmode .fondo-login input {
+  background-color: #1a1c1f !important;
+  color: white !important;
+}
+
+.darkmode .fondo-login input:-webkit-autofill,
+.darkmode .fondo-login input:-webkit-autofill:hover,
+.darkmode .fondo-login input:-webkit-autofill:focus{
+  -webkit-text-fill-color: white !important;
+  box-shadow: 0 0 0px 1000px #1a1c1f inset;
+}
+
+.darkmode .modal-content{
+  background-color: #141618 !important;
+}
+
+.darkmode .modal-header h5{
+  color: white !important;
+}
+
+.darkmode .btna:hover, .darkmode .btn:hover{
+  background-color: white !important;
+  color: #141618 !important;
+}
+
+.darkmode .card-register{
+  background-color: #141618;
+}
+
+.darkmode .title-register{
+  background-color: #24262a;
+}
+
+.darkmode .card-register input{
+  border-color: #5c5c5c !important;
+}
+
+.darkmode .card-register input[type="date"]{
+  background-color: #e1dfdb !important;
+  color: black !important;
+  border-color: #a5a5a5 !important;
+  filter: invert(1);
+}
+
+.darkmode .menu-login{
+  background-color: #141618 !important;
+  color: white !important;
+  border: 0.05px solid #303030;
+}
+
+.darkmode .menu-login::after{
+  background-color: #141618 !important;
+  color: white !important;
+  border-left: 0.05px solid #303030;
+  border-top: 0.05px solid #303030;
+}
+
+.darkmode .menu-login a{
+  color: white;
+}
+
+.darkmode .menu-login a:hover{
+  background-color: #1a1c1f !important;
+}
+
+.darkmode .top_panel_middle .sidebar_cart{
+  background-color: #141618 !important;
+  border-color:  #303030 !important;
+  color: white !important;
+}
+
+.darkmode .top_panel_middle .sidebar_cart:after {
+  background-color: #141618 !important;
+  border-color:  #303030 !important;
+  border-left: 0.05px solid #303030 !important;
+  border-top: 0.05px solid #303030 !important;
 }
 
 .bg-dark-x {

@@ -11754,6 +11754,7 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
 .content-wrapper > .content {
   padding: 0 0.5rem;
+  padding-bottom: 10px !important;
 }
 
 .main-sidebar, .main-sidebar::before {

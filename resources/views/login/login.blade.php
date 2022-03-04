@@ -88,7 +88,7 @@
                   <div class="row">
                     <div class="col-md-6 mb-4">
                       <input type="checkbox" class="form-check-input" id="remember" name="remember" style="margin-top: -5px;">
-                      <label style="font-size: 15px;" class="form-check-label letras" for="remember" >Recordarme
+                      <label class="form-check-label letras" for="remember" >Recordarme
                     </div>
                     <div class="col-md-6 mb-4">
                       <a href="/forgot-password" class="form-text font-weight-bold">¡Recuperar contraseña!</a>

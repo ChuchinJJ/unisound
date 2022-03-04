@@ -68,6 +68,18 @@
 
                     <div class="summary entry-summary">
                         <h1 class="product_title entry-title">{{ $producto->nombre }}</h1>
+                        @if($valoraciones->first() != null)
+                        <div class="woocommerce-product-rating">
+		                    <div class="star-rating" role="img" aria-label="Valorado en {{ $valoraciones->avg('puntuacion') }} de 5">
+                                <span style="width:{{ $valoraciones->avg('puntuacion')*20 }}%">
+                                    Valorado 
+                                    <strong class="rating">{{ $valoraciones->avg('puntuacion') }}</strong> 
+                                    sobre 5 basado en <span class="rating">{{ $valoraciones->count() }}</span> 
+                                    puntuaciones de clientes
+                                </span>
+                            </div>
+						</div>
+                        @endif
                         <p class="price">
                             @if (count($colores) > 1 && $colores[0]->precio != $colores[count($colores)-1]->precio)
                                 <span class="woocommerce-Price-amount amount">

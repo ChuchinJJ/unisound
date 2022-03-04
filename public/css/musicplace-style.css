@@ -4240,7 +4240,7 @@ header .menu_main_nav > li > a:hover:before {
 .top_panel_style_7 .top_panel_icon .sidebar_cart,
 .top_panel_style_8 .top_panel_icon .sidebar_cart {
   left: auto;
-  right: -1em;
+  right: 2.5em;
 }
 
 .top_panel_icon.search_wrap {
