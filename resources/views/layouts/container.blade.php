@@ -139,6 +139,8 @@
 	<script>
 		const bdark_luna = document.querySelector('#bdark-luna');
 		const bdark_sol = document.querySelector('#bdark-sol');
+		const bdark_luna2 = document.querySelector('#bdark-luna2');
+		const bdark_sol2 = document.querySelector('#bdark-sol2');
 		const body = document.querySelector('body');
 
 		load();
@@ -149,6 +151,16 @@
 		});
 
 		bdark_sol.addEventListener('click', e =>{
+			body.classList.toggle('darkmode');
+			store(body.classList.contains('darkmode'));
+		});
+
+		bdark_luna2.addEventListener('click', e =>{
+			body.classList.toggle('darkmode');
+			store(body.classList.contains('darkmode'));
+		});
+
+		bdark_sol2.addEventListener('click', e =>{
 			body.classList.toggle('darkmode');
 			store(body.classList.contains('darkmode'));
 		});
