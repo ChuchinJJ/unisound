@@ -84,7 +84,7 @@ body {
     display: block;
   }
 
-  .table tr .collapse{
+  .table tr .collapse {
     border-bottom: 1px solid #8f8f8f87 !important;
   }
 
@@ -234,6 +234,30 @@ body {
   font-size: 22px;
 }
 
+.sol-movil {
+  color: #ebcf09 !important;
+  float: right;
+  cursor: pointer;
+  margin-left: 28px;
+  font-size: 22px;
+}
+
+.luna-movil {
+  transform: rotate(-7deg);
+  color: rgb(77, 77, 88);
+  float: right;
+  cursor: pointer;
+  margin-left: 28px;
+  font-size: 22px;
+}
+
+.luna-movil:hover {
+  color: #1a1c1fe7;
+}
+
+.cuentai {
+  color: black;
+}
 /*Estilos para el Login*/
 
 .bg-dark {
@@ -578,16 +602,18 @@ body {
     margin-bottom: 5px;
   }
 
-  .container-1, .container-1 .form-control, .select-admin{
+  .container-1,
+  .container-1 .form-control,
+  .select-admin {
     width: 100% !important;
     margin-left: 0px;
   }
 
-  .imagen-td{
+  .imagen-td {
     text-align: center !important;
   }
 
-  .imagen-td img{
+  .imagen-td img {
     width: 50%;
   }
 }
@@ -609,11 +635,11 @@ body {
     text-align: -webkit-center;
   }
 
-  .img-collapse img{
+  .img-collapse img {
     width: 50%;
   }
 
-  .img-product-detail{
+  .img-product-detail {
     padding-left: 15%;
     padding-right: 15%;
   }
@@ -659,8 +685,8 @@ body {
 }
 
 .movil .cart-number {
-  top: -7px !important;
-  right: -14px !important;
+  top: -9px !important;
+  right: 32px !important;
 }
 
 .head-user {
@@ -782,15 +808,15 @@ body {
   padding-left: 0px !important;
 }
 
-.shop_mode_thumbs .post_content .description{
+.shop_mode_thumbs .post_content .description {
   display: none;
 }
 
-.shop_mode_list .post_content .description{
+.shop_mode_list .post_content .description {
   display: block;
 }
 
-.woocommerce select{
+.woocommerce select {
   background-image: none;
 }
 

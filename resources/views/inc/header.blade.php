@@ -13,7 +13,7 @@
                                     </a>
                                 </div>
                                 <div class="logodark">
-                                <a href="/">
+                                    <a href="/">
                                         <img src="/img/logoUnisoundDark.png" class="logo_main" alt="Logo" width="108" height="35">
                                         <img src="/img/logoUnisoundDark.png" class="logo_fixed" alt="Logo" width="108" height="35">
                                     </a>
@@ -113,7 +113,7 @@
                                     </form>
                                 </div>
                                 @else
-                                <div>Iniciar sesión</div>
+                                <div class="cuentai">Iniciar sesión</div>
                                 <a class="cuenta" onclick="abrirMenu()">Mi cuenta 
                                     <i class="icon-down"></i>
                                 </a>
@@ -149,9 +149,16 @@
             <div class="content_wrap">
                 <div class="menu_button icon-menu"></div>
                 <div class="logo">
-                    <a href="/">
-                        <img src="/img/logoUnisound.png" class="logo_main" alt="Logo" width="216" height="79"/>
-                    </a>
+                    <div class="logolight-movil">
+                        <a href="/">
+                            <img src="/img/logoUnisound.png" class="logo_main" alt="Logo" width="216" height="79"/>
+                        </a>
+                    </div>
+                    <div class="logodark-movil">
+                        <a href="/">
+                            <img src="/img/logoUnisoundDark.png" class="logo_main" alt="Logo" width="216" height="79"/>
+                        </a>
+                    </div>
                 </div>
                 <div class="menu_main_cart top_panel_icon">
                     <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
@@ -172,6 +179,12 @@
                             </div>
                         </div></li>
                     </ul>
+                    <div class="luna-movil">
+                        <span><i id="bdark-luna2" class="fa fa-moon"></i></span>
+                    </div> 
+                    <div class="sol-movil">
+                        <span><i id="bdark-sol2" class="fa fa-sun"></i></span>
+                    </div> 
                 </div>
             </div>
             <div class="side_wrap">
