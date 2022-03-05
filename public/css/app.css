@@ -366,7 +366,7 @@ body {
   background-color: #1a1c1f !important;
 }
 
-.darkmode .top_panel_middle .sidebar_cart{
+.darkmode .top_panel_middle .sidebar_cart, .darkmode .top_panel_icon .sidebar_cart{
   background-color: #141618 !important;
   border-color:  #303030 !important;
   color: white !important;

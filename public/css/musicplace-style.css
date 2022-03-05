@@ -383,11 +383,12 @@ body.darkmode {
   color: #f2f8fd;
 }
 
+.darkmode .scheme_original .menu_main_nav > li > a:hover {
+  color: #f04848 !important;
+}
+
 .darkmode .menu_main_cart .head-name {
   color: white;
-}
-.darkmode .menu_main_cart .head-name:hover {
-  color: #f04848;
 }
 
 .darkmode .cuenta {
@@ -424,6 +425,10 @@ body.darkmode {
 
 .darkmode .search_send {
   color: #ffffff !important;
+}
+
+.darkmode .search_form .search_input{
+  color: white !important;
 }
 
 .darkmode .woocommerce-Price-amount bdi {
@@ -669,6 +674,14 @@ body.darkmode {
 .darkmode .woocommerce-Tabs-panel table {
   border-top: 1px solid #ada9a99e !important;
   border-bottom: 1px solid #ada9a99e !important;
+}
+
+.darkmode .woocommerce-review__author{
+  color: white !important;
+}
+
+.darkmode .woocommerce-review__published-date{
+  color: #d3d6d8 !important;
 }
 
 .darkmode .comment-form-comment textarea {
