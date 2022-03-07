@@ -97,7 +97,8 @@
                         <div itemprop="description">
                             <p>{{ $producto->descripcion_general }}</p>
                         </div>
-                        <form class="variations_form cart" action="/proximo" method="get" enctype='multipart/form-data' data-product_id="1053">
+                        <form action="{{route('cart.add')}}" method="post" class="variations_form cart">
+                            @csrf
                             @if (count($colores) > 1)
                                 <table class="variations" cellspacing="0">
                                     <tbody>
@@ -143,9 +144,7 @@
                                         <input type="number" id="quantity_61e094d825320" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric" autocomplete="off"/>
                                     </div>
                                     <button type="submit" class="single_add_to_cart_button button alt">Añadir al carrito</button>
-                                    <input type="hidden" name="add-to-cart" value="1053" />
-                                    <input type="hidden" name="product_id" value="1053" />
-                                    <input type="hidden" name="variation_id" class="variation_id" value="0" />
+                                    <input type="hidden" name="product_id" value="{{ $producto->id_producto }}" />
                                 </div>
                             </div>
                         </form>
@@ -285,6 +284,31 @@
         </div>
     </div>
 </div>
+
+@if(session()->has('success'))
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModal">Atención</h5>
+      </div>
+      <div class="modal-body">
+	  {{ session('success') }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btna" onclick="cerrar()" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	function cerrar(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+</script>
+@endif
+
 <script>
     function cambiarColor(val){
         var precio = document.getElementById(val).value;

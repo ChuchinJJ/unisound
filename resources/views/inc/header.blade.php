@@ -74,7 +74,7 @@
                             <div class="top_panel_icon head-cart">
                                 <a class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
                                     <span class="icon-online-shopping-cart">
-                                        <div class="cart-number">0</div>
+                                        <div class="cart-number">{{count(Cart::getContent())}}</div>
                                     </span>
                                     <span class="contact_label contact_cart_label">Your cart:</span>
                                     <span class="contact_cart_totals">
@@ -88,7 +88,37 @@
                                     <li>
                                         <div  class="widget woocommerce widget_shopping_cart">
                                             <div class="hide_cart_widget_if_empty">
-                                                <div class="widget_shopping_cart_content">No hay productos</div>
+                                                <div class="widget_shopping_cart_content">
+                                                    @if (count(Cart::getContent()))
+                                                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+                                                        @foreach (Cart::getContent() as $item)
+                                                        <li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
+                                                            <a href="/product/{{ $item->id }}">
+                                                                <img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail">{{ $item->name }}
+                                                            </a>
+                                                            <span class="quantity">
+                                                                {{ $item->quantity }} x 
+                                                                <span class="woocommerce-Price-amount amount">
+                                                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</bdi>
+                                                                </span>
+                                                            </span>				
+                                                        </li>
+                                                        @endforeach
+                                                    </ul>
+                                                    <p class="woocommerce-mini-cart__total total">
+                                                        <strong>Subtotal:</strong>
+                                                        <span class="woocommerce-Price-amount amount">
+                                                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ Cart::getTotal() }}</bdi>
+                                                        </span>
+                                                    </p>
+                                                    <p class="woocommerce-mini-cart__buttons buttons">
+                                                        <a href="/cart/" class="button wc-forward">Ver carrito</a>
+                                                        <a href="/checkout/" class="button checkout wc-forward">Finalizar compra</a>
+                                                    </p>
+                                                    @else
+                                                    No hay productos
+                                                    @endif
+                                                </div>
                                             </div>
                                         </div>
                                     </li> 
@@ -135,9 +165,7 @@
                                         <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="nombre"/>
                                     </form>
                                 </div>
-                            </div>
-
-                            
+                            </div>  
                         </div>
                     </div>
                 </div>
@@ -163,7 +191,7 @@
                 <div class="menu_main_cart top_panel_icon">
                     <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
                         <span class="contact_icon icon-online-shopping-cart movil">
-                            <div class="cart-number">0</div>
+                            <div class="cart-number">{{count(Cart::getContent())}}</div>
                         </span>
                         <span class="contact_label contact_cart_label">Your cart:</span>
                         <span class="contact_cart_totals">
@@ -173,11 +201,41 @@
                         </span>
                     </a>
                     <ul class="widget_area sidebar_cart sidebar">
-                        <li><div class="widget woocommerce widget_shopping_cart">
-                            <div class="hide_cart_widget_if_empty">
-                                <div class="widget_shopping_cart_content">No hay productos</div>
+                        <li>
+                            <div class="widget woocommerce widget_shopping_cart">
+                                <div class="hide_cart_widget_if_empty">
+                                    @if (count(Cart::getContent()))
+                                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+                                        @foreach (Cart::getContent() as $item)
+                                        <li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
+                                            <a href="/product/{{ $item->id }}">
+                                                <img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail">{{ $item->name }}
+                                            </a>
+                                            <span class="quantity">
+                                                {{ $item->quantity }} x 
+                                                <span class="woocommerce-Price-amount amount">
+                                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</bdi>
+                                                </span>
+                                            </span>				
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                    <p class="woocommerce-mini-cart__total total">
+                                        <strong>Subtotal:</strong>
+                                        <span class="woocommerce-Price-amount amount">
+                                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ Cart::getTotal() }}</bdi>
+                                        </span>
+                                    </p>
+                                    <p class="woocommerce-mini-cart__buttons buttons">
+                                        <a href="/cart/" class="button wc-forward">Ver carrito</a>
+                                        <a href="/checkout/" class="button checkout wc-forward">Finalizar compra</a>
+                                    </p>
+                                    @else
+                                    <div class="widget_shopping_cart_content">No hay productos</div>
+                                    @endif
+                                </div>
                             </div>
-                        </div></li>
+                        </li>
                     </ul>
                     <div class="luna-movil">
                         <span><i id="bdark-luna2" class="fa fa-moon"></i></span>

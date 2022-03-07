@@ -5,6 +5,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CarritoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,11 @@ Route::post('shop', [ShopController::class, 'index']);
 Route::get('shop/{id}', [ShopController::class, 'show']);
 Route::post('shop/{id}', [ShopController::class, 'show']);
 Route::get('product/{id}', [ProductoController::class, 'showShop']);
+Route::post('cart-add', [CarritoController::class, 'add'])->name('cart.add');
+Route::get('cart', [CarritoController::class, 'cart'])->name('cart');
+Route::get('checkout', [CarritoController::class, 'checkout']);
+Route::post('cart-clear', [CarritoController::class, 'clear'])->name('cart.clear');
+Route::get('cart-removeitem/{id}', [CarritoController::class, 'removeitem']);
 
 Route::group([
         'middleware' => 'admin', 

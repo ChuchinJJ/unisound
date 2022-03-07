@@ -156,7 +156,36 @@
 					<aside id="woocommerce_widget_cart-2" class="widget_number_1 widget woocommerce widget_shopping_cart">
 						<h5 class="widget_title">Carrito de compras</h5>
 						<div class="widget_shopping_cart_content">
+							@if (count(Cart::getContent()))
+							<ul class="woocommerce-mini-cart cart_list product_list_widget">
+								@foreach (Cart::getContent() as $item)
+								<li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
+									<a href="/cart-removeitem/{{$item->id}}" class="remove remove_from_cart_button" aria-label="Borrar este artículo">×</a>
+									<a href="/product/{{ $item->id }}">
+										<img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail">{{ $item->name }}
+									</a>
+									<span class="quantity">
+										{{ $item->quantity }} x 
+										<span class="woocommerce-Price-amount amount">
+											<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</bdi>
+										</span>
+									</span>				
+								</li>
+								@endforeach
+							</ul>
+							<p class="woocommerce-mini-cart__total total">
+								<strong>Subtotal:</strong>
+								<span class="woocommerce-Price-amount amount">
+									<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ Cart::getTotal() }}</bdi>
+								</span>
+							</p>
+							<p class="woocommerce-mini-cart__buttons buttons">
+								<a href="/cart/" class="button wc-forward">Ver carrito</a>
+								<a href="/checkout/" class="button checkout wc-forward">Finalizar compra</a>
+							</p>
+							@else
 							<p class="woocommerce-mini-cart__empty-message">No hay productos en el carrito.</p>
+							@endif
 						</div>
 					</aside>
 

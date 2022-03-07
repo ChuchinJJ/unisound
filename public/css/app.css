@@ -379,6 +379,19 @@ body {
   border-top: 0.05px solid #303030 !important;
 }
 
+.darkmode .sidebar_cart li a, .darkmode .sidebar_cart li strong{
+  color: white !important;
+}
+
+.darkmode .sidebar_cart li a:hover{
+  color: rgba(240, 77, 65, 0.959) !important;
+}
+
+.darkmode .widget_shopping_cart_content .buttons .button:hover{
+  background-color: white !important;
+  color: #1a1c1fe8 !important
+}
+
 .bg-dark-x {
   background-color: var(--dark-x);
 }

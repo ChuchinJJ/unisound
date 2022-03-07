@@ -1097,6 +1097,7 @@ header .woocommerce .buttons a,
 header .woocommerce .cart_list li + li {
 	padding-top: 1em;
 	margin-top: 1em;
+	padding-bottom: 1.5em;
 }
 
 .woocommerce ul.cart_list li:before, .woocommerce ul.product_list_widget li:before, .woocommerce-page ul.cart_list li:before, .woocommerce-page ul.product_list_widget li:before {
