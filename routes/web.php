@@ -38,9 +38,8 @@ Route::post('shop/{id}', [ShopController::class, 'show']);
 Route::get('product/{id}', [ProductoController::class, 'showShop']);
 Route::post('cart-add', [CarritoController::class, 'add'])->name('cart.add');
 Route::get('cart', [CarritoController::class, 'cart'])->name('cart');
-Route::get('checkout', [CarritoController::class, 'checkout']);
-Route::post('cart-clear', [CarritoController::class, 'clear'])->name('cart.clear');
 Route::get('cart-removeitem/{id}', [CarritoController::class, 'removeitem']);
+Route::post('cart-edit', [CarritoController::class, 'edit']);
 
 Route::group([
         'middleware' => 'admin', 

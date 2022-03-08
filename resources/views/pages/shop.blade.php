@@ -40,6 +40,18 @@
 						<li class="column-1_3 product type-product post-1053 status-publish instock product_cat-band-orchestra product_cat-mouthpieces product_tag-concept product_tag-creative has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
 							<div class="post_item_wrap">
 								<div class="post_featured">
+									@php
+									$mi_color = $colores->whereIn('id_producto', $producto->id_producto);
+									$mi_valoracion = $valoraciones->whereIn('id_producto', $producto->id_producto);
+									$cant_colores = $mi_color->filter(function ($value, $key) {
+										return $value->cantidad > 0;
+									});
+									@endphp
+									@if($cant_colores->isEmpty())
+									<div class="ribbon-wrapper ribbon-lg">
+										<div class="ribbon bg-danger">Agotado</div>
+									</div>
+									@endif
 									<div class="post_thumb">
 										<a class="hover_icon hover_icon_link" href="/product/{{ $producto->id_producto }}">
 											<img width="300" height="400"
@@ -50,10 +62,6 @@
 									</div>
 								</div>
 								<div class="post_content">
-									@php
-										$mi_color = $colores->whereIn('id_producto', $producto->id_producto);
-										$mi_valoracion = $valoraciones->whereIn('id_producto', $producto->id_producto);
-									@endphp
 									<h3>
 										<a href="/product/{{ $producto->id_producto }}">{{ $producto->nombre }}</a>
 									</h3>
@@ -140,9 +148,9 @@
 						<div class="price_slider_wrapper">
 							<div class="price_slider" style="display:none;"></div>
 							<div class="price_slider_amount" data-step="1">
-								<input type="text" id="min_price" name="min_precio" value="{{old('min_precio', 47)}}" data-min="47"
+								<input type="text" id="min_price" name="min_precio" value="{{old('min_precio', $colores->min('precio'))}}" data-min="{{ $colores->min('precio') }}"
 									placeholder="Precio mínimo" />
-								<input type="text" id="max_price" name="max_precio" value="{{old('max_precio', 90000)}}" data-max="90330"
+								<input type="text" id="max_price" name="max_precio" value="{{old('max_precio', $colores->max('precio'))}}" data-max="{{ $colores->max('precio') }}"
 									placeholder="Precio máximo" />
 								<button type="submit" class="button">Filtrar</button>
 								<div class="price_label" style="display:none;">
@@ -159,7 +167,7 @@
 							@if (count(Cart::getContent()))
 							<ul class="woocommerce-mini-cart cart_list product_list_widget">
 								@foreach (Cart::getContent() as $item)
-								<li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
+								<li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 80px;">
 									<a href="/cart-removeitem/{{$item->id}}" class="remove remove_from_cart_button" aria-label="Borrar este artículo">×</a>
 									<a href="/product/{{ $item->id }}">
 										<img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail">{{ $item->name }}

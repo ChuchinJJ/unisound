@@ -12563,18 +12563,6 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   outline: none;
 }
 
-.sidebar {
-  height: calc(100% - (3.5rem + 1px));
-  overflow-x: hidden;
-  overflow-y: initial;
-  padding-bottom: 0;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0;
-  scrollbar-color: #a9a9a9 transparent;
-  scrollbar-width: none;
-}
-
 .sidebar::-webkit-scrollbar-thumb {
   background-color: #a9a9a9;
 }

@@ -1279,7 +1279,7 @@ Very common low res
 	}
 
 	.slider_boxed, .content_wrap, .content_container {
-		width: 280px;
+		width: 90%;
 	}
 
 	/* Content and Sidebar */

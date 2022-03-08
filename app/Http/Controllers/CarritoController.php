@@ -17,12 +17,12 @@ class CarritoController extends Controller
         return view('pages.checkout');
     }
 
-    public function add(Request $request){ 
+    public function add(Request $request){
         $producto = Producto::find($request->product_id);
         $color = Color::find($request->color);
 
         Cart::add(
-            $producto->id_producto, 
+            $color->id_color, 
             $producto->nombre,
             $color->precio,
             $request->quantity,
@@ -33,7 +33,7 @@ class CarritoController extends Controller
             )
            
         );
-        return back()->with('success',"$producto->nombre ¡se ha agregado con éxito al carrito!");
+        return back()->with('success',"$producto->nombre se ha agregado con éxito al carrito");
    
     }
 
@@ -41,11 +41,25 @@ class CarritoController extends Controller
         Cart::remove([
         'id' => $id,
         ]);
-        return back()->with('success',"Producto eliminado con éxito de su carrito.");
+        return back()->with('success',"El producto se ha eliminado con éxito de su carrito.");
     }
 
-    public function clear(){
-        Cart::clear();
-        return back()->with('success',"The shopping cart has successfully beed added to the shopping cart!");
+    public function edit(Request $request){
+        $count = count($request->input('quantity'));
+        for($i=0; $i<$count; $i++){
+            $producto = Color::find($request->input('cart_id')[$i]);
+            $cantidad = $request->input('quantity')[$i];
+            $id = $request->input('cart_id')[$i];
+            if($producto->cantidad < $cantidad){
+                return back()->with('success',"La cantidad seleccionada para ".Cart::get($id)->name." no está disponible.");        
+            }
+            Cart::update($id, array(
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => $cantidad
+                )
+            ));
+        }
+        return back()->with('success',"Se ha actualizado su carrito.");
     }
 }

@@ -24,7 +24,8 @@
                     <div class="woocommerce">
                         <div class="woocommerce-notices-wrapper"></div>
                         @if (count(Cart::getContent()))
-                        <form class="woocommerce-cart-form" action="" method="post">
+                        <form class="woocommerce-cart-form" action="/cart-edit" method="post">
+                            @csrf
                             <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
                                 <thead>
                                     <tr>
@@ -55,11 +56,13 @@
                                                 <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $item->price }}</bdi>
                                             </span>
                                         </td>
+                                        <input type="hidden" name="cart_id[]" value="{{ $item->id }}">
                                         <td class="product-quantity" data-title="Cantidad">
                                             <div class="quantity">
                                                 <label class="screen-reader-text" for="quantity_61e0972f0a471">{{ $item->name }}</label>
-                                                <input type="number" id="quantity_61e0972f0a471" class="input-text qty text" step="1" min="0" max="" name="cart[bdc082e57f8703ea12dc0f851a8c0074][qty]" value="{{ $item->quantity }}" title="Cantidad" size="4" placeholder="" inputmode="numeric" autocomplete="off"
-                                                />
+                                                <input type="number" id="quantity_61e0972f0a471" class="input-text qty text" step="1" min="1" max="" 
+                                                    name="quantity[]" value="{{ $item->quantity }}" title="Cantidad" size="4" placeholder="" 
+                                                    inputmode="numeric" autocomplete="off" onchange="activarBoton()"/>
                                             </div>
                                         </td>
                                         <td class="product-subtotal" data-title="Subtotal">
@@ -76,7 +79,7 @@
                                                 <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Código de cupón" /> 
                                                 <button type="submit" class="button" name="apply_coupon" value="Aplicar cupón">Aplicar cupón</button>
                                             </div>
-                                            <button type="submit" class="button" name="update_cart" value="Actualizar carrito" disabled>Actualizar carrito</button>
+                                            <button type="submit" class="button" name="update_cart" id="update_cart" value="Actualizar carrito" disabled>Actualizar carrito</button>
                                             <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="8fbbb3868c" />
                                             <input type="hidden" name="_wp_http_referer" value="/wordpress/cart/" />
                                         </td>
@@ -129,5 +132,33 @@
         </div>
     </div>
 </div>
+@if(session()->has('success'))
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModal">Atención</h5>
+      </div>
+      <div class="modal-body">
+	  {{ session('success') }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btna" onclick="cerrar()" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	function cerrar(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+</script>
+@endif
+<script>
+    function activarBoton(){
+        document.getElementById("update_cart").disabled=false;
+    }
+</script>
 
 @endsection
