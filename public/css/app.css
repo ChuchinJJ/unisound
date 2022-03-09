@@ -280,6 +280,19 @@ body {
   padding-left: 0 !important;
 }
 
+.fondo-login .align-self-center .row .col-md-6{
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.fondo-login .align-self-center .row .col-md-6 .form-check-input,
+.fondo-login .align-self-center .row .col-md-6 label{
+  position: relative !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    vertical-align: sub !important;
+}
+
 .letras {
   font-family: "Spartan", sans-serif;
   font-weight: 300;

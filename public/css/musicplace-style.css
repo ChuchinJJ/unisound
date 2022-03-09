@@ -4744,6 +4744,17 @@ li.opened > a > .open_child_menu:before {
   display: block;
 }
 
+@media screen and (max-width: 1150px) {
+  .search_wrap{
+    max-width: 30% !important;
+  }
+
+  .header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
 .search_wrap {
   position: relative;
   width: 35% !important;

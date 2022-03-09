@@ -87,7 +87,7 @@
                   
                   <div class="row">
                     <div class="col-md-6 mb-4">
-                      <input type="checkbox" class="form-check-input" id="remember" name="remember" style="margin-top: -5px;">
+                      <input type="checkbox" class="form-check-input" id="remember" name="remember">
                       <label class="form-check-label letras" for="remember" >Recordarme
                     </div>
                     <div class="col-md-6 mb-4">
