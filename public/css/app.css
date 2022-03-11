@@ -334,7 +334,8 @@ body {
   background-color: #141618 !important;
 }
 
-.darkmode .modal-header h5{
+.darkmode .modal-header h5,
+.darkmode .modal-body h4{
   color: white !important;
 }
 

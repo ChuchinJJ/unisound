@@ -23,6 +23,10 @@ Route::get('/', [SliderController::class, "index"])->name("home");
 Route::get('contact', [ContactController::class, "index"]);
 Route::post('contact', [ContactController::class, "send"]);
 
+Route::get('email', function () {
+    return view('emails.checkout');
+});
+
 Route::get('about', function () {
     return view('pages.about');
 });

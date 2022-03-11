@@ -15,6 +15,7 @@
 	<link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all' />
 	<link rel="stylesheet" href="/css/bootstrap.css" type='text/css' media='all' />
 	<link rel="stylesheet" href="/css/app.css">
+	<link rel="stylesheet" href="/css/app2.css">
 	<link rel="stylesheet" href="/img/404.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

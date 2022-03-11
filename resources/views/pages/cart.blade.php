@@ -53,7 +53,7 @@
                                         </td>
                                         <td class="product-price" data-title="Precio">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $item->price }}</bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($item->price,2,".",",") }}</bdi>
                                             </span>
                                         </td>
                                         <input type="hidden" name="cart_id[]" value="{{ $item->id }}">
@@ -67,7 +67,7 @@
                                         </td>
                                         <td class="product-subtotal" data-title="Subtotal">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $item->price*$item->quantity }}</bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($item->price*$item->quantity,2,".",",") }}</bdi>
                                             </span>
                                         </td>
                                     </tr>
@@ -95,7 +95,7 @@
                                         <th>Subtotal</th>
                                         <td data-title="Subtotal">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ Cart::getTotal() }}</bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format(Cart::getTotal(),2,".",",") }}</bdi>
                                             </span>
                                         </td>
                                     </tr>
@@ -104,7 +104,7 @@
                                         <td data-title="Total">
                                             <strong>
                                                 <span class="woocommerce-Price-amount amount">
-                                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ Cart::getTotal() }}</bdi>
+                                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format(Cart::getTotal(),2,".",",") }}</bdi>
                                                 </span>
                                             </strong>
                                         </td>

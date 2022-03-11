@@ -172,3 +172,35 @@
     background-color: transparent !important;
     cursor: auto !important;
 }
+
+.woocommerce-checkout-review-order-table{
+    border: none !important;
+    margin-top: 20px !important;
+}
+
+.woocommerce-checkout-review-order-table thead th{
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+
+.woocommerce-checkout-review-order-table tfoot th{
+    font-size: 1em !important;
+}
+
+.darkmode .post_item .checkout h2,
+.darkmode .post_item .checkout h3,
+.darkmode .post_item .checkout h4,
+.darkmode .post_item .checkout h5{
+    color: white !important;
+}
+
+.darkmode .woocommerce-checkout-review-order-table tfoot th{
+    color: white !important;
+}
+
+.darkmode .woocommerce-checkout-review-order .button:hover{
+    background-color: white !important;
+    color: #1a1c1fe8 !important
+}
+
+  

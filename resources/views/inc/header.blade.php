@@ -113,7 +113,6 @@
                                                     </p>
                                                     <p class="woocommerce-mini-cart__buttons buttons">
                                                         <a href="/cart/" class="button wc-forward">Ver carrito</a>
-                                                        <a href="/checkout/" class="button checkout wc-forward">Finalizar compra</a>
                                                     </p>
                                                     @else
                                                     No hay productos
@@ -228,7 +227,6 @@
                                     </p>
                                     <p class="woocommerce-mini-cart__buttons buttons">
                                         <a href="/cart/" class="button wc-forward">Ver carrito</a>
-                                        <a href="/checkout/" class="button checkout wc-forward">Finalizar compra</a>
                                     </p>
                                     @else
                                     <div class="widget_shopping_cart_content">No hay productos</div>
