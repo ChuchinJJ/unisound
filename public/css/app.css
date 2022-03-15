@@ -258,6 +258,201 @@ body {
 .cuentai {
   color: black;
 }
+
+/*Estilos para Admin Cliente*/
+
+.contenedor-cliente {
+  display: flex;
+}
+
+.menu-cliente i {
+  color: #aab0b9;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.menu-cliente a {
+  padding-top: 15px;
+  padding-left: 20px;
+  font-weight: 450;
+  font-size: 16px;
+  color: black;
+}
+.menu-cliente a:hover {
+  background-color: #e4e7eba8;
+}
+
+.menu-cliente hr {
+  margin-top: 20px;
+  color: #c4c6c7;
+}
+
+.menu-cliente span {
+  font-size: 13px;
+  color: #857f7f;
+}
+
+.cliente-izquierda {
+  width: 30%;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.cliente-izquierda::-webkit-scrollbar {
+  width: 10px;
+  background-color: red;
+}
+
+.cliente-izquierda::-webkit-scrollbar-thumb {
+  background-color: rgb(22, 21, 21);
+}
+
+.cliente-derecha {
+  width: 70%;
+  min-height: 100vh;
+  background-color: #f1f5f9a8;
+  padding-bottom: 20px;
+}
+
+.menu-derecha {
+  margin-left: 35px;
+  margin-top: 30px;
+}
+
+.menu-derecha a {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.menu-derecha span {
+  color: #857f7f;
+}
+
+.menu-derecha2 {
+  margin-left: 5px;
+  margin-top: 30px;
+}
+
+.menu-derecha2 a {
+  font-weight: 500px;
+  font-size: 18px;
+}
+
+.menu-derecha2 span {
+  color: #857f7f;
+}
+.menu-derecha3 {
+  padding-left: 15px;
+  margin-top: 40px;
+}
+
+.menu-derecha3 a {
+  font-weight: 500px;
+  font-size: 25px;
+}
+
+.menu-derecha3 span {
+  color: #857f7f;
+}
+
+.seguridad-span {
+  color: #857f7f;
+}
+
+.titulo-cliente {
+  font-size: 34px;
+  font-weight: bold;
+  margin-left: 42px;
+}
+
+.titulo-cliente2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 32px;
+}
+
+.button-cliente {
+  padding: 10px 24px;
+  background-color: transparent !important;
+  border: 1px solid #f04848;
+  border-radius: 12px;
+  display: inline-block;
+  color: #e21818 !important;
+}
+.button-cliente:hover {
+  background-color: #e21818 !important;
+  border: 2px solid #caccce;
+  color: white !important;
+}
+
+.button-cliente2 {
+  padding: 10px 24px;
+  border-radius: 12px;
+  display: inline-block;
+}
+.button-cliente2:hover {
+  background-color: rgb(26, 24, 24) !important;
+  border: 2px solid #caccce;
+  color: white !important;
+}
+
+.input-cliente {
+  padding: 12px !important;
+  border-radius: 8px !important;
+}
+.input-group-text {
+  border-radius: 12px;
+  background-color: white;
+}
+
+#seguridad {
+  padding-left: 20px;
+  display: none;
+}
+
+.icono-cliente {
+  font-size: 18px;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex !important;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.icono-cliente:hover {
+  background: rgb(239 235 235 / 88%);
+  border: 1px solid #c1c4c7;
+}
+
+.cliente-block {
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.cliente-block {
+  display: none;
+}
+/*Admin Cliete Responsivo*/
+
+@media screen and (max-width: 600px) {
+  .cliente-izquierda {
+    display: none;
+  }
+
+  .cliente-block {
+    display: block;
+    display: inline-flex;
+  }
+
+  .cliente-derecha {
+    width: 100%;
+  }
+  .cliente-derecha .row {
+    padding-right: 22px;
+  }
+}
 /*Estilos para el Login*/
 
 .bg-dark {
@@ -297,7 +492,9 @@ body {
   color: white;
 }
 
-.darkmode .fondo-login h1, .darkmode .fondo-login p, .darkmode .fondo-login label{
+.darkmode .fondo-login h1,
+.darkmode .fondo-login p,
+.darkmode .fondo-login label {
   color: white !important;
 }
 
@@ -308,73 +505,75 @@ body {
 
 .darkmode .fondo-login input:-webkit-autofill,
 .darkmode .fondo-login input:-webkit-autofill:hover,
-.darkmode .fondo-login input:-webkit-autofill:focus{
+.darkmode .fondo-login input:-webkit-autofill:focus {
   -webkit-text-fill-color: white !important;
   box-shadow: 0 0 0px 1000px #1a1c1f inset;
 }
 
-.darkmode .modal-content{
+.darkmode .modal-content {
   background-color: #141618 !important;
 }
 
-.darkmode .modal-header h5{
+.darkmode .modal-header h5 {
   color: white !important;
 }
 
-.darkmode .btna:hover, .darkmode .btn:hover{
+.darkmode .btna:hover,
+.darkmode .btn:hover {
   background-color: white !important;
   color: #141618 !important;
 }
 
-.darkmode .card-register{
+.darkmode .card-register {
   background-color: #141618;
 }
 
-.darkmode .title-register{
+.darkmode .title-register {
   background-color: #24262a;
 }
 
-.darkmode .card-register input{
+.darkmode .card-register input {
   border-color: #5c5c5c !important;
 }
 
-.darkmode .card-register input[type="date"]{
+.darkmode .card-register input[type="date"] {
   background-color: #e1dfdb !important;
   color: black !important;
   border-color: #a5a5a5 !important;
   filter: invert(1);
 }
 
-.darkmode .menu-login{
+.darkmode .menu-login {
   background-color: #141618 !important;
   color: white !important;
   border: 0.05px solid #303030;
 }
 
-.darkmode .menu-login::after{
+.darkmode .menu-login::after {
   background-color: #141618 !important;
   color: white !important;
   border-left: 0.05px solid #303030;
   border-top: 0.05px solid #303030;
 }
 
-.darkmode .menu-login a{
+.darkmode .menu-login a {
   color: white;
 }
 
-.darkmode .menu-login a:hover{
+.darkmode .menu-login a:hover {
   background-color: #1a1c1f !important;
 }
 
-.darkmode .top_panel_middle .sidebar_cart, .darkmode .top_panel_icon .sidebar_cart{
+.darkmode .top_panel_middle .sidebar_cart,
+.darkmode .top_panel_icon .sidebar_cart {
   background-color: #141618 !important;
-  border-color:  #303030 !important;
+  border-color: #303030 !important;
   color: white !important;
 }
 
 .darkmode .top_panel_middle .sidebar_cart:after {
   background-color: #141618 !important;
-  border-color:  #303030 !important;
+  border-color: #303030 !important;
   border-left: 0.05px solid #303030 !important;
   border-top: 0.05px solid #303030 !important;
 }

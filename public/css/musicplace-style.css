@@ -427,7 +427,7 @@ body.darkmode {
   color: #ffffff !important;
 }
 
-.darkmode .search_form .search_input{
+.darkmode .search_form .search_input {
   color: white !important;
 }
 
@@ -676,11 +676,11 @@ body.darkmode {
   border-bottom: 1px solid #ada9a99e !important;
 }
 
-.darkmode .woocommerce-review__author{
+.darkmode .woocommerce-review__author {
   color: white !important;
 }
 
-.darkmode .woocommerce-review__published-date{
+.darkmode .woocommerce-review__published-date {
   color: #d3d6d8 !important;
 }
 
@@ -759,6 +759,73 @@ body.darkmode {
 .darkmode .scheme_original .header_mobile .menu_main_nav > li a:hover {
   color: #f04848 !important;
 }
+
+/*Darkmode para Admin Cliente*/
+
+.darkmode .cliente-izquierda {
+  background-color: #141618 !important;
+}
+
+.darkmode .titulo-cliente {
+  color: white !important;
+}
+
+.darkmode .menu-cliente a {
+  color: white !important;
+}
+.darkmode .menu-cliente span {
+  color: #c3bdbd;
+}
+.darkmode .menu-cliente a:hover {
+  background-color: #0d0e0e;
+}
+
+.darkmode .cliente-derecha {
+  background-color: #141618 !important;
+}
+
+.darkmode .titulo-cliente2 {
+  color: white !important;
+}
+
+.darkmode .menu-derecha span {
+  color: #c3bdbd;
+}
+
+.darkmode .menu-derecha2 span {
+  color: #c3bdbd;
+}
+
+.darkmode .menu-derecha3 span {
+  color: #c3bdbd !important;
+}
+
+.darkmode .letras {
+  color: #ffffff !important;
+  font-size: 14px;
+}
+
+.darkmode .input-cliente {
+  background-color: #1a1c1f !important;
+  color: #dfdada !important;
+}
+
+.darkmode .seguridad-span {
+  color: #c3bdbd;
+}
+
+.darkmode .button-cliente {
+  background-color: transparent !important;
+  border: 1px solid white;
+  color: #eee4e4 !important;
+}
+
+.darkmode .button-cliente:hover {
+  background-color: #e21818 !important;
+  border: 1px solid #eee4e4;
+  color: #ffffff !important;
+}
+
 /* Tables */
 table {
   border-collapse: collapse;

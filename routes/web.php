@@ -30,6 +30,10 @@ Route::get('proximo', function () {
     return view('pages.proximo');
 });
 
+Route::get('cliente', function () {
+    return view('pages.cliente');
+});
+
 Route::get('shop', [ShopController::class, 'index']);
 Route::post('shop', [ShopController::class, 'index']);
 Route::get('shop/{id}', [ShopController::class, 'show']);
