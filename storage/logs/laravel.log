@@ -1,0 +1,28 @@
+[2022-03-15 16:51:16] local.ERROR: Class 'Darryldecode\Cart\CartServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Darryldecode\\Cart\\CartServiceProvider' not found at C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Darryldecode\\\\Ca...')
+#1 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(659): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#7 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#8 C:\\xampp\\htdocs\\unisound\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#9 C:\\xampp\\htdocs\\unisound\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
+#10 {main}
+"} 
+[2022-03-15 16:51:29] local.ERROR: Class 'Darryldecode\Cart\CartServiceProvider' not found {"exception":"[object] (Error(code: 0): Class 'Darryldecode\\Cart\\CartServiceProvider' not found at C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('Darryldecode\\\\Ca...')
+#1 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(659): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(153): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(137): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#7 C:\\xampp\\htdocs\\unisound\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(111): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#8 C:\\xampp\\htdocs\\unisound\\public\\index.php(52): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#9 C:\\xampp\\htdocs\\unisound\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
+#10 {main}
+"} 

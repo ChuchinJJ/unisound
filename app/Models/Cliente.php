@@ -8,6 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Cliente extends Model
 {
     use HasFactory;
-    public $primaryKey = 'rfc';
     public $timestamps = false;
 }

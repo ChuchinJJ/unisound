@@ -13,7 +13,6 @@
 			</div>
 		</div>
 		<div class="page_content_wrap page_paddings_yes">
-
 				
 <div class="content_wrap">
 	<div class="content">

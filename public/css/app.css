@@ -471,6 +471,23 @@ body {
   text-transform: none;
 }
 
+.fondo-login .col-lg-7 {
+  padding-left: 0 !important;
+}
+
+.fondo-login .align-self-center .row .col-md-6 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.fondo-login .align-self-center .row .col-md-6 .form-check-input,
+.fondo-login .align-self-center .row .col-md-6 label {
+  position: relative !important;
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+  vertical-align: sub !important;
+}
+
 .letras {
   font-family: "Spartan", sans-serif;
   font-weight: 300;
@@ -514,7 +531,8 @@ body {
   background-color: #141618 !important;
 }
 
-.darkmode .modal-header h5 {
+.darkmode .modal-header h5,
+.darkmode .modal-body h4 {
   color: white !important;
 }
 
@@ -576,6 +594,20 @@ body {
   border-color: #303030 !important;
   border-left: 0.05px solid #303030 !important;
   border-top: 0.05px solid #303030 !important;
+}
+
+.darkmode .sidebar_cart li a,
+.darkmode .sidebar_cart li strong {
+  color: white !important;
+}
+
+.darkmode .sidebar_cart li a:hover {
+  color: rgba(240, 77, 65, 0.959) !important;
+}
+
+.darkmode .widget_shopping_cart_content .buttons .button:hover {
+  background-color: white !important;
+  color: #1a1c1fe8 !important;
 }
 
 .bg-dark-x {
@@ -865,14 +897,14 @@ body {
 .cart-number {
   display: inline-flex;
   position: absolute;
-  right: 44px;
-  top: -1px;
+  right: 48px;
+  top: 2px;
   padding-top: 1px;
   align-items: center;
   justify-content: center;
   height: 20px;
   width: 20px;
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
   background-color: #e21818 !important;
   color: white;
@@ -884,8 +916,11 @@ body {
 }
 
 .movil .cart-number {
-  top: -9px !important;
-  right: 32px !important;
+  top: -8px !important;
+  right: 38px !important;
+  height: 18px !important;
+  width: 18px !important;
+  font-size: 12px !important;
 }
 
 .head-user {
@@ -928,7 +963,7 @@ body {
   border: 0.05px solid #bdbdbd;
   box-shadow: 0px 2px 4px 0px #0000003d;
   border-radius: 3px;
-  z-index: 999;
+  z-index: 1999;
 }
 
 .menu-login::after {
@@ -1017,6 +1052,15 @@ body {
 
 .woocommerce select {
   background-image: none;
+}
+
+.cantidad-disponible {
+  margin-bottom: 20px;
+}
+
+.agotado {
+  font-size: 18px !important;
+  font-weight: normal !important;
 }
 
 /*

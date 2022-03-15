@@ -5,6 +5,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CarritoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,10 @@ Route::get('/', [SliderController::class, "index"])->name("home");
 Route::get('contact', [ContactController::class, "index"]);
 Route::post('contact', [ContactController::class, "send"]);
 
+Route::get('email', function () {
+    return view('emails.checkout');
+});
+
 Route::get('about', function () {
     return view('pages.about');
 });
@@ -30,15 +35,16 @@ Route::get('proximo', function () {
     return view('pages.proximo');
 });
 
-Route::get('cliente', function () {
-    return view('pages.cliente');
-});
 
 Route::get('shop', [ShopController::class, 'index']);
 Route::post('shop', [ShopController::class, 'index']);
 Route::get('shop/{id}', [ShopController::class, 'show']);
 Route::post('shop/{id}', [ShopController::class, 'show']);
 Route::get('product/{id}', [ProductoController::class, 'showShop']);
+Route::post('cart-add', [CarritoController::class, 'add'])->name('cart.add');
+Route::get('cart', [CarritoController::class, 'cart'])->name('cart');
+Route::get('cart-removeitem/{id}', [CarritoController::class, 'removeitem']);
+Route::post('cart-edit', [CarritoController::class, 'edit']);
 
 Route::group([
         'middleware' => 'admin', 

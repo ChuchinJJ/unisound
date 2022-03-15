@@ -9,6 +9,8 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CarritoController;
+use App\Http\Controllers\ConfigClienteController;
 
 Route::middleware('guest')->group(function () {
     Route::get('registrar', [RegisteredUserController::class, 'create'])->name('registrar');
@@ -27,4 +29,6 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
+    Route::get('checkout', [CarritoController::class, 'checkout']);
+    Route::get('cliente', [ConfigClienteController::class, 'index']);
 });

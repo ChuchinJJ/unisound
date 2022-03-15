@@ -15,6 +15,7 @@
 	<link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all' />
 	<link rel="stylesheet" href="/css/bootstrap.css" type='text/css' media='all' />
 	<link rel="stylesheet" href="/css/app.css">
+	<link rel="stylesheet" href="/css/app2.css">
 	<link rel="stylesheet" href="/img/404.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +24,7 @@
 	<style id='woocommerce-inline-inline-css' type='text/css'>
 	    .woocommerce form .form-row .required { visibility: visible; }
 	</style>
+	<link rel="stylesheet" href="/css/adminlte.css">
 	<link rel='stylesheet' id='musicplace-font-google-fonts-style-css'  href='//fonts.googleapis.com/css?family=Hind:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&#038;subset=latin,latin-ext' type='text/css' media='all' />
 	<link rel='stylesheet' id='tp-fontello-css'  href='/css/fontello-esg.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='fontello-style-css'  href='/css/fontello.css' type='text/css' media='all' />

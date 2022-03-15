@@ -97,57 +97,83 @@
                         <div itemprop="description">
                             <p>{{ $producto->descripcion_general }}</p>
                         </div>
-                        <form class="variations_form cart" action="/proximo" method="get" enctype='multipart/form-data' data-product_id="1053">
-                            @if (count($colores) > 1)
-                                <table class="variations" cellspacing="0">
-                                    <tbody>
-                                        <tr>
-                                            <th class="label"><label for="pa_color">Color</label></th>
-                                            <td class="value">
-                                                <select id="pa_color" style="border-style: none;" name="color" data-attribute_name="color" data-show_option_none="yes" required onchange="cambiarColor(this.value)">
-                                                    <option value="" selected='selected'>Elige una opción</option>
-                                                    @foreach( $colores as $color )
-                                                        <option value="{{ $color->id_color }}">{{ $color->color }}</option>
-                                                    @endforeach
-                                                </select>
-                                                <a class="reset_variations" href="#">Limpiar</a>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                    @foreach( $colores as $color )
-                                        <input type="hidden" id="{{ $color->id_color }}" value="{{ $color->precio }}" />
-                                    @endforeach
-                                </table>
-                                @if($colores[0]->precio != $colores[count($colores)-1]->precio)
-                                <div class="single_variation_wrap">
-                                    <div class="woocommerce-variation single_variation">
-                                        <div class="woocommerce-variation-description"></div>
-                                        <div class="woocommerce-variation-price">
-                                            <span class="price">
-                                                <span class="woocommerce-Price-amount amount">
-                                                    <bdi id="priceByColor"></bdi>
+                        <form action="{{route('cart.add')}}" method="post" class="variations_form cart">
+                            @csrf
+                            @php
+                                $cant_colores = $colores->filter(function ($value, $key) {
+                                    return $value->cantidad > 0;
+                                });
+                            @endphp
+                            @if($cant_colores->isNotEmpty())
+                                @if (count($colores) > 1)
+                                    <table class="variations" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <th class="label"><label for="pa_color">Color</label></th>
+                                                <td class="value">
+                                                    <select id="pa_color" style="border-style: none;" name="color" data-attribute_name="color" data-show_option_none="yes" required onchange="cambiarColor(this.value)">
+                                                        <option value="" selected='selected'>Elige una opción</option>
+                                                        @foreach( $colores as $color )
+                                                            @if($color->cantidad > 0)
+                                                                <option value="{{ $color->id_color }}">{{ $color->color }}</option>
+                                                            @endif
+                                                        @endforeach
+                                                    </select>
+                                                    <a class="reset_variations" href="#">Limpiar</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        @foreach( $colores as $color )
+                                            <input type="hidden" id="precio-{{ $color->id_color }}" value="{{ $color->precio }}" />
+                                            <input type="hidden" id="cantidad-{{ $color->id_color }}" value="{{ $color->cantidad }}" />
+                                        @endforeach
+                                    </table>
+                                    @if($colores[0]->precio != $colores[count($colores)-1]->precio)
+                                    <div class="single_variation_wrap">
+                                        <div class="woocommerce-variation single_variation">
+                                            <div class="woocommerce-variation-description"></div>
+                                            <div class="woocommerce-variation-price">
+                                                <span class="price">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <bdi id="priceByColor"></bdi>
+                                                    </span>
                                                 </span>
-                                            </span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                    @endif
+                                    <label class="cantidad-disponible" id="cantidad-disponible"></label>
+                                @else
+                                    <input type="hidden" id="pa_color" name="color" value="{{ $colores[0]->id_color }}" />
+                                    <label class="cantidad-disponible" id="cantidad-disponible">
+                                        @if($colores[0]->cantidad > 0)
+                                        <small>
+                                            {{ $colores[0]->cantidad }}
+                                            @if($colores[0]->cantidad > 1)
+                                                unidades disponibles
+                                            @else
+                                                unidad disponible
+                                            @endif
+                                        </small>
+                                        @endif
+                                    </label>
                                 @endif
-                            @else
-                                <input type="hidden" name="color" value="{{ $colores[0]->id_color }}" />
-                            @endif
-                            <div class="single_variation_wrap">
-                                <div class="woocommerce-variation single_variation"></div>
-                                <div class="woocommerce-variation-add-to-cart variations_button">
-                                    <div class="quantity">
-                                        <label class="screen-reader-text" for="quantity_61e094d825320">{{ $producto->nombre }} cantidad</label>
-                                        <input type="number" id="quantity_61e094d825320" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric" autocomplete="off"/>
+                                <div class="single_variation_wrap">
+                                    <div class="woocommerce-variation single_variation"></div>
+                                    <div class="woocommerce-variation-add-to-cart variations_button">
+                                        <div class="quantity">
+                                            <label class="screen-reader-text" for="quantity_61e094d825320">{{ $producto->nombre }} cantidad</label>
+                                            <input type="number" id="quantity_61e094d825320" class="input-text qty text" step="1" min="1" 
+                                                max="@if(count($colores) == 1){{$colores[0]->cantidad }}@endif" name="quantity" value="1" title="Cantidad" 
+                                                size="4" placeholder="" inputmode="numeric" autocomplete="off"/>
+                                        </div>
+                                        <button type="submit" class="single_add_to_cart_button button alt">Añadir al carrito</button>
+                                        <input type="hidden" name="product_id" value="{{ $producto->id_producto }}" />
                                     </div>
-                                    <button type="submit" class="single_add_to_cart_button button alt">Añadir al carrito</button>
-                                    <input type="hidden" name="add-to-cart" value="1053" />
-                                    <input type="hidden" name="product_id" value="1053" />
-                                    <input type="hidden" name="variation_id" class="variation_id" value="0" />
                                 </div>
-                            </div>
+                            @else
+                                <span class="badge bg-danger agotado">Producto agotado</span>
+                            @endif
                         </form>
                         <div class="product_meta">
                             <span class="posted_in">Categoría: <a href="/shop/{{ $producto->id_categoria }}" rel="tag">{{ $categoria }}</a></span>
@@ -285,10 +311,47 @@
         </div>
     </div>
 </div>
+
+@if(session()->has('success'))
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModal">Atención</h5>
+      </div>
+      <div class="modal-body">
+	  {{ session('success') }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btna" onclick="cerrar()" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	function cerrar(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+</script>
+@endif
+
 <script>
     function cambiarColor(val){
-        var precio = document.getElementById(val).value;
-        document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+        if(val != ""){
+            var precio = document.getElementById("precio-"+val).value;
+            var cantidad = document.getElementById("cantidad-"+val).value;
+            document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+            var unidad = " unidad disponible";
+            if(parseInt(cantidad)>1){
+                unidad = " unidades disponibles";
+            }
+            document.getElementById("cantidad-disponible").innerHTML = '<small>'+cantidad+unidad+'</small>';
+            document.getElementById("quantity_61e094d825320").max=cantidad;
+        }else{
+            document.getElementById("priceByColor").innerHTML = '';
+            document.getElementById("cantidad-disponible").innerHTML = '';
+        }
     }
 </script>
 @endsection
