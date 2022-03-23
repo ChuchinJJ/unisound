@@ -9,4 +9,6 @@ class Cliente extends Model
 {
     use HasFactory;
     public $timestamps = false;
+    public $primaryKey = 'email';
+    public $incrementing = false;
 }

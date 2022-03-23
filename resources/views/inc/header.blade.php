@@ -134,6 +134,10 @@
                                 <div class="menu-login" id="menu">
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
+                                        <a href="/cliente"class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
+                                            Ver perfil
+                                        </a>
+
                                         <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
                                                 onclick="event.preventDefault();
                                                 this.closest('form').submit();">
