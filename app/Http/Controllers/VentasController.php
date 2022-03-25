@@ -63,7 +63,21 @@ class VentasController extends Controller
         ]);
     }
 
-    public function update($id){
-        return view('admin.dashboard');
+    public function edit($id){
+        $venta = Venta::find($id);
+        return view('admin.updateVentas')->with('venta', $venta);
+    }
+
+    public function update($id, Request $request){
+        $venta = Venta::find($id);
+        $venta->status = $request->input('status');
+        $venta->detalles = $request->input('detalles');
+        if($request->input('pagado') == '0'){
+            $venta->pagado = 0;
+        }else{
+            $venta->pagado = 1;
+        }
+        $venta->save();
+        return redirect('admin/ventas')->with('success', 'La venta ha sido editada con exito');
     }
 }

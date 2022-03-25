@@ -77,7 +77,8 @@ Route::group([
         Route::get('ventas', [VentasController::class, "index"]);
         Route::post('ventas', [VentasController::class, "index"]);
         Route::get('ventas/{id}/detalle', [VentasController::class, "detalle"]);
-        Route::get('ventas/{id}/update', [VentasController::class, "update"]);
+        Route::get('ventas/{id}/update', [VentasController::class, "edit"]);
+        Route::post('ventas/{id}/update', [VentasController::class, "update"]);
     }
 );
 

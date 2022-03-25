@@ -137,6 +137,37 @@
         justify-content: space-between;
         height: 45px;
     }
+
+    .table-sale tr {
+        border-bottom: 1px solid #727272;
+    }
+
+    .table-sale .pagado{
+        justify-content: space-between !important;
+    }
+
+    .table-detail-sale tr {
+        border-bottom: 1px solid #727272;
+    }
+
+    .table-detail-sale tfoot tr{
+        display: grid;
+    }
+
+    .table-detail-sale tfoot tr th,
+    .table-detail-sale tfoot tr td{
+        padding: 0.2rem;
+    }
+
+    .table-detail-sale .detalle-venta-imagen{
+        border-bottom: 0;
+        padding-bottom: 0px !important;
+    }
+
+    .table-detail-sale .detalle-venta-producto{
+        text-align: right !important;
+        padding-top: 5px !important;
+    }
 }
 
 .pagination-products{
@@ -242,4 +273,90 @@
     color: #dc3545;
     background-color: #f3f3f3 !important;
 }
-  
+
+.table-sale .pagado{
+    display: flex;
+    justify-content: center;
+}
+
+.table-detail-sale{
+    border-right: 3px solid white; border-left: 3px solid white;
+    border: 0;
+}
+
+.table-detail-sale thead th{
+    background-color: #ffffff;
+    color: #3a3a3a;
+    border-bottom: 1px solid #4e4e4e;
+}
+
+.table-detail-sale tbody td{
+    border-bottom: 1px solid #dee2e6;
+}
+.table-detail-sale tfoot th,
+.table-detail-sale tfoot td{
+    font-size: 18px;
+    text-align: right;
+}
+
+.table-detail-sale .detalle-venta-producto{
+    text-align: left;
+}
+
+.card-cliente .fa{
+    margin-right: 10px;
+    color: #000000ba;
+}
+
+.card-venta{
+    padding: 40px;
+}
+
+.update-sale label{
+    display: block;
+}
+
+.update-sale .custom-switch{
+    padding-bottom: 0 !important;
+}
+
+.circle-status{
+    width: 25px !important;
+    display: block;
+    height: 25px !important;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.circle-Pedido{
+    background-color: #50cd89;
+}
+
+.circle-Entregado{
+    background-color: #009ef7;
+}
+
+.circle-Cancelado{
+    background-color: #f1416c;
+}
+
+.circle-pagado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+
+.venta-pagado{
+    background-color: #50cd89;
+    color: white;
+}
+
+.venta-no-pagado{
+    background-color: #f1416c;
+    color: white;
+}

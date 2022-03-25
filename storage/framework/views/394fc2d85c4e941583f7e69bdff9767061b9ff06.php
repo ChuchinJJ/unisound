@@ -5,12 +5,7 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row m-3 align-items-center">
-          <div class="col-sm-6">
             <h1 class="m-0">Ventas</h1>
-          </div>
-          <!--<div class="col-sm-6 btn-top">
-            <a class="btn btn-danger btn-lg" href="/admin/">Agregar <i class="fa fa-plus"></i></a>
-          </div>-->
         </div>
       </div>
     </div>
@@ -60,7 +55,7 @@
                         <div class="filter-select">
                             <div class="product-filter mb-2" style="margin-left: 30px;">
                                 <span>Estado</span>
-                                <select class="select-admin" name="status" onchange="enviar()">
+                                <select class="select-admin" name="status" id="status" onchange="enviar()">
                                     <option value="">Todas</option>
                                     <option value="Pedido" <?php if(old('status') == "Pedido"): ?> selected='selected' <?php endif; ?>>Pedido</option>
                                     <option value="Entregado" <?php if(old('status') == "Entregado"): ?> selected='selected' <?php endif; ?>>Entregado</option>
@@ -71,7 +66,7 @@
                     </form>
             
                     <div class="container-table">
-                        <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table" width="100%">
+                        <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table table-sale" width="100%">
                             <thead>
                                 <tr>
                                     <th>ID pedido</th>
@@ -99,13 +94,15 @@
                                     </td>
                                     <td data-label="Estado"><div class="bg-status bg-<?php echo e($venta->status); ?>"><?php echo e($venta->status); ?></div></td>
                                     <td data-label="Total">$<?php echo e(number_format($venta->total,2,".",",")); ?></td>
-                                    <td data-label="Pagado">
-                                        <?php if( $venta->pagado == 1): ?>
-                                        <i style="color:#31cf31b5;" class="fa fa-check"></i>
+                                    <td data-label="Pagado" class="pagado">
+                                        <?php if($venta->pagado == 0): ?>
+                                            <i class="circle-pagado venta-no-pagado">
+                                                <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ffff">
+                                                    <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
+                                                </svg>
+                                            </i>
                                         <?php else: ?>
-                                        <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                            <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
-                                        </svg>
+                                            <i class="fa fa-check circle-pagado venta-pagado"></i>
                                         <?php endif; ?>
                                     </td>
                                     <td data-label="Fecha">
@@ -171,6 +168,7 @@
     $(function () {
         $('#datetimepicker').daterangepicker({}, function(start, end, label) {
             $('#datetimepicker input').val(start.format('D/MM/YYYY') + ' - ' + end.format('D/MM/YYYY'));
+            $('#status').val('');
             enviar();
         });
     });
