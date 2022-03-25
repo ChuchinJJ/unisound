@@ -93,7 +93,34 @@
 }
 
 .no-products i{
-    font-size: 50px;
+    font-size: 60px;
+}
+
+.bg-status{
+    display: inline-block;
+    padding: 0.325rem 0.5rem;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.325rem;
+}
+
+.bg-Pedido{
+    color: #50cd89;
+    background-color: #e8fff3;
+}
+
+.bg-Entregado{
+    color: #009ef7;
+    background-color: #f1faff;
+}
+
+.bg-Cancelado{
+    color: #f1416c;
+    background-color: #fff5f8;
 }
 
 @media screen and (max-width: 600px) {
@@ -102,7 +129,7 @@
     }
 
     .filter-select .product-filter{
-        margin-left: 0px;
+        margin-left: 0px !important;
     }
 
     .star-td{
@@ -203,4 +230,16 @@
     color: #1a1c1fe8 !important
 }
 
+.card-slider .dropdown .icono-arrow:hover{
+    color: #5c5252a8;
+}
+
+.card-slider .dropdown .dropdown-menu{
+    min-width: 6rem;
+}
+
+.card-slider .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #dc3545;
+    background-color: #f3f3f3 !important;
+}
   

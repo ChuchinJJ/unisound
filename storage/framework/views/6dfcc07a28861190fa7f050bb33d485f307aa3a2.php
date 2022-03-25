@@ -31,13 +31,13 @@
 
 <body class="sidebar-mini layout-navbar-fixed">
     <div class="wrapper">
-        @include('admin.menu')
-        @yield('contenido')
-        @include('admin.footer')
+        <?php echo $__env->make('admin.menu', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->yieldContent('contenido'); ?>
+        <?php echo $__env->make('admin.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     
     </div>
     <script type="text/javascript" src="/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="/js/jquery.overlayScrollbars.js"></script>
     <script type="text/javascript" src="/js/adminlte.js"></script>
 </body>
-</html>
+</html><?php /**PATH C:\xampp\htdocs\unisound\resources\views/admin/container.blade.php ENDPATH**/ ?>

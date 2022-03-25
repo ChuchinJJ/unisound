@@ -14,13 +14,13 @@
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown">
         <a class="nav-link" href="#" onclick="abrirMenu()" aria-hidden="true">
-          <span>{{ Auth::user()->email }} 
+          <span><?php echo e(Auth::user()->email); ?> 
             <i style="margin-left: 4px;top: 14px;position: absolute;" class="fa fa fa-angle-down"></i>
           </span>
         </a>
         <div class="menu-login" id="menu" style="right: -47px;">
-          <form method="POST" action="{{ route('logout') }}">
-            @csrf
+          <form method="POST" action="<?php echo e(route('logout')); ?>">
+            <?php echo csrf_field(); ?>
             <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
               onclick="event.preventDefault();
               this.closest('form').submit();">
@@ -130,7 +130,7 @@
           <div class="fa fa-user-alt"></div>
         </div>
         <div class="info">
-          <a class="d-block">{{ Auth::user()->usuario }}</a>
+          <a class="d-block"><?php echo e(Auth::user()->usuario); ?></a>
         </div>
       </div>
 
@@ -210,4 +210,4 @@
             menu.style.display = "block";
         }
     }
-</script>
+</script><?php /**PATH C:\xampp\htdocs\unisound\resources\views/admin/menu.blade.php ENDPATH**/ ?>
