@@ -36,6 +36,9 @@ Route::get('proximo', function () {
     return view('pages.proximo');
 });
 
+Route::get('clienteDetalle', function () {
+    return view('pages.clienteDetalle');
+});
 
 Route::get('shop', [ShopController::class, 'index']);
 Route::post('shop', [ShopController::class, 'index']);

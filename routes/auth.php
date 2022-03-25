@@ -31,4 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
     Route::get('checkout', [CarritoController::class, 'checkout']);
     Route::get('cliente', [ConfigClienteController::class, 'index']);
+    Route::post('cliente', [ConfigClienteController::class, 'index']);
+    Route::post('cliente/update', [ConfigClienteController::class, 'update']);
+    Route::post('cliente/newPass', [ConfigClienteController::class, 'newPass']);
+    Route::get('cliente/{id}/detalleVenta', [ConfigClienteController::class, 'clienteDetalle']);
 });

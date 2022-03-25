@@ -222,7 +222,7 @@
 											<div class="modal-content" >
 												<div style="margin-top:20px;" class="modal-header">
 													<h5 style="font-size:20px;" id="tituloVentana">INNOTEC Ocosingo, Chiapas.</h5>
-													<button style="font-size:30px; line-height:.8; padding:4px 18px; border-radius:8px;" type="button" class="btn btn-warning" data-bs-dismiss="modal" aria-lable="Close">&times;</button>
+													<button style="font-size:30px; line-height:.8; padding:4px 18px; border-radius:8px;" type="button" class="btn btn-warning" data-bs-dismiss="modal" aria-label="Close">&times;</button>
 													
 												</div>
 												<div class="modal-body">

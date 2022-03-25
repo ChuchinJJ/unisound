@@ -824,6 +824,10 @@ body.darkmode {
   color: #c3bdbd !important;
 }
 
+.darkmode .menu-derecha3 h5 {
+  color: white !important;
+}
+
 .darkmode .letras {
   color: #ffffff !important;
   font-size: 14px;
@@ -848,6 +852,53 @@ body.darkmode {
   background-color: #e21818 !important;
   border: 1px solid #eee4e4;
   color: #ffffff !important;
+}
+
+.darkmode .menu-derecha4 h5 {
+  color: white;
+}
+.darkmode .count-cliente h6 {
+  color: #ffffff !important;
+}
+
+.darkmode .icono-cliente {
+  color: black;
+}
+
+.darkmode .select-cliente {
+  background-color: #1a1c1f !important;
+  color: white !important;
+}
+
+.darkmode .card-header {
+  background-color: #1a1c1f !important;
+}
+
+.darkmode .card-header h4 {
+  color: white !important;
+}
+
+.darkmode .card-body {
+  background-color: #1a1c1f !important;
+}
+
+.darkmode .card-body h6 {
+  color: white !important;
+}
+
+.darkmode .cliente-espacio {
+  background-color: #1a1c1f !important;
+  color: white !important;
+}
+
+.darkmode .cliente-espacio1 h4 {
+  color: white !important;
+}
+
+.darkmode .button-cliente3 {
+  background-color: transparent;
+  color: white !important;
+  border: 1px solid #f04848;
 }
 
 /* darkmode cart*/

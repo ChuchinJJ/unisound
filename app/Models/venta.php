@@ -10,4 +10,5 @@ class venta extends Model
     use HasFactory;
     public $primaryKey = 'id_venta';
     public $timestamps = false;
+    protected $dates = ['fecha'];
 }
