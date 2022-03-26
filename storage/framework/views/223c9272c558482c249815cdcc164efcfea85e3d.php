@@ -1,9 +1,14 @@
 
 <?php $__env->startSection('contenido'); ?>
-<div class="top_panel_title top_panel_style_6  title_present scheme_original">
-	<div class="top_panel_title_inner top_panel_inner_style_6  title_present_inner">
+<div class="top_panel_title top_panel_style_6  breadcrumbs_present title_present scheme_original">
+	<div class="top_panel_title_inner top_panel_inner_style_6 title_present_inner breadcrumbs_present_inner">
 		<div class="content_wrap">
 			<h5 class="page_title">Tienda</h5>
+			<?php if(isset($categoria)): ?>
+				<div class="breadcrumbs">
+					<span class="breadcrumbs_item current"><?php echo e($categoria); ?></span>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
@@ -279,9 +284,22 @@
 	document.getElementById('buscar-nombre').addEventListener('click', (e) => {
 		e.preventDefault();
 		var formulario = document.getElementById("formulario");
+		document.getElementById("min_price").value = "<?php echo e($colores->min('precio')); ?>";
+		document.getElementById("max_price").value = "<?php echo e($colores->max('precio')); ?>";
 		formulario.setAttribute('action', '/shop');
 		formulario.submit()
 	});
+
+    document.getElementById("search").addEventListener("keypress", function onEvent(event) {
+        if (event.key === "Enter") {
+            e.preventDefault();
+			var formulario = document.getElementById("formulario");
+			document.getElementById("min_price").value = "<?php echo e($colores->min('precio')); ?>";
+			document.getElementById("max_price").value = "<?php echo e($colores->max('precio')); ?>";
+			formulario.setAttribute('action', '/shop');
+			formulario.submit()
+        }
+    });
 </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.container', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\unisound\resources\views/pages/shop.blade.php ENDPATH**/ ?>

@@ -163,7 +163,8 @@
 
                             <div class="search_wrap search_style_fullscreen top_panel_icon  search_state_open">
                                 <div class="search_form_wrap">
-                                    <form role="search" method="get" class="search_form" action="/shop">
+                                    <form role="search" method="post" class="search_form" action="/shop">
+                                        @csrf
                                         <button type="submit" class="search_send icon-search-1" title="Buscar"></button>
                                         <input type="text" class="search_input" placeholder="Buscar" autocomplete="off" name="nombre"/>
                                     </form>

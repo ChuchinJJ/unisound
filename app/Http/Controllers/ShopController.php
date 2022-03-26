@@ -43,9 +43,10 @@ class ShopController extends Controller
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion')
+                ->where('productos.deleted_at', null)
                 ->where('nombre', 'like', '%'.$nombre.'%')
-                ->where('precio', '>', $min_precio)
-                ->where('precio', '<', $max_precio)
+                ->where('precio', '>=', $min_precio)
+                ->where('precio', '<=', $max_precio)
                 ->orderBy("valoracion", $order[1])
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
@@ -53,9 +54,10 @@ class ShopController extends Controller
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5')
+                ->where('productos.deleted_at', null)
                 ->where('nombre', 'like', '%'.$nombre.'%')
-                ->where('precio', '>', $min_precio)
-                ->where('precio', '<', $max_precio)
+                ->where('precio', '>=', $min_precio)
+                ->where('precio', '<=', $max_precio)
                 ->orderBy($order[0], $order[1])
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
@@ -92,6 +94,8 @@ class ShopController extends Controller
                 $order = ["rating", "ASC"];
             }
         }
+
+        $categoria = Producto::getCategoria($id);
         
         if($order[0] == "rating"){
             $valoraciones  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
@@ -103,8 +107,9 @@ class ShopController extends Controller
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion')
-                ->where('precio', '>', $min_precio)
-                ->where('precio', '<', $max_precio)
+                ->where('productos.deleted_at', null)
+                ->where('precio', '>=', $min_precio)
+                ->where('precio', '<=', $max_precio)
                 ->where('id_categoria', $id)
                 ->orderBy("valoracion", $order[1])
                 ->distinct(['productos.id_producto'])
@@ -113,8 +118,9 @@ class ShopController extends Controller
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5')
-                ->where('precio', '>', $min_precio)
-                ->where('precio', '<', $max_precio)
+                ->where('productos.deleted_at', null)
+                ->where('precio', '>=', $min_precio)
+                ->where('precio', '<=', $max_precio)
                 ->where('id_categoria', $id)
                 ->orderBy($order[0], $order[1])
                 ->distinct(['productos.id_producto'])
@@ -127,7 +133,8 @@ class ShopController extends Controller
         return view('pages.shop')->with([
             'productos' => $productos, 
             'colores' => $colores, 
-            'valoraciones' => $valoracion
+            'valoraciones' => $valoracion,
+            'categoria' => $categoria
         ]);
     }
 }
