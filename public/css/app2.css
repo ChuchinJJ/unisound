@@ -18,6 +18,31 @@
     display: inline-flex;
 }
 
+.search-product .search{
+    justify-content: end;
+    display: flex;
+}
+
+.search-product .search a{
+    background-color: #dc3545;
+    color: white;
+    width: 50px;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-product .search a:hover{
+    background-color: #3a3a3a;
+}
+
+.search-product .form-control{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
 .img-collapse{
     text-align: -webkit-center;
 }
@@ -126,6 +151,7 @@
 @media screen and (max-width: 600px) {
     .filter-select, .search-product{
         width: 100% !important;
+        display: block;
     }
 
     .filter-select .product-filter{
@@ -142,7 +168,7 @@
         border-bottom: 1px solid #727272;
     }
 
-    .table-sale .pagado{
+    .table .pagado{
         justify-content: space-between !important;
     }
 
@@ -274,7 +300,7 @@
     background-color: #f3f3f3 !important;
 }
 
-.table-sale .pagado{
+.table .pagado{
     display: flex;
     justify-content: center;
 }

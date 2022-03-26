@@ -268,4 +268,12 @@ class ProductoController extends Controller
         $producto->save();        
         return redirect('/admin/productos')->with('success', 'El Producto ha sido eliminado con exito');
     }
+
+    public function restore($id)
+    {
+        $producto = Producto::find($id);
+        $producto->deleted_at = null;
+        $producto->save();        
+        return redirect('/admin/productos')->with('success', 'El Producto ha sido restaurado con exito');
+    }
 }

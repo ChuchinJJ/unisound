@@ -46,16 +46,16 @@
                 <div class="card-slider">
                     <form method="post" action="" id="formulario" class="row m-2">
                         <?php echo csrf_field(); ?>
-                        <div class="search-product">
-                            <div class="container-1">
-                                <span class="icon"><i class="fa fa-search"></i></span>
-                                <input class="form-control me-2 mb-2" type="search" id="search" value="<?php echo e(old('nombre')); ?>" placeholder="Buscar..." name="nombre" />
+                        <div class="search-product me-2 mb-2">
+                            <div class="search">
+                                <a href="#" class="icon" onclick="searchButtom()"><i class="fa fa-search"></i></a>
+                                <input class="form-control" type="search" id="search" value="<?php echo e(old('nombre')); ?>" placeholder="Buscar..." name="nombre"/>
                             </div>
                         </div>
                         <div class="filter-select">
                             <div class="product-filter mb-2">
                                 <span>Categoría</span>
-                                <select class="select-admin" name="categoria" onchange="enviar()">
+                                <select class="select-admin" name="categoria" onchange="enviar()" id="categoria">
                                     <option value="">Todas</option>
                                     <option value="1" <?php if(old('categoria') == "1"): ?> selected='selected' <?php endif; ?>>Cuerda</option>
                                     <option value="2" <?php if(old('categoria') == "2"): ?> selected='selected' <?php endif; ?>>Percusión</option>
@@ -70,7 +70,7 @@
                         <div class="filter-select">
                             <div class="product-filter">
                                 <span>Ordenar</span>
-                                <select class="select-admin" name="order" onchange="enviar()">
+                                <select class="select-admin" name="order" onchange="enviar()" id="order">
                                     <option value="defecto" <?php if(old('order') == "defecto"): ?> selected='selected' <?php endif; ?>>Defecto</option>
                                     <option value="nombre-desc" <?php if(old('order') == "nombre"): ?> selected='selected' <?php endif; ?>>Nombre: A-Z</option>
                                     <option value="nombre-desc" <?php if(old('order') == "nombre-desc"): ?> selected='selected' <?php endif; ?>>Nombre: Z-A</option>
@@ -139,13 +139,15 @@
                                         <p>Sin valoraciones</p>
                                         <?php endif; ?>
                                     </td>
-                                    <td data-label="Activo">
+                                    <td data-label="Activo" class="pagado">
                                         <?php if($producto->deleted_at != null): ?>
-                                        <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                            <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
-                                        </svg>
+                                            <i class="circle-pagado venta-no-pagado">
+                                                <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ffff">
+                                                    <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
+                                                </svg>
+                                            </i>
                                         <?php else: ?>
-                                        <i style="color:#31cf31b5;" class="fa fa-check"></i>
+                                            <i class="fa fa-check circle-pagado venta-pagado"></i>
                                         <?php endif; ?>
                                     </td>
                                     <td data-label="Detalles">
@@ -227,10 +229,14 @@
                                             </div>
                                         </div>
                                         <div class="pr-2 pl-1 product-detail-controls">
-                                            <div class="">
-                                                <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/delete">Eliminar<i class="fa fa-trash"></i></a>
+                                            <div>
+                                                <?php if($producto->deleted_at == null): ?>
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/delete">Eliminar<i class="fa fa-trash"></i></a>
+                                                <?php else: ?>
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/restore">Restablecer<i class="fa fa-trash-restore"></i></a>
+                                                <?php endif; ?>
                                             </div>
-                                            <div class="">
+                                            <div>
                                                 <a class="btn btn-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/edit">Editar<i class="fa fa-edit"></i></a>
                                             </div>
                                         </div>
@@ -260,34 +266,36 @@
                                         count<?php echo e($producto->id_producto); ?> ++;
                                     }
 
-                                    document.getElementById("left-<?php echo e($producto->id_producto); ?>").addEventListener("click", function(e) {
-                                        var selected = $('#img-selected-<?php echo e($producto->id_producto); ?>').val();
-                                        if(parseInt(selected) != 1){
-                                            var anterior = parseInt(selected)-1;
-                                        }else{
-                                            var anterior = count<?php echo e($producto->id_producto); ?>;
-                                        }
-                                        $('#imagen'+anterior+'-<?php echo e($producto->id_producto); ?>').css('display', 'block');
-                                        if(count<?php echo e($producto->id_producto); ?> != 1){
-                                            $('#imagen'+selected+'-<?php echo e($producto->id_producto); ?>').css('display', 'none');
-                                        }
-                                        $('#img-selected-<?php echo e($producto->id_producto); ?>').val(anterior);
-                                        $('#selected-text-<?php echo e($producto->id_producto); ?>').text(anterior);
-                                    });
-                                    document.getElementById("right-<?php echo e($producto->id_producto); ?>").addEventListener("click", function(e) {
-                                        var selected = $('#img-selected-<?php echo e($producto->id_producto); ?>').val();
-                                        if(parseInt(selected)<count<?php echo e($producto->id_producto); ?>){
-                                            var siguiente = parseInt(selected)+1;   
-                                        }else{
-                                            var siguiente = 1;
-                                        }
-                                        $('#imagen'+siguiente+'-<?php echo e($producto->id_producto); ?>').css('display', 'block');
-                                        if(count<?php echo e($producto->id_producto); ?> != 1){
-                                            $('#imagen'+selected+'-<?php echo e($producto->id_producto); ?>').css('display', 'none');
-                                        }
-                                        $('#img-selected-<?php echo e($producto->id_producto); ?>').val(siguiente);
-                                        $('#selected-text-<?php echo e($producto->id_producto); ?>').text(siguiente);
-                                    });
+                                    if(<?php echo e($count); ?> != 1){
+                                        document.getElementById("left-<?php echo e($producto->id_producto); ?>").addEventListener("click", function(e) {
+                                            var selected = $('#img-selected-<?php echo e($producto->id_producto); ?>').val();
+                                            if(parseInt(selected) != 1){
+                                                var anterior = parseInt(selected)-1;
+                                            }else{
+                                                var anterior = count<?php echo e($producto->id_producto); ?>;
+                                            }
+                                            $('#imagen'+anterior+'-<?php echo e($producto->id_producto); ?>').css('display', 'block');
+                                            if(count<?php echo e($producto->id_producto); ?> != 1){
+                                                $('#imagen'+selected+'-<?php echo e($producto->id_producto); ?>').css('display', 'none');
+                                            }
+                                            $('#img-selected-<?php echo e($producto->id_producto); ?>').val(anterior);
+                                            $('#selected-text-<?php echo e($producto->id_producto); ?>').text(anterior);
+                                        });
+                                        document.getElementById("right-<?php echo e($producto->id_producto); ?>").addEventListener("click", function(e) {
+                                            var selected = $('#img-selected-<?php echo e($producto->id_producto); ?>').val();
+                                            if(parseInt(selected)<count<?php echo e($producto->id_producto); ?>){
+                                                var siguiente = parseInt(selected)+1;   
+                                            }else{
+                                                var siguiente = 1;
+                                            }
+                                            $('#imagen'+siguiente+'-<?php echo e($producto->id_producto); ?>').css('display', 'block');
+                                            if(count<?php echo e($producto->id_producto); ?> != 1){
+                                                $('#imagen'+selected+'-<?php echo e($producto->id_producto); ?>').css('display', 'none');
+                                            }
+                                            $('#img-selected-<?php echo e($producto->id_producto); ?>').val(siguiente);
+                                            $('#selected-text-<?php echo e($producto->id_producto); ?>').text(siguiente);
+                                        });
+                                    }
                                 </script>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
                                 <tr>
@@ -302,17 +310,19 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="pagination-products">
-                        <div class="title-pagination">
-                            <span><?php echo e($productos->firstItem()); ?> - <?php echo e($productos->lastItem()); ?> de <?php echo e($productos->total()); ?></span>
+                    <?php if(count($productos) > 0): ?>
+                        <div class="pagination-products">
+                            <div class="title-pagination">
+                                <span><?php echo e($productos->firstItem()); ?> - <?php echo e($productos->lastItem()); ?> de <?php echo e($productos->total()); ?></span>
+                            </div>
+                            <div class="controls-pagination">
+                                <a <?php if(!$productos->onFirstPage()): ?> href="?page=1" <?php endif; ?> class="doble-arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if(!$productos->onFirstPage()): ?> href="<?php echo e($productos->previousPageUrl()); ?>" <?php endif; ?> class="arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if($productos->currentPage() != $productos->lastPage()): ?> href="<?php echo e($productos->nextPageUrl()); ?>" <?php endif; ?> class="arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if($productos->currentPage() != $productos->lastPage()): ?> href="<?php echo e($productos->url($productos->lastPage())); ?>" <?php endif; ?> class="doble-arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
+                            </div>
                         </div>
-                        <div class="controls-pagination">
-                            <a <?php if(!$productos->onFirstPage()): ?> href="?page=1" <?php endif; ?> class="doble-arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
-                            <a <?php if(!$productos->onFirstPage()): ?> href="<?php echo e($productos->previousPageUrl()); ?>" <?php endif; ?> class="arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
-                            <a <?php if($productos->currentPage() != $productos->lastPage()): ?> href="<?php echo e($productos->nextPageUrl()); ?>" <?php endif; ?> class="arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
-                            <a <?php if($productos->currentPage() != $productos->lastPage()): ?> href="<?php echo e($productos->url($productos->lastPage())); ?>" <?php endif; ?> class="doble-arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
-                        </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -325,6 +335,19 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+
+    function searchButtom(){
+        document.getElementById("categoria").value = "";
+        enviar();
+    }
+
+    const search = document.getElementById("search");
+    search.addEventListener("keypress", function onEvent(event) {
+        if (event.key === "Enter") {
+            document.getElementById("categoria").value = "";
+            enviar();
+        }
+    });
 </script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('admin.container', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\unisound\resources\views/admin/productos.blade.php ENDPATH**/ ?>

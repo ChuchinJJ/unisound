@@ -163,7 +163,7 @@
         paramName: "file",
         maxFilesize: 3,
         filesizeBase: 1000,
-        acceptedFiles: "image/*",
+        acceptedFiles: "image/jpeg,image/png,image/jpg",
         autoProcessQueue: false,
         uploadMultiple: true,
         init: function() {
@@ -204,7 +204,7 @@
         paramName: "file",
         maxFilesize: 3,
         filesizeBase: 1000,
-        acceptedFiles: "image/*",
+        acceptedFiles: "image/jpeg,image/png,image/jpg",
         autoProcessQueue: false,
         uploadMultiple: true,
         init: function() {
@@ -249,7 +249,7 @@
         paramName: "file",
         maxFilesize: 3,
         filesizeBase: 1000,
-        acceptedFiles: "image/*",
+        acceptedFiles: "image/jpeg,image/png,image/jpg",
         autoProcessQueue: false,
         uploadMultiple: true,
         init: function() {
@@ -293,7 +293,7 @@
         paramName: "file",
         maxFilesize: 3,
         filesizeBase: 1000,
-        acceptedFiles: "image/*",
+        acceptedFiles: "image/jpeg,image/png,image/jpg",
         autoProcessQueue: false,
         uploadMultiple: true,
         init: function() {
@@ -337,7 +337,7 @@
         paramName: "file",
         maxFilesize: 3,
         filesizeBase: 1000,
-        acceptedFiles: "image/*",
+        acceptedFiles: "image/jpeg,image/png,image/jpg",
         autoProcessQueue: false,
         uploadMultiple: true,
         init: function() {

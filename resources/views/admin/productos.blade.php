@@ -45,16 +45,16 @@
                 <div class="card-slider">
                     <form method="post" action="" id="formulario" class="row m-2">
                         @csrf
-                        <div class="search-product">
-                            <div class="container-1">
-                                <span class="icon"><i class="fa fa-search"></i></span>
-                                <input class="form-control me-2 mb-2" type="search" id="search" value="{{old('nombre')}}" placeholder="Buscar..." name="nombre" />
+                        <div class="search-product me-2 mb-2">
+                            <div class="search">
+                                <a href="#" class="icon" onclick="searchButtom()"><i class="fa fa-search"></i></a>
+                                <input class="form-control" type="search" id="search" value="{{old('nombre')}}" placeholder="Buscar..." name="nombre"/>
                             </div>
                         </div>
                         <div class="filter-select">
                             <div class="product-filter mb-2">
                                 <span>Categoría</span>
-                                <select class="select-admin" name="categoria" onchange="enviar()">
+                                <select class="select-admin" name="categoria" onchange="enviar()" id="categoria">
                                     <option value="">Todas</option>
                                     <option value="1" @if(old('categoria') == "1") selected='selected' @endif>Cuerda</option>
                                     <option value="2" @if(old('categoria') == "2") selected='selected' @endif>Percusión</option>
@@ -69,7 +69,7 @@
                         <div class="filter-select">
                             <div class="product-filter">
                                 <span>Ordenar</span>
-                                <select class="select-admin" name="order" onchange="enviar()">
+                                <select class="select-admin" name="order" onchange="enviar()" id="order">
                                     <option value="defecto" @if(old('order') == "defecto") selected='selected' @endif>Defecto</option>
                                     <option value="nombre-desc" @if(old('order') == "nombre") selected='selected' @endif>Nombre: A-Z</option>
                                     <option value="nombre-desc" @if(old('order') == "nombre-desc") selected='selected' @endif>Nombre: Z-A</option>
@@ -138,13 +138,15 @@
                                         <p>Sin valoraciones</p>
                                         @endif
                                     </td>
-                                    <td data-label="Activo">
+                                    <td data-label="Activo" class="pagado">
                                         @if($producto->deleted_at != null)
-                                        <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                            <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
-                                        </svg>
+                                            <i class="circle-pagado venta-no-pagado">
+                                                <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ffff">
+                                                    <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
+                                                </svg>
+                                            </i>
                                         @else
-                                        <i style="color:#31cf31b5;" class="fa fa-check"></i>
+                                            <i class="fa fa-check circle-pagado venta-pagado"></i>
                                         @endif
                                     </td>
                                     <td data-label="Detalles">
@@ -225,10 +227,14 @@
                                             </div>
                                         </div>
                                         <div class="pr-2 pl-1 product-detail-controls">
-                                            <div class="">
-                                                <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/delete">Eliminar<i class="fa fa-trash"></i></a>
+                                            <div>
+                                                @if($producto->deleted_at == null)
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/delete">Eliminar<i class="fa fa-trash"></i></a>
+                                                @else
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/restore">Restablecer<i class="fa fa-trash-restore"></i></a>
+                                                @endif
                                             </div>
-                                            <div class="">
+                                            <div>
                                                 <a class="btn btn-danger" href="/admin/producto/{{ $producto->id_producto }}/edit">Editar<i class="fa fa-edit"></i></a>
                                             </div>
                                         </div>
@@ -258,34 +264,36 @@
                                         count{{ $producto->id_producto }} ++;
                                     }
 
-                                    document.getElementById("left-{{ $producto->id_producto }}").addEventListener("click", function(e) {
-                                        var selected = $('#img-selected-{{ $producto->id_producto }}').val();
-                                        if(parseInt(selected) != 1){
-                                            var anterior = parseInt(selected)-1;
-                                        }else{
-                                            var anterior = count{{ $producto->id_producto }};
-                                        }
-                                        $('#imagen'+anterior+'-{{ $producto->id_producto }}').css('display', 'block');
-                                        if(count{{ $producto->id_producto }} != 1){
-                                            $('#imagen'+selected+'-{{ $producto->id_producto }}').css('display', 'none');
-                                        }
-                                        $('#img-selected-{{ $producto->id_producto }}').val(anterior);
-                                        $('#selected-text-{{ $producto->id_producto }}').text(anterior);
-                                    });
-                                    document.getElementById("right-{{ $producto->id_producto }}").addEventListener("click", function(e) {
-                                        var selected = $('#img-selected-{{ $producto->id_producto }}').val();
-                                        if(parseInt(selected)<count{{ $producto->id_producto }}){
-                                            var siguiente = parseInt(selected)+1;   
-                                        }else{
-                                            var siguiente = 1;
-                                        }
-                                        $('#imagen'+siguiente+'-{{ $producto->id_producto }}').css('display', 'block');
-                                        if(count{{ $producto->id_producto }} != 1){
-                                            $('#imagen'+selected+'-{{ $producto->id_producto }}').css('display', 'none');
-                                        }
-                                        $('#img-selected-{{ $producto->id_producto }}').val(siguiente);
-                                        $('#selected-text-{{ $producto->id_producto }}').text(siguiente);
-                                    });
+                                    if({{ $count }} != 1){
+                                        document.getElementById("left-{{ $producto->id_producto }}").addEventListener("click", function(e) {
+                                            var selected = $('#img-selected-{{ $producto->id_producto }}').val();
+                                            if(parseInt(selected) != 1){
+                                                var anterior = parseInt(selected)-1;
+                                            }else{
+                                                var anterior = count{{ $producto->id_producto }};
+                                            }
+                                            $('#imagen'+anterior+'-{{ $producto->id_producto }}').css('display', 'block');
+                                            if(count{{ $producto->id_producto }} != 1){
+                                                $('#imagen'+selected+'-{{ $producto->id_producto }}').css('display', 'none');
+                                            }
+                                            $('#img-selected-{{ $producto->id_producto }}').val(anterior);
+                                            $('#selected-text-{{ $producto->id_producto }}').text(anterior);
+                                        });
+                                        document.getElementById("right-{{ $producto->id_producto }}").addEventListener("click", function(e) {
+                                            var selected = $('#img-selected-{{ $producto->id_producto }}').val();
+                                            if(parseInt(selected)<count{{ $producto->id_producto }}){
+                                                var siguiente = parseInt(selected)+1;   
+                                            }else{
+                                                var siguiente = 1;
+                                            }
+                                            $('#imagen'+siguiente+'-{{ $producto->id_producto }}').css('display', 'block');
+                                            if(count{{ $producto->id_producto }} != 1){
+                                                $('#imagen'+selected+'-{{ $producto->id_producto }}').css('display', 'none');
+                                            }
+                                            $('#img-selected-{{ $producto->id_producto }}').val(siguiente);
+                                            $('#selected-text-{{ $producto->id_producto }}').text(siguiente);
+                                        });
+                                    }
                                 </script>
                                 @empty
                                 <tr>
@@ -300,17 +308,19 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="pagination-products">
-                        <div class="title-pagination">
-                            <span>{{ $productos->firstItem() }} - {{ $productos->lastItem() }} de {{ $productos->total() }}</span>
+                    @if(count($productos) > 0)
+                        <div class="pagination-products">
+                            <div class="title-pagination">
+                                <span>{{ $productos->firstItem() }} - {{ $productos->lastItem() }} de {{ $productos->total() }}</span>
+                            </div>
+                            <div class="controls-pagination">
+                                <a @if(!$productos->onFirstPage()) href="?page=1" @endif class="doble-arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
+                                <a @if(!$productos->onFirstPage()) href="{{ $productos->previousPageUrl() }}" @endif class="arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
+                                <a @if($productos->currentPage() != $productos->lastPage()) href="{{ $productos->nextPageUrl() }}" @endif class="arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
+                                <a @if($productos->currentPage() != $productos->lastPage()) href="{{ $productos->url($productos->lastPage()) }}" @endif class="doble-arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
+                            </div>
                         </div>
-                        <div class="controls-pagination">
-                            <a @if(!$productos->onFirstPage()) href="?page=1" @endif class="doble-arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
-                            <a @if(!$productos->onFirstPage()) href="{{ $productos->previousPageUrl() }}" @endif class="arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
-                            <a @if($productos->currentPage() != $productos->lastPage()) href="{{ $productos->nextPageUrl() }}" @endif class="arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
-                            <a @if($productos->currentPage() != $productos->lastPage()) href="{{ $productos->url($productos->lastPage()) }}" @endif class="doble-arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
-                        </div>
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -323,5 +333,18 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+
+    function searchButtom(){
+        document.getElementById("categoria").value = "";
+        enviar();
+    }
+
+    const search = document.getElementById("search");
+    search.addEventListener("keypress", function onEvent(event) {
+        if (event.key === "Enter") {
+            document.getElementById("categoria").value = "";
+            enviar();
+        }
+    });
 </script>
 @endsection

@@ -74,6 +74,7 @@ Route::group([
         Route::post('producto/{id}/edit', [ProductoController::class, "update"]);
         Route::post('producto/addimage', [ProductoController::class, "addImagen"]);
         Route::get('producto/{id}/delete', [ProductoController::class, "destroy"]);
+        Route::get('producto/{id}/restore', [ProductoController::class, "restore"]);
         Route::get('ventas', [VentasController::class, "index"]);
         Route::post('ventas', [VentasController::class, "index"]);
         Route::get('ventas/{id}/detalle', [VentasController::class, "detalle"]);

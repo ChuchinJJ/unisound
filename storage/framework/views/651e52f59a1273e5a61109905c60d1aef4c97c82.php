@@ -47,7 +47,8 @@
                 </div>
                 <div class="card">
                     <div class="card-slider">
-                        <h4 class="require-label">Imagenes</h4>
+                        <h4 class="require-label">Imágenes</h4>
+                        <small>*Puedes agregar de 1 a 5 imágenes</small>
                         <div class="row justify-center">
                             <div class="dropzone col-md-11" id="dropzone">
                                 <div class="dz-message needsclick">Suelte el archivo aquí <br> o <br> haga click para cargar</div>
@@ -100,7 +101,7 @@
         filesizeBase: 1000,
         uploadMultiple: true,
         autoProcessQueue: false,
-        acceptedFiles: "image/*",
+        acceptedFiles: "image/jpeg,image/png,image/jpg",
         init: function() {
             this.on("addedfile", file => {
                 document.getElementById("submit").disabled = false;
