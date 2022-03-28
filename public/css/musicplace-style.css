@@ -501,6 +501,17 @@ body.darkmode {
 .darkmode .scroll_to_top:hover {
   color: white !important;
 }
+
+.darkmode .btn-wsp {
+  color: #0df053 !important;
+  background-color: #fff !important;
+}
+
+.darkmode .btn-wsp:hover {
+  color: white !important;
+  background-color: #0df053 !important;
+}
+
 /*Darkmode Acerca de*/
 
 .darkmode .sc_title {
@@ -897,6 +908,12 @@ body.darkmode {
 
 .darkmode .button-cliente3 {
   background-color: transparent;
+  color: white !important;
+  border: 1px solid #ffffff;
+}
+
+.darkmode .button-cliente3:hover {
+  background-color: #e21818;
   color: white !important;
   border: 1px solid #f04848;
 }
@@ -4865,7 +4882,7 @@ li.opened > a > .open_child_menu:before {
   display: block;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1150px) and (min-width: 1024px) {
   .search_wrap {
     max-width: 30% !important;
   }
