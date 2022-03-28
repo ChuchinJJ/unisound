@@ -918,6 +918,14 @@ body.darkmode {
   border: 1px solid #f04848;
 }
 
+.darkmode .offcanvas-fondo {
+  background-color: #1a1c1f;
+}
+
+.darkmode .offcanvas-body h5 {
+  color: white;
+}
+
 /* darkmode cart*/
 
 .darkmode .woocommerce-cart-form__contents th {

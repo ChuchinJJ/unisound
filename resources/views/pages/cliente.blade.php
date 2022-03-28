@@ -6,7 +6,7 @@
 
         <!--Offcanvas para menu hamburguesa-->
 
-        <div style="z-index:999999;" class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+        <div style="z-index:999999;" class="offcanvas offcanvas-start offcanvas-fondo" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
                 <button type="button" class="btn btn-warning " data-bs-dismiss="offcanvas" aria-label="Close">&times;</button>
