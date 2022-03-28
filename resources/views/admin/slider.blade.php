@@ -65,7 +65,7 @@
                                         <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch{{ $slider->id_slider }}" onchange="cambiar({{ $slider->id_slider }},this.checked)" name="{{ $slider->id_slider }}"
                                                 @if($slider->status == 1) checked @endif>
-                                            <label class="custom-control-label" for="customSwitch{{ $slider->id_slider }}">Estado</label>
+                                            <label class="custom-control-label" for="customSwitch{{ $slider->id_slider }}">Activo</label>
                                         </div>
                                         <a class="btn btn-danger" onclick="confirmar({{ $slider->id_slider }})"><i class="fa fa-trash"></i></a>
                                     </div>
