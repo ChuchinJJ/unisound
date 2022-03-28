@@ -107,8 +107,8 @@
                 </div>
 
                 <div class="d-flex justify-content-around">
-                  <button type="submit" class="btn btn-outline-light flex-grow-1 mr-2 letra-boton"><i class="fab fa-google  mr-2"></i>Google</button>
-                  <button type="submit" class="btn btn-outline-light flex-grow-1 ml-2 letra-boton"><i class="fab fa-facebook-f mr-2"></i>Facebook</button>
+                  <button onclick="window.location.href= 'login/google'" class="btn btn-outline-light flex-grow-1 mr-2 letra-boton"><i class="fab fa-google  mr-2"></i>Google</button>
+                  <button onclick="window.location.href= 'login/facebook'" class="btn btn-outline-light flex-grow-1 ml-2 letra-boton"><i class="fab fa-facebook-f mr-2"></i>Facebook</button>
                 </div>  
             </div>
         </div>
