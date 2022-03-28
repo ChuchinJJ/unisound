@@ -18,6 +18,31 @@
     display: inline-flex;
 }
 
+.search-product .search{
+    justify-content: end;
+    display: flex;
+}
+
+.search-product .search a{
+    background-color: #dc3545;
+    color: white;
+    width: 50px;
+    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-product .search a:hover{
+    background-color: #3a3a3a;
+}
+
+.search-product .form-control{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
 .img-collapse{
     text-align: -webkit-center;
 }
@@ -93,22 +118,81 @@
 }
 
 .no-products i{
-    font-size: 50px;
+    font-size: 60px;
+}
+
+.bg-status{
+    display: inline-block;
+    padding: 0.325rem 0.5rem;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.325rem;
+}
+
+.bg-Pedido{
+    color: #50cd89;
+    background-color: #e8fff3;
+}
+
+.bg-Entregado{
+    color: #009ef7;
+    background-color: #f1faff;
+}
+
+.bg-Cancelado{
+    color: #f1416c;
+    background-color: #fff5f8;
 }
 
 @media screen and (max-width: 600px) {
     .filter-select, .search-product{
         width: 100% !important;
+        display: block;
     }
 
     .filter-select .product-filter{
-        margin-left: 0px;
+        margin-left: 0px !important;
     }
 
     .star-td{
         display: flex !important;
         justify-content: space-between;
         height: 45px;
+    }
+
+    .table-sale tr {
+        border-bottom: 1px solid #727272;
+    }
+
+    .table .pagado{
+        justify-content: space-between !important;
+    }
+
+    .table-detail-sale tr {
+        border-bottom: 1px solid #727272;
+    }
+
+    .table-detail-sale tfoot tr{
+        display: grid;
+    }
+
+    .table-detail-sale tfoot tr th,
+    .table-detail-sale tfoot tr td{
+        padding: 0.2rem;
+    }
+
+    .table-detail-sale .detalle-venta-imagen{
+        border-bottom: 0;
+        padding-bottom: 0px !important;
+    }
+
+    .table-detail-sale .detalle-venta-producto{
+        text-align: right !important;
+        padding-top: 5px !important;
     }
 }
 
@@ -203,4 +287,102 @@
     color: #1a1c1fe8 !important
 }
 
-  
+.card-slider .dropdown .icono-arrow:hover{
+    color: #5c5252a8;
+}
+
+.card-slider .dropdown .dropdown-menu{
+    min-width: 6rem;
+}
+
+.card-slider .dropdown .dropdown-menu .dropdown-item:hover{
+    color: #dc3545;
+    background-color: #f3f3f3 !important;
+}
+
+.table .pagado{
+    display: flex;
+    justify-content: center;
+}
+
+.table-detail-sale{
+    border-right: 3px solid white; border-left: 3px solid white;
+    border: 0;
+}
+
+.table-detail-sale thead th{
+    background-color: #ffffff;
+    color: #3a3a3a;
+    border-bottom: 1px solid #4e4e4e;
+}
+
+.table-detail-sale tbody td{
+    border-bottom: 1px solid #dee2e6;
+}
+.table-detail-sale tfoot th,
+.table-detail-sale tfoot td{
+    font-size: 18px;
+    text-align: right;
+}
+
+.table-detail-sale .detalle-venta-producto{
+    text-align: left;
+}
+
+.card-cliente .fa{
+    margin-right: 10px;
+    color: #000000ba;
+}
+
+.card-venta{
+    padding: 40px;
+}
+
+.update-sale label{
+    display: block;
+}
+
+.update-sale .custom-switch{
+    padding-bottom: 0 !important;
+}
+
+.circle-status{
+    width: 25px !important;
+    display: block;
+    height: 25px !important;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.circle-Pedido{
+    background-color: #50cd89;
+}
+
+.circle-Entregado{
+    background-color: #009ef7;
+}
+
+.circle-Cancelado{
+    background-color: #f1416c;
+}
+
+.circle-pagado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    padding: 7px;
+}
+
+.venta-pagado{
+    background-color: #50cd89;
+    color: white;
+}
+
+.venta-no-pagado{
+    background-color: #f1416c;
+    color: white;
+}

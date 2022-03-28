@@ -154,11 +154,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/admin" class="nav-link" id="ventas">
+            <a href="/admin/ventas" class="nav-link" id="ventas">
               <i class="nav-icon fa fa-store"></i>
               <p>
                 Ventas
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
