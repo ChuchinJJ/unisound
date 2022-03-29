@@ -4,23 +4,22 @@
 
 <div class="contenedor-cliente" id="contenedor">
 
-        <!--Offcanvas para menu hamburguesa-->
-
-        <div style="z-index:999999;" class="offcanvas offcanvas-start offcanvas-fondo" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
-                <button type="button" class="btn btn-warning " data-bs-dismiss="offcanvas" aria-label="Close">&times;</button>
-            </div>
-            <div class="offcanvas-body">
-                <h5 style="font-size:30px;" class="font-weight-bold ml-4">Mi cuenta</h5> <hr style="color:#cccfd3;">
-                <div class="menu-cliente" id="menuNavegacion">
-                    <a href="#cuenta" class="d-block" onclick="mostrarPerfil();"><i class="fa fa-user mr-2 "></i>Perfil <br> <span>Aca veras todos los datos de tu perfil</span> <hr></a>
-                    <a href="#seguridad" class="d-block" onclick="mostrarSeguridad();"><i class="fa fa-key mr-2"></i> Seguridad <br> <span>Actualiza tu información para estar mas seguro</span> <hr></a> 
-                    <a href="#compras" class="d-block" onclick="mostrarCompras();" ><i class="fa fa-shopping-bag mr-2"></i>Mis Compras <br> <span>Aca podras ver todas las compras realizadas</span> <hr></a>
-                </div>
-                
-            </div>
+    <!--Offcanvas para menu hamburguesa-->
+    <div style="z-index:999999;" class="offcanvas offcanvas-start offcanvas-fondo" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+            <button type="button" class="btn btn-warning " data-bs-dismiss="offcanvas" aria-label="Close">&times;</button>
         </div>
+        <div class="offcanvas-body">
+            <h5 style="font-size:30px;" class="font-weight-bold ml-4">Mi cuenta</h5> <hr style="color:#cccfd3;">
+            <div class="menu-cliente" id="menuNavegacion">
+                <a href="#cuenta" class="d-block" onclick="mostrarPerfil();"><i class="fa fa-user mr-2 "></i>Perfil <br> <span>Aca veras todos los datos de tu perfil</span> <hr></a>
+                <a href="#seguridad" class="d-block" onclick="mostrarSeguridad();"><i class="fa fa-key mr-2"></i> Seguridad <br> <span>Actualiza tu información para estar mas seguro</span> <hr></a> 
+                <a href="#compras" class="d-block" onclick="mostrarCompras();" ><i class="fa fa-shopping-bag mr-2"></i>Mis Compras <br> <span>Aca podras ver todas las compras realizadas</span> <hr></a>
+            </div>
+            
+        </div>
+    </div>
 
     <div class="cliente-izquierda">
         <h5 class="titulo-cliente">Perfil</h5>
@@ -28,7 +27,6 @@
             <a href="#" class="d-block" onclick="mostrarPerfil();"><i class="fa fa-user mr-2 "></i>Perfil <br> <span>Aca veras todos los datos de tu perfil</span> <hr></a>
             <a href="#" class="d-block" onclick="mostrarSeguridad();"><i class="fa fa-key mr-2"></i> Seguridad <br> <span>Actualiza tu información para estar mas seguro</span> <hr></a> 
             <a href="#" class="d-block" onclick="mostrarCompras();" ><i class="fa fa-shopping-bag mr-2"></i>Mis Compras <br> <span>Aca podras ver todas las compras realizadas</span> <hr></a>
-            
         </div> 
     </div>
     <div class="cliente-derecha">
@@ -37,7 +35,7 @@
             <!--Menu Hamburguesa-->
             <div class="cliente-block">
                 <i class="fa fa-bars icono-cliente ml-4" data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas"></i>
-                <h5 class="titulo-cliente">Perfil</h5>
+                <h5 class="titulo-movil">Perfil</h5>
             </div>
 
             <h5 class="titulo-cliente2">Cuenta</h5>
@@ -132,7 +130,7 @@
                     </div>
                     <div class="col-md-5">
                         <label for="password" class="form-label font-weight-bold letras" required>Nueva Contraseña</label>
-                        <input style="font-size:15px;" id="password" name="password" type="password" class="form-control input-cliente"  required placeholder="Escriba su nueva contraseña">
+                        <input style="font-size:15px;" id="password" name="password" type="password" class="form-control input-cliente input-margen"  required placeholder="Escriba su nueva contraseña">
                     </div>
                     <div class="col-md-5">
                         <label for="password_confirmation" class="form-label font-weight-bold letras" required>Confirmar nueva Contraseña</label>
@@ -174,7 +172,7 @@
                 @forelse($ventas as $venta)
                     <div class="card mb-5 m-4">
                         <div class="card-header card-cabecera cliente-espacio">
-                            <h4 >Fecha Pedido: <br> 
+                            <h4 class="grid-1">Fecha Pedido: <br> 
                                 @php
                                     setlocale(LC_TIME, "spanish");
                                     $fecha_str = str_replace("/", "-", $venta->fecha->format('Y-m-d H:i:s'));
@@ -183,11 +181,9 @@
                                 @endphp
                                 {{ $fecha }}
                             </h4>
-                            <h4>Total. <br> <Strong> ${{ number_format($venta->total, 2, ".", ",") }}</Strong> </h4>
-                            
-                            <h4>Enviar a: <br>{{ $cliente->nombre }}
-                                <h4>Pedido N. °{{ $venta->id_venta }}</°> </h4>    
-                            </h4>
+                            <h4 class="grid-2">Total:<br><Strong> ${{ number_format($venta->total, 2, ".", ",") }}</Strong> </h4>
+                            <h4 class="grid-3">Enviar a: <br>{{ $cliente->nombre }} </h4>
+                            <h4 class="grid-4">Pedido N° {{ $venta->id_venta }}</°> </h4>    
                         </div>
                     
                         <div class="card-body">
@@ -204,7 +200,7 @@
                         </div>
 
                         <div class="p-4 cliente-espacio " >
-                            <p class="badge bg-success text-wrap" style="font-size:15px;">{{ $venta->status }}</p>
+                            <p class="bg-status bg-{{ $venta->status }} text-wrap" style="font-size:15px;">{{ $venta->status }}</p>
                             <a href="cliente/{{ $venta->id_venta }}/detalleVenta" class="button button-cliente3" style="padding:8px 20px;">Ver compra</a>
                         </div>
                     </div>
@@ -279,6 +275,7 @@
         var myOffcanvas = document.getElementById('offcanvas');
         var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
         bsOffcanvas.hide();
+        myOffcanvas.classList.remove('show');
     }
 
 	function cerrar(){

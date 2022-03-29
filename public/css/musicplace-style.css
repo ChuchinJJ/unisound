@@ -926,6 +926,10 @@ body.darkmode {
   color: white;
 }
 
+.darkmode .titulo-movil {
+  color: white !important;
+}
+
 /* darkmode cart*/
 
 .darkmode .woocommerce-cart-form__contents th {
