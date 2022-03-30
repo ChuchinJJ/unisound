@@ -97,6 +97,13 @@
                         <div itemprop="description">
                             <p><?php echo e($producto->descripcion_general); ?></p>
                         </div>
+                        <?php if(count($colores) > 1): ?>
+                        <!-- <div class="container-color-product">
+                            <?php $__currentLoopData = $colores; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $color): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                            <i class="square-color" style="background-color: <?php echo e($color->rgb); ?>"></i>    
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </div>-->
+                        <?php endif; ?>  
                         <form action="<?php echo e(route('cart.add')); ?>" method="post" class="variations_form cart">
                             <?php echo csrf_field(); ?>
                             <?php

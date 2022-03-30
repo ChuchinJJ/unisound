@@ -62,7 +62,14 @@
 											<img width="300" height="400"
 												src="/storage/img/products/{{ $producto->imagen1 }}"
 												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-												loading="lazy"/> 
+												loading="lazy"/>
+												@if(count($mi_color)>1)
+									<div class="container-color-shop">
+										@foreach($mi_color as $color)
+										<i class="square-color" style="background-color: {{ $color->rgb }}"></i>
+										@endforeach
+									</div>
+									@endif
 										</a>
 									</div>
 								</div>

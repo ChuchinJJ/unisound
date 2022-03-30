@@ -67,7 +67,7 @@
                                         <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
                                             <input type="checkbox" class="custom-control-input" id="customSwitch<?php echo e($slider->id_slider); ?>" onchange="cambiar(<?php echo e($slider->id_slider); ?>,this.checked)" name="<?php echo e($slider->id_slider); ?>"
                                                 <?php if($slider->status == 1): ?> checked <?php endif; ?>>
-                                            <label class="custom-control-label" for="customSwitch<?php echo e($slider->id_slider); ?>">Estado</label>
+                                            <label class="custom-control-label" for="customSwitch<?php echo e($slider->id_slider); ?>">Activo</label>
                                         </div>
                                         <a class="btn btn-danger" onclick="confirmar(<?php echo e($slider->id_slider); ?>)"><i class="fa fa-trash"></i></a>
                                     </div>

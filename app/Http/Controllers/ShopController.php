@@ -62,7 +62,7 @@ class ShopController extends Controller
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }
-        $colores = Color::orderBy('precio','asc')->get();
+        $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')->get();
         $request->flash();
@@ -126,7 +126,7 @@ class ShopController extends Controller
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }
-        $colores = Color::orderBy('precio','asc')->get();
+        $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')->get();
         $request->flash();

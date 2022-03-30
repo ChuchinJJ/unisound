@@ -306,6 +306,9 @@
                                     <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505">
                                         <form method="POST" action="<?php echo e(route('logout')); ?>">
                                             <?php echo csrf_field(); ?>
+                                            <a href="/cliente" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
+                                                <span>Ver Perfil</span>
+                                            </a>
                                             <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
                                                 onclick="event.preventDefault();
                                                 this.closest('form').submit();">
