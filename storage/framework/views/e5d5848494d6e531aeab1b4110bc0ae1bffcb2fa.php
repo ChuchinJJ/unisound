@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <a href="https://wa.me/529191007549?text=¿Desea%20enviar%20un%20mensaje%20a%20UNISOUND?" class="btn-wsp" target="_blank">
+=======
+<a href="https://wa.me/529191007549?text=¿Desea%20enviar%20un%20mensaje%20a%20UNISOUND?" 
+	class="btn-wsp" target="_blank">
+>>>>>>> ec263c0c90f5b6e456540daff884e82a279f5f27
 	<i class="fa fa-whatsapp"></i>
 </a>
 <a href="#" class="scroll_to_top icon-up show" title="Scroll to top"></a>

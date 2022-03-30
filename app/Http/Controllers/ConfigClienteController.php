@@ -20,7 +20,7 @@ class ConfigClienteController extends Controller
         $cliente = Cliente::where('id_usuario', $usuario->id_usuario)->first();
         $filtro = $request->input('filtro', 'all');
         if($filtro == 'all'){
-            $ventas = Venta::where('id_cliente', $cliente->email)->get();
+            $ventas = Venta::where('id_cliente', $cliente->email)->orderBy("fecha","DESC")->get();
         }else{
             $valorFiltro = [date('Y/m/d', strtotime(date('Y/m/d')."- 30 days")), date('Y/m/d')];
             if($filtro == "30+"){
@@ -32,6 +32,7 @@ class ConfigClienteController extends Controller
             $ventas = Venta::where('id_cliente', $cliente->email)
                 ->where('fecha', '>', $valorFiltro['0'])
                 ->where('fecha', '<', $valorFiltro['1'])
+                ->orderBy("fecha","DESC")
                 ->get();
         }
         $detalleVenta = DetalleVenta::all();

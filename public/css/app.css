@@ -494,6 +494,10 @@ body {
   justify-content: space-between;
 }
 
+.cliente-espacio h4 {
+  margin: auto;
+}
+
 .cliente-espacio1 {
   display: flex;
   justify-content: space-between;
@@ -509,8 +513,9 @@ body {
 /*Estilos para compras cliente*/
 
 .card-cabecera {
-  background-color: #ececec !important;
+  background-color: #eef0f3 !important;
 }
+
 .table-cliente {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -564,6 +569,9 @@ body {
   .titulo-movil {
     margin-left: 20px;
     font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
   }
 
   .menu-derecha {
@@ -574,11 +582,41 @@ body {
   }
 
   .card-header {
-    display: flow-root;
+    display: grid;
+  }
+
+  .card-header h4 {
+    text-align: center;
+  }
+
+  .card-header .grid-1 {
+    grid-column: 1/2;
+    grid-row: 1;
+    margin-bottom: 10px;
+  }
+
+  .card-header .grid-2 {
+    grid-column: 2/2;
+    grid-row: 1;
+    margin-bottom: 10px;
+  }
+
+  .card-header .grid-3 {
+    grid-column: 1;
+    grid-row: 2/2;
+  }
+
+  .card-header .grid-4 {
+    grid-column: 2/2;
+    grid-row: 2/2;
   }
 
   .select-cliente {
     width: 34%;
+  }
+
+  .input-margen {
+    margin-bottom: 1.4rem;
   }
 }
 
@@ -688,6 +726,14 @@ body {
   color: black !important;
   border-color: #a5a5a5 !important;
   filter: invert(1);
+}
+
+.darkmode .cliente-derecha input[type="date"] {
+  background-color: #e1dfdb !important;
+  color: black !important;
+  border-color: #232323 !important;
+  filter: invert(1);
+  font-size: 15px;
 }
 
 .darkmode .menu-login {
