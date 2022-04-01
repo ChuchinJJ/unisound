@@ -14,21 +14,33 @@ class SliderController extends Controller
 
     public function index()
     {
-        $sliders = Slider::where('status', "1")->get();
-        return view('home')->with('sliders', $sliders);
+        $sliders = Slider::where('status', '1')->where('tipo', 'Imagen')->get();
+        $videos = Slider::where('status', '1')->where('tipo', 'Video')->get();
+        return view('home')->with(['sliders' => $sliders, 'videos' => $videos]);
     }
 
     public function indexAdmin()
     {
-        $sliders = Slider::get();
-        return view('admin.slider')->with('sliders', $sliders);
+        $sliders = Slider::where('tipo', 'Imagen')->get();
+        $videos = Slider::where('tipo', 'Video')->get();
+        return view('admin.slider')->with(['sliders' => $sliders, 'videos' => $videos]);
     }
 
     public function update($id, $value)
     {   
         $slider = Slider::find($id);
+        $count = Slider::where('status', 1)->where('tipo', $slider->tipo)->count();
         $status = 0;
         if($value == "true"){ $status = 1; }
+        if($count < 2 && $value == "false"){
+            return redirect('/admin/sliders')->with('success', 'Tiene que tener al menos un slider activo');    
+        }
+        
+        if($count > 1 && $value == "true" && $slider->tipo == "Video"){
+            $sliderRm = Slider::where('status', 1)->where('tipo', $slider->tipo)->first();
+            $sliderRm->status = 0;
+            $sliderRm->save();
+        }
         $slider->status = $status;
         $slider->save();
         return redirect('/admin/sliders')->with('success', 'El estado del slider ha sido cambiado');
@@ -64,6 +76,15 @@ class SliderController extends Controller
         $slider = new Slider;
         $slider->imagen = $horizontal;
         $slider->movil = $vertical;
+        if($horizontal == $vertical){
+            $slider->tipo = "Video";
+            $count = Slider::where('status', 1)->where('tipo', 'video')->count();
+            if($count > 1){
+                $sliderRm = Slider::where('status', 1)->where('tipo', $slider->tipo)->first();
+                $sliderRm->status = 0;
+                $sliderRm->save();
+            }
+        }
         $slider->save();
         return redirect('/admin/sliders')->with('success', 'El Slider ha sido agregado con exito');
     }
@@ -74,7 +95,7 @@ class SliderController extends Controller
         if( $slider->imagen != 'noimage.jpg' ) {
             Storage::delete('public/img/sliders/'.$slider->imagen);
         }
-        if( $slider->movil != 'noimage.jpg' ) {
+        if( $slider->movil != 'noimage.jpg' && $slider->imagen != $slider->movil ) {
             Storage::delete('public/img/sliders/'.$slider->movil);
         }
         $slider->delete();

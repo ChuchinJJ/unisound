@@ -148,6 +148,24 @@
     background-color: #fff5f8;
 }
 
+.tabs-slider{
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+.tabs-slider .card{
+    background-color: #f2f2f273 !important;
+}
+
+.card-slider .video-details{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 @media screen and (max-width: 600px) {
     .filter-select, .search-product{
         width: 100% !important;

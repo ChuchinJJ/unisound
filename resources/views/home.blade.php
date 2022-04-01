@@ -8,9 +8,18 @@
 			<rs-slides>
 				@foreach($sliders as $slider)
 				<rs-slide data-key="rs-{{ $slider->id_slider }}" data-title="Slide" data-thumb="/storage/img/sliders/{{ $slider->imagen }}" data-duration="15950" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-					<img src="/storage/img/sliders/{{ $slider->imagen }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>			
+					<img src="/storage/img/sliders/{{ $slider->imagen }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>
 				</rs-slide>
-				@endforeach	
+				@endforeach
+				@foreach($videos as $video)
+				<rs-slide data-key="rs-{{ $video->id_slider }}" data-title="Slide" data-anim="ei:d;eo:d;s:1000ms;r:0;t:fade;sl:0;">
+					<img src="/img/background.png" alt="Slide" title="Video" data-parallax="off" class="rev-slidebg" data-no-retina>
+					<rs-layer id="video-{{ $video->id_slider }}" class="rs-layer-video intrinsic-ignore" data-type="video" data-rsp_ch="on"
+						data-xy="x:c;y:m;" data-text="w:normal;s:20,17,12,7;l:0,21,15,9;" data-dim="w:100%;h:100%;" data-basealign="slide" data-video="vd:100;l:false;ptimer:true;sav:f;vc:t;"
+						data-mp4="/storage/img/sliders/{{ $video->imagen }}" data-frame_999="o:0;st:w;" style="z-index:5;">
+					</rs-layer>
+            	</rs-slide>
+				@endforeach
 			</rs-slides>
 		</rs-module>
 
@@ -56,6 +65,7 @@
 							allowHTML5AutoPlayOnAndroid:true
 						},
 					});
+					console.log("algo");
 				}
 			});} // End of RevInitScript
 			var once_revslider11 = false;
@@ -64,7 +74,6 @@
 	</rs-module-wrap>
 	<!-- END REVOLUTION SLIDER -->
 </section>
-
 <section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_home-1 slider-vertical">
 	<!-- START Home 1 REVOLUTION SLIDER 6.3.5 -->
 	<p class="rs-p-wp-fix"></p>
@@ -73,9 +82,18 @@
 			<rs-slides>
 				@foreach($sliders as $slider)
 				<rs-slide data-key="rs-{{ $slider->id_slider }}" data-title="Slide" data-thumb="/storage/img/sliders/{{ $slider->movil }}" data-duration="15950" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-					<img src="/storage/img/sliders/{{ $slider->movil }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>			
+					<img src="/storage/img/sliders/{{ $slider->movil }}" title="Home {{ $slider->id_slider }}" data-parallax="off" class="rev-slidebg" data-no-retina>
 				</rs-slide>
-				@endforeach	
+				@endforeach
+				@foreach($videos as $video)
+				<rs-slide data-key="rs-movil-{{ $video->id_slider }}" data-title="Slide" data-anim="ei:d;eo:d;s:1000ms;r:0;t:fade;sl:0;">
+					<img src="/img/background.png" alt="Slide" title="Video" data-parallax="off" class="rev-slidebg" data-no-retina>
+					<rs-layer id="video-movil-{{ $video->id_slider }}" class="rs-layer-video intrinsic-ignore" data-type="video" data-rsp_ch="on"
+						data-xy="x:c;y:m;" data-text="w:normal;s:20,17,12,7;l:0,21,15,9;" data-dim="w:100%;h:100%;" data-basealign="slide"	data-video="vd:100;l:false;ptimer:true;sav:f;vc:t;"
+						data-mp4="/storage/img/sliders/{{ $video->imagen }}" data-frame_999="o:0;st:w;" style="z-index:5;">
+					</rs-layer>
+            	</rs-slide>
+				@endforeach
 			</rs-slides>
 		</rs-module>
 
@@ -130,7 +148,7 @@
 	<!-- END REVOLUTION SLIDER -->
 </section>
 
-<div class="page_content_wrap page_paddings_no">
+<div class="page_content_wrap page_paddings_no" style="margin-top: 90px">
 	<div class="content_wrap">
 		<div class="content">
 			<article class="itemscope post_item post_item_single post_featured_default post_format_standard post-450 page type-page status-publish hentry" itemscope itemtype="//schema.org/Article">
