@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Producto;
+use App\Models\Color;
+use App\Models\Valoracion;
 
 class SliderController extends Controller
 {
@@ -16,7 +19,27 @@ class SliderController extends Controller
     {
         $sliders = Slider::where('status', '1')->where('tipo', 'Imagen')->get();
         $videos = Slider::where('status', '1')->where('tipo', 'Video')->get();
-        return view('home')->with(['sliders' => $sliders, 'videos' => $videos]);
+        
+        $destacados = Producto::join('colores','productos.id_producto','=','colores.id_producto')
+            ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
+            ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria ,sum(detalle_venta.cantidad) as count_ventas')
+            ->where('productos.deleted_at', null)
+            ->groupBy('productos.id_producto')
+            ->limit(4)
+            ->get();
+        $nuevos = Producto::orderBy('id_producto', 'DESC')->where('deleted_at', null)->limit(4)->get();
+        $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
+        $valoraciones  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
+            ->groupBy('id_producto')->get();
+
+        return view('home')->with([
+            'sliders' => $sliders, 
+            'videos' => $videos, 
+            'destacados' => $destacados,
+            'nuevos' => $nuevos,
+            'colores' => $colores,
+            'valoraciones' => $valoraciones
+        ]);
     }
 
     public function indexAdmin()

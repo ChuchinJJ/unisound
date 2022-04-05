@@ -150,7 +150,7 @@
 						class="widget_number_3 widget woocommerce widget_product_search">
 						<div class="search_form">
 							<input type="text" class="search_field" placeholder="Buscar producto" value="<?php echo e(old('nombre')); ?>"
-								name="nombre" title="Buscar producto:" />
+								name="nombre" title="Buscar producto:" id="search" />
 							<button class="search_button icon-search" id="buscar-nombre"></button>
 						</div>
 					</aside>
@@ -213,54 +213,44 @@
 					<aside id="woocommerce_products-4" class="widget_number_5 widget woocommerce widget_products">
 						<h5 class="widget_title">Productos destacados</h5>
 						<ul class="product_list_widget">
-							<li>
-								<a href="/product/2">
-									<img width="300" height="400"
-										src="/img/1-1-300x400.jpg"
-										class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-										loading="lazy" /> 
-									<span class="product-title">Tama S.L.P. Big Black Steel Snare Drum</span>
-								</a>
-								<div class="star-rating" role="img" aria-label="Valorado en 5.00 de 5">
-									<span style="width:100%">Valorado en <strong class="rating">5.00</strong> de 5</span>
-								</div>
-								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>249.99</bdi>
-								</span>
-							</li>
-							<li>
-								<a href="/product/2">
-									<img width="300" height="400"
-										src="/img/7_4-300x400.jpg"
-										class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-										loading="lazy" />
-									<span class="product-title">Crosley Cruiser Portable 3-Speed Turntable</span>
-								</a>
-								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>349.99</bdi>
-								</span> &ndash;
-								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>449.99</bdi>
-								</span>
-							</li>
-							<li>
-								<a href="/product/2">
-									<img width="300" height="400"
-										src="/img/2-300x400.jpg"
-										class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
-										loading="lazy" />
-									<span class="product-title">Meinl Cymbals Arena Marching Cymbals Pair</span>
-								</a>
-								<div class="star-rating" role="img" aria-label="Valorado en 4.00 de 5">
-									<span style="width:80%">Valorado en <strong class="rating">4.00</strong> de 5</span>
-								</div>
-								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>349.99</bdi>
-								</span> &ndash;
-								<span class="woocommerce-Price-amount amount">
-									<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>369.99</bdi>
-								</span>
-							</li>
+							<?php $__currentLoopData = $destacados; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $destacado): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+								<?php
+									$color_destacado = $colores->whereIn('id_producto', $destacado->id_producto);
+									$valoracion_destacado = $valoraciones->whereIn('id_producto', $destacado->id_producto);
+								?>
+								<li>
+									<a href="/product/<?php echo e($destacado->id_producto); ?>">
+										<img width="300" height="400"
+											src="/storage/img/products/<?php echo e($destacado->imagen1); ?>"
+											class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
+											loading="lazy" /> 
+										<span class="product-title"><?php echo e($destacado->nombre); ?></span>
+									</a>
+									<?php if($valoracion_destacado->first() != null): ?>
+									<div class="star-rating" role="img" aria-label="Valorado en <?php echo e($valoracion_destacado->first()->valoracion); ?> de 5">
+										<span style="width:<?php echo e($valoracion_destacado->first()->valoracion*20); ?>%">Valorado en <strong class="rating"><?php echo e($valoracion_destacado->first()->valoracion); ?></strong> de 5</span>
+									</div>
+									<?php endif; ?>
+									<?php if(count($color_destacado)>1): ?>
+										<?php if($color_destacado->first() == $color_destacado->last()): ?>
+										<span class="woocommerce-Price-amount amount">
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e($color_destacado->first()->precio); ?></bdi>
+										</span>
+										<?php else: ?>
+										<span class="woocommerce-Price-amount amount">
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e($color_destacado->first()->precio); ?></bdi>
+										</span>&ndash; 
+										<span class="woocommerce-Price-amount amount">
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e($color_destacado->last()->precio); ?></bdi>
+										</span>
+										<?php endif; ?>
+									<?php else: ?>
+									<span class="woocommerce-Price-amount amount">
+										<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e($color_destacado->first()->precio); ?></bdi>
+									</span>
+									<?php endif; ?>
+								</li>
+							<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 						</ul>
 					</aside>
 				</div>

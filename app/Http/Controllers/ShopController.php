@@ -65,11 +65,19 @@ class ShopController extends Controller
         $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')->get();
+        $destacados = Producto::join('colores','productos.id_producto','=','colores.id_producto')
+                ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
+                ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria ,sum(detalle_venta.cantidad) as count_ventas')
+                ->where('productos.deleted_at', null)
+                ->groupBy('productos.id_producto')
+                ->limit(4)
+                ->get();
         $request->flash();
         return view('pages.shop')->with([
             'productos' => $productos, 
             'colores' => $colores, 
-            'valoraciones' => $valoracion
+            'valoraciones' => $valoracion,
+            'destacados' => $destacados
         ]);
     }
 
@@ -129,12 +137,19 @@ class ShopController extends Controller
         $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')->get();
+        $destacados = Producto::join('colores','productos.id_producto','=','colores.id_producto')
+                ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
+                ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria ,sum(detalle_venta.cantidad) as count_ventas')
+                ->where('productos.deleted_at', null)
+                ->groupBy('productos.id_producto')
+                ->get();
         $request->flash();
         return view('pages.shop')->with([
             'productos' => $productos, 
             'colores' => $colores, 
             'valoraciones' => $valoracion,
-            'categoria' => $categoria
+            'categoria' => $categoria,
+            'destacados' => $destacados
         ]);
     }
 }
