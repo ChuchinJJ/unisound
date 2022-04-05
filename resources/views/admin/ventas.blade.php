@@ -62,6 +62,9 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="pdf-button">
+                            <a onclick="enviarPDF()" class="btn btn-danger">PDF <i class="fa fa-file-pdf"></i></a>
+                        </div>
                     </form>
             
                     <div class="container-table">
@@ -161,6 +164,11 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+    function enviarPDF(){
+        var formulario = document.getElementById("formulario");
+		formulario.setAttribute('action', '/admin/ventas/pdf');
+        formulario.submit();
+    }
     
     $(function () {
         $('#datetimepicker').daterangepicker({}, function(start, end, label) {

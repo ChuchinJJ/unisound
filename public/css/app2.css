@@ -452,3 +452,14 @@
     width: 35px !important;
     height: 35px !important;
 }
+
+.pdf-button{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: auto;
+}
+
+.pdf-button i{
+    margin-left: 5px;
+}

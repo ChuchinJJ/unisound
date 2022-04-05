@@ -9,6 +9,7 @@ use App\Models\DetalleVenta;
 use App\Models\Cliente;
 use App\Models\Color;
 use App\Models\Producto;
+use PDF;
 
 class VentasController extends Controller
 {   
@@ -46,6 +47,19 @@ class VentasController extends Controller
         $clientes = Cliente::all();
         $request->flash();
         return view('admin.ventas')->with(['ventas' => $ventas, 'clientes' => $clientes]);
+    }
+
+    public function download(Request $request)
+    {   
+        $fechas = $request->input('fechas');
+        $separar = explode('-', $fechas);
+        $fecha_inicio = date('Y-m-d', strtotime(str_replace("/", "-", $separar[0])));
+        $fecha_fin = date('Y-m-d', strtotime(str_replace("/", "-", $separar[1])."+ 1 days"));
+        $ventas = Venta::where('fecha', '>=', $fecha_inicio)->where('fecha', '<=', $fecha_fin)->get();
+        $clientes = Cliente::all();
+        
+        $pdf = PDF::loadView('pdf.ventas', ['ventas' => $ventas,'clientes' => $clientes]);
+        return $pdf->download('ventas Unisound.pdf');
     }
 
     public function detalle($id){
