@@ -89,6 +89,7 @@
         console.log("Failure at Presize of Slider:" + e)
     }
 };</script>
+@livewireStyles
 </head>
 
 <body>
@@ -183,6 +184,6 @@
 			localStorage.setItem('darkmode', value);
 		}
 	</script>
-
+	@livewireScripts
 </body>
 </html>

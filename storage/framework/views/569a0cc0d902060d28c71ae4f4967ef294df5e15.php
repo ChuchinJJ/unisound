@@ -89,6 +89,8 @@
         console.log("Failure at Presize of Slider:" + e)
     }
 };</script>
+<?php echo \Livewire\Livewire::styles(); ?>
+
 </head>
 
 <body>
@@ -183,6 +185,7 @@
 			localStorage.setItem('darkmode', value);
 		}
 	</script>
+	<?php echo \Livewire\Livewire::scripts(); ?>
 
 </body>
 </html><?php /**PATH C:\xampp\htdocs\unisound\resources\views/layouts/container.blade.php ENDPATH**/ ?>
