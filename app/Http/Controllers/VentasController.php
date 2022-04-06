@@ -9,6 +9,7 @@ use App\Models\DetalleVenta;
 use App\Models\Cliente;
 use App\Models\Color;
 use App\Models\Producto;
+use App\Models\Notificacion;
 use PDF;
 
 class VentasController extends Controller
@@ -93,5 +94,12 @@ class VentasController extends Controller
         }
         $venta->save();
         return redirect('admin/ventas')->with('success', 'La venta ha sido editada con exito');
+    }
+
+    public function notificacion($id){
+        $notificacion = Notificacion::find($id);
+        $id_venta = $notificacion->id_venta;
+        $notificacion->delete();
+        return redirect('admin/ventas/'.$id_venta.'/detalle');
     }
 }

@@ -29,84 +29,38 @@
           </form>
         </div>
       </li>
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <!-- <a href="#" class="dropdown-item">
-            <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <div class="media">
-              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-          </a>
-          --> 
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
       <!-- Notifications Dropdown Menu -->
+      @php 
+        $notificaciones = App\Models\Notificacion::all();
+      @endphp
       <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
+        <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false" href="#">
           <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+          @if(count($notificaciones)>0)
+          <span class="badge badge-warning navbar-badge">
+            {{ count($notificaciones) }}
+          </span>
+          @endif
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <span class="dropdown-item dropdown-header">{{ count($notificaciones) }} Notificaciones</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+          @foreach($notificaciones as $notificacion)
+            @php
+                setlocale(LC_TIME, "spanish");
+                $fecha_str = str_replace("/", "-", $notificacion->fecha->format('Y-m-d H:i:s'));
+                $newDate = date("d-m-Y", strtotime($fecha_str));
+                $fecha = strftime("%d de %B, %Y", strtotime($newDate));
+                $ventas = App\Models\DetalleVenta::where("id_venta", $notificacion->id_venta)->get();
+            @endphp
+            <a href="/admin/notificacion/{{ $notificacion->id_notificacion }}" class="dropdown-item text-aling-center">
+              <b>{{ $notificacion->cliente }}</b>
+               compró {{ $ventas->first()->cantidad }} {{ $ventas->first()->producto }}
+               @if(count($ventas) > 1), + {{ count($ventas)-1 }} productos  @endif
+              <p class="text-muted text-sm">{{ $fecha }}</p>
+            </a>
+            <div class="dropdown-divider"></div>
+          @endforeach
         </div>
       </li>
     </ul>
@@ -123,17 +77,6 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image"
-        style="background-color: white;border-radius: 100%;padding: 8px;display: flex;color: #343a40; font-size: 20px;">
-          <div class="fa fa-user-alt"></div>
-        </div>
-        <div class="info">
-          <a class="d-block">{{ Auth::user()->usuario }}</a>
-        </div>
-      </div>
-
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
