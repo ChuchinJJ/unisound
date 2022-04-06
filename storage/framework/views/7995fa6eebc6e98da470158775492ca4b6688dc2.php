@@ -95,17 +95,21 @@
                                 <div class="row row-color">
                                     <input type="hidden" name="id_color[]" value="<?php echo e($color->id_color); ?>" >
                                     <div class="col-md-4">
-                                        <label for="color" required>Color</label>
+                                        <label for="color">Color</label>
                                         <input class="form-control" placeholder="Color" name="color[]" id="color" value="<?php echo e($color->color); ?>" required>
                                     </div>
                                     <div class="col-md-8 inputs-color align-items-end">
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <label for="precio">Precio</label>
                                             <input type="number" class="form-control" placeholder="Precio" name="precio[]" id="precio" value="<?php echo e($color->precio); ?>" required>
                                         </div>
-                                        <div class="col-md-5">
+                                        <div class="col-md-4">
                                             <label for="cantidad">Cantidad</label>
                                             <input type="number" class="form-control" placeholder="Cantidad" name="cantidad[]" id="cantidad" value="<?php echo e($color->cantidad); ?>" required>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="rgb">RGB</label>
+                                            <input type="color" name="rgb[]" class="form-control" id="rgb" value="<?php echo e($color->rgb); ?>" required>
                                         </div>
                                     </div>
                                 </div>
@@ -116,16 +120,20 @@
                                         <input type="hidden" name="id_color[]" value="<?php echo e($color->id_color); ?>" >
                                         <div class="col-md-4">
                                             <label for="color">Color</label>
-                                            <input class="form-control" placeholder="Color" id="color" name="color[]" value="<?php echo e($color->color); ?>" required>
+                                            <input class="form-control" placeholder="Color" name="color[]" id="color" value="<?php echo e($color->color); ?>" required>
                                         </div>
                                         <div class="col-md-8 inputs-color align-items-end">
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                 <label for="precio">Precio</label>
                                                 <input type="number" class="form-control" placeholder="Precio" id="precio" name="precio[]" value="<?php echo e($color->precio); ?>" required>
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                 <label for="cantidad">Cantidad</label>
                                                 <input type="number" class="form-control" placeholder="Cantidad" id="cantidad" name="cantidad[]" value="<?php echo e($color->cantidad); ?>" required>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label for="rgb">RGB</label>
+                                                <input type="color" name="rgb[]" class="form-control" id="rgb" value="<?php echo e($color->rgb); ?>" required>
                                             </div>
                                             <div class="col-md-2 text-align-center" style="text-align: center">
                                                 <a class="btn btn-danger remove_color"><i class="fa fa-trash"></i></a>
@@ -155,6 +163,7 @@
     var img3add = true;
     var img4add = true;
     var img5add = true;
+    Dropzone.autoDiscover = false;
     var dropzone1 = new Dropzone('#dropzone1', {
         parallelUploads: 1,
         maxFiles: 1,
@@ -374,26 +383,27 @@
     });
     const imagen1 = "<?php echo e($producto->imagen1); ?>";
     let mockFile1 = { name: imagen1, size: 12345};
-    dropzone1.displayExistingFile(mockFile1, 'http://127.0.0.1:8000/storage/img/products/'+imagen1);
+    var host = 'http://127.0.0.1:8000/storage/img/products/'; //'http://unisound.apparte.com-mx/storage/img/products/'
+    dropzone1.displayExistingFile(mockFile1, host+imagen1);
     if("<?php echo e($producto->imagen2); ?>" != ""){
         const imagen2 = "<?php echo e($producto->imagen2); ?>";
         let mockFile2 = { name: imagen2, size: 12345 };
-        dropzone2.displayExistingFile(mockFile2, 'http://127.0.0.1:8000/storage/img/products/'+imagen2);
+        dropzone2.displayExistingFile(mockFile2, host+imagen2);
     }
     if("<?php echo e($producto->imagen3); ?>" != ""){
         const imagen3 = "<?php echo e($producto->imagen3); ?>";
         let mockFile3 = { name: imagen3, size: 12345 };
-        dropzone3.displayExistingFile(mockFile3, 'http://127.0.0.1:8000/storage/img/products/'+imagen3);
+        dropzone3.displayExistingFile(mockFile3, host+imagen3);
     }
     if("<?php echo e($producto->imagen4); ?>" != ""){
         const imagen4 = "<?php echo e($producto->imagen4); ?>";
         let mockFile4 = { name: imagen4, size: 12345 };
-        dropzone4.displayExistingFile(mockFile4, 'http://127.0.0.1:8000/storage/img/products/'+imagen4);
+        dropzone4.displayExistingFile(mockFile4, host+imagen4);
     }
     if("<?php echo e($producto->imagen5); ?>" != ""){
         const imagen5 = "<?php echo e($producto->imagen5); ?>";
         let mockFile5 = { name: imagen5, size: 12345 };
-        dropzone5.displayExistingFile(mockFile5, 'http://127.0.0.1:8000/storage/img/products/'+imagen5);
+        dropzone5.displayExistingFile(mockFile5, host+imagen5);
     }
 
     document.getElementById("submit_btn").addEventListener("click", function(e) {
@@ -444,13 +454,17 @@
                         +'<input class="form-control" placeholder="Color" id="color" name="color[]" required>'
                     +'</div>'
                     +'<div class="col-md-8 inputs-color align-items-end">'
-                        +'<div class="col-md-5">'
+                        +'<div class="col-md-4">'
                             +'<label for="precio">Precio</label>'
                             +'<input type="number" class="form-control" placeholder="Precio" id="precio" name="precio[]" required>'
                         +'</div>'
-                        +'<div class="col-md-5">'
+                        +'<div class="col-md-4">'
                             +'<label for="cantidad">Cantidad</label>'
                             +'<input type="number" class="form-control" placeholder="Cantidad" id="cantidad" name="cantidad[]" required>'
+                        +'</div>'
+                        +'<div class="col-md-2">'
+                            +'<label for="rgb">RGB</label>'
+                            +'<input type="color" name="rgb[]" class="form-control" id="rgb" required>'
                         +'</div>'
                         +'<div class="col-md-2 text-align-center" style="text-align: center">'
                             +'<a class="btn btn-danger remove_color"><i class="fa fa-trash"></i></a>'
@@ -465,8 +479,11 @@
             e.preventDefault();
             var padre = $(this).parents('.nuevo-color');
             idEliminar=padre.find('input[name="id_color[]"]').val();
-            var inputDelete = '<input type="hidden" name="color_delete[]" value="'+idEliminar+'" >';
-            $(wrapper).append(inputDelete);
+            if(idEliminar != null){
+                console.log(idEliminar);
+                var inputDelete = '<input type="hidden" name="color_delete[]" value="'+idEliminar+'" >';
+                $(wrapper).append(inputDelete);
+            }
             $(this).parents('.nuevo-color').remove();
         });
     });

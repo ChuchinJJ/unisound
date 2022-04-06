@@ -97,6 +97,13 @@
                         <div itemprop="description">
                             <p>{{ $producto->descripcion_general }}</p>
                         </div>
+                        @if(count($colores) > 1)
+                        <!-- <div class="container-color-product">
+                            @foreach($colores as $color)
+                            <i class="square-color" style="background-color: {{ $color->rgb }}"></i>    
+                            @endforeach
+                        </div>-->
+                        @endif  
                         <form action="{{route('cart.add')}}" method="post" class="variations_form cart">
                             @csrf
                             @php

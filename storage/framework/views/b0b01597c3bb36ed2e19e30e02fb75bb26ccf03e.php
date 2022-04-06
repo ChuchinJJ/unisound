@@ -40,57 +40,84 @@
     <?php endif; ?>
 
     <section class="content">
-       <!-- <form action="/admin/sliders" method="POST"> <?php echo e(csrf_field()); ?>
-
-            <button type="submit" class="btn btn-danger btn-lg btn-save btn-oculto" id="button">
-                Guardar  <i class="fa fa-save"></i>
-            </button> -->
-            <div class="container-fluid">
-                <div class="row gallery">
-                    <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-md-4 card-group" style="margin-bottom: 20px;">
-                        <div class="card">
-                            <div class="card-slider">
-                                <div class="title-card">Orientación horizontal</div>
-                                <a class="venobox" href="/storage/img/sliders/<?php echo e($slider->imagen); ?>" data-gall="myGallery" title="Sliders">
-                                    <img src="/storage/img/sliders/<?php echo e($slider->imagen); ?>" alt="imagen<?php echo e($slider->id_slider); ?>" width="100%" style="max-height: 300px">
-                                </a>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <div class="title-card">Orientación vertical</div>
-                                        <a class="venobox" href="/storage/img/sliders/<?php echo e($slider->movil); ?>" data-gall="myGallery" title="Sliders">
-                                            <img src="/storage/img/sliders/<?php echo e($slider->movil); ?>" alt="imagen<?php echo e($slider->movil); ?>" width="100%">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-5 align-self-end" style="text-align: -webkit-right;">
-                                        <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
-                                            <input type="checkbox" class="custom-control-input" id="customSwitch<?php echo e($slider->id_slider); ?>" onchange="cambiar(<?php echo e($slider->id_slider); ?>,this.checked)" name="<?php echo e($slider->id_slider); ?>"
-                                                <?php if($slider->status == 1): ?> checked <?php endif; ?>>
-                                            <label class="custom-control-label" for="customSwitch<?php echo e($slider->id_slider); ?>">Estado</label>
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="imagen-tab" data-bs-toggle="tab" data-bs-target="#imagen" type="button" role="tab" aria-controls="imagen" aria-selected="true">Imagenes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab" aria-controls="video" aria-selected="false">Videos</button>
+                </li>
+            </ul>
+            <div class="tab-content tabs-slider" id="myTabContent">
+                <div class="tab-pane fade show active" id="imagen" role="tabpanel" aria-labelledby="imagen-tab">
+                    <div class="row gallery">
+                        <?php $__currentLoopData = $sliders; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $slider): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="col-md-4 card-group" style="margin-bottom: 20px;">
+                            <div class="card">
+                                <div class="card-slider">
+                                    <div class="title-card">Orientación horizontal</div>
+                                    <a class="venobox" href="/storage/img/sliders/<?php echo e($slider->imagen); ?>" data-gall="myGallery" title="Sliders">
+                                        <img src="/storage/img/sliders/<?php echo e($slider->imagen); ?>" alt="imagen<?php echo e($slider->id_slider); ?>" width="100%" style="max-height: 300px">
+                                    </a>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <div class="title-card">Orientación vertical</div>
+                                            <a class="venobox" href="/storage/img/sliders/<?php echo e($slider->movil); ?>" data-gall="myGallery" title="Sliders">
+                                                <img src="/storage/img/sliders/<?php echo e($slider->movil); ?>" alt="imagen<?php echo e($slider->movil); ?>" width="100%">
+                                            </a>
                                         </div>
-                                        <a class="btn btn-danger" onclick="confirmar(<?php echo e($slider->id_slider); ?>)"><i class="fa fa-trash"></i></a>
+                                        <div class="col-md-5 align-self-end" style="text-align: -webkit-right;">
+                                            <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success switch-slider">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch<?php echo e($slider->id_slider); ?>" onchange="cambiar(<?php echo e($slider->id_slider); ?>,this.checked)" name="<?php echo e($slider->id_slider); ?>"
+                                                    <?php if($slider->status == 1): ?> checked <?php endif; ?>>
+                                                <label class="custom-control-label" for="customSwitch<?php echo e($slider->id_slider); ?>">Activo</label>
+                                            </div>
+                                            <a class="btn btn-danger" onclick="confirmar(<?php echo e($slider->id_slider); ?>)"><i class="fa fa-trash"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </div>
-                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </div>
+                <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+                    <div class="row gallery">
+                        <?php $__currentLoopData = $videos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $video): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="col-md-6 card-group" style="margin-bottom: 20px;">
+                            <div class="card">
+                                <div class="card-slider">
+                                    <video src="/storage/img/sliders/<?php echo e($video->movil); ?>" width="100%" controls>
+                                        <p>Su navegador no soporta videos HTML5.</p>
+                                    </video>
+                                    <div class="video-details">
+                                        <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                                            <input type="checkbox" class="custom-control-input" id="customSwitch<?php echo e($video->id_slider); ?>" onchange="cambiar(<?php echo e($video->id_slider); ?>,this.checked)" name="<?php echo e($video->id_slider); ?>"
+                                                <?php if($video->status == 1): ?> checked <?php endif; ?>>
+                                            <label class="custom-control-label" for="customSwitch<?php echo e($video->id_slider); ?>">Activo</label>
+                                        </div>
+                                        <a class="btn btn-danger" onclick="confirmar(<?php echo e($video->id_slider); ?>)"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </div>
                 </div>
             </div>
-        <!-- </form> -->
+        </div>
     </section>
 </div>
 <script>
     document.getElementById('sliders').classList.add('active');
     function cambiar(id, checked){
         window.location.href='/admin/sliders/'+id+'/'+checked;
-        /*const button = document.getElementById('button');
-        button.style.display = "block";*/
     }
 
     function confirmar(id){
-        var confirmar = confirm("¿Realmente deseeas eliminar el registro?");
+        var confirmar = confirm("¿Realmente deseeas eliminar el slider?");
         if(confirmar){
             window.location.href='/admin/sliders/'+id;
         }

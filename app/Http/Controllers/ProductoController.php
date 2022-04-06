@@ -65,7 +65,7 @@ class ProductoController extends Controller
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }
-        $colores = Color::orderBy('precio','asc')->get();
+        $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
             ->groupBy('id_producto')->get();
         $request->flash();
@@ -80,7 +80,7 @@ class ProductoController extends Controller
     {
         $producto = Producto::find($id);
         $categoria = Producto::getCategoria($producto->id_categoria);
-        $colores = Color::orderBy('precio','asc')->where('id_producto', $producto->id_producto)->get();
+        $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->where('id_producto', $producto->id_producto)->get();
         $valoraciones = Valoracion::join('usuarios','usuarios.id_usuario', '=', 'valoraciones.id_usuario')
         ->select('id_valoracion', 'comentario', 'puntuacion', 'fecha', 'email')
         ->where('id_producto', $producto->id_producto)->get();
@@ -147,6 +147,7 @@ class ProductoController extends Controller
             $color->color = $request->input('color')[$i];
             $color->precio = $request->input('precio')[$i];
             $color->cantidad = $request->input('cantidad')[$i];
+            $color->rgb = $request->input('rgb')[$i];
             $color->id_producto = $producto->id_producto;
             $color->save();
         }  
@@ -160,7 +161,7 @@ class ProductoController extends Controller
     {
         $producto = Producto::find($id);
         $categoria = Producto::getCategoria($producto->id_categoria);
-        $colores = Color::where('id_producto', $producto->id_producto)->get();
+        $colores = Color::where('deleted_at', null)->where('id_producto', $producto->id_producto)->get();
         return view('admin.editProduct')->with([
             'producto'=>$producto, 
             'colores' => $colores, 
@@ -236,6 +237,7 @@ class ProductoController extends Controller
                 $color->color = $request->input('color')[$i];
                 $color->precio = $request->input('precio')[$i];
                 $color->cantidad = $request->input('cantidad')[$i];
+                $color->rgb = $request->input('rgb')[$i];
                 $color->id_producto = $producto->id_producto;
                 $color->save();
             }else{
@@ -244,6 +246,7 @@ class ProductoController extends Controller
                 $color->color = $request->input('color')[$i];
                 $color->precio = $request->input('precio')[$i];
                 $color->cantidad = $request->input('cantidad')[$i];
+                $color->rgb = $request->input('rgb')[$i];
                 $color->id_producto = $producto->id_producto;
                 $color->save();
             }

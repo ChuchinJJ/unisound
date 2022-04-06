@@ -21,12 +21,12 @@
     <link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all' />
     <link rel='stylesheet' id='musicplace-plugin-woocommerce-style-css'  href='/css/plugin.woocommerce.css' type='text/css' media='all' />
     <script type="text/javascript" src="/js/jquery-1.12.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script type="text/javascript" src="/js/venobox.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/dropzone.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 </head>
 
 <body class="sidebar-mini layout-navbar-fixed">

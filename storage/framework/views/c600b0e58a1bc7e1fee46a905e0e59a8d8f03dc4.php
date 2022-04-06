@@ -13,14 +13,6 @@
 			</div>
 		</div>
 		<div class="page_content_wrap page_paddings_yes">
-<?php
-$date = new DateTime('2000-01-01');
-setlocale(LC_TIME, "spanish");
-$fecha_str = str_replace("/", "-", $date->format('Y-m-d H:i:s'));
-$newDate = date("d-m-Y", strtotime($fecha_str));
-$fecha = strftime("%d de %B del %Y", strtotime($newDate));
-echo $fecha;
-?>
 				
 <div class="content_wrap">
 	<div class="content">

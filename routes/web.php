@@ -80,6 +80,7 @@ Route::group([
         Route::get('ventas/{id}/detalle', [VentasController::class, "detalle"]);
         Route::get('ventas/{id}/update', [VentasController::class, "edit"]);
         Route::post('ventas/{id}/update', [VentasController::class, "update"]);
+        Route::post('ventas/pdf', [VentasController::class, "download"]);
     }
 );
 

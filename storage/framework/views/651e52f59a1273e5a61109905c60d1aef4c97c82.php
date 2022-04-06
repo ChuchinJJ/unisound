@@ -62,17 +62,21 @@
                         <div id="field_wrapper">
                             <div class="row row-color">
                                 <div class="col-md-4">
-                                    <label for="color" required>Color</label>
+                                    <label for="color">Nombre</label>
                                     <input class="form-control" placeholder="Color" name="color[]" id="color" value="Default" required>
                                 </div>
                                 <div class="col-md-8 inputs-color align-items-end">
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <label for="precio">Precio</label>
                                         <input type="number" class="form-control" placeholder="Precio" name="precio[]" id="precio" required>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <label for="cantidad">Cantidad</label>
                                         <input type="number" class="form-control" placeholder="Cantidad" name="cantidad[]" id="cantidad" required>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="rgb">RGB</label>
+                                        <input type="color" name="rgb[]" class="form-control" id="rgb" required>
                                     </div>
                                 </div>
                             </div>
@@ -91,6 +95,7 @@
 </div>
 <script>
     document.getElementById('productos').classList.add('active');
+    Dropzone.autoDiscover = false;
     var dropzone = new Dropzone('#dropzone', {
         parallelUploads: 5,
         maxFiles: 5,
@@ -118,6 +123,7 @@
                     formData.append("color[]", document.getElementsByName("color[]")[i].value);
                     formData.append("precio[]", document.getElementsByName("precio[]")[i].value);
                     formData.append("cantidad[]", document.getElementsByName("cantidad[]")[i].value);
+                    formData.append("rgb[]", document.getElementsByName("rgb[]")[i].value);
                 };
             });
             this.on("successmultiple", function(files, response) {
@@ -167,13 +173,17 @@
                         +'<input class="form-control" placeholder="Color" id="color" name="color[]" required>'
                     +'</div>'
                     +'<div class="col-md-8 inputs-color align-items-end">'
-                        +'<div class="col-md-5">'
+                        +'<div class="col-md-4">'
                             +'<label for="precio">Precio</label>'
                             +'<input type="number" class="form-control" placeholder="Precio" id="precio" name="precio[]" required>'
                         +'</div>'
-                        +'<div class="col-md-5">'
+                        +'<div class="col-md-4">'
                             +'<label for="cantidad">Cantidad</label>'
                             +'<input type="number" class="form-control" placeholder="Cantidad" id="cantidad" name="cantidad[]" required>'
+                        +'</div>'
+                        +'<div class="col-md-2">'
+                            +'<label for="rgb">RGB</label>'
+                            +'<input type="color" name="rgb[]" class="form-control" id="rgb" required>'
                         +'</div>'
                         +'<div class="col-md-2 text-align-center" style="text-align: center">'
                             +'<a class="btn btn-danger remove_color"><i class="fa fa-trash"></i></a>'

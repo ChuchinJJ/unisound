@@ -211,17 +211,20 @@
                                                                 <hr>
                                                             </div>
                                                             <?php endif; ?>
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-5">
                                                                 <label for="color" required>Color</label>
                                                                 <div class="form-control"><?php echo e($color->color); ?></div>
                                                             </div>
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-3">
                                                                 <label for="precio">Precio</label>
                                                                 <div class="form-control">$<?php echo e($color->precio); ?></div>
                                                             </div>
-                                                            <div class="col-md-4">
+                                                            <div class="col-md-3">
                                                                 <label for="cantidad">Cantidad</label>
                                                                 <div class="form-control"><?php echo e($color->cantidad); ?></div>
+                                                            </div>
+                                                            <div class="col-md-1 aling-circle">
+                                                                <i class="square-color" style="background-color: <?php echo e($color->rgb); ?>"></i>
                                                             </div>
                                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                                     </div>
