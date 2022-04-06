@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Cliente;
@@ -11,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use Livewire\Component;
 
 class RegisteredUserController extends Controller
 {

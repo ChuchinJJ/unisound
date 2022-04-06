@@ -11,6 +11,8 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\ConfigClienteController;
+use App\Http\Controllers\ValoracionController;
+use App\Http\Livewire\ChangeCountries;
 
 Route::middleware('guest')->group(function () {
     Route::get('registrar', [RegisteredUserController::class, 'create'])->name('registrar');
@@ -20,8 +22,6 @@ Route::middleware('guest')->group(function () {
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
-    Route::get('login/{provider}', [AuthenticatedSessionController::class, 'redirectToProvider']);
-    Route::get('{provider}/callback', [AuthenticatedSessionController::class, 'handleProviderCallback']);
 
     Route::get('forgot-password', [PasswordResetLinkController::class, 'create'])->name('password.request');
     Route::post('forgot-password', [PasswordResetLinkController::class, 'store'])->name('password.email');
@@ -37,4 +37,5 @@ Route::middleware('auth')->group(function () {
     Route::post('cliente/update', [ConfigClienteController::class, 'update']);
     Route::post('cliente/newPass', [ConfigClienteController::class, 'newPass']);
     Route::get('cliente/{id}/detalleVenta', [ConfigClienteController::class, 'clienteDetalle']);
+    Route::post('valoracion/product', [ValoracionController::class, 'index']);
 });

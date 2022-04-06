@@ -259,7 +259,8 @@
                                     <h2 class="woocommerce-Reviews-title">Valoraciones</h2>
                                     <p class="woocommerce-noreviews">No hay valoraciones aún.</p>
                                     @endif
-                                    </div>
+                                </div>
+
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
@@ -268,7 +269,11 @@
                                             @else
                                             <span id="reply-title" class="comment-reply-title">Sé el primero en valorar &ldquo;{{ $producto->nombre }}&rdquo;</span>
                                             @endif
-                                            <form action="/proximo" method="get" id="commentform" class="comment-form">
+
+                                            @if(Auth::check())
+
+                                            <form action="/valoracion/product" method="post" id="commentform" class="comment-form">
+                                                @csrf
                                                 <p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p>
                                                 <div class="comment-form-rating">
                                                     <label for="rating">Tu puntuación&nbsp;<span class="required">*</span></label>
@@ -285,24 +290,19 @@
                                                     <label for="comment">Tu valoración&nbsp;<span class="required">*</span></label>
                                                     <textarea id="comment" name="comment" cols="45" rows="8" required></textarea>
                                                 </p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Nombre&nbsp;<span class="required">*</span></label>
-                                                    <input id="author" name="author" type="text" value="" size="30" required />
-                                                </p>
-                                                <p class="comment-form-email">
-                                                    <label for="email">Correo electrónico&nbsp;<span class="required">*</span></label>
-                                                    <input id="email" name="email" type="email" value="" size="30" required />
-                                                </p>
                                                 <p class="form-submit">
                                                     <input name="submit" type="submit" id="submit" class="submit" value="Enviar" />
-                                                    <input type='hidden' name='comment_post_ID' value='1053' id='comment_post_ID' />
-                                                    <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                    <input type='hidden' name='id_producto' value='{{ $producto->id_producto }}' />
                                                 </p>
+                                                @else
+                                                <p class="mt-4">Para hacer una valoración deberas iniciar sesión</p> <button onclick="window.location.href= '/login'" class="btn button" style="padding:9px 18px;">Iniciar Sesión</button>
+                                                @endif
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
+
                             </div>
                         </div>
                     </div>
