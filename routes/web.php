@@ -7,6 +7,8 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\VentasController;
+use App\Http\Controllers\ConfigClienteController;
+use App\Http\Controllers\ClientesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +40,10 @@ Route::get('proximo', function () {
 
 Route::get('clienteDetalle', function () {
     return view('pages.clienteDetalle');
+});
+
+Route::get('admin/clientesDetalles', function () {
+    return view('admin.clientesDetalles');
 });
 
 Route::get('shop', [ShopController::class, 'index']);
@@ -81,7 +87,10 @@ Route::group([
         Route::get('ventas/{id}/update', [VentasController::class, "edit"]);
         Route::post('ventas/{id}/update', [VentasController::class, "update"]);
         Route::post('ventas/pdf', [VentasController::class, "download"]);
-    }
-);
+        Route::get('clientes', [ClientesController::class, "index"]);
+        Route::get('clientes/{id}/ventas', [ClientesController::class, "index"]);
+
+});
+    
 
 require __DIR__.'/auth.php';
