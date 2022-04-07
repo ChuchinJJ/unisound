@@ -89,8 +89,10 @@ Route::group([
         Route::post('ventas/pdf', [VentasController::class, "download"]);
         Route::get('clientes', [ClientesController::class, "index"]);
         Route::get('clientes/{id}/ventas', [ClientesController::class, "index"]);
+        Route::get('notificacion/{id}', [VentasController::class, "notificacion"]);
 
 });
     
+
 
 require __DIR__.'/auth.php';

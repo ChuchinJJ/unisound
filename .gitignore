@@ -13,5 +13,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/storage/framework
-/storage/logs
+/storage/framework/views/*.php
+/storage/logs/laravel.log

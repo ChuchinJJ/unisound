@@ -10,6 +10,7 @@ use App\Models\Venta;
 use App\Models\DetalleVenta;
 use App\Models\Cliente;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Notificacion;
 use DateTime;
 use Mail;
 
@@ -74,6 +75,12 @@ class CarritoController extends Controller
             $venta->descuento = 0;
             $venta->id_cliente = $cliente->email;
             $venta->save();
+
+            $notificacion = new Notificacion();
+            $notificacion->id_venta = $venta->id_venta;
+            $notificacion->cliente = $cliente->nombre." ".$cliente->apellidos;
+            $notificacion->fecha = new DateTime();
+            $notificacion->save();
 
             foreach(Cart::getContent() as $item){
                 $nombre = $item->name;
