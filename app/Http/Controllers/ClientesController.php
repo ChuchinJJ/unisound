@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use App\Models\Venta;
 use App\Models\DetalleVenta;
 use App\Models\Color;
@@ -21,6 +22,17 @@ class ClientesController extends Controller
         return view('admin.clientes')->with([
             'clientes' => $clientes,
             'detalleVenta' => $detalleVenta]);
+    }
+
+    public function datos($id){
+
+        $cliente = Cliente::find($id);
+        $ventas = Venta::where('id_cliente',$id)->get();
+
+        return view('admin.clientesDetalles')->with([
+            'cliente' => $cliente,
+            'ventas' => $ventas
+        ]); 
     }
 
     public function detalles($id){

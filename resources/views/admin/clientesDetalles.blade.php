@@ -39,7 +39,6 @@
                                     <td data-label="Id">{{ $venta->id_venta }}</td>
                                     <td data-label="Cliente">
                                         @php
-                                            $cliente = $clientes->firstWhere('email', $venta->id_cliente);
                                             $nombre = $cliente->nombre;
                                             $apellidos = $cliente->apellidos;
                                         @endphp

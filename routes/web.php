@@ -88,7 +88,7 @@ Route::group([
         Route::post('ventas/{id}/update', [VentasController::class, "update"]);
         Route::post('ventas/pdf', [VentasController::class, "download"]);
         Route::get('clientes', [ClientesController::class, "index"]);
-        Route::get('clientes/{id}/ventas', [ClientesController::class, "index"]);
+        Route::get('clientes/{id}/ventas', [ClientesController::class, "datos"]);
         Route::get('notificacion/{id}', [VentasController::class, "notificacion"]);
 
 });

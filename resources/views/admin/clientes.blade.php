@@ -53,7 +53,7 @@
                                 <td data-label="Estado">{{ $cliente->estado }} </td>
                                 <td data-label="Ciudad"> {{ $cliente->ciudad }} </td>
                                 <td data-label="Calle">{{$cliente->calle}} </td>
-                                <td data-label="Historial"><a href="/admin/clientesDetalles" class="button button-cliente3" style="padding:2px 16px;"> Ver</a></td>
+                                <td data-label="Historial"><a href="/admin/clientes/{{ $cliente->email }}/ventas" class="button button-cliente3" style="padding:2px 16px;"> Ver</a></td>
 
                             @endforeach
                             </tbody>
