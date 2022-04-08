@@ -115,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/admin" class="nav-link" id="clientes">
+            <a href="/admin/clientes" class="nav-link" id="clientes">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 Clientes
