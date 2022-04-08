@@ -21,9 +21,10 @@
 .search-product .search{
     justify-content: end;
     display: flex;
+    width: 100%;
 }
 
-.search-product .search a{
+.search-product .search .icon{
     background-color: #dc3545;
     color: white;
     width: 50px;
@@ -34,7 +35,7 @@
     justify-content: center;
 }
 
-.search-product .search a:hover{
+.search-product .search .icon:hover{
     background-color: #3a3a3a;
 }
 
@@ -462,4 +463,43 @@
 
 .pdf-button i{
     margin-left: 5px;
+}
+
+.product-cupon{
+    padding-right: 20px !important;
+}
+
+.product-cupon-search{
+    padding-left: 20px !important;
+    border-left: 1px solid #ced4da;
+}
+
+.product-cupon-search .search-product{
+    width: 100%;
+}
+
+.product-cupon-search ul{
+    height: 400px;
+    overflow-y: scroll;
+    padding-right: 15px;
+}
+
+.product-cupon li{
+    padding: 10px;
+    border-bottom: 1px dashed #ced4da;
+    display: flex;
+    align-items: center;
+}
+
+.product-cupon img{
+    width: 12%;
+}
+
+.product-cupon p{
+    margin-left: 15px;
+    margin-bottom: 0px !important;
+}
+
+.product-cupon a{
+    margin-left: auto;
 }

@@ -7,6 +7,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\VentasController;
+use App\Http\Controllers\CuponesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,6 +83,15 @@ Route::group([
         Route::post('ventas/{id}/update', [VentasController::class, "update"]);
         Route::post('ventas/pdf', [VentasController::class, "download"]);
         Route::get('notificacion/{id}', [VentasController::class, "notificacion"]);
+
+        Route::get('cupones', [CuponesController::class, "index"]);
+        Route::post('cupones', [CuponesController::class, "index"]);
+        Route::get('addcupon', [CuponesController::class, "add"]);
+        Route::post('addcupon', [CuponesController::class, "create"]);
+        Route::get('cupones/{id}/update', [CuponesController::class, "edit"]);
+        Route::post('cupones/{id}/update', [CuponesController::class, "update"]);
+        Route::get('cupones/{id}/delete', [CuponesController::class, "destroy"]);
+        Route::get('cupones/{id}/restore', [CuponesController::class, "restore"]);
     }
 );
 

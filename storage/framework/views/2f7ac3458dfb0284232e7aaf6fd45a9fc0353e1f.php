@@ -123,18 +123,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/admin" class="nav-link" id="usuarios">
-              <i class="nav-icon fa fa-users-cog"></i>
-              <p>
-                Usuarios
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/admin" class="nav-link">
+            <a href="/admin/cupones" class="nav-link" id="cupones">
               <i class="nav-icon fa fa-gift"></i>
               <p>
-                Promosiones
+                Cupones
               </p>
             </a>
           </li>

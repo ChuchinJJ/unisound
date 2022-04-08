@@ -27,6 +27,8 @@
     <script type="text/javascript" src="/js/venobox.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/dropzone.js"></script>
+    <?php echo \Livewire\Livewire::styles(); ?>
+
 </head>
 
 <body class="sidebar-mini layout-navbar-fixed">
@@ -39,5 +41,7 @@
     <script type="text/javascript" src="/js/bootstrap.bundle.js"></script>
     <script type="text/javascript" src="/js/jquery.overlayScrollbars.js"></script>
     <script type="text/javascript" src="/js/adminlte.js"></script>
+    <?php echo \Livewire\Livewire::scripts(); ?>
+
 </body>
 </html><?php /**PATH C:\xampp\htdocs\unisound\resources\views/admin/container.blade.php ENDPATH**/ ?>

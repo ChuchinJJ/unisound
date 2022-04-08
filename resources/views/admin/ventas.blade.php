@@ -123,7 +123,6 @@
                                                 <li><a class="dropdown-item" href="/admin/ventas/{{ $venta->id_venta }}/update">Editar</a></li>
                                             </ul>
                                         </div>
-                                        <i></i>
                                     </td>
                                 </tr>
                                 @empty

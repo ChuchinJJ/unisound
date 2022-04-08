@@ -126,7 +126,6 @@
                                                 <li><a class="dropdown-item" href="/admin/ventas/<?php echo e($venta->id_venta); ?>/update">Editar</a></li>
                                             </ul>
                                         </div>
-                                        <i></i>
                                     </td>
                                 </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
