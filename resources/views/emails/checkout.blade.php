@@ -19,8 +19,8 @@
                 <hr style="margin-top: 5px; color:black; border-color: white;">
                 <div style="display: flex;">
                     <div style="text-align: left;">
-                        <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0;"><b>Id pedido:</b></h5>
-                        <h5 style="font-size: 1rem; margin-top: 0;"># {{ $venta->id_venta }}</h5>
+                        <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0;"><b>Pedido:</b></h5>
+                        <h5 style="font-size: 1rem; margin-top: 0;">#{{ $venta->id_venta }}</h5>
                         <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0; color:black"><b>Fecha del pedido:</b></h5>
                         @php
                             setlocale(LC_TIME, "spanish");
@@ -31,7 +31,7 @@
                         <p style="font-size: 1rem; margin-top: 0; color:black">{{ $fecha }}</p>
                     </div>
                     <div style="text-align: right; margin-left: auto;">
-                        <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0; color:black"><b>Facturado a:</b></h5>
+                        <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0; color:black"><b>Para:</b></h5>
                         <h5 style="font-size: 1rem; margin-top: 0; color:black">{{ $cliente->nombre }}</h5>
                         <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0; color:black"><b>Dirección:</b></h5>
                         <p style="margin-bottom:0; margin-top: 0; color:black; font-size: 15px;">{{ $cliente->calle }}</p>

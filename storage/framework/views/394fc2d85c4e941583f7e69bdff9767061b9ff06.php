@@ -72,7 +72,7 @@
                         <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table table-sale" width="100%">
                             <thead>
                                 <tr>
-                                    <th>ID pedido</th>
+                                    <th># pedido</th>
                                     <th>Cliente</th>
                                     <th>Estado</th>
                                     <th>Total</th>

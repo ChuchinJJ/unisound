@@ -25,8 +25,8 @@
                             <div class="row">
                                 <div class="col-md-5">
                                     <h2>Tu pedido</h2>
-                                    <h3>Factura #{{ $venta->id_venta }}</h3>
-                                    <h4 style="margin-bottom:0"><b>Fecha de factura:</b></h4>
+                                    <h3>Compra #{{ $venta->id_venta }}</h3>
+                                    <h4 style="margin-bottom:0"><b>Fecha de Compra:</b></h4>
                                     @php
                                         setlocale(LC_TIME, "spanish");
                                         $fecha_str = str_replace("/", "-", $venta->fecha->format('Y-m-d H:i:s'));

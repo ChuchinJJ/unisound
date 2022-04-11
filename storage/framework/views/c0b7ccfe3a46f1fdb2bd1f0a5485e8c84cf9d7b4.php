@@ -185,7 +185,7 @@
                         </form>
                         <div class="product_meta">
                             <span class="posted_in">Categoría: <a href="/shop/<?php echo e($producto->id_categoria); ?>" rel="tag"><?php echo e($categoria); ?></a></span>
-                            <span class="product_id">Product ID: <span><?php echo e($producto->id_producto); ?></span></span>
+                            <span class="product_id">Producto #: <span><?php echo e($producto->id_producto); ?></span></span>
                         </div>
                     </div>
                     <div class="woocommerce-tabs wc-tabs-wrapper">

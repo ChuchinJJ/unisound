@@ -38,7 +38,7 @@
 <table width="100%" style="color: #212529; vertical-align: top; border-color: #dee2e6; border-collapse: collapse;">
     <thead style="text-align: center; color: #fff; border-color: #373b3e; background-color: #212529;">
         <tr>
-            <th>Id</th>
+            <th>#</th>
             <th>Cliente</th>
             <th>Estado</th>
             <th>Total</th>

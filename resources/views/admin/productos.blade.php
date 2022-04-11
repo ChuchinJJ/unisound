@@ -86,7 +86,7 @@
                         <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table" width="100%">
                             <thead>
                                 <tr>
-                                    <th colspan="2">ID</th>
+                                    <th colspan="2">#</th>
                                     <th>Nombre</th>
                                     <th>Categoría</th>
                                     <th>Valoración</th>

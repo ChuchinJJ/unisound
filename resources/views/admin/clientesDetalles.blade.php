@@ -23,7 +23,7 @@
                             <thead>
                                 <tr>
                                     
-                                    <th>ID pedido</th>
+                                    <th># pedido</th>
                                     <th>Cliente</th>
                                     <th>Estado</th>
                                     <th>Total</th>
