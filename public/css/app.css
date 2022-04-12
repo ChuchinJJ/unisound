@@ -237,6 +237,158 @@ body {
   color: #a79b9bed;
   font-weight: 500;
 }
+.content-header .container-fluid  h2{
+  color: #2b2a2ae3;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 20px;
+  font-weight: 600;
+}
+
+.panel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.panel_titulo h2{
+  color: #2b2a2ae3;
+  font-size: 45px;
+  font-weight: 600;
+  margin: 20px;
+  padding-left: 15px;
+}
+
+.panel_img{
+  animation: movimiento 2.5s linear infinite;
+}
+.panel_img img{
+  width: 450px;
+  display: block;
+}
+
+ .burbuja{
+  border-radius: 50%;
+  background: rgba(65, 63, 63, 0.884);
+  opacity: 0;
+
+  position: absolute;
+  
+  animation: burbujas 3s linear infinite;
+
+}
+
+.burbuja:nth-child(1){
+  width: 60px;
+  height: 60px;
+  left: 25.5%;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+  width: 60px;
+  height: 60px;
+  left: 53.5%;
+  animation-duration: 3s;
+  animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+  width: 50px;
+  height: 50px;
+  left: 80%;
+  animation-duration: 6s;
+  animation-delay: 3s;
+}
+
+.burbuja:nth-child(4){
+  width: 20px;
+  height: 20px;
+  left: 18.5%;
+  animation-duration: 1.5s;
+  animation-delay: 7s;
+}
+
+.burbuja:nth-child(5){
+  width: 65px;
+  height: 65px;
+  left: 65.5%;
+  animation-duration: 3s;
+  animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+  width: 20px;
+  height: 20px;
+  left: 90.5%;
+  animation-duration: 4s;
+  animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+  width: 20px;
+  height: 20px;
+  left: 45%;
+  animation-duration: 4s;
+  animation-delay: 5s;
+}
+.burbuja:nth-child(8){
+  width: 20px;
+  height: 20px;
+  left: 35%;
+  animation-duration: 2.5s;
+  animation-delay: 4s;
+}
+
+.burbuja:nth-child(9){
+  width: 25px;
+  height: 25px;
+  left: 75%;
+  animation-duration: 3.5s;
+  animation-delay: 3s;
+}
+
+.burbuja:nth-child(10){
+  width: 25px;
+  height: 25px;
+  left: 60%;
+  animation-duration: 2s;
+  animation-delay: 4s;
+}
+
+
+@keyframes burbujas{
+  0%{
+    bottom: 0;
+    opacity: 0;
+  }
+  30%{
+    transform: translateX(30px);
+  }
+  50%{
+    opacity: .3;
+  }
+  100%{
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+@keyframes movimiento{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
 
 /*Estilos para el  DARK MODE*/
 
