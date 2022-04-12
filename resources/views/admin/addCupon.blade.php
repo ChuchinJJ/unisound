@@ -27,11 +27,11 @@
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="fecha_inicio" class="require-label" required>Fecha inicio</label>
-                                <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required>
+                                <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required min="{{ $fechaVigente }}">
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="fecha_fin" class="require-label" required>Fecha fin</label>
-                                <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required>
+                                <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required min="{{ $fechaVigente }}">
                             </div>
                             <div class="col-md-12 mb-4">
                                 <label for="descripcion" class="require-label" required>Descripción</label>

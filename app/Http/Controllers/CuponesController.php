@@ -14,9 +14,13 @@ class CuponesController extends Controller
     {   
         $filtro = $request->input('filtro', 'all');
         if($filtro == 'all'){
-            $cupones = Cupon::paginate(10);
-        }else{
             $cupones = Cupon::where('deleted_at', null)->paginate(10);
+        }else{
+            $fechaVigente = date('Y-m-d');
+            $cupones = Cupon::where('deleted_at', null)
+            ->where('fecha_inicio', '<=', $fechaVigente)
+            ->where('fecha_fin', '>=', $fechaVigente)
+            ->paginate(10);
         }
         $request->flash();
         return view('admin.cupones')->with('cupones', $cupones);
@@ -24,7 +28,8 @@ class CuponesController extends Controller
 
     public function add()
     {
-        return view('admin.addCupon');
+        $fechaVigente = date('Y-m-d', strtotime(str_replace("/", "-", Cupon::fechaVigente())."+ 1 days"));
+        return view('admin.addCupon')->with('fechaVigente', $fechaVigente);
     }
 
     public function create(Request $request)
@@ -51,10 +56,15 @@ class CuponesController extends Controller
     public function edit($id)
     {
         $cupon = Cupon::find($id);
+        $fechaVigente = Cupon::fechaVigente();
+        if($fechaVigente == $cupon->fecha_fin){
+            $fechaVigente = date('Y-m-d', strtotime(str_replace("/", "-", Cupon::fechaVigente(2))."+ 1 days"));
+        }
         $detalle_cupon = DetalleCupon::where('id_cupon', $id)->get();
         return view('admin.updateCupon')->with([
             'cupon' => $cupon, 
-            'detalle' => $detalle_cupon
+            'detalle' => $detalle_cupon,
+            'fechaVigente' => date('Y-m-d', strtotime(str_replace("/", "-", $fechaVigente)."+ 1 days"))
         ]);
     }
 
@@ -88,14 +98,14 @@ class CuponesController extends Controller
         $cupon = Cupon::find($id);
         $cupon->deleted_at = new DateTime();
         $cupon->save();
-        return redirect('/admin/cupones')->with('success', 'El cupón ha sido desactivado con exito');
+        return redirect('/admin/cupones')->with('success', 'El cupón ha sido suspendido');
     }
 
-    public function restore($id)
+    /*public function restore($id)
     {
         $cupon = Cupon::find($id);
         $cupon->deleted_at = null;
         $cupon->save();
         return redirect('/admin/cupones')->with('success', 'El cupón ha sido restaurado con exito');
-    }
+    }*/
 }

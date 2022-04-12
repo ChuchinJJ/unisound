@@ -50,7 +50,7 @@
                         <label class="btn btn-outline-danger" for="filtro-todos" style="margin-right: 10px;">Todos</label>
                         <input type="radio" class="btn-check" name="filtro" value="vigentes" id="filtro-vigentes" 
                             autocomplete="off" onclick="enviar()" @if(old("filtro") == "vigentes") checked @endif>
-                        <label class="btn btn-outline-danger" for="filtro-vigentes">Vigentes</label>
+                        <label class="btn btn-outline-success" for="filtro-vigentes">Vigente</label>
                     </form>
             
                     <div class="container-table">
@@ -63,7 +63,6 @@
                                     <th>Fecha inicio</th>
                                     <th>Fecha fin</th>
                                     <th>Decuento</th>
-                                    <th>Activo</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -72,13 +71,10 @@
                                 @forelse($cupones as $cupon)
                                 <tr>
                                     @php
-                                        setlocale(LC_TIME, "spanish");
                                         $fecha_str_inicio = str_replace("/", "-", $cupon->fecha_inicio->format('Y-m-d H:i:s'));
-                                        $newDateInicio = date("d-m-Y", strtotime($fecha_str_inicio));
-                                        $fecha_inicio = strftime("%d de %B de %Y", strtotime($newDateInicio));
+                                        $fecha_inicio = date("d/m/Y", strtotime($fecha_str_inicio));
                                         $fecha_str_fin = str_replace("/", "-", $cupon->fecha_fin->format('Y-m-d H:i:s'));
-                                        $newDateFin = date("d-m-Y", strtotime($fecha_str_fin));
-                                        $fecha_fin = strftime("%d de %B de %Y", strtotime($newDateFin));
+                                        $fecha_fin = date("d/m/Y", strtotime($fecha_str_fin));
                                     @endphp
                                     <td data-label="Id">{{ $cupon->id_cupon }}</td>
                                     <td data-label="Nombre">{{ $cupon->nombre }}</td>
@@ -86,19 +82,10 @@
                                     <td data-label="Fecha inicio">{{ $fecha_inicio }}</td>
                                     <td data-label="Fecha fin">{{ $fecha_fin }}</td>
                                     <td data-label="Descuento">{{ $cupon->descuento }}%</td>
-                                    <td data-label="Activo" class="pagado">
-                                        @if($cupon->deleted_at != null)
-                                            <i class="circle-pagado venta-no-pagado">
-                                                <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ffff">
-                                                    <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
-                                                </svg>
-                                            </i>
-                                        @else
-                                            <i class="fa fa-check circle-pagado venta-pagado"></i>
-                                        @endif
-                                    </td>
                                     <td data-label="Acciones">
-                                        <div class="dropdown">
+                                        <a href="/admin/cupones/{{ $cupon->id_cupon }}/update" title="Editar" class="btn btn-danger"><i class="fa fa-edit" style="font-size:19px;"></i></a>
+                                        <a href="/admin/cupones/{{ $cupon->id_cupon }}/delete" title="Eliminar" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                        <!--<div class="dropdown">
                                             <a class="fa fa-solid fa-angle-down icono-arrow" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="icono" role="button"></a>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                 <li><a class="dropdown-item" href="/admin/cupones/{{ $cupon->id_cupon }}/update">Editar</a></li>
@@ -108,7 +95,7 @@
                                                 <li><a class="dropdown-item" href="/admin/cupones/{{ $cupon->id_cupon }}/restore">Restaurar</a></li>
                                                 @endif
                                             </ul>
-                                        </div>
+                                        </div> -->
                                     </td>
                                 </tr>
                                 @empty
