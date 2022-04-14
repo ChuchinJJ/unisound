@@ -24,7 +24,7 @@
                     <div class="woocommerce">
                         <div class="woocommerce-notices-wrapper"></div>
                         <?php if(count(Cart::getContent())): ?>
-                        <form class="woocommerce-cart-form" action="/cart-edit" method="post">
+                        <form class="woocommerce-cart-form" action="/cart-edit" method="post" id="formulario">
                             <?php echo csrf_field(); ?>
                             <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
                                 <thead>
@@ -38,6 +38,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php $subtotal = 0; $cupon = ""; ?>
                                     <?php $__currentLoopData = Cart::getContent(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                     <tr class="woocommerce-cart-form__cart-item cart_item">
                                         <td class="product-remove">
@@ -66,22 +67,36 @@
                                             </div>
                                         </td>
                                         <td class="product-subtotal" data-title="Subtotal">
-                                            <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e(number_format($item->price*$item->quantity,2,".",",")); ?></bdi>
+                                            <span class="woocommerce-Price-amount amount cupon-descuento">
+                                                <bdi>
+                                                    <span class="woocommerce-Price-currencySymbol">&#36;</span>
+                                                    <?php echo e(number_format($item->getPriceSum(),2,".",",")); ?>
+
+                                                </bdi>
+                                                <?php if(count($item->conditions) > 0): ?>
+                                                <div class="badge badge-danger">
+                                                    <?php echo e($item->conditions[0]->getValue()); ?>
+
+                                                    <?php $cupon = $item->conditions[0]->getName() ?>
+                                                </div>
+                                                <?php endif; ?>
                                             </span>
                                         </td>
                                     </tr>
+                                    <?php $subtotal = $subtotal + $item->getPriceSum(); ?>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     <tr>
                                         <td colspan="6" class="actions">
                                             <div class="coupon">
-                                                <label for="coupon_code">Cupón:</label> 
-                                                <input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="Código de cupón" /> 
-                                                <button type="submit" class="button" name="apply_coupon" value="Aplicar cupón">Aplicar cupón</button>
+                                                <?php if($cupon == ""): ?>
+                                                <label for="coupon_code">Cupón:</label>
+                                                <input type="text" name="cupon" class="input-text" id="coupon_code" placeholder="Código de cupón" /> 
+                                                <button type="button" class="button" name="apply_coupon" value="Aplicar cupón" onclick="enviarCupon()">Aplicar cupón</button>
+                                                <?php else: ?>
+                                                <span><b>Cupón:</b> <?php echo e($cupon); ?></span>
+                                                <?php endif; ?>
                                             </div>
                                             <button type="submit" class="button" name="update_cart" id="update_cart" value="Actualizar carrito" disabled>Actualizar carrito</button>
-                                            <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="8fbbb3868c" />
-                                            <input type="hidden" name="_wp_http_referer" value="/wordpress/cart/" />
                                         </td>
                                     </tr>
                                 </tbody>
@@ -91,14 +106,24 @@
                             <div class="cart_totals">
                                 <h2>Total del carrito</h2>
                                 <table cellspacing="0" class="shop_table shop_table_responsive">
+                                    <?php if($subtotal != Cart::getTotal()): ?>
                                     <tr class="cart-subtotal">
                                         <th>Subtotal</th>
                                         <td data-title="Subtotal">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e(number_format(Cart::getTotal(),2,".",",")); ?></bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e(number_format($subtotal,2,".",",")); ?></bdi>
                                             </span>
                                         </td>
                                     </tr>
+                                    <tr class="cart-subtotal">
+                                        <th>Descuento</th>
+                                        <td data-title="Subtotal">
+                                            <span class="woocommerce-Price-amount amount">
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e(number_format($subtotal-Cart::getTotal(),2,".",",")); ?></bdi>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <?php endif; ?>
                                     <tr class="order-total">
                                         <th>Total</th>
                                         <td data-title="Total">
@@ -149,16 +174,21 @@
     </div>
   </div>
 </div>
+<?php endif; ?>
 <script>
 	function cerrar(){
 		var modal = document.getElementById("myModal");
 		modal.style.display = "none";
 	}
-</script>
-<?php endif; ?>
-<script>
+
     function activarBoton(){
         document.getElementById("update_cart").disabled=false;
+    }
+
+    function enviarCupon(){
+        var formulario = document.getElementById("formulario");
+        formulario.setAttribute('action', '/cupon');
+        formulario.submit()
     }
 </script>
 

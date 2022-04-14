@@ -188,7 +188,7 @@
 									<span class="quantity">
 										<?php echo e($item->quantity); ?> x 
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">$</span><?php echo e($item->price); ?></bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">$</span><?php echo e($item->getPriceWithConditions()); ?></bdi>
 										</span>
 									</span>				
 								</li>

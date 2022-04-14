@@ -187,7 +187,7 @@
 									<span class="quantity">
 										{{ $item->quantity }} x 
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->getPriceWithConditions() }}</bdi>
 										</span>
 									</span>				
 								</li>

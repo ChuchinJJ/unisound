@@ -37,7 +37,7 @@
                                 </h4>
                             </div>
                             <div>
-                                <h4><b>N. Pedido:</b> °{{ $venta->id_venta }} </h4>
+                                <h4><b>N. Pedido:</b> {{ $venta->id_venta }} </h4>
                                 <h4><b>Estado:</b> {{$venta->status}} </h4>
                             </div>
                         </div>

@@ -503,3 +503,15 @@
 .product-cupon a{
     margin-left: auto;
 }
+
+.cupon-descuento{
+    display: flex;
+    justify-content: center;
+}
+
+.cupon-descuento .badge{
+    margin-left: 10px;
+    display: flex;
+    align-items: end;
+    padding: 4px;
+}

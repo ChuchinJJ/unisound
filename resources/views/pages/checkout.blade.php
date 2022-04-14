@@ -67,6 +67,7 @@
                                         @endforeach
                                     </tbody>
                                     <tfoot>
+                                        @if($venta->descuento > 0)
                                         <tr class="cart-subtotal">
                                             <th>Subtotal</th>
                                             <td><span class="woocommerce-Price-amount amount">
@@ -79,6 +80,7 @@
                                                 <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($venta->descuento,2,".",",") }}</bdi>
                                             </span></td>
                                         </tr>
+                                        @endif
                                         <tr class="order-total">
                                             <th>Total</th>
                                             <td>

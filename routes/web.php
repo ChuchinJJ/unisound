@@ -56,6 +56,7 @@ Route::post('cart-add', [CarritoController::class, 'add'])->name('cart.add');
 Route::get('cart', [CarritoController::class, 'cart'])->name('cart');
 Route::get('cart-removeitem/{id}', [CarritoController::class, 'removeitem']);
 Route::post('cart-edit', [CarritoController::class, 'edit']);
+Route::post('cupon', [CarritoController::class, 'cupon']);
 
 Route::group([
         'middleware' => 'admin', 

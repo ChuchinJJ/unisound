@@ -6,10 +6,10 @@
     </style>
     <div style="text-align: -webkit-center; padding-top:20px; margin-right: 0px; padding-bottom:20px;">
         <div style="text-align:center; margin-bottom:10px;">
-            <img src="https://www.unisound.com.mx/wp-content/uploads/2022/02/icono-unisound-133x133.png" width="8%"/>
+            <img src="https://www.unisound.com.mx/wp-content/uploads/2022/02/icono-unisound-133x133.png" width="100px"/>
             <h1 style="font-size: calc(0.6rem + 1.5vw); color:black; margin-bottom: 0; margin-top: 0;">¡Gracias por su compra!</h1>
         </div>
-        <div style="flex: 0 0 auto; width: 58.33333333%;">
+        <div style="flex: 0 0 auto; width: 80%;">
             <div style="padding: 8%; margin-bottom:20px; min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 1px solid rgba(0,0,0,.125); border-radius: 0.25rem;">
                 <h3 style="text-align:center; font-size: calc(0.8rem + .6vw); margin-top:0; color:black"><b>¡Hola {{ $cliente->nombre }}! Tu pedido ha sido enviado:</b></h3>
                 <br>
@@ -66,6 +66,7 @@
                             @endforeach
                         </tbody>
                         <tfoot style="border-top: 2px solid currentColor;">
+                            @if($venta->descuento > 0)
                             <tr style="border-color: inherit; border-style: solid; border-width: 0;">
                                 <th style="text-align: right;  border-bottom-width: 1px; padding: 0.5rem 0.5rem; border-bottom: 1px solid #dee2e685;">Subtotal: </th>
                                 <td style="text-align: center; border-bottom-width: 1px; padding: 0.5rem 0.5rem; border-bottom: 1px solid #dee2e685;"><span>
@@ -78,6 +79,7 @@
                                     <bdi><span>&#36;</span>{{ number_format($venta->descuento,2,".",",") }}</bdi>
                                 </span></td>
                             </tr>
+                            @endif
                             <tr style="border-color: inherit; border-style: solid; border-width: 0;">
                                 <th style="text-align: right;  border-bottom-width: 1px; padding: 0.5rem 0.5rem; border-bottom: 1px solid #dee2e685;">Total: </th>
                                 <td style="text-align: center; border-bottom-width: 1px; padding: 0.5rem 0.5rem; border-bottom: 1px solid #dee2e685;">

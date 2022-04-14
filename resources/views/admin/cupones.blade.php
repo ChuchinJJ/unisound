@@ -57,7 +57,7 @@
                         <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table table-sale" width="100%">
                             <thead>
                                 <tr>
-                                    <th>ID cupón</th>
+                                    <th># cupón</th>
                                     <th>Nombre</th>
                                     <th>Código</th>
                                     <th>Fecha inicio</th>
@@ -76,7 +76,7 @@
                                         $fecha_str_fin = str_replace("/", "-", $cupon->fecha_fin->format('Y-m-d H:i:s'));
                                         $fecha_fin = date("d/m/Y", strtotime($fecha_str_fin));
                                     @endphp
-                                    <td data-label="Id">{{ $cupon->id_cupon }}</td>
+                                    <td data-label="# cupón">{{ $cupon->id_cupon }}</td>
                                     <td data-label="Nombre">{{ $cupon->nombre }}</td>
                                     <td data-label="Código">{{ $cupon->codigo }}</td>
                                     <td data-label="Fecha inicio">{{ $fecha_inicio }}</td>
