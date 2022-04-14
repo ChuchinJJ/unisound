@@ -43,7 +43,7 @@
           </span>
           <?php endif; ?>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right scroll-notificacion">
           <span class="dropdown-item dropdown-header"><?php echo e(count($notificaciones)); ?> Notificaciones</span>
           <div class="dropdown-divider"></div>
           <?php $__currentLoopData = $notificaciones; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $notificacion): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

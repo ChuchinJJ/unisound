@@ -526,3 +526,9 @@
 .total-venta p{
     display: grid;
 }
+
+.scroll-notificacion{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 85vh;
+}

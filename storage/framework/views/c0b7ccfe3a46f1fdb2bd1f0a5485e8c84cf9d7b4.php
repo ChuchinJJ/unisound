@@ -135,7 +135,6 @@
                                             <input type="hidden" id="cantidad-<?php echo e($color->id_color); ?>" value="<?php echo e($color->cantidad); ?>" />
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </table>
-                                    <?php if($colores[0]->precio != $colores[count($colores)-1]->precio): ?>
                                     <div class="single_variation_wrap">
                                         <div class="woocommerce-variation single_variation">
                                             <div class="woocommerce-variation-description"></div>
@@ -148,7 +147,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <?php endif; ?>
                                     <label class="cantidad-disponible" id="cantidad-disponible"></label>
                                 <?php else: ?>
                                     <input type="hidden" id="pa_color" name="color" value="<?php echo e($colores[0]->id_color); ?>" />
@@ -352,7 +350,9 @@
         if(val != ""){
             var precio = document.getElementById("precio-"+val).value;
             var cantidad = document.getElementById("cantidad-"+val).value;
+            <?php if($colores[0]->precio != $colores[count($colores)-1]->precio): ?>
             document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+            <?php endif; ?>
             var unidad = " unidad disponible";
             if(parseInt(cantidad)>1){
                 unidad = " unidades disponibles";

@@ -42,7 +42,7 @@
           </span>
           @endif
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right scroll-notificacion">
           <span class="dropdown-item dropdown-header">{{ count($notificaciones) }} Notificaciones</span>
           <div class="dropdown-divider"></div>
           @foreach($notificaciones as $notificacion)

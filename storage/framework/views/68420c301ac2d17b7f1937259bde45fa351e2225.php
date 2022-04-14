@@ -44,7 +44,7 @@
         <div class="content-fluid">
             <div class="card">
                 <div class="card-slider">
-                    <form method="post" action="" id="formulario" class="row m-2">
+                    <form method="post" action="/admin/productos" id="formulario" class="row m-2">
                         <?php echo csrf_field(); ?>
                         <div class="search-product me-2 mb-2">
                             <div class="search">
@@ -319,10 +319,10 @@
                                 <span><?php echo e($productos->firstItem()); ?> - <?php echo e($productos->lastItem()); ?> de <?php echo e($productos->total()); ?></span>
                             </div>
                             <div class="controls-pagination">
-                                <a <?php if(!$productos->onFirstPage()): ?> href="?page=1" <?php endif; ?> class="doble-arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
-                                <a <?php if(!$productos->onFirstPage()): ?> href="<?php echo e($productos->previousPageUrl()); ?>" <?php endif; ?> class="arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
-                                <a <?php if($productos->currentPage() != $productos->lastPage()): ?> href="<?php echo e($productos->nextPageUrl()); ?>" <?php endif; ?> class="arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
-                                <a <?php if($productos->currentPage() != $productos->lastPage()): ?> href="<?php echo e($productos->url($productos->lastPage())); ?>" <?php endif; ?> class="doble-arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if(!$productos->onFirstPage()): ?> onclick="enviarPagina('/admin/productos?page=1')" href="#" <?php endif; ?> class="doble-arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if(!$productos->onFirstPage()): ?> onclick="enviarPagina('<?php echo e($productos->previousPageUrl()); ?>')" href="#" <?php endif; ?> class="arrow-left <?php if($productos->onFirstPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if($productos->currentPage() != $productos->lastPage()): ?> onclick="enviarPagina('<?php echo e($productos->nextPageUrl()); ?>')" href="#" <?php endif; ?> class="arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
+                                <a <?php if($productos->currentPage() != $productos->lastPage()): ?> onclick="enviarPagina('<?php echo e($productos->url($productos->lastPage())); ?>')" href="#" <?php endif; ?> class="doble-arrow-right <?php if($productos->currentPage() == $productos->lastPage()): ?> no-control <?php endif; ?>"></a>
                             </div>
                         </div>
                     <?php endif; ?>
@@ -338,6 +338,12 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+
+    function enviarPagina(valor){
+        var formulario = document.getElementById("formulario");
+		formulario.setAttribute('action', valor);
+        formulario.submit();
+    }
 
     function searchButtom(){
         document.getElementById("categoria").value = "";

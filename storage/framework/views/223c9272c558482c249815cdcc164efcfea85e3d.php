@@ -15,7 +15,7 @@
 
 <div class="page_content_wrap page_paddings_yes">
 	<div class="content_wrap woocommerce sidebar_right sidebar_show">
-		<form method="post" action="" id="formulario">
+		<form method="post" action="/shop" id="formulario">
 			<?php echo csrf_field(); ?>
 			<div class="content">
 				<div class="list_products <?php echo e(old('vista', 'shop_mode_thumbs')); ?>" id="shop_mode">
@@ -63,13 +63,13 @@
 												src="/storage/img/products/<?php echo e($producto->imagen1); ?>"
 												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
 												loading="lazy"/>
-												<?php if(count($mi_color)>1): ?>
-									<div class="container-color-shop">
-										<?php $__currentLoopData = $mi_color; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $color): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-										<i class="square-color" style="background-color: <?php echo e($color->rgb); ?>"></i>
-										<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-									</div>
-									<?php endif; ?>
+											<?php if(count($mi_color)>1): ?>
+											<div class="container-color-shop">
+												<?php $__currentLoopData = $mi_color; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $color): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+												<i class="square-color" style="background-color: <?php echo e($color->rgb); ?>"></i>
+												<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+											</div>
+											<?php endif; ?>
 										</a>
 									</div>
 								</div>
@@ -87,7 +87,7 @@
 									</div>
 									<span class="price">
 										<?php if(count($mi_color)>1): ?>
-											<?php if($mi_color->first() == $mi_color->last()): ?>
+											<?php if($mi_color->first()->precio == $mi_color->last()->precio): ?>
 											<span class="woocommerce-Price-amount amount">
 												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span><?php echo e($mi_color->first()->precio); ?></bdi>
 											</span>

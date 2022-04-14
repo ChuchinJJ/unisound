@@ -38,7 +38,7 @@
         <div class="content-fluid">
             <div class="card">
                 <div class="card-slider">
-                    <form method="post" action="" id="formulario" class="row" style="margin-right: 1px;">
+                    <form method="post" action="/admin/ventas" id="formulario" class="row" style="margin-right: 1px;">
                         @csrf
                         <div class="filter-select">
                             <div class="product-filter mb-2">
@@ -159,19 +159,19 @@
 
 <script>
     document.getElementById('ventas').classList.add('active');
+    var formulario = document.getElementById("formulario");
     
     function enviar(){
-		document.getElementById("formulario").submit();
+        formulario.setAttribute('action', '/admin/ventas');
+		formulario.submit();
 	}
 
     function enviarPagina(valor){
-        var formulario = document.getElementById("formulario");
 		formulario.setAttribute('action', valor);
         formulario.submit();
     }
 
     function enviarPDF(){
-        var formulario = document.getElementById("formulario");
 		formulario.setAttribute('action', '/admin/ventas/pdf');
         formulario.submit();
     }

@@ -43,7 +43,7 @@
         <div class="content-fluid">
             <div class="card">
                 <div class="card-slider">
-                    <form method="post" action="" id="formulario" class="row m-2">
+                    <form method="post" action="/admin/productos" id="formulario" class="row m-2">
                         @csrf
                         <div class="search-product me-2 mb-2">
                             <div class="search">
@@ -317,10 +317,10 @@
                                 <span>{{ $productos->firstItem() }} - {{ $productos->lastItem() }} de {{ $productos->total() }}</span>
                             </div>
                             <div class="controls-pagination">
-                                <a @if(!$productos->onFirstPage()) href="?page=1" @endif class="doble-arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
-                                <a @if(!$productos->onFirstPage()) href="{{ $productos->previousPageUrl() }}" @endif class="arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
-                                <a @if($productos->currentPage() != $productos->lastPage()) href="{{ $productos->nextPageUrl() }}" @endif class="arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
-                                <a @if($productos->currentPage() != $productos->lastPage()) href="{{ $productos->url($productos->lastPage()) }}" @endif class="doble-arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
+                                <a @if(!$productos->onFirstPage()) onclick="enviarPagina('/admin/productos?page=1')" href="#" @endif class="doble-arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
+                                <a @if(!$productos->onFirstPage()) onclick="enviarPagina('{{ $productos->previousPageUrl() }}')" href="#" @endif class="arrow-left @if($productos->onFirstPage()) no-control @endif"></a>
+                                <a @if($productos->currentPage() != $productos->lastPage()) onclick="enviarPagina('{{ $productos->nextPageUrl() }}')" href="#" @endif class="arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
+                                <a @if($productos->currentPage() != $productos->lastPage()) onclick="enviarPagina('{{ $productos->url($productos->lastPage()) }}')" href="#" @endif class="doble-arrow-right @if($productos->currentPage() == $productos->lastPage()) no-control @endif"></a>
                             </div>
                         </div>
                     @endif
@@ -336,6 +336,12 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+
+    function enviarPagina(valor){
+        var formulario = document.getElementById("formulario");
+		formulario.setAttribute('action', valor);
+        formulario.submit();
+    }
 
     function searchButtom(){
         document.getElementById("categoria").value = "";

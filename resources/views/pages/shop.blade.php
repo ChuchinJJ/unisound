@@ -15,7 +15,7 @@
 
 <div class="page_content_wrap page_paddings_yes">
 	<div class="content_wrap woocommerce sidebar_right sidebar_show">
-		<form method="post" action="" id="formulario">
+		<form method="post" action="/shop" id="formulario">
 			@csrf
 			<div class="content">
 				<div class="list_products {{ old('vista', 'shop_mode_thumbs') }}" id="shop_mode">
@@ -63,13 +63,13 @@
 												src="/storage/img/products/{{ $producto->imagen1 }}"
 												class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt=""
 												loading="lazy"/>
-												@if(count($mi_color)>1)
-									<div class="container-color-shop">
-										@foreach($mi_color as $color)
-										<i class="square-color" style="background-color: {{ $color->rgb }}"></i>
-										@endforeach
-									</div>
-									@endif
+											@if(count($mi_color)>1)
+											<div class="container-color-shop">
+												@foreach($mi_color as $color)
+												<i class="square-color" style="background-color: {{ $color->rgb }}"></i>
+												@endforeach
+											</div>
+											@endif
 										</a>
 									</div>
 								</div>
@@ -87,7 +87,7 @@
 									</div>
 									<span class="price">
 										@if(count($mi_color)>1)
-											@if($mi_color->first() == $mi_color->last())
+											@if($mi_color->first()->precio == $mi_color->last()->precio)
 											<span class="woocommerce-Price-amount amount">
 												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
 											</span>

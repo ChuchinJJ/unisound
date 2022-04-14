@@ -135,7 +135,6 @@
                                             <input type="hidden" id="cantidad-{{ $color->id_color }}" value="{{ $color->cantidad }}" />
                                         @endforeach
                                     </table>
-                                    @if($colores[0]->precio != $colores[count($colores)-1]->precio)
                                     <div class="single_variation_wrap">
                                         <div class="woocommerce-variation single_variation">
                                             <div class="woocommerce-variation-description"></div>
@@ -148,7 +147,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    @endif
                                     <label class="cantidad-disponible" id="cantidad-disponible"></label>
                                 @else
                                     <input type="hidden" id="pa_color" name="color" value="{{ $colores[0]->id_color }}" />
@@ -348,7 +346,9 @@
         if(val != ""){
             var precio = document.getElementById("precio-"+val).value;
             var cantidad = document.getElementById("cantidad-"+val).value;
+            @if($colores[0]->precio != $colores[count($colores)-1]->precio)
             document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+            @endif
             var unidad = " unidad disponible";
             if(parseInt(cantidad)>1){
                 unidad = " unidades disponibles";
