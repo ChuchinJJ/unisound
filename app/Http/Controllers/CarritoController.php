@@ -203,6 +203,12 @@ class CarritoController extends Controller
                 $message->subject('Su pedido fue procesado con éxito');
             });
 
+            /*Mail::send('emails.checkout', $data, function($message) use ($data){
+                $message->from('noreply@unisound.com.mx', 'Unisound');
+                $message->to('atencion@unisound.com.mx');
+                $message->subject('Nuevo pedido de '.$cliente->nombre);
+            });*/
+
             return view('pages.checkout')->with([
                 'success' => 'Su pedido fue procesado con éxito',
                 'venta' => $venta,

@@ -30,18 +30,32 @@
         .bg-Cancelado{
             color: #f1416c;background-color: #fff5f8;
         }
+        .total-venta{
+            display: flex;
+            align-items: end;
+            margin-left: 5%;
+            text-align: center;
+        }
+        .total-venta p{
+            display: grid;
+        }
     </style>
 </head>
 <body>
 <center><h1>Reporte de pedidos</h1></center>
-<br>
-<table width="100%" style="color: #212529; vertical-align: top; border-color: #dee2e6; border-collapse: collapse;">
+<span>
+    <b>Inicio - fin: </b>{{ $fechas }}
+    <b style="margin-left: 20%">Total: </b>{{ number_format($ventas->sum('total'),2,".",",") }}
+    <b style="margin-left: 25px;">Total pagado: </b>{{ number_format($ventas->where('pagado', 1)->sum('total'),2,".",",") }}
+</span>
+<table width="100%" style="color: #212529; vertical-align: top; border-color: #dee2e6; border-collapse: collapse; margin-top:20px">
     <thead style="text-align: center; color: #fff; border-color: #373b3e; background-color: #212529;">
         <tr>
             <th>#</th>
             <th>Cliente</th>
             <th>Estado</th>
             <th>Total</th>
+            <th>Pagado</th>
             <th>Fecha</th>
         </tr>
     </thead>
@@ -61,11 +75,17 @@
             <td><div class="bg-status bg-{{ $venta->status }}">{{ $venta->status }}</div></td>
             <td>${{ number_format($venta->total,2,".",",") }}</td>
             <td>
+                @if($venta->pagado == 0)
+                    No
+                @else
+                    Si
+                @endif
+            </td>
+            <td>
                 @php
                     setlocale(LC_TIME, "spanish");
                     $fecha_str = str_replace("/", "-", $venta->fecha->format('Y-m-d H:i:s'));
-                    $newDate = date("d-m-Y", strtotime($fecha_str));
-                    $fecha = strftime("%d de %B de %Y", strtotime($newDate));
+                    $fecha = date("d/m/Y", strtotime($fecha_str));
                 @endphp
                 {{ $fecha }}
             </td>

@@ -32,7 +32,7 @@
                     </div>
                     <div style="text-align: right; margin-left: auto;">
                         <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0; color:black"><b>Para:</b></h5>
-                        <h5 style="font-size: 1rem; margin-top: 0; color:black">{{ $cliente->nombre }}</h5>
+                        <h5 style="font-size: 1rem; margin-top: 0; color:black">{{ $cliente->nombre." ".$cliente->apellidos }}</h5>
                         <h5 style="font-size: 1rem; margin-bottom: 0.5rem; margin-top: 0; color:black"><b>Dirección:</b></h5>
                         <p style="margin-bottom:0; margin-top: 0; color:black; font-size: 15px;">{{ $cliente->calle }}</p>
                         <p style="margin-top:0; color:black; font-size: 15px;">{{ $cliente->ciudad.", ".$cliente->estado.", ".$cliente->pais }}</p>

@@ -39,7 +39,7 @@
         <div class="content-fluid">
             <div class="card">
                 <div class="card-slider">
-                    <form method="post" action="" id="formulario" class="row m-2">
+                    <form method="post" action="" id="formulario" class="row" style="margin-right: 1px;">
                         <?php echo csrf_field(); ?>
                         <div class="filter-select">
                             <div class="product-filter mb-2">
@@ -63,11 +63,16 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="total-venta">
+                            <p><b>Total </b><?php echo e(number_format($ventas->sum('total'),2,".",",")); ?></p>
+                        </div>
+                        <div class="total-venta">
+                            <p><b>Total pagado </b><?php echo e(number_format($ventas->where('pagado', 1)->sum('total'),2,".",",")); ?></p>
+                        </div>
                         <div class="pdf-button">
                             <a onclick="enviarPDF()" class="btn btn-danger">PDF <i class="fa fa-file-pdf"></i></a>
                         </div>
                     </form>
-            
                     <div class="container-table">
                         <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table table-sale" width="100%">
                             <thead>
@@ -119,13 +124,8 @@
 
                                     </td>
                                     <td data-label="Acciones">
-                                        <div class="dropdown">
-                                            <a class="fa fa-solid fa-angle-down icono-arrow" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="icono" role="button"></a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <li><a class="dropdown-item" href="/admin/ventas/<?php echo e($venta->id_venta); ?>/detalle">Ver</a></li>
-                                                <li><a class="dropdown-item" href="/admin/ventas/<?php echo e($venta->id_venta); ?>/update">Editar</a></li>
-                                            </ul>
-                                        </div>
+                                        <a href="/admin/ventas/<?php echo e($venta->id_venta); ?>/detalle" title="Ver" class="btn btn-danger"><i class="fa fa-bars" style="font-size:19px;"></i></a>
+                                        <a href="/admin/ventas/<?php echo e($venta->id_venta); ?>/update" title="Atender" class="btn btn-danger"><i class="fa fa-truck"></i></a>
                                     </td>
                                 </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); if ($__empty_1): ?>
@@ -147,10 +147,10 @@
                             <span><?php echo e($ventas->firstItem()); ?> - <?php echo e($ventas->lastItem()); ?> de <?php echo e($ventas->total()); ?></span>
                         </div>
                         <div class="controls-pagination">
-                            <a <?php if(!$ventas->onFirstPage()): ?> href="?page=1" <?php endif; ?> class="doble-arrow-left <?php if($ventas->onFirstPage()): ?> no-control <?php endif; ?>"></a>
-                            <a <?php if(!$ventas->onFirstPage()): ?> href="<?php echo e($ventas->previousPageUrl()); ?>" <?php endif; ?> class="arrow-left <?php if($ventas->onFirstPage()): ?> no-control <?php endif; ?>"></a>
-                            <a <?php if($ventas->currentPage() != $ventas->lastPage()): ?> href="<?php echo e($ventas->nextPageUrl()); ?>" <?php endif; ?> class="arrow-right <?php if($ventas->currentPage() == $ventas->lastPage()): ?> no-control <?php endif; ?>"></a>
-                            <a <?php if($ventas->currentPage() != $ventas->lastPage()): ?> href="<?php echo e($ventas->url($ventas->lastPage())); ?>" <?php endif; ?> class="doble-arrow-right <?php if($ventas->currentPage() == $ventas->lastPage()): ?> no-control <?php endif; ?>"></a>
+                            <a <?php if(!$ventas->onFirstPage()): ?> onclick="enviarPagina('/admin/ventas?page=1')" href="#" <?php endif; ?> class="doble-arrow-left <?php if($ventas->onFirstPage()): ?> no-control <?php endif; ?>"></a>
+                            <a <?php if(!$ventas->onFirstPage()): ?> onclick="enviarPagina('<?php echo e($ventas->previousPageUrl()); ?>')" href="#" <?php endif; ?> class="arrow-left <?php if($ventas->onFirstPage()): ?> no-control <?php endif; ?>"></a>
+                            <a <?php if($ventas->currentPage() != $ventas->lastPage()): ?> onclick="enviarPagina('<?php echo e($ventas->nextPageUrl()); ?>')" href="#" <?php endif; ?> class="arrow-right <?php if($ventas->currentPage() == $ventas->lastPage()): ?> no-control <?php endif; ?>"></a>
+                            <a <?php if($ventas->currentPage() != $ventas->lastPage()): ?> onclick="enviarPagina('<?php echo e($ventas->url($ventas->lastPage())); ?>')" href="#" <?php endif; ?> class="doble-arrow-right <?php if($ventas->currentPage() == $ventas->lastPage()): ?> no-control <?php endif; ?>"></a>
                         </div>
                     </div>
                     <?php endif; ?>
@@ -166,6 +166,13 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+
+    function enviarPagina(valor){
+        var formulario = document.getElementById("formulario");
+		formulario.setAttribute('action', valor);
+        formulario.submit();
+    }
+
     function enviarPDF(){
         var formulario = document.getElementById("formulario");
 		formulario.setAttribute('action', '/admin/ventas/pdf');

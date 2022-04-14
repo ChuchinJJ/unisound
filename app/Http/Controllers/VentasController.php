@@ -59,7 +59,7 @@ class VentasController extends Controller
         $ventas = Venta::where('fecha', '>=', $fecha_inicio)->where('fecha', '<=', $fecha_fin)->get();
         $clientes = Cliente::all();
         
-        $pdf = PDF::loadView('pdf.ventas', ['ventas' => $ventas,'clientes' => $clientes]);
+        $pdf = PDF::loadView('pdf.ventas', ['ventas' => $ventas,'clientes' => $clientes, 'fechas' => $fechas]);
         return $pdf->download('ventas Unisound.pdf');
     }
 

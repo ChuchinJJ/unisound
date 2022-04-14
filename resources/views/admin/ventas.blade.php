@@ -38,7 +38,7 @@
         <div class="content-fluid">
             <div class="card">
                 <div class="card-slider">
-                    <form method="post" action="" id="formulario" class="row m-2">
+                    <form method="post" action="" id="formulario" class="row" style="margin-right: 1px;">
                         @csrf
                         <div class="filter-select">
                             <div class="product-filter mb-2">
@@ -62,11 +62,16 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="total-venta">
+                            <p><b>Total </b>{{ number_format($ventas->sum('total'),2,".",",") }}</p>
+                        </div>
+                        <div class="total-venta">
+                            <p><b>Total pagado </b>{{ number_format($ventas->where('pagado', 1)->sum('total'),2,".",",") }}</p>
+                        </div>
                         <div class="pdf-button">
                             <a onclick="enviarPDF()" class="btn btn-danger">PDF <i class="fa fa-file-pdf"></i></a>
                         </div>
                     </form>
-            
                     <div class="container-table">
                         <table style="border-right: 3px solid white; border-left: 3px solid white;" class="table table-sale" width="100%">
                             <thead>
@@ -116,13 +121,8 @@
                                         {{ $fecha }}
                                     </td>
                                     <td data-label="Acciones">
-                                        <div class="dropdown">
-                                            <a class="fa fa-solid fa-angle-down icono-arrow" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="icono" role="button"></a>
-                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <li><a class="dropdown-item" href="/admin/ventas/{{ $venta->id_venta }}/detalle">Ver</a></li>
-                                                <li><a class="dropdown-item" href="/admin/ventas/{{ $venta->id_venta }}/update">Editar</a></li>
-                                            </ul>
-                                        </div>
+                                        <a href="/admin/ventas/{{ $venta->id_venta }}/detalle" title="Ver" class="btn btn-danger"><i class="fa fa-bars" style="font-size:19px;"></i></a>
+                                        <a href="/admin/ventas/{{ $venta->id_venta }}/update" title="Atender" class="btn btn-danger"><i class="fa fa-truck"></i></a>
                                     </td>
                                 </tr>
                                 @empty
@@ -144,10 +144,10 @@
                             <span>{{ $ventas->firstItem() }} - {{ $ventas->lastItem() }} de {{ $ventas->total() }}</span>
                         </div>
                         <div class="controls-pagination">
-                            <a @if(!$ventas->onFirstPage()) href="?page=1" @endif class="doble-arrow-left @if($ventas->onFirstPage()) no-control @endif"></a>
-                            <a @if(!$ventas->onFirstPage()) href="{{ $ventas->previousPageUrl() }}" @endif class="arrow-left @if($ventas->onFirstPage()) no-control @endif"></a>
-                            <a @if($ventas->currentPage() != $ventas->lastPage()) href="{{ $ventas->nextPageUrl() }}" @endif class="arrow-right @if($ventas->currentPage() == $ventas->lastPage()) no-control @endif"></a>
-                            <a @if($ventas->currentPage() != $ventas->lastPage()) href="{{ $ventas->url($ventas->lastPage()) }}" @endif class="doble-arrow-right @if($ventas->currentPage() == $ventas->lastPage()) no-control @endif"></a>
+                            <a @if(!$ventas->onFirstPage()) onclick="enviarPagina('/admin/ventas?page=1')" href="#" @endif class="doble-arrow-left @if($ventas->onFirstPage()) no-control @endif"></a>
+                            <a @if(!$ventas->onFirstPage()) onclick="enviarPagina('{{ $ventas->previousPageUrl() }}')" href="#" @endif class="arrow-left @if($ventas->onFirstPage()) no-control @endif"></a>
+                            <a @if($ventas->currentPage() != $ventas->lastPage()) onclick="enviarPagina('{{ $ventas->nextPageUrl() }}')" href="#" @endif class="arrow-right @if($ventas->currentPage() == $ventas->lastPage()) no-control @endif"></a>
+                            <a @if($ventas->currentPage() != $ventas->lastPage()) onclick="enviarPagina('{{ $ventas->url($ventas->lastPage()) }}')" href="#" @endif class="doble-arrow-right @if($ventas->currentPage() == $ventas->lastPage()) no-control @endif"></a>
                         </div>
                     </div>
                     @endif
@@ -163,6 +163,13 @@
     function enviar(){
 		document.getElementById("formulario").submit();
 	}
+
+    function enviarPagina(valor){
+        var formulario = document.getElementById("formulario");
+		formulario.setAttribute('action', valor);
+        formulario.submit();
+    }
+
     function enviarPDF(){
         var formulario = document.getElementById("formulario");
 		formulario.setAttribute('action', '/admin/ventas/pdf');

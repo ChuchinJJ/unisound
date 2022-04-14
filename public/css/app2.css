@@ -515,3 +515,14 @@
     align-items: end;
     padding: 4px;
 }
+
+.total-venta{
+    display: flex;
+    align-items: end;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.total-venta p{
+    display: grid;
+}
