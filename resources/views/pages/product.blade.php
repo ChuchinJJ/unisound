@@ -182,7 +182,7 @@
                         </form>
                         <div class="product_meta">
                             <span class="posted_in">Categoría: <a href="/shop/{{ $producto->id_categoria }}" rel="tag">{{ $categoria }}</a></span>
-                            <span class="product_id">Producto #: <span>{{ $producto->id_producto }}</span></span>
+                            <span class="product_id">Producto # <span>{{ $producto->id_producto }}</span></span>
                         </div>
                     </div>
                     <div class="woocommerce-tabs wc-tabs-wrapper">
