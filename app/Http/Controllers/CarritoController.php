@@ -162,9 +162,7 @@ class CarritoController extends Controller
             $cliente = Cliente::where('id_usuario', Auth::user()->id_usuario)->first();
             $subtotal = 0;
             foreach(Cart::getContent() as $item){
-                if(count($item->conditions) > 0){
-                    $subtotal = $subtotal + $item->getPriceSum();
-                }
+                $subtotal = $subtotal + $item->getPriceSum();
             }
             $venta = new Venta();
             $venta->fecha = new DateTime();
