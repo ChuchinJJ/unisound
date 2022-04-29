@@ -30,7 +30,7 @@
 				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="/contact"><span>Contactanos</span></a></li>
 			</ul>
 			<div class="copyright_text">
-				<p><a href="http://www.apparte.com.mx/" target="_blank" rel="noopener">AppArte</a> © 2022, Derechos Reservados.</p>
+				<p><a  target="_blank" rel="noopener">UNISOUND</a> © 2022, Derechos Reservados.</p>
 			</div>
 			<div>
                             

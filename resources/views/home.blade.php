@@ -156,62 +156,8 @@
 					<div class="vc_row wpb_row vc_row-fluid column_rs">
 						<div class="wpb_column vc_column_container vc_col-sm-12">
 							<div class="vc_column-inner">
-								<div class="wpb_wrapper">
-									<div class="columns_wrap sc_columns columns_nofluid sc_columns_count_4" style="margin-top:-3.57em;">
-										<div class="column-1_4 sc_column_item sc_column_item_1 odd first">
-											<div data-href="#" class="sc_intro sc_intro_position_bottom_left" data-style="1"
-												style="height:253px;background: url(/img/1-3-e1469613546458.jpg);">
-												<div class="sc_intro_inner  sc_intro_style_1">
-													<div class="sc_intro_content">
-														<h6 class="sc_intro_subtitle">Teclados & Pianos Digitales</h6>
-														<h2 class="sc_intro_title">
-															<span class="title">Nuevos<br />Teclados</span>
-														</h2>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="column-1_4 sc_column_item sc_column_item_2 even">
-											<div data-href="#" class="sc_intro"data-style="4" 
-											style="height:253px;background: url(/img/2-3-e1469613586251.jpg);">
-												<div class="sc_intro_inner  sc_intro_style_4">
-													<div class="sc_intro_content">
-														<h2 class="sc_intro_title">
-															<span class="title">Musicos<br /> con estilo</span>
-														</h2>
-														<div class="sc_intro_descr">Comprar ahora</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="column-1_4 sc_column_item sc_column_item_3 odd">
-											<div data-href="#" class="sc_intro"data-style="1" 
-												style="height:253px;background: url(/img/3-3-e1469613668852.jpg);">
-												<div class="sc_intro_inner  sc_intro_style_1">
-													<div class="sc_intro_content"></div>
-												</div>
-											</div>
-										</div>
-										<div class="column-1_4 sc_column_item sc_column_item_4 even">
-											<div data-href="/shop/" class="sc_intro"data-style="3" 
-											style="height:253px;background: url(/img/SW_CalebMorris1.jpg);">
-												<div class="sc_intro_inner  sc_intro_style_3">
-													<div class="sc_intro_content">
-														<h2 class="sc_intro_title"><span class="title">Mega Ventas</span></h2>
-														<div class="sc_intro_descr">En todas las Marcas</div>
-														<div class="sc_intro_buttons sc_item_buttons">
-															<div class="sc_intro_button sc_item_button">
-																<a href="/shop/" class="sc_button sc_button_square sc_button_style_filled sc_button_size_medium">
-																	<span class="text">Comprar ahora</span><span class="icon icon-music-note-black-shape"></span>
-																</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="vc_empty_space" style="height: 4.8em">
+								<div >	
+									<div class="vc_empty_space">
 										<span class="vc_empty_space_inner"></span>
 									</div>
 								</div>
