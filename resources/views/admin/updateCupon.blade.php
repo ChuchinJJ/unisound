@@ -58,10 +58,9 @@
 
     var submit= document.getElementById("submit");
 
-    var addBtn= document.querySelector(".add_producto");
-    addBtn.addEventListener("click", function(e){
+    function agregarProducto(){
         submit.disabled = false;
-    });
+    }
 
     function eliminarProducto(){
         var lista = document.querySelectorAll("#list-products li").length;

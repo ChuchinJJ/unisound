@@ -202,7 +202,7 @@
 					</div>
 				</div>
 				
-					<di class="vc_row wpb_row vc_row-fluid">
+					<!-- <di class="vc_row wpb_row vc_row-fluid">
 						<div class="wpb_column vc_column_container vc_col-sm-12">
 							<div class="vc_column-inner">
 								<div class="wpb_wrapper">
@@ -216,8 +216,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-			
+					</div> -->			
 				<div class="vc_empty_space  hide_on_mobile"   style="height: 5.15em">
 					<span class="vc_empty_space_inner"></span>
 				</div>

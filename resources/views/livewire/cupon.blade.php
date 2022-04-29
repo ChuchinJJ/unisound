@@ -35,7 +35,7 @@
                     <li>
                         <img src="/storage/img/products/{{ $searchProducto->imagen1 }}"/>
                         <p>{{ $searchProducto->nombre }}</p>
-                        <a class="btn btn-danger add_producto" wire:click="addProducto({{ $searchProducto->id_producto }})"><i class="fa fa-plus"></i></a>
+                        <a class="btn btn-danger add_producto" wire:click="addProducto({{ $searchProducto->id_producto }})" onclick="agregarProducto()"><i class="fa fa-plus"></i></a>
                     </li>
                     @endforeach
                 </ul>

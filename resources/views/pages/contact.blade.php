@@ -143,7 +143,7 @@
 												</a>
 											</div>
 											<div class="sc_socials_item">
-												<a href="#" target="_blank" class="social_icons social_youtube">
+												<a href="https://youtube.com/channel/UCRjz06O0dtW-0kJWyYZ63-g" target="_blank" class="social_icons social_youtube">
 													<span class="icon-youtube"></span>
 												</a>
 											</div>

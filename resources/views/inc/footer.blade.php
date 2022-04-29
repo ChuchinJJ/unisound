@@ -18,7 +18,7 @@
 					<a href="https://www.instagram.com/unisoundimusa/" target="_blank" class="social_icons social_instagramm"><span class="icon-instagramm"></span></a>
 				</div>
 				<div class="sc_socials_item">
-					<a href="#" target="_blank" class="social_icons social_youtube"><span class="icon-youtube"></span></a>
+					<a href="https://youtube.com/channel/UCRjz06O0dtW-0kJWyYZ63-g" target="_blank" class="social_icons social_youtube"><span class="icon-youtube"></span></a>
 				</div>
 				<div class="sc_socials_item">
 					<a href="https://wa.me/529191007549" target="_blank" class="social_icons"><span class="fa fa-whatsapp"></a>
@@ -28,12 +28,6 @@
 				<li id="menu-item-794" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-794"><a href="/about"><span> Servicios</span></a></li>
 				<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-466"><a href="/shop"><span>Ver todos</span></a></li>
 				<li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="/contact"><span>Contactanos</span></a></li>
-			<!--<li><button class="switch" id="switch">
-						<span><i class="fa fa-cloud-sun"></i></span>
-						<span><i class="fa fa-cloud-moon"></i></span>
-                	</button>
-				</li>
-			-->   
 			</ul>
 			<div class="copyright_text">
 				<p><a href="http://www.apparte.com.mx/" target="_blank" rel="noopener">AppArte</a> © 2022, Derechos Reservados.</p>
