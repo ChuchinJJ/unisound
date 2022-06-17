@@ -661,7 +661,7 @@ font-family: star;
 ****************************/
 
 [class^="eg-icon-"]:before, 
-[class*=" eg-icon-"]:before {
+[class*="eg-icon-"]:before {
 	font-family: "eg-font";
 	font-style: normal;
 	font-weight: normal;
@@ -692,7 +692,7 @@ font-family: star;
 	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-[class^="fa-icon-"]:before, [class*=" fa-icon-"]:before{
+[class^="fa-icon-"]:before, [class*="fa-icon-"]:before{
 	font-family: FontAwesome;
 	font-style: normal;
 	font-weight: normal;

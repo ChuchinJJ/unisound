@@ -5,23 +5,18 @@
 <div class="top_panel_title top_panel_style_6  title_present navi_present breadcrumbs_present scheme_original">
     <div class="top_panel_title_inner top_panel_inner_style_6  title_present_inner breadcrumbs_present_inner">
         <div class="content_wrap">
-            <div class="post_navi">
-                <span class="post_navi_item post_navi_prev"><a href="#" rel="prev">MicroMall(TM) Paint Gold Drop B</a></span>
-                <span class="post_navi_item post_navi_next"><a href="http://localhost/wordpress/product/hercules-ds513bb-2-trumpet/" rel="next">Hercules DS513BB 2 Trumpet</a></span>
-            </div>
-            <div class="breadcrumbs">
-                <a class="breadcrumbs_item home" href="index.html">Home</a>
+            <div class="breadcrumbs" style="text-align: left;">
+                <a class="breadcrumbs_item home" href="/">Home</a>
                 <span class="breadcrumbs_delimiter"></span>
-                <a class="breadcrumbs_item all" href="shop.html">Shop</a>
+                <a class="breadcrumbs_item all" href="/shop">Tienda</a>
                 <span class="breadcrumbs_delimiter"></span>
-                <a class="breadcrumbs_item cat_post" href="#">Band &amp; Orchestra</a>
-                <span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">Barrington BR FR401 Double French Horn</span></div>
+                <a class="breadcrumbs_item cat_post" href="/shop/{{ $producto->id_categoria }}">{{ $categoria }}</a>
+                <span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">{{ $producto->nombre }}</span></div>
             </div>
         </div>
     </div>
 </div>
 <!-- breadcrumb fin -->
-
 <div class="page_content_wrap page_paddings_yes">
     <div class="content_wrap">
         <div class="content">
@@ -35,75 +30,159 @@
                 <div id="product-1053" class="product type-product post-1053 status-publish first instock product_cat-band-orchestra product_cat-mouthpieces product_tag-concept product_tag-creative has-post-thumbnail shipping-taxable purchasable product-type-variable has-default-attributes">
                     <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images" data-columns="4" style="opacity: 0; transition: opacity .25s ease-in-out;">
                         <figure class="woocommerce-product-gallery__wrapper">
-                            <div data-thumb="img/horn-100x100.jpg" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                <a href="img/horn.jpg">
-                                    <img width="600" height="777" src="img/horn-600x777.jpg" class="wp-post-image" alt="" loading="lazy" title="horn" data-caption="" data-src="img/horn.jpg" data-large_image="img/horn.jpg" data-large_image_width="656" data-large_image_height="850" srcset="img/horn-600x777.jpg 600w, img/horn-232x300.jpg 232w, img/horn.jpg 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen1 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                                <a href="{{ $producto->imagen1 }}">
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen1 }}" class="wp-post-image" alt="" loading="lazy" title="1" data-caption="" data-src="/storage/img/products/{{ $producto->imagen1 }}" data-large_image="/storage/img/products/{{ $producto->imagen1 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen1 }} 600w, /storage/img/products/{{ $producto->imagen1 }} 232w, /storage/img/products/{{ $producto->imagen1 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
-                            <div data-thumb="http://localhost/wordpress/wp-content/uploads/2016/08/4-1-100x100.jpg" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                <a href="http://localhost/wordpress/wp-content/uploads/2016/08/4-1.jpg">
-                                    <img width="600" height="777" src="http://localhost/wordpress/wp-content/uploads/2016/08/4-1-600x777.jpg" class="" alt="" loading="lazy" title="4" data-caption="" data-src="http://localhost/wordpress/wp-content/uploads/2016/08/4-1.jpg" data-large_image="http://localhost/wordpress/wp-content/uploads/2016/08/4-1.jpg" data-large_image_width="656" data-large_image_height="850" srcset="http://localhost/wordpress/wp-content/uploads/2016/08/4-1-600x777.jpg 600w, http://localhost/wordpress/wp-content/uploads/2016/08/4-1-232x300.jpg 232w, http://localhost/wordpress/wp-content/uploads/2016/08/4-1.jpg 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                            @if($producto->imagen2)
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen2 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                                <a href="{{ $producto->imagen2 }}">
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen2 }}" class="" alt="" loading="lazy" title="2" data-caption="" data-src="/storage/img/products/{{ $producto->imagen2 }}" data-large_image="/storage/img/products/{{ $producto->imagen2 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen2 }} 600w, /storage/img/products/{{ $producto->imagen2 }} 232w, /storage/img/products/{{ $producto->imagen2 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
-                            <div data-thumb="http://localhost/wordpress/wp-content/uploads/2016/08/horn-100x100.jpg" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                <a href="http://localhost/wordpress/wp-content/uploads/2016/08/horn.jpg">
-                                    <img width="600" height="777" src="http://localhost/wordpress/wp-content/uploads/2016/08/horn-600x777.jpg" class="" alt="" loading="lazy" title="horn" data-caption="" data-src="http://localhost/wordpress/wp-content/uploads/2016/08/horn.jpg" data-large_image="http://localhost/wordpress/wp-content/uploads/2016/08/horn.jpg" data-large_image_width="656" data-large_image_height="850" srcset="http://localhost/wordpress/wp-content/uploads/2016/08/horn-600x777.jpg 600w, http://localhost/wordpress/wp-content/uploads/2016/08/horn-232x300.jpg 232w, http://localhost/wordpress/wp-content/uploads/2016/08/horn.jpg 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                            @endif
+                            @if($producto->imagen3)
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen3 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                                <a href="{{ $producto->imagen3 }}">
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen3 }}" class="" alt="" loading="lazy" title="3" data-caption="" data-src="/storage/img/products/{{ $producto->imagen3 }}" data-large_image="/storage/img/products/{{ $producto->imagen3 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen3 }} 600w, /storage/img/products/{{ $producto->imagen3 }} 232w, /storage/img/products/{{ $producto->imagen3 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
-                            <div data-thumb="http://localhost/wordpress/wp-content/uploads/2016/08/2-1-100x100.jpg" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                <a href="http://localhost/wordpress/wp-content/uploads/2016/08/2-1.jpg">
-                                    <img width="600" height="777" src="http://localhost/wordpress/wp-content/uploads/2016/08/2-1-600x777.jpg" class="" alt="" loading="lazy" title="2" data-caption="" data-src="http://localhost/wordpress/wp-content/uploads/2016/08/2-1.jpg" data-large_image="http://localhost/wordpress/wp-content/uploads/2016/08/2-1.jpg" data-large_image_width="656" data-large_image_height="850" srcset="http://localhost/wordpress/wp-content/uploads/2016/08/2-1-600x777.jpg 600w, http://localhost/wordpress/wp-content/uploads/2016/08/2-1-232x300.jpg 232w, http://localhost/wordpress/wp-content/uploads/2016/08/2-1.jpg 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                            @endif
+                            @if($producto->imagen4)
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen4 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                                <a href="{{ $producto->imagen4 }}">
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen4 }}" class="" alt="" loading="lazy" title="4" data-caption="" data-src="/storage/img/products/{{ $producto->imagen4 }}" data-large_image="/storage/img/products/{{ $producto->imagen4 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen4 }} 600w, /storage/img/products/{{ $producto->imagen4 }} 232w, /storage/img/products/{{ $producto->imagen4 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
-                            <div data-thumb="http://localhost/wordpress/wp-content/uploads/2016/08/1-1-100x100.jpg" data-thumb-alt="" class="woocommerce-product-gallery__image">
-                                <a href="http://localhost/wordpress/wp-content/uploads/2016/08/1-1.jpg">
-                                    <img width="600" height="777" src="http://localhost/wordpress/wp-content/uploads/2016/08/1-1-600x777.jpg" class="" alt="" loading="lazy" title="1" data-caption="" data-src="http://localhost/wordpress/wp-content/uploads/2016/08/1-1.jpg" data-large_image="http://localhost/wordpress/wp-content/uploads/2016/08/1-1.jpg" data-large_image_width="656" data-large_image_height="850" srcset="http://localhost/wordpress/wp-content/uploads/2016/08/1-1-600x777.jpg 600w, http://localhost/wordpress/wp-content/uploads/2016/08/1-1-232x300.jpg 232w, http://localhost/wordpress/wp-content/uploads/2016/08/1-1.jpg 656w" sizes="(max-width: 600px) 100vw, 600px" />
+                            @endif
+                            @if($producto->imagen5)
+                            <div data-thumb="/storage/img/products/{{ $producto->imagen5 }}" data-thumb-alt="" class="woocommerce-product-gallery__image">
+                                <a href="{{ $producto->imagen5 }}">
+                                    <img width="600" height="777" src="/storage/img/products/{{ $producto->imagen5 }}" class="" alt="" loading="lazy" title="5" data-caption="" data-src="/storage/img/products/{{ $producto->imagen5 }}" data-large_image="/storage/img/products/{{ $producto->imagen5 }}" data-large_image_width="656" data-large_image_height="850" srcset="/storage/img/products/{{ $producto->imagen5 }} 600w, /storage/img/products/{{ $producto->imagen5 }} 232w, /storage/img/products/{{ $producto->imagen5 }} 656w" sizes="(max-width: 600px) 100vw, 600px" />
                                 </a>
                             </div>
+                            @endif
                         </figure>
                     </div>
 
                     <div class="summary entry-summary">
-                        <h1 class="product_title entry-title">Barrington BR FR401 Double French Horn</h1><p class="price"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>280.00</bdi></span> &ndash; <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>350.75</bdi></span></p>
-                        <div itemprop="description">
-                            <p>Nullam tincidunt tempus ligula, a dapibus massa ullamcorper et. Aliquam facilisis, massa in malesuada vehicula, odio mauris gravida sem, molestie imperdiet metus urna sit amet ex. Praesent egestas, nisi vel finibus finibus, dui nulla aliquam metus, sit amet lacinia diam justo sed mauris. Sed efficitur, eros vitae ultricies bibendum, eros nibh pretium massa, ut consequat nisl felis eu libero.a</p>
-                        </div>
-                        <form class="variations_form cart" action="?" method="post" enctype='multipart/form-data' data-product_id="1053" data-product_variations="[{&quot;attributes&quot;:{&quot;attribute_pa_color&quot;:&quot;red&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/D&quot;,&quot;display_price&quot;:280,&quot;display_regular_price&quot;:280,&quot;image&quot;:{&quot;title&quot;:&quot;horn&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg&quot;,&quot;srcset&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg 600w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-232x300.jpg 232w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg 656w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;full_src_w&quot;:656,&quot;full_src_h&quot;:850,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-100x100.jpg&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-300x400.jpg&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:400,&quot;src_w&quot;:600,&quot;src_h&quot;:777},&quot;image_id&quot;:1069,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;280.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1054,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/D&quot;},{&quot;attributes&quot;:{&quot;attribute_pa_color&quot;:&quot;brown&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/D&quot;,&quot;display_price&quot;:280,&quot;display_regular_price&quot;:280,&quot;image&quot;:{&quot;title&quot;:&quot;horn&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg&quot;,&quot;srcset&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg 600w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-232x300.jpg 232w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg 656w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;full_src_w&quot;:656,&quot;full_src_h&quot;:850,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-100x100.jpg&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-300x400.jpg&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:400,&quot;src_w&quot;:600,&quot;src_h&quot;:777},&quot;image_id&quot;:1069,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;280.00&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1055,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/D&quot;},{&quot;attributes&quot;:{&quot;attribute_pa_color&quot;:&quot;blue&quot;},&quot;availability_html&quot;:&quot;&quot;,&quot;backorders_allowed&quot;:false,&quot;dimensions&quot;:{&quot;length&quot;:&quot;&quot;,&quot;width&quot;:&quot;&quot;,&quot;height&quot;:&quot;&quot;},&quot;dimensions_html&quot;:&quot;N\/D&quot;,&quot;display_price&quot;:350.75,&quot;display_regular_price&quot;:350.75,&quot;image&quot;:{&quot;title&quot;:&quot;horn&quot;,&quot;caption&quot;:&quot;&quot;,&quot;url&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;alt&quot;:&quot;&quot;,&quot;src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg&quot;,&quot;srcset&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-600x777.jpg 600w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-232x300.jpg 232w, http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg 656w&quot;,&quot;sizes&quot;:&quot;(max-width: 600px) 100vw, 600px&quot;,&quot;full_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn.jpg&quot;,&quot;full_src_w&quot;:656,&quot;full_src_h&quot;:850,&quot;gallery_thumbnail_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-100x100.jpg&quot;,&quot;gallery_thumbnail_src_w&quot;:100,&quot;gallery_thumbnail_src_h&quot;:100,&quot;thumb_src&quot;:&quot;http:\/\/localhost\/wordpress\/wp-content\/uploads\/2016\/08\/horn-300x400.jpg&quot;,&quot;thumb_src_w&quot;:300,&quot;thumb_src_h&quot;:400,&quot;src_w&quot;:600,&quot;src_h&quot;:777},&quot;image_id&quot;:1069,&quot;is_downloadable&quot;:false,&quot;is_in_stock&quot;:true,&quot;is_purchasable&quot;:true,&quot;is_sold_individually&quot;:&quot;no&quot;,&quot;is_virtual&quot;:false,&quot;max_qty&quot;:&quot;&quot;,&quot;min_qty&quot;:1,&quot;price_html&quot;:&quot;&lt;span class=\&quot;price\&quot;&gt;&lt;span class=\&quot;woocommerce-Price-amount amount\&quot;&gt;&lt;bdi&gt;&lt;span class=\&quot;woocommerce-Price-currencySymbol\&quot;&gt;&amp;#36;&lt;\/span&gt;350.75&lt;\/bdi&gt;&lt;\/span&gt;&lt;\/span&gt;&quot;,&quot;sku&quot;:&quot;&quot;,&quot;variation_description&quot;:&quot;&quot;,&quot;variation_id&quot;:1056,&quot;variation_is_active&quot;:true,&quot;variation_is_visible&quot;:true,&quot;weight&quot;:&quot;&quot;,&quot;weight_html&quot;:&quot;N\/D&quot;}]">
-                            <table class="variations" cellspacing="0">
-                                <tbody>
-                                    <tr>
-                                        <th class="label"><label for="pa_color">Color</label></th>
-                                        <td class="value">
-                                            <select id="pa_color" class="" name="attribute_pa_color" data-attribute_name="attribute_pa_color" data-show_option_none="yes">
-                                                <option value="" selected='selected'>Elige una opción</option>
-                                                <option value="blue">Blue</option>
-                                                <option value="brown" >Brown</option>
-                                                <option value="red" >Red</option>
-                                            </select>
-                                            <a class="reset_variations" href="#">Limpiar</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="single_variation_wrap">
-                                <div class="woocommerce-variation single_variation"></div>
-                                <div class="woocommerce-variation-add-to-cart variations_button">
-                                    <div class="quantity">
-                                        <label class="screen-reader-text" for="quantity_61e094d825320">Barrington BR FR401 Double French Horn cantidad</label>
-                                        <input type="number" id="quantity_61e094d825320" class="input-text qty text" step="1" min="1" max="" name="quantity" value="1" title="Cantidad" size="4" placeholder="" inputmode="numeric" autocomplete="off"/>
-                                    </div>
-                                    <button type="submit" class="single_add_to_cart_button button alt">Añadir al carrito</button>
-                                    <input type="hidden" name="add-to-cart" value="1053" />
-                                    <input type="hidden" name="product_id" value="1053" />
-                                    <input type="hidden" name="variation_id" class="variation_id" value="0" />
-                                </div>
+                        <h1 class="product_title entry-title">{{ $producto->nombre }}</h1>
+                        @if($valoraciones->first() != null)
+                        <div class="woocommerce-product-rating">
+		                    <div class="star-rating" role="img" aria-label="Valorado en {{ $valoraciones->avg('puntuacion') }} de 5">
+                                <span style="width:{{ $valoraciones->avg('puntuacion')*20 }}%">
+                                    Valorado 
+                                    <strong class="rating">{{ $valoraciones->avg('puntuacion') }}</strong> 
+                                    sobre 5 basado en <span class="rating">{{ $valoraciones->count() }}</span> 
+                                    puntuaciones de clientes
+                                </span>
                             </div>
+						</div>
+                        @endif
+                        <p class="price">
+                            @if (count($colores) > 1 && $colores[0]->precio != $colores[count($colores)-1]->precio)
+                                <span class="woocommerce-Price-amount amount">
+                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->precio }}</bdi>
+                                </span> &ndash; 
+                                <span class="woocommerce-Price-amount amount"><bdi>
+                                    <span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[count($colores)-1]->precio }}</bdi>
+                                </span>
+                            @else
+                                <span class="woocommerce-Price-amount amount">
+                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->precio }}</bdi>
+                                </span>
+                            @endif
+                        </p>
+                        <div itemprop="description">
+                            <p>{{ $producto->descripcion_general }}</p>
+                        </div>
+                        @if(count($colores) > 1)
+                        <!-- <div class="container-color-product">
+                            @foreach($colores as $color)
+                            <i class="square-color" style="background-color: {{ $color->rgb }}"></i>    
+                            @endforeach
+                        </div>-->
+                        @endif  
+                        <form action="{{route('cart.add')}}" method="post" class="variations_form cart">
+                            @csrf
+                            @php
+                                $cant_colores = $colores->filter(function ($value, $key) {
+                                    return $value->cantidad > 0;
+                                });
+                            @endphp
+                            @if($cant_colores->isNotEmpty())
+                                @if (count($colores) > 1)
+                                    <table class="variations" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <th class="label"><label for="pa_color">Color</label></th>
+                                                <td class="value">
+                                                    <select id="pa_color" style="border-style: none;" name="color" data-attribute_name="color" data-show_option_none="yes" required onchange="cambiarColor(this.value)">
+                                                        <option value="" selected='selected'>Elige una opción</option>
+                                                        @foreach( $colores as $color )
+                                                            @if($color->cantidad > 0)
+                                                                <option value="{{ $color->id_color }}">{{ $color->color }}</option>
+                                                            @endif
+                                                        @endforeach
+                                                    </select>
+                                                    <a class="reset_variations" href="#">Limpiar</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        @foreach( $colores as $color )
+                                            <input type="hidden" id="precio-{{ $color->id_color }}" value="{{ $color->precio }}" />
+                                            <input type="hidden" id="cantidad-{{ $color->id_color }}" value="{{ $color->cantidad }}" />
+                                        @endforeach
+                                    </table>
+                                    <div class="single_variation_wrap">
+                                        <div class="woocommerce-variation single_variation">
+                                            <div class="woocommerce-variation-description"></div>
+                                            <div class="woocommerce-variation-price">
+                                                <span class="price">
+                                                    <span class="woocommerce-Price-amount amount">
+                                                        <bdi id="priceByColor"></bdi>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label class="cantidad-disponible" id="cantidad-disponible"></label>
+                                @else
+                                    <input type="hidden" id="pa_color" name="color" value="{{ $colores[0]->id_color }}" />
+                                    <label class="cantidad-disponible" id="cantidad-disponible">
+                                        @if($colores[0]->cantidad > 0)
+                                        <small>
+                                            {{ $colores[0]->cantidad }}
+                                            @if($colores[0]->cantidad > 1)
+                                                unidades disponibles
+                                            @else
+                                                unidad disponible
+                                            @endif
+                                        </small>
+                                        @endif
+                                    </label>
+                                @endif
+                                <div class="single_variation_wrap">
+                                    <div class="woocommerce-variation single_variation"></div>
+                                    <div class="woocommerce-variation-add-to-cart variations_button">
+                                        <div class="quantity">
+                                            <label class="screen-reader-text" for="quantity_61e094d825320">{{ $producto->nombre }} cantidad</label>
+                                            <input type="number" id="quantity_61e094d825320" class="input-text qty text" step="1" min="1" 
+                                                max="@if(count($colores) == 1){{$colores[0]->cantidad }}@endif" name="quantity" value="1" title="Cantidad" 
+                                                size="4" placeholder="" inputmode="numeric" autocomplete="off"/>
+                                        </div>
+                                        <button type="submit" class="single_add_to_cart_button button alt">Añadir al carrito</button>
+                                        <input type="hidden" name="product_id" value="{{ $producto->id_producto }}" />
+                                    </div>
+                                </div>
+                            @else
+                                <span class="badge bg-danger agotado">Producto agotado</span>
+                            @endif
                         </form>
                         <div class="product_meta">
-                            <span class="sku_wrapper">SKU: <span class="sku">N/D</span></span>
-                            <span class="posted_in">Categorías: <a href="#" rel="tag">Band &amp; Orchestra</a>, <a href="#" rel="tag">Mouthpieces</a></span>
-                            <span class="tagged_as">Etiquetas: <a href="#" rel="tag">concept</a>, <a href="#" rel="tag">creative</a></span>
-                            <span class="product_id">Product ID: <span>1053</span></span>
+                            <span class="posted_in">Categoría: <a href="/shop/{{ $producto->id_categoria }}" rel="tag">{{ $categoria }}</a></span>
+                            <span class="product_id">Producto # <span>{{ $producto->id_producto }}</span></span>
                         </div>
                     </div>
                     <div class="woocommerce-tabs wc-tabs-wrapper">
@@ -115,14 +194,13 @@
                                 <a href="#tab-additional_information">Información adicional</a>
                             </li>
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Valoraciones (0)</a>
+                                <a href="#tab-reviews">Valoraciones ({{ count($valoraciones) }})</a>
                             </li>
                         </ul>
 
                         <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                             <h2>Descripción</h2>
-                            <p>Fusce nunc dolor, pretium luctus elit at, interdum sollicitudin lectus. Quisque finibus consequat molestie. Aenean cursus lorem eu fringilla euismod. Pellentesque ullamcorper tempus nisl at sollicitudin. Ut ut maximus lectus, ut condimentum augue. Curabitur non tortor neque. Donec euismod diam sit amet pretium molestie. Sed quis pellentesque velit, vitae rhoncus dolor. Aliquam erat volutpat. Aenean malesuada, risus sed lobortis iaculis, massa erat tristique purus, eu suscipit magna ipsum eu elit. Ut eu orci eget est vestibulum pretium quis ultrices eros.</p>
-                            <p>Mauris non rhoncus mauris, ut porta nunc. Nullam tincidunt tempus ligula, a dapibus massa ullamcorper et. Aliquam facilisis, massa in malesuada vehicula, odio mauris gravida sem, molestie imperdiet metus urna sit amet ex. Praesent egestas, nisi vel finibus finibus, dui nulla aliquam metus, sit amet lacinia diam justo sed mauris. Sed efficitur, eros vitae ultricies bibendum, eros nibh pretium massa, ut consequat nisl felis eu libero. Aenean sit amet convallis nisl. Vestibulum sollicitudin nec sem sit amet aliquam. Integer rutrum vel neque nec porttitor. Integer malesuada at massa at vulputate. Duis in nunc molestie, vulputate erat a, interdum tellus. Vestibulum eget nisl ullamcorper, mattis nisi sed, mollis nibh. Maecenas semper, erat a porttitor rutrum, metus nulla accumsan ligula, nec faucibus lorem risus ac enim.</p>
+                            <p>{{ $producto->descripcion_detallada }}</p>
                         </div>
 
                         <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--additional_information panel entry-content wc-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
@@ -130,7 +208,21 @@
                             <table class="woocommerce-product-attributes shop_attributes">
                                 <tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--attribute_pa_color">
                                     <th class="woocommerce-product-attributes-item__label">Color</th>
-                                    <td class="woocommerce-product-attributes-item__value"><p>Blue, Brown, Red</p></td>
+                                    <td class="woocommerce-product-attributes-item__value">
+                                        @php
+                                            $count = 1;
+                                        @endphp
+                                        <p>@foreach( $colores as $color )
+                                            @if($count < count($colores))
+                                                {{ $color->color }},
+                                                @php
+                                                    $count++;
+                                                @endphp
+                                            @else
+                                                {{ $color->color }}
+                                            @endif
+                                        @endforeach</p>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -138,14 +230,55 @@
                         <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
                             <div id="reviews" class="woocommerce-Reviews">
                                 <div id="comments">
+                                    @if(count($valoraciones)>0)
+                                    <h2 class="woocommerce-Reviews-title">
+                                        {{ count($valoraciones) }} valoración en <span>{{ $producto->nombre }}</span>
+                                    </h2>
+                                    <ol class="commentlist">
+                                        @foreach($valoraciones as $valoracion)
+                                        <li class="review byuser bypostauthor even thread-even depth-1" id="li-comment-17">
+                                            <div id="comment-17" class="comment_container">
+                                                <img alt="" src="http://2.gravatar.com/avatar/5cd0b6012e5c0b81a9a70035543643a3?s=60&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/5cd0b6012e5c0b81a9a70035543643a3?s=120&amp;d=mm&amp;r=g 2x" class="avatar avatar-60 photo" height="60" width="60" loading="lazy">
+                                                <div class="comment-text">
+                                                    <div class="star-rating" role="img" aria-label="Valorado en {{ $valoracion->puntuacion }} de 5"><span style="width:{{ $valoracion->puntuacion*20 }}%">Valorado en <strong class="rating">{{ $valoracion->puntuacion }}</strong> de 5</span></div>
+                                                        <p class="meta">
+                                                            <strong class="woocommerce-review__author">{{ $valoracion->email }} </strong>
+                                                            <span class="woocommerce-review__dash">-</span>
+                                                                <time class="woocommerce-review__published-date" datetime="{{ $valoracion->fecha }}">
+                                                                @php
+                                                                    setlocale(LC_TIME, "spanish");
+                                                                    $fecha_str = str_replace("/", "-", $valoracion->fecha);
+                                                                    $newDate = date("d-m-Y", strtotime($fecha_str));
+                                                                    $fecha = strftime("%d de %B, %Y", strtotime($newDate));
+                                                                @endphp
+                                                                {{ $fecha }}
+                                                                </time>
+                                                        </p>
+                                                    <div class="description"><p>{{ $valoracion->comentario }}</p></div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        @endforeach
+			                        </ol>
+                                    @else
                                     <h2 class="woocommerce-Reviews-title">Valoraciones</h2>
                                     <p class="woocommerce-noreviews">No hay valoraciones aún.</p>
+                                    @endif
                                 </div>
+
                                 <div id="review_form_wrapper">
                                     <div id="review_form">
                                         <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Sé el primero en valorar &ldquo;Barrington BR FR401 Double French Horn&rdquo; <small><a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress/product/barrington-br-fr401-double-french-horn/#respond" style="display:none;">Cancelar respuesta</a></small></span>
-                                            <form action="#comentarios" method="post" id="commentform" class="comment-form">
+                                            @if(count($valoraciones)>0)
+                                            <span id="reply-title" class="comment-reply-title">Añadir una valoración</span>
+                                            @else
+                                            <span id="reply-title" class="comment-reply-title">Sé el primero en valorar &ldquo;{{ $producto->nombre }}&rdquo;</span>
+                                            @endif
+
+                                            @if(Auth::check())
+
+                                            <form action="/valoracion/product" method="post" id="commentform" class="comment-form">
+                                                @csrf
                                                 <p class="comment-notes"><span id="email-notes">Tu dirección de correo electrónico no será publicada.</span> Los campos obligatorios están marcados con <span class="required">*</span></p>
                                                 <div class="comment-form-rating">
                                                     <label for="rating">Tu puntuación&nbsp;<span class="required">*</span></label>
@@ -162,28 +295,19 @@
                                                     <label for="comment">Tu valoración&nbsp;<span class="required">*</span></label>
                                                     <textarea id="comment" name="comment" cols="45" rows="8" required></textarea>
                                                 </p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Nombre&nbsp;<span class="required">*</span></label>
-                                                    <input id="author" name="author" type="text" value="" size="30" required />
-                                                </p>
-                                                <p class="comment-form-email">
-                                                    <label for="email">Correo electrónico&nbsp;<span class="required">*</span></label>
-                                                    <input id="email" name="email" type="email" value="" size="30" required />
-                                                </p>
-                                                <p class="comment-form-cookies-consent">
-                                                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" />
-                                                    <label for="wp-comment-cookies-consent">Guardar mi nombre, correo electrónico y sitio web en este navegador para la próxima vez que haga un comentario.</label>
-                                                </p>
                                                 <p class="form-submit">
                                                     <input name="submit" type="submit" id="submit" class="submit" value="Enviar" />
-                                                    <input type='hidden' name='comment_post_ID' value='1053' id='comment_post_ID' />
-                                                    <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                    <input type='hidden' name='id_producto' value='{{ $producto->id_producto }}' />
                                                 </p>
+                                                @else
+                                                <p class="mt-4">Para hacer una valoración deberas iniciar sesión</p> <button onclick="window.location.href= '/login'" class="btn button" style="padding:9px 18px;">Iniciar Sesión</button>
+                                                @endif
                                             </form>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="clear"></div>
+
                             </div>
                         </div>
                     </div>
@@ -192,4 +316,49 @@
         </div>
     </div>
 </div>
+
+@if(session()->has('success'))
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" style="display:block; background-color: #00000085;" aria-hidden="false">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="myModal">Atención</h5>
+      </div>
+      <div class="modal-body">
+	  {{ session('success') }}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btna" onclick="cerrar()" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+	function cerrar(){
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+	}
+</script>
+@endif
+
+<script>
+    function cambiarColor(val){
+        if(val != ""){
+            var precio = document.getElementById("precio-"+val).value;
+            var cantidad = document.getElementById("cantidad-"+val).value;
+            @if($colores[0]->precio != $colores[count($colores)-1]->precio)
+            document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+            @endif
+            var unidad = " unidad disponible";
+            if(parseInt(cantidad)>1){
+                unidad = " unidades disponibles";
+            }
+            document.getElementById("cantidad-disponible").innerHTML = '<small>'+cantidad+unidad+'</small>';
+            document.getElementById("quantity_61e094d825320").max=cantidad;
+        }else{
+            document.getElementById("priceByColor").innerHTML = '';
+            document.getElementById("cantidad-disponible").innerHTML = '';
+        }
+    }
+</script>
 @endsection
