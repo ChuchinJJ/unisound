@@ -73,7 +73,7 @@
 													<strong>Dirección:</strong> Calle Tercera Ote. Sur 119, Candelaria 29950, Ocosingo, Chiapas.<br />
 													<strong>Horarios:</strong> Abierto los 7 dias de la semana. <br> De 8am a 6pm.<br />
 													<strong>Llamar:</strong> <a href="tel:+55 919 673 0629"> (919) 673 0629</a><br />
-													<strong>Email:</strong> <a href="mailto:atencion@unisound.com.mx"> atencion@unisound.com.mx</a>
+													<strong>Email:</strong> <a href="mailto:{{ env('MAIL_ATTENTION_ADDRESS') }}"> {{ env('MAIL_ATTENTION_ADDRESS') }}</a>
 												</p>
 											</div>
 										</div>
@@ -104,7 +104,7 @@
 												<a style="margin-top:5px;" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ventana-modal" ><strong >Suc. Ocosingo.</strong> 3a. Sur Oriente #119, Candelaria, 29950. </a><br> <strong>Tel: </strong> <a href="tel:+55 919 673 0629"> (919) 673 0629 </a> <br> <hr>
 												<a style="margin-top:5px;" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ventana-modal1"> <strong >Suc. San Cristobal de las Casas.</strong>  Carretera Panamericana #9, 29270. </a> <br> <strong>Tel: </strong> <a href="tel:+55 919 688 1966">  (967) 688 1966 </a> <br>
 												<hr style="margin-top:14px;">
-												<a style="margin-top:5px;" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ventana-modal2"><strong >Suc. Yahalon.</strong>  Av. Central Poniente #22, 29930. </a> <br> <strong>Tel: </strong> <a href="tel:+55 919 674 1900">(919) 674 1900 </a> <br>
+												<a style="margin-top:5px;" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ventana-modal2"><strong >Suc. Yajalón.</strong>  Av. Central Poniente #22, 29930. </a> <br> <strong>Tel: </strong> <a href="tel:+55 919 674 1900">(919) 674 1900 </a> <br>
 												<hr style="margin-top:14px;">
 												<a style="margin-top:5px;" href="#" type="button" data-bs-toggle="modal" data-bs-target="#ventana-modal3"><strong>Innotec Ocosingo.</strong> 3a. Sur Oriente #137, <br> Barrio Candelaria, 29950. </a> <br><strong>Tel. </strong> <a href="tel:+55 919 688 0397">(919) 688 0397 </a> <br>
 												
@@ -133,7 +133,7 @@
 											</div>
 
 											<div class="sc_socials_item">
-												<a href="https://twitter.com/Unisound_Imusa" target="_blank" class="social_icons social_twitter">
+												<a href="https://twitter.com/UnisoundI" target="_blank" class="social_icons social_twitter">
 													<span class="icon-twitter"></span>
 												</a>
 											</div>

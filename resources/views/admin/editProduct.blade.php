@@ -26,10 +26,12 @@
                                 <select id="categoria" name="categoria" class="form-control" required>
                                     <option value="1" @if($categoria == "Cuerda") selected='selected' @endif>Cuerda</option>
                                     <option value="2" @if($categoria == "Percusión") selected='selected' @endif>Percusión</option>
+                                    <option value="8" @if($categoria == "Viento") selected='selected' @endif>Viento</option>
+                                    <option value="9" @if($categoria == "Teclados") selected='selected' @endif>Teclados</option>
+                                    <option value="10" @if($categoria == "Microfonía") selected='selected' @endif>Microfonía</option>
                                     <option value="3" @if($categoria == "Atriles y soporte") selected='selected' @endif>Atriles y soporte</option>
                                     <option value="4" @if($categoria == "Audio") selected='selected' @endif>Audio</option>
                                     <option value="5" @if($categoria == "Iluminación") selected='selected' @endif>Iluminación</option>
-                                    <option value="6" @if($categoria == "Adapatadores") selected='selected' @endif>Adapatadores</option>
                                     <option value="7" @if($categoria == "Accesorios") selected='selected' @endif>Accesorios</option>
                                 </select>
                             </div>

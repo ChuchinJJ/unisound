@@ -58,10 +58,12 @@
                                     <option value="">Todas</option>
                                     <option value="1" @if(old('categoria') == "1") selected='selected' @endif>Cuerda</option>
                                     <option value="2" @if(old('categoria') == "2") selected='selected' @endif>Percusión</option>
+                                    <option value="8" @if(old('categoria') == "8") selected='selected' @endif>Viento</option>
+                                    <option value="9" @if(old('categoria') == "9") selected='selected' @endif>Teclados</option>
+                                    <option value="10" @if(old('categoria') == "10") selected='selected' @endif>Microfonía</option>
                                     <option value="3" @if(old('categoria') == "3") selected='selected' @endif>Atriles y soporte</option>
                                     <option value="4" @if(old('categoria') == "4") selected='selected' @endif>Audio</option>
                                     <option value="5" @if(old('categoria') == "5") selected='selected' @endif>Iluminación</option>
-                                    <option value="6" @if(old('categoria') == "6") selected='selected' @endif>Adaptadores</option>
                                     <option value="7" @if(old('categoria') == "7") selected='selected' @endif>Accesorios</option>
                                 </select>
                             </div>
@@ -71,7 +73,7 @@
                                 <span>Ordenar</span>
                                 <select class="select-admin" name="order" onchange="enviar()" id="order">
                                     <option value="defecto" @if(old('order') == "defecto") selected='selected' @endif>Defecto</option>
-                                    <option value="nombre-desc" @if(old('order') == "nombre") selected='selected' @endif>Nombre: A-Z</option>
+                                    <option value="nombre" @if(old('order') == "nombre") selected='selected' @endif>Nombre: A-Z</option>
                                     <option value="nombre-desc" @if(old('order') == "nombre-desc") selected='selected' @endif>Nombre: Z-A</option>
                                     <option value="precio-desc" @if(old('order') == "precio-desc") selected='selected' @endif>Precio: bajo a alto</option>
                                     <option value="precio" @if(old('order') == "precio") selected='selected' @endif>Precio: alto a bajo</option>
@@ -110,14 +112,18 @@
                                             Cuerda
                                         @elseif($producto->id_categoria == 2)
                                             Percusión
+                                        @elseif($producto->id_categoria == 8)
+                                            Viento
+                                        @elseif($producto->id_categoria == 9)
+                                            Teclados
+                                        @elseif($producto->id_categoria == 10)
+                                            Microfonía
                                         @elseif($producto->id_categoria == 3)
                                             Atriles y soporte
                                         @elseif($producto->id_categoria == 4)
                                             Audio
                                         @elseif($producto->id_categoria == 5)
                                             Iluminación
-                                        @elseif($producto->id_categoria == 6)
-                                            Adaptadores
                                         @elseif($producto->id_categoria == 7)
                                             Accesorios
                                         @endif
@@ -139,7 +145,7 @@
                                         @endif
                                     </td>
                                     <td data-label="Activo" class="pagado">
-                                        @if($producto->deleted_at != null)
+                                        @if($producto->activo == 0)
                                             <i class="circle-pagado venta-no-pagado">
                                                 <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ffff">
                                                     <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
@@ -215,7 +221,7 @@
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label for="precio">Precio</label>
-                                                                <div class="form-control">${{ $color->precio }}</div>
+                                                                <div class="form-control">${{ $color->f_precio }}</div>
                                                             </div>
                                                             <div class="col-md-3">
                                                                 <label for="cantidad">Cantidad</label>
@@ -230,16 +236,21 @@
                                             </div>
                                         </div>
                                         <div class="pr-2 pl-1 product-detail-controls">
-                                            <div>
-                                                @if($producto->deleted_at == null)
-                                                    <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/delete">Eliminar<i class="fa fa-trash"></i></a>
-                                                @else
-                                                    <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/restore">Restablecer<i class="fa fa-trash-restore"></i></a>
-                                                @endif
-                                            </div>
-                                            <div>
-                                                <a class="btn btn-danger" href="/admin/producto/{{ $producto->id_producto }}/edit">Editar<i class="fa fa-edit"></i></a>
-                                            </div>
+                                            @if($producto->activo == 0)
+                                                <div>
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/restore">Habilitar<i class="fa fa-eye"></i></a>
+                                                </div>
+                                                <div>
+                                                    <a class="btn btn-danger" onclick="confirmar({{ $producto->id_producto }})">Eliminar<i class="fa fa-trash"></i></a>
+                                                </div>
+                                            @else
+                                                <div>
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/{{ $producto->id_producto }}/disable">Deshabilitar<i class="fa fa-eye-slash"></i></a>
+                                                </div>
+                                                <div>
+                                                    <a class="btn btn-danger" href="/admin/producto/{{ $producto->id_producto }}/edit">Editar<i class="fa fa-edit"></i></a>
+                                                </div>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>
@@ -346,6 +357,13 @@
     function searchButtom(){
         document.getElementById("categoria").value = "";
         enviar();
+    }
+
+    function confirmar(id){
+        var confirmar = confirm("¿Realmente deseeas eliminar el producto permanentemente?");
+        if(confirmar){
+            window.location.href='/admin/producto/'+id+'/delete';
+        }
     }
 
     const search = document.getElementById("search");

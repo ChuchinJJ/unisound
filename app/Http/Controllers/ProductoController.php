@@ -49,18 +49,20 @@ class ProductoController extends Controller
                     $join->on('productos.id_producto', '=', 'valoraciones.id_producto');
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
-                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion', 'productos.deleted_at')
+                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion', 'activo', 'productos.deleted_at')
                 ->where('nombre', 'like', '%'.$nombre.'%')
                 ->where('id_categoria', $categoria[0], $categoria[1])
+                ->where('productos.deleted_at', null)
                 ->orderBy("valoracion", $order[1])
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
         }else{
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
-                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'productos.deleted_at')
+                    'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'activo', 'productos.deleted_at')
                 ->where('nombre', 'like', '%'.$nombre.'%')
                 ->where('id_categoria', $categoria[0], $categoria[1])
+                ->where('productos.deleted_at', null)
                 ->orderBy($order[0], $order[1])
                 ->distinct(['productos.id_producto'])
                 ->paginate(10);
@@ -79,6 +81,11 @@ class ProductoController extends Controller
     public function showShop($id)
     {
         $producto = Producto::find($id);
+
+        if($producto->activo == 0){
+            return view('pages.not-product');
+        }
+
         $categoria = Producto::getCategoria($producto->id_categoria);
         $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->where('id_producto', $producto->id_producto)->get();
         $valoraciones = Valoracion::join('usuarios','usuarios.id_usuario', '=', 'valoraciones.id_usuario')
@@ -272,10 +279,18 @@ class ProductoController extends Controller
         return redirect('/admin/productos')->with('success', 'El Producto ha sido eliminado con exito');
     }
 
+    public function disable($id)
+    {
+        $producto = Producto::find($id);
+        $producto->activo = 0;
+        $producto->save();        
+        return redirect('/admin/productos')->with('success', 'El Producto ha sido deshabilitado con exito');
+    }
+
     public function restore($id)
     {
         $producto = Producto::find($id);
-        $producto->deleted_at = null;
+        $producto->activo = 1;
         $producto->save();        
         return redirect('/admin/productos')->with('success', 'El Producto ha sido restaurado con exito');
     }

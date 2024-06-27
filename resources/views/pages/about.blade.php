@@ -34,7 +34,7 @@
 															<p>
 															<strong>En Unisound tendras la mejor experiencia Musical de tu vida. </strong>
 																Dedicados a ofrecer los mejores instrumentos musicales en la zona Regional de los
-																Altos de Chiapas. <br> Con Sucursales en Ocosingo, Yahalon y San Cristobal de las Casas, Chiapas.
+																Altos de Chiapas. <br> Con Sucursales en Ocosingo, Yajalón y San Cristobal de las Casas, Chiapas.
 																Contamos con instrumentos en todas las categorias musicales y de las mejores marcas- 
 															</p>
 
@@ -69,7 +69,7 @@
 												<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
 													<div id="sc_clients_1742308914_1" class="sc_clients_item sc_clients_item_1 odd first">
 														<div class="sc_client_image">
-															<img class="wp-post-image" width="180" height="72" alt="Client 2" src="/img/1-1.png">
+															<img class="wp-post-image" width="180" height="72" alt="Client 2" src="/img/1A.png">
 														</div>
 													</div>
 												</div>
@@ -77,7 +77,7 @@
 												<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
 													<div id="sc_clients_1742308914_2" class="sc_clients_item sc_clients_item_2 even">
 														<div class="sc_client_image">
-															<img class="wp-post-image" width="180" height="72" alt="Client 3" src="/img/3-1.png">
+															<img class="wp-post-image" width="180" height="72" alt="Client 3" src="/img/1B.png">
 														</div>
 													</div>
 												</div>
@@ -85,7 +85,7 @@
 												<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
 													<div id="sc_clients_1742308914_3" class="sc_clients_item sc_clients_item_3 odd">
 														<div class="sc_client_image">
-															<img class="wp-post-image" width="180" height="72" alt="Client 4" src="/img/5-1.png">
+															<img class="wp-post-image" width="180" height="72" alt="Client 4" src="/img/1C.png">
 														</div>
 													</div>
 												</div>
@@ -93,7 +93,7 @@
 												<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
 													<div id="sc_clients_1742308914_4" class="sc_clients_item sc_clients_item_4 even">
 														<div class="sc_client_image">
-															<img class="wp-post-image" width="180" height="72" alt="Client 5" src="/img/2-1.png">
+															<img class="wp-post-image" width="180" height="72" alt="Client 5" src="/img/1D.png">
 														</div>				
 													</div>
 												</div>
@@ -101,7 +101,7 @@
 												<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
 													<div id="sc_clients_1742308914_5" class="sc_clients_item sc_clients_item_5 odd">
 														<div class="sc_client_image">
-															<img class="wp-post-image" width="180" height="72" alt="Client 6" src="/img/4-1.png">
+															<img class="wp-post-image" width="180" height="72" alt="Client 6" src="/img/1E.png">
 														</div>
 													</div>
 												</div>
@@ -109,7 +109,7 @@
 												<div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
 													<div id="sc_clients_1742308914_6" class="sc_clients_item sc_clients_item_6 even">
 														<div class="sc_client_image">
-															<img class="wp-post-image" width="180" height="72" alt="Client 7" src="/img/6-1.png">
+															<img class="wp-post-image" width="180" height="72" alt="Client 7" src="/img/1F.png">
 														</div>
 													</div>
 												</div>

@@ -64,7 +64,7 @@ class AuthenticatedSessionController extends Controller
 
     public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver($provider)->user();
+        $user = Socialite::driver($provider)->stateless()->user();
         $authUser = User::where('email', $user->email)->first();
         if ($authUser) {
             Auth::login($authUser, true);

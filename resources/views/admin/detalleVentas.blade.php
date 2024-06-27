@@ -24,7 +24,7 @@
                         @endphp
                         <p><b>Fecha de venta:</b> {{ $fecha }}</p>
                         <p><b>Pagado:</b> @if($venta->pagado == 0) No @else Si @endif</p>
-                        <p class="bg-status bg-{{ $venta->status }}">{{ $venta->status }}</p>
+                        <p class="bg-status bg-{{ str_replace(' ', '',$venta->status) }}">{{ $venta->status }}</p>
                         @if($venta->detalles != null)
                             <p>{{ $venta->detalles }}</p>
                         @endif
@@ -70,7 +70,16 @@
                                 </td>
                                 <td class="detalle-venta-producto">{{ $detalle->producto }}</td>
                                 <td data-label="Cantidad">{{ $detalle->cantidad }}@if($detalle->cantidad >1) unidades @else unidad @endif</td>
+                                @if($detalle->descuento > 0)
+                                <td data-label="Precio unitario">
+                                    <small style="text-decoration: line-through;">
+                                        ${{ number_format($detalle->precio+$detalle->descuento, 2, ".", ",") }}
+                                    </small>
+                                    <p>${{ number_format($detalle->precio, 2, ".", ",") }}</p>
+                                </td>
+                                @else
                                 <td data-label="Precio unitario">${{ number_format($detalle->precio, 2, ".", ",") }}</td>
+                                @endif
                                 <td data-label="Subtotal">${{ number_format($detalle->precio*$detalle->cantidad, 2, ".", ",") }}</td>
                             </tr>
                             @endforeach

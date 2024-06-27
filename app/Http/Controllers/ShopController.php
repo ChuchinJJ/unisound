@@ -13,7 +13,7 @@ class ShopController extends Controller
     public function index(Request $request)
     {
         $nombre = $request->input('nombre', '');
-        $min_precio = $request->input('min_precio', '1');
+        $min_precio = $request->input('min_precio', '0');
         $max_precio = $request->input('max_precio', '900000');
         $order = ["id_producto", "ASC"];
         if ($request->has('order')) {
@@ -43,33 +43,35 @@ class ShopController extends Controller
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion')
-                ->where('productos.deleted_at', null)
+                ->where('productos.activo', 1)
                 ->where('nombre', 'like', '%'.$nombre.'%')
                 ->where('precio', '>=', $min_precio)
                 ->where('precio', '<=', $max_precio)
                 ->orderBy("valoracion", $order[1])
                 ->distinct(['productos.id_producto'])
-                ->paginate(10);
+                ->paginate(12);
         }else{
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5')
-                ->where('productos.deleted_at', null)
+                    ->where('productos.activo', 1)
                 ->where('nombre', 'like', '%'.$nombre.'%')
                 ->where('precio', '>=', $min_precio)
                 ->where('precio', '<=', $max_precio)
                 ->orderBy($order[0], $order[1])
                 ->distinct(['productos.id_producto'])
-                ->paginate(10);
+                ->paginate(12);
         }
         $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')->get();
         $destacados = Producto::join('colores','productos.id_producto','=','colores.id_producto')
                 ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
-                ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria ,sum(detalle_venta.cantidad) as count_ventas')
-                ->where('productos.deleted_at', null)
+                ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria, sum(detalle_venta.cantidad) as count_ventas, sum(colores.cantidad) as cantidad_disp')
+                ->where('productos.activo', 1)
+                ->having('cantidad_disp', '>', 0)
                 ->groupBy('productos.id_producto')
+                ->orderBy('count_ventas', 'desc')
                 ->limit(4)
                 ->get();
         $request->flash();
@@ -83,7 +85,7 @@ class ShopController extends Controller
 
     public function show(Request $request, $id)
     {   
-        $min_precio = $request->input('min_precio', '1');
+        $min_precio = $request->input('min_precio', '0');
         $max_precio = $request->input('max_precio', '900000');
         $order = ["id_producto", "ASC"];
         if ($request->has('order')) {
@@ -115,7 +117,7 @@ class ShopController extends Controller
                 })
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5', 'valoracion')
-                ->where('productos.deleted_at', null)
+                ->where('productos.activo', 1)
                 ->where('precio', '>=', $min_precio)
                 ->where('precio', '<=', $max_precio)
                 ->where('id_categoria', $id)
@@ -126,7 +128,7 @@ class ShopController extends Controller
             $productos = Producto::join('colores','colores.id_producto', '=', 'productos.id_producto')
                 ->select('productos.id_producto', 'nombre', 'descripcion_general', 'descripcion_detallada', 
                     'id_categoria', 'imagen1', 'imagen2', 'imagen3', 'imagen4', 'imagen5')
-                ->where('productos.deleted_at', null)
+                ->where('productos.activo', 1)
                 ->where('precio', '>=', $min_precio)
                 ->where('precio', '<=', $max_precio)
                 ->where('id_categoria', $id)
@@ -138,11 +140,14 @@ class ShopController extends Controller
         $valoracion  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
                 ->groupBy('id_producto')->get();
         $destacados = Producto::join('colores','productos.id_producto','=','colores.id_producto')
-                ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
-                ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria ,sum(detalle_venta.cantidad) as count_ventas')
-                ->where('productos.deleted_at', null)
-                ->groupBy('productos.id_producto')
-                ->get();
+            ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
+            ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria, sum(detalle_venta.cantidad) as count_ventas, sum(colores.cantidad) as cantidad_disp')
+            ->where('productos.activo', 1)
+            ->having('cantidad_disp', '>', 0)
+            ->groupBy('productos.id_producto')
+            ->orderBy('count_ventas', 'desc')
+            ->limit(4)
+            ->get();
         $request->flash();
         return view('pages.shop')->with([
             'productos' => $productos, 

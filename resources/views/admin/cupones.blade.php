@@ -62,7 +62,7 @@
                                     <th>Código</th>
                                     <th>Fecha inicio</th>
                                     <th>Fecha fin</th>
-                                    <th>Decuento</th>
+                                    <th>Decuento %</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>

@@ -17,7 +17,7 @@ Apple iPod Touch (5th generation)
 /* Without side menu */
 @media (max-width: 1439px) {
 	body:not(.top_panel_fixed) .top_panel_style_6 .top_panel_middle .menu_main_wrap {
-		top: -0.3em;
+		top: -0.5em;
 	}
 
 	.menu_main_nav > li > a {
@@ -152,7 +152,7 @@ Apple iPod Touch (5th generation)
 	}
 
 	body:not(.top_panel_fixed) .top_panel_style_6 .top_panel_middle .menu_main_wrap {
-		top: -0.6em;
+		top: -0.5em;
 	}
 
 	.sc_testimonial_content {
@@ -1602,10 +1602,6 @@ Very common low res
 	.woocommerce table.cart td.actions .coupon .input-text, .woocommerce #content table.cart td.actions .coupon .input-text, .woocommerce-page table.cart td.actions .coupon .input-text, .woocommerce-page #content table.cart td.actions .coupon .input-text {
 		width: 10.5em;
 		margin-right: 0.3em;
-	}
-
-	th.product-remove, td.product-remove {
-		display: none !important;
 	}
 
 	table.shop_table tr {

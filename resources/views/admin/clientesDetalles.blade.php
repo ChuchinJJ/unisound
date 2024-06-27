@@ -44,7 +44,7 @@
                                         @endphp
                                         {{ $nombre." ".$apellidos }}
                                     </td>
-                                    <td data-label="Estado"><div class="bg-status bg-{{ $venta->status }}">{{ $venta->status }}</div></td>
+                                    <td data-label="Estado"><div class="bg-status bg-{{ str_replace(' ', '',$venta->status) }}">{{ $venta->status }}</div></td>
                                     <td data-label="Total">${{ number_format($venta->total,2,".",",") }}</td>
                                     <td data-label="Pagado" class="pagado">
                                         @if($venta->pagado == 0)

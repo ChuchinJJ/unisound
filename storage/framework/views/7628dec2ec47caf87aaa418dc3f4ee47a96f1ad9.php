@@ -45,12 +45,12 @@
                                             <a href="/cart-removeitem/<?php echo e($item->id); ?>" class="remove" aria-label="Borrar este artículo">&times;</a>
                                         </td>
                                         <td class="product-thumbnail">
-                                            <a href="/product/<?php echo e($item->id); ?>">
+                                            <a href="/product/<?php echo e($item->attributes['id_producto']); ?>">
                                                 <img width="300" height="400" src="/storage/img/products/<?php echo e($item->attributes['urlimg']); ?>" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />
                                             </a>
                                         </td>
                                         <td class="product-name" data-title="Producto">
-                                            <a href="/product/<?php echo e($item->id); ?>"><?php echo e($item->name); ?></a>
+                                            <a href="/product/<?php echo e($item->attributes['id_producto']); ?>"><?php echo e($item->name); ?></a>
                                         </td>
                                         <td class="product-price" data-title="Precio">
                                             <span class="woocommerce-Price-amount amount">

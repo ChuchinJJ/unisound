@@ -19,10 +19,11 @@
                         <div class="card-venta">
                             <div class="flex justify-content-between">
                                 <h5><b>Status</b></h5>
-                                <i id="circle-status" class="circle-status circle-{{ $venta->status }}"></i>
+                                <i id="circle-status" class="circle-status circle-{{ str_replace(' ', '',$venta->status) }}"></i>
                             </div>
                             <select class="form-control" name="status" onchange="cambiarCirculo(this.value)">
                                 <option value="Pedido" @if($venta->status == 'Pedido') selected='selected' @endif>Pedido</option>
+                                <option value="En Tránsito" @if($venta->status == 'En Tránsito') selected='selected' @endif>En Tránsito</option>
                                 <option value="Entregado" @if($venta->status == 'Entregado') selected='selected' @endif>Entregado</option>
                                 <option value="Cancelado"@if($venta->status == 'Cancelado') selected='selected' @endif>Cancelado</option>
                             </select>
@@ -72,7 +73,7 @@
     document.getElementById('ventas').classList.add('active');
     
     function cambiarCirculo(valor){
-		document.getElementById("circle-status").className = "circle-status circle-"+valor;
+		document.getElementById("circle-status").className = "circle-status circle-"+valor.split(" ").join("");
 	}
 
     function cambiarPagado(valor){

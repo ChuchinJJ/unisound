@@ -20,7 +20,7 @@ class ContactController extends Controller
             
         Mail::send('emails.contact', $data, function($message) use ($data){
             $message->from([$data['email']]);
-            $message->to('atencion@unisound.com.mx');
+            $message->to(env('MAIL_ATTENTION_ADDRESS'));
             $message->subject($data['subject']);
         });
 

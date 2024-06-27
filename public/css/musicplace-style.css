@@ -798,7 +798,7 @@ body.darkmode {
 /*Darkmode para Admin Cliente*/
 
 .darkmode .cliente-izquierda {
-  background-color: #141618 !important;
+  background-color: #1a1c1f !important;
 }
 
 .darkmode .titulo-cliente {
@@ -893,7 +893,7 @@ body.darkmode {
   background-color: #1a1c1f !important;
 }
 
-.darkmode .card-body h6 {
+.darkmode .card-body h6, .darkmode .card-body a {
   color: white !important;
 }
 
@@ -942,7 +942,8 @@ body.darkmode {
 }
 
 .darkmode .shop_table .cart_item a:hover,
-.darkmode .shop_table .order-total strong bdi {
+.darkmode .shop_table .order-total strong bdi,
+.darkmode .card-body a:hover {
   color: rgba(240, 77, 65, 0.959) !important;
 }
 
@@ -2631,7 +2632,7 @@ fieldset legend {
 
 .column-1_6,
 .column-2_12 {
-  width: 16.66666667%;
+  width: 15%;
 }
 
 .column-5_6,
@@ -3639,7 +3640,7 @@ fieldset legend {
 
 /* Boxed style for articles and sidebar */
 .page_content_wrap {
-  padding: 6.5em 0 6em;
+  padding: 6.5% 0 6em;
   min-height: 30em;
 }
 
@@ -6371,6 +6372,14 @@ li.opened > a > .open_child_menu:before {
   overflow: hidden;
   margin-bottom: 1.9em;
   position: relative;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.post_item_wrap {
+  height: 350px;
 }
 
 .article_style_boxed .post_featured {

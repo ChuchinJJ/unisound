@@ -50,8 +50,12 @@ class RegisteredUserController extends Controller
         return redirect("completar-registro")->withInput();
     }
 
-    public function completar()
+    public function completar(Request $request)
     {
+        if($request->old('email') == null){
+            return redirect('registrar')->withErrors(['message1'=>'Lo sentimos los datos se perdieron, por favor vuelva a intentarlo']);
+        }
+
         return view('login.completar');
     }
 

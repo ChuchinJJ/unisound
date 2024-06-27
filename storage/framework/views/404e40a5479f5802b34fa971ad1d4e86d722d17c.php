@@ -31,9 +31,11 @@
                                         <ul class="sub-menu">
                                             <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De cuerda</span></a></li>
-                                                    <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusion</span></a></li>
-                                                    
+                                                    <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De Cuerda</span></a></li>
+                                                    <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusión</span></a></li>
+                                                    <li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="/shop/8"><span>De Viento</span></a></li>
+                                                    <li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="/shop/9"><span>Teclados</span></a></li>
+                                                    <li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="/shop/10"><span>Microfonía</span></a></li>
                                                 </ul>
                                             </li>
                                             <li id="menu-item-934" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
@@ -46,9 +48,7 @@
                                             </li>
                                             <li id="menu-item-1124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/shop/6"><span>Adaptadores</span></a></li>
                                                     <li id="menu-item-1224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/shop/7"><span>Accessorios</span></a></li>
-                                                    
                                                 </ul>
                                             </li>
                                             <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
@@ -93,7 +93,7 @@
                                                     <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                                         <?php $__currentLoopData = Cart::getContent(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                                         <li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
-                                                            <a href="/product/<?php echo e($item->id); ?>">
+                                                            <a href="/product/<?php echo e($item->attributes['id_producto']); ?>">
                                                                 <img width="300" height="400" src="/storage/img/products/<?php echo e($item->attributes['urlimg']); ?>" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"><?php echo e($item->name); ?>
 
                                                             </a>
@@ -135,9 +135,15 @@
                                 <div class="menu-login" id="menu">
                                     <form method="POST" action="<?php echo e(route('logout')); ?>">
                                         <?php echo csrf_field(); ?>
+                                        <?php if(Auth::user()->tipo == 2): ?>
                                         <a href="/cliente"class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
                                             Ver perfil
                                         </a>
+                                        <?php else: ?>
+                                        <a href="/admin"class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
+                                            Dashboard
+                                        </a>
+                                        <?php endif; ?>
 
                                         <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
                                                 onclick="event.preventDefault();
@@ -213,7 +219,7 @@
                                     <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                         <?php $__currentLoopData = Cart::getContent(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
-                                            <a href="/product/<?php echo e($item->id); ?>">
+                                            <a href="/product/<?php echo e($item->attributes['id_producto']); ?>">
                                                 <img width="300" height="400" src="/storage/img/products/<?php echo e($item->attributes['urlimg']); ?>" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"><?php echo e($item->name); ?>
 
                                             </a>
@@ -265,8 +271,11 @@
                                 <ul class="sub-menu">
                                 <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                     <ul class="sub-menu">
-                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De cuerda</span></a></li>
-                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusion</span></a></li>
+                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De Cuerda</span></a></li>
+                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusión</span></a></li>
+                                        <li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="/shop/8"><span>De Viento</span></a></li>
+                                        <li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="/shop/9"><span>Teclados</span></a></li>
+                                        <li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="/shop/10"><span>Microfonía</span></a></li>
                                     </ul>
                                 </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
@@ -279,7 +288,6 @@
                                     </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/shop/6"><span>Adaptadores</span></a></li>
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/shop/7"><span>Accessorios</span></a></li>
                                         </ul>
                                     </li>
@@ -318,7 +326,7 @@
                                     </li>
                                     <?php else: ?>
                                     <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login"><span>Iniciar Sesión</span></a></li>
-                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login/registrar"><span>Registrarse</span></a></li>
+                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/registrar"><span>Registrarse</span></a></li>
                                     <?php endif; ?>
                                 </ul>
                             </li>

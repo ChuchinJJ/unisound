@@ -11,7 +11,7 @@ class Producto extends Model
     public $primaryKey = 'id_producto';
     public $timestamps = false;
 
-    public function getCategoria($id){
+    public static function getCategoria($id){
         $categoria = Categoria::find($id);
         return $categoria->categoria;
     }

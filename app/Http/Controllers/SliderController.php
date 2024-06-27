@@ -22,12 +22,23 @@ class SliderController extends Controller
         
         $destacados = Producto::join('colores','productos.id_producto','=','colores.id_producto')
             ->join('detalle_venta', 'detalle_venta.id_color', '=', 'colores.id_color')
-            ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria ,sum(detalle_venta.cantidad) as count_ventas')
-            ->where('productos.deleted_at', null)
+            ->selectRaw('productos.id_producto, nombre, imagen1, id_categoria, sum(detalle_venta.cantidad) as count_ventas, sum(colores.cantidad) as cantidad_disp')
+            ->where('activo', 1)
+            ->having('cantidad_disp', '>', 0)
             ->groupBy('productos.id_producto')
+            ->orderBy('count_ventas', 'desc')
             ->limit(4)
             ->get();
-        $nuevos = Producto::orderBy('id_producto', 'DESC')->where('deleted_at', null)->limit(4)->get();
+        $nuevos = Producto::orderBy('id_producto', 'DESC')
+            ->where('activo', 1)
+            ->whereExists(function ($query) {
+                $query->select('cantidad')
+                      ->from('colores')
+                      ->whereColumn('colores.id_producto', 'productos.id_producto')
+                      ->where('cantidad', '>', 0);
+            })
+            ->limit(4)
+            ->get();
         $colores = Color::where('deleted_at', null)->orderBy('precio','asc')->get();
         $valoraciones  = Valoracion::selectRaw('avg(puntuacion) as valoracion, id_producto')
             ->groupBy('id_producto')->get();
@@ -55,7 +66,7 @@ class SliderController extends Controller
         $count = Slider::where('status', 1)->where('tipo', $slider->tipo)->count();
         $status = 0;
         if($value == "true"){ $status = 1; }
-        if($count < 2 && $value == "false"){
+        if($count < 2 && $value == "false" && $slider->tipo == "Imagen"){
             return redirect('/admin/sliders')->with('success', 'Tiene que tener al menos un slider activo');    
         }
         

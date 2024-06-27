@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es-MX" class="scheme_original">
 <head>
-	<title>Unisound</title>
+	<title>{{ env('APP_NAME') }}</title>
+	<meta name="description" content="En {{ env('APP_NAME') }} tendras la mejor experiencia Musical de tu vida. Dedicados a ofrecer los mejores instrumentos musicales en la zona Regional de los Altos de Chiapas." />
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="icon" href="/img/icon.ico" sizes="32x32" />
-	<link rel="icon" href="/img/icon.ico" sizes="192x192" />
-	<link rel="icon" href="/img/icono-unisound.png" sizes="32x32" />
-	<link rel="icon" href="/img/icono-unisound.png" sizes="192x192" />
-	<link rel="apple-touch-icon" href="img/cropped-favicon-300x300.png" />
-	<link rel='stylesheet' id='photoswipe-default-skin-css'  href='/css/default-skin.min.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='woocommerce-layout-css'  href='/css/woocommerce-layout.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
-	<link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all' />
-	<link rel="stylesheet" href="/css/bootstrap.css" type='text/css' media='all' />
+	<link rel="icon" href="/img/icon.ico" sizes="32x32">
+	<link rel="icon" href="/img/icon.ico" sizes="192x192">
+	<link rel="icon" href="/img/icono-unisound.png" sizes="32x32">
+	<link rel="icon" href="/img/icono-unisound.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="img/cropped-favicon-300x300.png">
+	<link rel='stylesheet' id='photoswipe-default-skin-css'  href='/css/default-skin.min.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='woocommerce-layout-css'  href='/css/woocommerce-layout.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)'>
+	<link rel='stylesheet' id='woocommerce-general-css'  href='/css/woocommerce.css' type='text/css' media='all'>
+	<link rel="stylesheet" href="/css/bootstrap.css" type='text/css' media='all'>
 	<link rel="stylesheet" href="/css/app.css">
 	<link rel="stylesheet" href="/css/app2.css">
 	<link rel="stylesheet" href="/img/404.jpg">
@@ -25,20 +26,20 @@
 	    .woocommerce form .form-row .required { visibility: visible; }
 	</style>
 	<link rel="stylesheet" href="/css/adminlte.css">
-	<link rel='stylesheet' id='musicplace-font-google-fonts-style-css'  href='//fonts.googleapis.com/css?family=Hind:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&#038;subset=latin,latin-ext' type='text/css' media='all' />
-	<link rel='stylesheet' id='tp-fontello-css'  href='/css/fontello-esg.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='fontello-style-css'  href='/css/fontello.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='fontawesome-all'  href='/css/fontawesome-all.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='essential-grid-plugin-settings-css'  href='/css/settings.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-main-style-css'  href='/css/musicplace-style.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-animation-style-css'  href='/css/core.animation.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-shortcodes-style-css'  href='/css/theme.shortcodes.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-theme-style-css'  href='/css/theme.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-plugin-woocommerce-style-css'  href='/css/plugin.woocommerce.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-responsive-style-css'  href='/css/responsive.css' type='text/css' media='all' />
-	<link rel='stylesheet' id='musicplace-responsive-megamenu-css'  href='/css/responsive-megamenu.css' type='text/css' media='all' />
-    <script type='text/javascript' src='/js/jquery-1.12.1.min.js'></script>
-	<script type='text/javascript' src='/js/jquery.min.js' id='jquery-core-js'></script>
+	<link rel='stylesheet' id='musicplace-font-google-fonts-style-css'  href='//fonts.googleapis.com/css?family=Hind:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic&#038;subset=latin,latin-ext' type='text/css' media='all'>
+	<link rel='stylesheet' id='tp-fontello-css'  href='/css/fontello-esg.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='fontello-style-css'  href='/css/fontello.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='fontawesome-all'  href='/css/fontawesome-all.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='essential-grid-plugin-settings-css'  href='/css/settings.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-main-style-css'  href='/css/musicplace-style.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-animation-style-css'  href='/css/core.animation.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-shortcodes-style-css'  href='/css/theme.shortcodes.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-theme-style-css'  href='/css/theme.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-plugin-woocommerce-style-css'  href='/css/plugin.woocommerce.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-responsive-style-css'  href='/css/responsive.css' type='text/css' media='all'>
+	<link rel='stylesheet' id='musicplace-responsive-megamenu-css'  href='/css/responsive-megamenu.css' type='text/css' media='all'>
+    
+	<script type='text/javascript' src='/js/jquery-3.6.0.min.js' id='jquery-core-js'></script>
 	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 	<link rel='stylesheet' id='rs-plugin-settings-css'  href='/css/rs6.css' type='text/css' media='all' />
 	<link rel='stylesheet' id='js_composer_front-css'  href='/css/js_composer.min.css' type='text/css' media='all' />
@@ -121,7 +122,7 @@
 	</script>
 	<script type='text/javascript' src='/js/core.init.js' id='musicplace-core-init-script-js'></script>
 	<script type='text/javascript' src='/js/theme.init.js' id='musicplace-theme-init-script-js'></script>
-	<script type='text/javascript' src='/js/underscore.min.js' id='underscore-js'></script>
+	<script type='text/javascript' src='/js/underscore-umd-min.js' id='underscore-js'></script>
 	<script type='text/javascript' src='/js/wp-util.min.js' id='wp-util-js'></script>
 	<script type='text/javascript' src='/js/add-to-cart-variation.min.js' id='wc-add-to-cart-variation-js'></script>
 	<script type='text/javascript' src='/js/theme.shortcodes.js' id='musicplace-shortcodes-script-js'></script>

@@ -45,16 +45,16 @@
                                             <a href="/cart-removeitem/{{$item->id}}" class="remove" aria-label="Borrar este artículo">&times;</a>
                                         </td>
                                         <td class="product-thumbnail">
-                                            <a href="/product/{{ $item->id }}">
+                                            <a href="/product/{{ $item->attributes['id_producto'] }}">
                                                 <img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" loading="lazy" />
                                             </a>
                                         </td>
                                         <td class="product-name" data-title="Producto">
-                                            <a href="/product/{{ $item->id }}">{{ $item->name }}</a>
+                                            <a href="/product/{{ $item->attributes['id_producto'] }}">{{ $item->name }}</a>
                                         </td>
                                         <td class="product-price" data-title="Precio">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($item->price,2,".",",") }}</bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($item->price) }}</bdi>
                                             </span>
                                         </td>
                                         <input type="hidden" name="cart_id[]" value="{{ $item->id }}">
@@ -70,7 +70,7 @@
                                             <span class="woocommerce-Price-amount amount cupon-descuento">
                                                 <bdi>
                                                     <span class="woocommerce-Price-currencySymbol">&#36;</span>
-                                                    {{ number_format($item->getPriceSum(),2,".",",") }}
+                                                    {{ number_format($item->getPriceSum()) }}
                                                 </bdi>
                                                 @if(count($item->conditions) > 0)
                                                 <div class="badge badge-danger">
@@ -109,7 +109,7 @@
                                         <th>Subtotal</th>
                                         <td data-title="Subtotal">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($subtotal,2,".",",") }}</bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($subtotal) }}</bdi>
                                             </span>
                                         </td>
                                     </tr>
@@ -117,7 +117,7 @@
                                         <th>Descuento</th>
                                         <td data-title="Subtotal">
                                             <span class="woocommerce-Price-amount amount">
-                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($subtotal-Cart::getTotal(),2,".",",") }}</bdi>
+                                                <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format($subtotal-Cart::getTotal()) }}</bdi>
                                             </span>
                                         </td>
                                     </tr>
@@ -127,7 +127,7 @@
                                         <td data-title="Total">
                                             <strong>
                                                 <span class="woocommerce-Price-amount amount">
-                                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format(Cart::getTotal(),2,".",",") }}</bdi>
+                                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ number_format(Cart::getTotal()) }}</bdi>
                                                 </span>
                                             </strong>
                                         </td>

@@ -48,6 +48,15 @@
     text-align: -webkit-center;
 }
 
+.link-p{
+    color: #e21818 !important;
+}
+
+.link-p:hover{
+    color: #c31212 !important;
+    text-decoration: underline;
+}
+
 .product-detail {
     display: flex;
     padding-right: 0px !important;
@@ -135,18 +144,23 @@
 }
 
 .bg-Pedido{
-    color: #50cd89;
-    background-color: #e8fff3;
+    color: #ffc700;
+    background-color: #ffc7001f;
+}
+
+.bg-EnTránsito{
+    color: #009ef7;
+    background-color: #009ef714;
 }
 
 .bg-Entregado{
-    color: #009ef7;
-    background-color: #f1faff;
+    color: #50cd89;
+    background-color: #50cd8917;
 }
 
 .bg-Cancelado{
     color: #f1416c;
-    background-color: #fff5f8;
+    background-color: #f1416c21;
 }
 
 .tabs-slider{
@@ -306,6 +320,35 @@
     color: #1a1c1fe8 !important
 }
 
+.darkmode .modal .modal-title, 
+.darkmode .modal .modal-body h2, 
+.darkmode .modal .modal-body h3,
+.darkmode .modal .modal-body h5, 
+.darkmode .modal .modal-body p,
+.darkmode .modal .modal-body li,
+.darkmode .modal .modal-body small{
+    color: white !important;
+}
+
+.darkmode .modal .close:hover{
+    background-color: white !important;
+    color: #1a1c1f !important;
+}
+
+.darkmode .card .list-group-item, .darkmode .card .list-group, .darkmode .modal .opps-instructions{
+    background-color: #1a1c1f !important;
+}
+
+.darkmode .card .list-group-item p,
+.darkmode .card .list-group-item .fa,
+.darkmode .card .payment-success-icon{
+    color: white !important;
+}
+
+.darkmode .card .list-group-item a, .darkmode .opps-instructions a{
+    color: rgba(240, 77, 65, 0.959) !important;
+}
+
 .card-slider .dropdown .icono-arrow:hover{
     color: #5c5252a8;
 }
@@ -374,11 +417,14 @@
 }
 
 .circle-Pedido{
-    background-color: #50cd89;
+    background-color: #ffc700;
 }
 
-.circle-Entregado{
+.circle-EnTránsito{
     background-color: #009ef7;
+}
+.circle-Entregado{
+    background-color: #50cd89;
 }
 
 .circle-Cancelado{
@@ -531,4 +577,154 @@
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 85vh;
+}
+
+.modal .card-link{
+    color: #e21818 !important;
+    font-weight: bold;
+}
+
+.spinner-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000b3;
+    z-index: 999;
+    padding-top: 15%;
+}
+
+.payment-success-icon {
+    font-size: 100px;
+    color: #e21818;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.opps {
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 0 45px !important;
+	overflow: auto;
+	font-family: 'Open Sans', sans-serif;
+	color: #4f5365;
+}
+
+.opps-reminder {
+	position: relative;
+	top: -1px;
+	padding: 9px 0 10px;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #ffffff;
+	background: #000000;
+}
+
+.opps-info {
+	margin-top: 26px;
+	position: relative;
+}
+
+.opps-info:after {
+	visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+.opps-brand {
+	width: 45%;
+	float: left;
+}
+
+.opps-brand img {
+	max-width: 250px;
+	margin-top: 2px;
+}
+
+.opps-ammount {
+	width: 55%;
+	float: right;
+}
+
+.opps-ammount h2 {
+	font-size: 36px;
+	color: #000000;
+	line-height: 24px;
+	margin-bottom: 15px;
+}
+
+.opps-ammount h2 sup {
+	font-size: 16px;
+	position: relative;
+	top: -2px
+}
+
+.opps-ammount p {
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.opps-reference {
+	margin-top: 14px;
+}
+
+.opps h1 {
+	font-size: 27px;
+	color: #000000;
+	text-align: center;
+	margin-top: -1px;
+	padding: 6px 0 7px;
+	border: 1px solid #b0afb5;
+	border-radius: 4px;
+	background: #f8f9fa;
+}
+
+.opps h3 {
+	margin-bottom: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.opps-instructions {
+	margin: 32px -45px 0;
+	padding: 32px 45px 45px;
+	border-top: 1px solid #b0afb5;
+	background: #f8f9fa;
+}
+
+.opps ol {
+	margin: 17px 0 0 16px;
+}
+
+.opps li{
+    list-style: auto;
+    font-size: 13px;
+}
+
+.opps a {
+	color: #e21818 !important;
+}
+
+.opps-footnote {
+	margin-top: 22px;
+	padding: 22px 20px 24px;
+	color: #108f30;
+	text-align: center;
+	border: 1px solid #108f30;
+	border-radius: 4px;
+	background: #ffffff;
+}
+
+@media screen and (max-width: 500px) {
+    .opps-ammount h2 {
+        font-size: 26px;
+    }
+    
+    .opps-ammount h2 sup {
+        font-size: 10px;
+    }
 }

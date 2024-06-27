@@ -31,9 +31,11 @@
                                         <ul class="sub-menu">
                                             <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De cuerda</span></a></li>
-                                                    <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusion</span></a></li>
-                                                    
+                                                    <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De Cuerda</span></a></li>
+                                                    <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusión</span></a></li>
+                                                    <li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="/shop/8"><span>De Viento</span></a></li>
+                                                    <li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="/shop/9"><span>Teclados</span></a></li>
+                                                    <!--<li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="/shop/10"><span>Microfonía</span></a></li>!-->
                                                 </ul>
                                             </li>
                                             <li id="menu-item-934" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
@@ -46,10 +48,10 @@
                                             </li>
                                             <li id="menu-item-1124" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                                 <ul class="sub-menu">
-                                                    <li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/shop/6"><span>Adaptadores</span></a></li>
                                                     <li id="menu-item-1224" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/shop/7"><span>Accessorios</span></a></li>
-                                                    
                                                 </ul>
+                                            </li>
+                                            <li id="menu-item-1210" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1210"><a href="/shop/10"><span>Microfonía</span></a>
                                             </li>
                                             <li id="menu-item-1218" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
                                             </li>
@@ -93,13 +95,13 @@
                                                     <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                                         @foreach (Cart::getContent() as $item)
                                                         <li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
-                                                            <a href="/product/{{ $item->id }}">
+                                                            <a href="/product/{{ $item->attributes['id_producto'] }}">
                                                                 <img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail">{{ $item->name }}
                                                             </a>
                                                             <span class="quantity">
                                                                 {{ $item->quantity }} x 
                                                                 <span class="woocommerce-Price-amount amount">
-                                                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->getPriceWithConditions() }}</bdi>
+                                                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($item->getPriceWithConditions(), 2,".",",") }}</bdi>
                                                                 </span>
                                                             </span>				
                                                         </li>
@@ -108,7 +110,7 @@
                                                     <p class="woocommerce-mini-cart__total total">
                                                         <strong>Subtotal:</strong>
                                                         <span class="woocommerce-Price-amount amount">
-                                                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ Cart::getTotal() }}</bdi>
+                                                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format(Cart::getTotal(),2,".",",") }}</bdi>
                                                         </span>
                                                     </p>
                                                     <p class="woocommerce-mini-cart__buttons buttons">
@@ -134,9 +136,15 @@
                                 <div class="menu-login" id="menu">
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
+                                        @if(Auth::user()->tipo == 2)
                                         <a href="/cliente"class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
                                             Ver perfil
                                         </a>
+                                        @else
+                                        <a href="/admin"class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
+                                            Dashboard
+                                        </a>
+                                        @endif
 
                                         <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
                                                 onclick="event.preventDefault();
@@ -212,13 +220,13 @@
                                     <ul class="woocommerce-mini-cart cart_list product_list_widget ">
                                         @foreach (Cart::getContent() as $item)
                                         <li class="woocommerce-mini-cart-item mini_cart_item" style="min-height: 60px;">
-                                            <a href="/product/{{ $item->id }}">
+                                            <a href="/product/{{ $item->attributes['id_producto'] }}">
                                                 <img width="300" height="400" src="/storage/img/products/{{ $item->attributes['urlimg'] }}" alt="" loading="lazy" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail">{{ $item->name }}
                                             </a>
                                             <span class="quantity">
                                                 {{ $item->quantity }} x 
                                                 <span class="woocommerce-Price-amount amount">
-                                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ $item->price }}</bdi>
+                                                    <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format($item->price) }}</bdi>
                                                 </span>
                                             </span>				
                                         </li>
@@ -227,7 +235,7 @@
                                     <p class="woocommerce-mini-cart__total total">
                                         <strong>Subtotal:</strong>
                                         <span class="woocommerce-Price-amount amount">
-                                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ Cart::getTotal() }}</bdi>
+                                            <bdi><span class="woocommerce-Price-currencySymbol">$</span>{{ number_format(Cart::getTotal()) }}</bdi>
                                         </span>
                                     </p>
                                     <p class="woocommerce-mini-cart__buttons buttons">
@@ -263,8 +271,11 @@
                                 <ul class="sub-menu">
                                 <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-505"><a><span>Instrumentos Musicales</span></a>
                                     <ul class="sub-menu">
-                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De cuerda</span></a></li>
-                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusion</span></a></li>
+                                        <li id="menu-item-503" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-503"><a href="/shop/1"><span>De Cuerda</span></a></li>
+                                        <li id="menu-item-502" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-502"><a href="/shop/2"><span>De Percusión</span></a></li>
+                                        <li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="/shop/8"><span>De Viento</span></a></li>
+                                        <li id="menu-item-505" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-505"><a href="/shop/9"><span>Teclados</span></a></li>
+                                        <!--<li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-506"><a href="/shop/10"><span>Microfonía</span></a></li>-->
                                     </ul>
                                 </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-934"><a><span>Audio e Iluminación</span></a>
@@ -277,13 +288,12 @@
                                     </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1124"><a><span>Electr. y Componentes</span></a>
                                         <ul class="sub-menu">
-                                            <li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-475"><a href="/shop/6"><span>Adaptadores</span></a></li>
                                             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1224"><a href="/shop/7"><span>Accessorios</span></a></li>
                                         </ul>
                                     </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/shop/10"><span>Microfonía</span></a>
+                                    </li>
                                     <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-1218"><a href="/shop"><span>Ver todos</span></a>
-                                        <ul class="sub-menu">
-                                        </ul>
                                     </li>
                                 </ul>
                             </li>
@@ -300,22 +310,22 @@
                                 </span></a>
                                 <ul class="sub-menu">
                                     @if(Auth::check())
-                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505">
-                                        <form method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                            <a href="/cliente" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100">
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505">
+                                            <a href="/cliente">
                                                 <span>Ver Perfil</span>
                                             </a>
-                                            <a type="submit" class="block px-4 py-2 text-sm leading-5 hover:bg-gray-100"
-                                                onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                        </li>
+                                        <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505">
+                                            <a type="submit" onclick="event.preventDefault();this.closest('form').submit();">
                                                 <span>Cerrar sesión</span>
                                             </a>
-                                        </form>
-                                    </li>
+                                        </li>
+                                    </form>
                                     @else
                                     <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login"><span>Iniciar Sesión</span></a></li>
-                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/login/registrar"><span>Registrarse</span></a></li>
+                                    <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-505"><a href="/registrar"><span>Registrarse</span></a></li>
                                     @endif
                                 </ul>
                             </li>

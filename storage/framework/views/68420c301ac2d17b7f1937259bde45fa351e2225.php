@@ -59,10 +59,12 @@
                                     <option value="">Todas</option>
                                     <option value="1" <?php if(old('categoria') == "1"): ?> selected='selected' <?php endif; ?>>Cuerda</option>
                                     <option value="2" <?php if(old('categoria') == "2"): ?> selected='selected' <?php endif; ?>>Percusión</option>
+                                    <option value="8" <?php if(old('categoria') == "8"): ?> selected='selected' <?php endif; ?>>Viento</option>
+                                    <option value="9" <?php if(old('categoria') == "9"): ?> selected='selected' <?php endif; ?>>Teclados</option>
+                                    <option value="10" <?php if(old('categoria') == "10"): ?> selected='selected' <?php endif; ?>>Microfonía</option>
                                     <option value="3" <?php if(old('categoria') == "3"): ?> selected='selected' <?php endif; ?>>Atriles y soporte</option>
                                     <option value="4" <?php if(old('categoria') == "4"): ?> selected='selected' <?php endif; ?>>Audio</option>
                                     <option value="5" <?php if(old('categoria') == "5"): ?> selected='selected' <?php endif; ?>>Iluminación</option>
-                                    <option value="6" <?php if(old('categoria') == "6"): ?> selected='selected' <?php endif; ?>>Adaptadores</option>
                                     <option value="7" <?php if(old('categoria') == "7"): ?> selected='selected' <?php endif; ?>>Accesorios</option>
                                 </select>
                             </div>
@@ -72,7 +74,7 @@
                                 <span>Ordenar</span>
                                 <select class="select-admin" name="order" onchange="enviar()" id="order">
                                     <option value="defecto" <?php if(old('order') == "defecto"): ?> selected='selected' <?php endif; ?>>Defecto</option>
-                                    <option value="nombre-desc" <?php if(old('order') == "nombre"): ?> selected='selected' <?php endif; ?>>Nombre: A-Z</option>
+                                    <option value="nombre" <?php if(old('order') == "nombre"): ?> selected='selected' <?php endif; ?>>Nombre: A-Z</option>
                                     <option value="nombre-desc" <?php if(old('order') == "nombre-desc"): ?> selected='selected' <?php endif; ?>>Nombre: Z-A</option>
                                     <option value="precio-desc" <?php if(old('order') == "precio-desc"): ?> selected='selected' <?php endif; ?>>Precio: bajo a alto</option>
                                     <option value="precio" <?php if(old('order') == "precio"): ?> selected='selected' <?php endif; ?>>Precio: alto a bajo</option>
@@ -111,14 +113,18 @@
                                             Cuerda
                                         <?php elseif($producto->id_categoria == 2): ?>
                                             Percusión
+                                        <?php elseif($producto->id_categoria == 8): ?>
+                                            Viento
+                                        <?php elseif($producto->id_categoria == 9): ?>
+                                            Teclados
+                                        <?php elseif($producto->id_categoria == 10): ?>
+                                            Microfonía
                                         <?php elseif($producto->id_categoria == 3): ?>
                                             Atriles y soporte
                                         <?php elseif($producto->id_categoria == 4): ?>
                                             Audio
                                         <?php elseif($producto->id_categoria == 5): ?>
                                             Iluminación
-                                        <?php elseif($producto->id_categoria == 6): ?>
-                                            Adaptadores
                                         <?php elseif($producto->id_categoria == 7): ?>
                                             Accesorios
                                         <?php endif; ?>
@@ -140,7 +146,7 @@
                                         <?php endif; ?>
                                     </td>
                                     <td data-label="Activo" class="pagado">
-                                        <?php if($producto->deleted_at != null): ?>
+                                        <?php if($producto->activo == 0): ?>
                                             <i class="circle-pagado venta-no-pagado">
                                                 <svg style="width:13px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="#ffff">
                                                     <path d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z"/>
@@ -232,16 +238,21 @@
                                             </div>
                                         </div>
                                         <div class="pr-2 pl-1 product-detail-controls">
-                                            <div>
-                                                <?php if($producto->deleted_at == null): ?>
-                                                    <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/delete">Eliminar<i class="fa fa-trash"></i></a>
-                                                <?php else: ?>
-                                                    <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/restore">Restablecer<i class="fa fa-trash-restore"></i></a>
-                                                <?php endif; ?>
-                                            </div>
-                                            <div>
-                                                <a class="btn btn-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/edit">Editar<i class="fa fa-edit"></i></a>
-                                            </div>
+                                            <?php if($producto->activo == 0): ?>
+                                                <div>
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/restore">Habilitar<i class="fa fa-eye"></i></a>
+                                                </div>
+                                                <div>
+                                                    <a class="btn btn-danger" onclick="confirmar(<?php echo e($producto->id_producto); ?>)">Eliminar<i class="fa fa-trash"></i></a>
+                                                </div>
+                                            <?php else: ?>
+                                                <div>
+                                                    <a class="btn btn-outline-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/disable">Deshabilitar<i class="fa fa-eye-slash"></i></a>
+                                                </div>
+                                                <div>
+                                                    <a class="btn btn-danger" href="/admin/producto/<?php echo e($producto->id_producto); ?>/edit">Editar<i class="fa fa-edit"></i></a>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                     </td>
                                 </tr>
@@ -348,6 +359,13 @@
     function searchButtom(){
         document.getElementById("categoria").value = "";
         enviar();
+    }
+
+    function confirmar(id){
+        var confirmar = confirm("¿Realmente deseeas eliminar el producto permanentemente?");
+        if(confirmar){
+            window.location.href='/admin/producto/'+id+'/delete';
+        }
     }
 
     const search = document.getElementById("search");

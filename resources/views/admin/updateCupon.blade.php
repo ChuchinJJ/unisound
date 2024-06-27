@@ -22,16 +22,16 @@
                                 <input id="nombre" name="nombre" type="text" class="form-control" required placeholder="Nombre" autocomplete="off" value="{{ $cupon->nombre }}">
                             </div>
                             <div class="col-md-5 mb-4">
-                                <label for="descuento" class="require-label" required>Descuento</label>
+                                <label for="descuento" class="require-label" required>Descuento %</label>
                                 <input id="descuento" name="descuento" type="number" class="form-control" required placeholder="Descuento" value="{{ $cupon->descuento }}">
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="fecha_inicio" class="require-label" required>Fecha inicio</label>
-                                <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required value="{{ $cupon->fecha_inicio->format('Y-m-d') }}" min="{{ $fechaVigente }}">
+                                <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required value="{{ $cupon->fecha_inicio->format('Y-m-d') }}">
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="fecha_fin" class="require-label" required>Fecha fin</label>
-                                <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required value="{{ $cupon->fecha_fin->format('Y-m-d') }}" min="{{ $fechaVigente }}">
+                                <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required value="{{ $cupon->fecha_fin->format('Y-m-d') }}">
                             </div>
                             <div class="col-md-12 mb-4">
                                 <label for="descripcion" class="require-label" required>Descripción</label>

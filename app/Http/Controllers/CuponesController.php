@@ -28,8 +28,8 @@ class CuponesController extends Controller
 
     public function add()
     {
-        $fechaVigente = date('Y-m-d', strtotime(str_replace("/", "-", Cupon::fechaVigente())."+ 1 days"));
-        return view('admin.addCupon')->with('fechaVigente', $fechaVigente);
+        //$fechaVigente = date('Y-m-d', strtotime(str_replace("/", "-", Cupon::fechaVigente())."+ 1 days"));
+        return view('admin.addCupon');
     }
 
     public function create(Request $request)
@@ -63,8 +63,7 @@ class CuponesController extends Controller
         $detalle_cupon = DetalleCupon::where('id_cupon', $id)->get();
         return view('admin.updateCupon')->with([
             'cupon' => $cupon, 
-            'detalle' => $detalle_cupon,
-            'fechaVigente' => date('Y-m-d', strtotime(str_replace("/", "-", $fechaVigente)."+ 1 days"))
+            'detalle' => $detalle_cupon
         ]);
     }
 

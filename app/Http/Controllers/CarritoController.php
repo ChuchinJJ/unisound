@@ -43,7 +43,7 @@ class CarritoController extends Controller
             }
         }
 
-        if($cuponVigente->nombre == $cupon){
+        if($cuponVigente!=null && $cuponVigente->nombre == $cupon){
             $productos = DetalleCupon::where('id_cupon', $cuponVigente->id_cupon)->get();
             $productoDescuento = $productos->where('id_producto', $producto->id_producto);
                 if($productoDescuento->isNotEmpty()){
@@ -159,60 +159,70 @@ class CarritoController extends Controller
 
     public function checkout(){
         if (count(Cart::getContent())){
-            $cliente = Cliente::where('id_usuario', Auth::user()->id_usuario)->first();
-            $subtotal = 0;
-            foreach(Cart::getContent() as $item){
-                $subtotal = $subtotal + $item->getPriceSum();
+            if( Auth::user() ) {
+                if( Auth::user()->tipo==2 ) {
+                    $cliente = Cliente::where('id_usuario', Auth::user()->id_usuario)->first();
+                    $subtotal = 0;
+                    foreach(Cart::getContent() as $item){
+                        $subtotal = $subtotal + $item->getPriceSum();
+                    }
+                    $venta = new Venta();
+                    $venta->fecha = new DateTime();
+                    $venta->total = Cart::getTotal();
+                    $venta->descuento = $subtotal-Cart::getTotal();
+                    $venta->id_cliente = $cliente->email;
+                    $venta->save();
+
+                    $notificacion = new Notificacion();
+                    $notificacion->id_venta = $venta->id_venta;
+                    $notificacion->cliente = $cliente->nombre." ".$cliente->apellidos;
+                    $notificacion->fecha = new DateTime();
+                    $notificacion->save();
+
+                    foreach(Cart::getContent() as $item){
+                        $detalle_venta = new DetalleVenta;
+                        $detalle_venta->producto = $item->name;
+                        $detalle_venta->cantidad = $item->quantity;
+                        $detalle_venta->precio = $item->getPriceWithConditions();
+                        $detalle_venta->id_color = $item->id;
+                        $detalle_venta->id_venta = $venta->id_venta;
+                        $detalle_venta->descuento = ($item->price)-($item->getPriceWithConditions());
+                        $detalle_venta->save();
+                    }
+
+                    $detalles = DetalleVenta::where('id_venta', $venta->id_venta)->get();
+                    Cart::clear();
+                    $data = array(
+                        'email' => $cliente->email,
+                        'venta' => $venta,
+                        'detalles' => $detalles, 
+                        'cliente' => $cliente
+                    );   
+                    Mail::send('emails.checkout', $data, function($message) use ($data){
+                        $message->from(env('MAIL_FROM_ADDRESS'), 'Unisound');
+                        $message->to($data['email']);
+                        $message->subject('Su pedido fue procesado con éxito');
+                    });
+
+                    Mail::send('emails.checkout', $data, function($message) use ($data){
+                        $message->from(env('MAIL_FROM_ADDRESS'), 'Unisound');
+                        $message->to(env('MAIL_ATTENTION_ADDRESS'));
+                        $message->subject('Nuevo pedido de '.$data["cliente"]["nombre"]);
+                    });
+
+                    return view('pages.checkout')->with([
+                        'success' => 'Su pedido fue procesado con éxito',
+                        'venta' => $venta,
+                        'detalles' => $detalles, 
+                        'cliente' => $cliente
+                    ]);
+                } else {
+                    Auth::logout();
+                    return redirect('login');
+                }
+            } else {
+                return redirect('login');
             }
-            $venta = new Venta();
-            $venta->fecha = new DateTime();
-            $venta->total = Cart::getTotal();
-            $venta->descuento = $subtotal-Cart::getTotal();
-            $venta->id_cliente = $cliente->email;
-            $venta->save();
-
-            $notificacion = new Notificacion();
-            $notificacion->id_venta = $venta->id_venta;
-            $notificacion->cliente = $cliente->nombre." ".$cliente->apellidos;
-            $notificacion->fecha = new DateTime();
-            $notificacion->save();
-
-            foreach(Cart::getContent() as $item){
-                $detalle_venta = new DetalleVenta;
-                $detalle_venta->producto = $item->name;
-                $detalle_venta->cantidad = $item->quantity;
-                $detalle_venta->precio = $item->getPriceWithConditions();
-                $detalle_venta->id_color = $item->id;
-                $detalle_venta->id_venta = $venta->id_venta;
-                $detalle_venta->save();
-            }
-
-            $detalles = DetalleVenta::where('id_venta', $venta->id_venta)->get();
-            Cart::clear();
-            $data = array(
-                'email' => $cliente->email,
-                'venta' => $venta,
-                'detalles' => $detalles, 
-                'cliente' => $cliente
-            );         
-            Mail::send('emails.checkout', $data, function($message) use ($data){
-                $message->from('noreply@unisound.com.mx', 'Unisound');
-                $message->to($data['email']);
-                $message->subject('Su pedido fue procesado con éxito');
-            });
-
-            /*Mail::send('emails.checkout', $data, function($message) use ($data){
-                $message->from('noreply@unisound.com.mx', 'Unisound');
-                $message->to('atencion@unisound.com.mx');
-                $message->subject('Nuevo pedido de '.$cliente->nombre);
-            });*/
-
-            return view('pages.checkout')->with([
-                'success' => 'Su pedido fue procesado con éxito',
-                'venta' => $venta,
-                'detalles' => $detalles, 
-                'cliente' => $cliente
-            ]);
         }else{
             return redirect('/');
         }

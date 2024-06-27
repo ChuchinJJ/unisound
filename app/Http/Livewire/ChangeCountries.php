@@ -19,7 +19,7 @@ class ChangeCountries extends Component
     }
 
     public function mount(){
-        $response = Http::withHeaders([
+        $response = Http::retry(3, 100)->withHeaders([
             "Accept" => "application/json",
             "api-token" => "IB9ke9yDbFFXfEUXAl0kpE04_XNsq2X-fMQkc1LphMge4ZkFClRDhMdlB4QRh7TWysA",
             "user-email" => "jonamorales1801@gmail.com"
@@ -27,13 +27,13 @@ class ChangeCountries extends Component
 
         $this->token = $response->json('auth_token');
 
-        $this->countries = Http::withHeaders([
+        $this->countries = Http::retry(3, 100)->withHeaders([
             "Authorization" => "Bearer ". $this->token,
             "Accept" => "application/json"
         ])->get('https://www.universal-tutorial.com/api/countries/')
         ->json();
 
-        $this->states = Http::withHeaders([
+        $this->states = Http::retry(3, 100)->withHeaders([
             "Authorization" => "Bearer ". $this->token,
             "Accept" => "application/json"
         ])->get('https://www.universal-tutorial.com/api/states/Mexico')
@@ -41,7 +41,7 @@ class ChangeCountries extends Component
     }
 
     public function getStates(){
-        $this->states = Http::withHeaders([
+        $this->states = Http::retry(3, 100)->withHeaders([
             "Authorization" => "Bearer ". $this->token,
             "Accept" => "application/json"
         ])->get('https://www.universal-tutorial.com/api/states/'.$this->myCountry)

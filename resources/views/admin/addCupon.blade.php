@@ -22,16 +22,16 @@
                                 <input id="nombre" name="nombre" type="text" class="form-control" required placeholder="Nombre" autocomplete="off">
                             </div>
                             <div class="col-md-5 mb-4">
-                                <label for="descuento" class="require-label" required>Descuento</label>
+                                <label for="descuento" class="require-label" required>Descuento %</label>
                                 <input id="descuento" name="descuento" type="number" class="form-control" required placeholder="Descuento">
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="fecha_inicio" class="require-label" required>Fecha inicio</label>
-                                <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required min="{{ $fechaVigente }}">
+                                <input id="fecha_inicio" name="fecha_inicio" type="date" class="form-control" required>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="fecha_fin" class="require-label" required>Fecha fin</label>
-                                <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required min="{{ $fechaVigente }}">
+                                <input id="fecha_fin" name="fecha_fin" type="date" class="form-control" required>
                             </div>
                             <div class="col-md-12 mb-4">
                                 <label for="descripcion" class="require-label" required>Descripción</label>

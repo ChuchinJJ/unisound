@@ -31,7 +31,7 @@
       </li>
       <!-- Notifications Dropdown Menu -->
       @php 
-        $notificaciones = App\Models\Notificacion::all();
+        $notificaciones = App\Models\Notificacion::orderBy('fecha','desc')->get();
       @endphp
       <li class="nav-item dropdown">
         <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false" href="#">

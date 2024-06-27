@@ -15,8 +15,18 @@ use Illuminate\Support\Facades\Hash;
 
 class ConfigClienteController extends Controller
 {
+    public function __construct(){
+        $this->middleware(function ($request, $next) {
+            if (Auth::user()->tipo == 1) {
+                abort(404);
+            }
+
+            return $next($request);
+        });
+    }
+
     public function index(Request $request){
-        $usuario = User::find(Auth::user()->id_usuario);
+        $usuario = Auth::user();
         $cliente = Cliente::where('id_usuario', $usuario->id_usuario)->first();
         $filtro = $request->input('filtro', 'all');
         if($filtro == 'all'){
@@ -36,13 +46,17 @@ class ConfigClienteController extends Controller
                 ->get();
         }
         $detalleVenta = DetalleVenta::all();
+        $colores = Color::all();
+        $productos = Producto::all();
         
 
         return view('pages.cliente')->with([
             'usuario' => $usuario, 
             'cliente' => $cliente,
             'ventas' =>  $ventas,
-            'detalles' => $detalleVenta
+            'detalles' => $detalleVenta,
+            'colores' => $colores,
+            'productos' => $productos
         ]);
     }
 
@@ -84,7 +98,7 @@ class ConfigClienteController extends Controller
             ],
         ]);
 
-        $usuario = User::find(Auth::user()->id_usuario);
+        $usuario = Auth::user();
         if (Hash::check($request->input('old_pass'), $usuario->password)) {
             $usuario->password = Hash::make($request->input('password'));
             $usuario->save();
@@ -99,6 +113,12 @@ class ConfigClienteController extends Controller
         $detalles = DetalleVenta::where('id_venta', $id)->get();
         $colores = Color::all();
         $productos = Producto::all();
+        $usuario = Auth::user();
+        $cliente = Cliente::where('id_usuario', $usuario->id_usuario)->first();
+
+        if($usuario->email != $venta->id_cliente){
+            return abort(404);
+        }
 
         return view('pages.clienteDetalle')->with([
             'venta' => $venta,

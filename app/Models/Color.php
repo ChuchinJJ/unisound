@@ -16,4 +16,9 @@ class Color extends Model
         $colores = Color::orderBy('precio','asc')->where('id_producto', $id)->get();;
         return $colores;
     }
+
+    public function getFPrecioAttribute()
+    {
+        return number_format($this->precio);
+    }
 }

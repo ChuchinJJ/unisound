@@ -10,7 +10,9 @@ use App\Models\Venta;
 use App\Models\DetalleVenta;
 use App\Models\Color;
 use App\Models\Producto;
+use App\Exports\ClientesExport;
 use DateTime;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ClientesController extends Controller
 {
@@ -22,6 +24,15 @@ class ClientesController extends Controller
         return view('admin.clientes')->with([
             'clientes' => $clientes,
             'detalleVenta' => $detalleVenta]);
+    }
+
+    public function show($id) {
+        $cliente = Cliente::find($id);
+        return view('admin.clientesInfo')->with('cliente',$cliente);
+    }
+
+    public function export() {
+        return Excel::download(new ClientesExport, 'clientes.xlsx');
     }
 
     public function datos($id){

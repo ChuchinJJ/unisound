@@ -57,6 +57,7 @@
                                 <select class="select-admin" name="status" id="status" onchange="enviar()">
                                     <option value="">Todas</option>
                                     <option value="Pedido" @if(old('status') == "Pedido") selected='selected' @endif>Pedido</option>
+                                    <option value="En Tránsito" @if(old('status') == 'En Tránsito') selected='selected' @endif>En Tránsito</option>
                                     <option value="Entregado" @if(old('status') == "Entregado") selected='selected' @endif>Entregado</option>
                                     <option value="Cancelado" @if(old('status') == "Cancelado") selected='selected' @endif>Cancelado</option>
                                 </select>
@@ -98,7 +99,7 @@
                                         @endphp
                                         {{ $nombre." ".$apellidos }}
                                     </td>
-                                    <td data-label="Estado"><div class="bg-status bg-{{ $venta->status }}">{{ $venta->status }}</div></td>
+                                    <td data-label="Estado"><div class="bg-status bg-{{ str_replace(' ', '',$venta->status) }}">{{ $venta->status }}</div></td>
                                     <td data-label="Total">${{ number_format($venta->total,2,".",",") }}</td>
                                     <td data-label="Pagado" class="pagado">
                                         @if($venta->pagado == 0)

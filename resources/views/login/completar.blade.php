@@ -1,9 +1,31 @@
 @extends('layouts.container')
 @section('contenido')
+<style>
+    html, body {
+        overscroll-behavior: contain;
+        overscroll-behavior-y: contain;
+        -webkit-touch-callout: none;
+    }
+</style>
+<script>
+    var recargar = false;
+    window.addEventListener("beforeunload", function (e) {
+        if(recargar == false){
+            var confirmationMessage = "\o/";
+
+            e.returnValue = confirmationMessage;
+            return confirmationMessage;
+        }
+    });
+
+    function enviar(){
+        recargar = true;
+    }
+</script>
 <section>
     <div class="p-4 w-100 align-self-center fondo-login">
         <div class="row justify-content-center">
-            <form class="card col-md-7 card-register" method="POST" action="{{ route('completar-registro') }}">
+            <form class="card col-md-7 card-register" method="POST" action="{{ route('completar-registro') }}" onsubmit="enviar()">
                 <div class="title-register">
                     <h1>Completar registro</h1>
                 </div>
@@ -82,82 +104,9 @@
     </div>
     <script>
         function cerrar(){
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
         }
-        $(document).ready(function() {
-            $.ajax({
-                url: 'https://www.universal-tutorial.com/api/getaccesstoken',
-                method: 'GET',
-                headers: {
-                    "Accept": "application/json",
-                    "api-token": "IB9ke9yDbFFXfEUXAl0kpE04_XNsq2X-fMQkc1LphMge4ZkFClRDhMdlB4QRh7TWysA",
-                    "user-email": "jonamorales1801@gmail.com"
-                },
-                success: function (data) {
-                    if(data.auth_token){
-                        var auth_token = data.auth_token;
-                        $.ajax({
-                            url: 'https://www.universal-tutorial.com/api/countries/',
-                            method: 'GET',
-                            headers: {
-                                "Authorization": "Bearer " + auth_token,
-                                "Accept": "application/json"
-                            },
-                            success: function (data) {
-                                var countries = data;
-                                var comboCountries = "<option value=''>Seleccionar</option>";
-                                countries.forEach(element => {
-                                    comboCountries += '<option value="' + element['country_name'] + '">' + element['country_name']+'</option>';
-                                });
-
-                                $("#pais").html(comboCountries);
-
-                                // State list
-
-                                $("#pais").on("change", function(){
-                                    var country = this.value;
-                                    $.ajax({
-                                        url: 'https://www.universal-tutorial.com/api/states/' + country,
-                                        method: 'GET',
-                                        headers: {
-                                            "Authorization": "Bearer " + auth_token,
-                                            "Accept": "application/json"
-                                        },
-                                        success: function (data) {
-                                            var states = data;
-                                            var comboStates = "<option value=''>Seleccionar</option>";
-                                            states.forEach(element => {
-                                                comboStates += '<option value="' + element['state_name'] + '">' + element['state_name'] + '</option>';
-                                            });
-                                            $("#estado").html(comboStates);
-
-                                            if (thisClass.stateValue) { $("#estado").val(thisClass.stateValue).trigger("change"); }
-
-                                        },
-                                        error: function (e) {
-                                            console.log("Error al obtener countries: " + e);
-                                        }
-                                    });
-
-                                });
-
-                                if (thisClass.countryValue) { $("#pais").val(thisClass.countryValue).trigger("change"); }
-
-                            },
-                            error: function (e) {
-                                console.log("Error al obtener countries: " + e);
-                            }
-                        });
-
-                    }
-                },
-                error: function (e) {
-                    console.log("Error al obtener countries: " + e);
-                }
-            });
-        });
-
     </script>
     @endif
 </section>

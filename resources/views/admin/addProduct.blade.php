@@ -27,10 +27,12 @@
                                     <option value="" selected='selected'>Selecciona una categoría</option>
                                     <option value="1">Cuerda</option>
                                     <option value="2">Percusión</option>
+                                    <option value="8">Viento</option>
+                                    <option value="9">Teclados</option>
+                                    <option value="10">Microfonía</option>
                                     <option value="3">Atriles y soporte</option>
                                     <option value="4">Audio</option>
                                     <option value="5">Iluminación</option>
-                                    <option value="6">Adapatadores</option>
                                     <option value="7">Accesorios</option>
                                 </select>
                             </div>

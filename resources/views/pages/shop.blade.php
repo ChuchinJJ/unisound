@@ -89,19 +89,19 @@
 										@if(count($mi_color)>1)
 											@if($mi_color->first()->precio == $mi_color->last()->precio)
 											<span class="woocommerce-Price-amount amount">
-												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
+												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->f_precio}}</bdi>
 											</span>
 											@else
 											<span class="woocommerce-Price-amount amount">
-												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
+												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->f_precio}}</bdi>
 											</span>&ndash; 
 											<span class="woocommerce-Price-amount amount">
-												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->last()->precio}}</bdi>
+												<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->last()->f_precio}}</bdi>
 											</span>
 											@endif
 										@else
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->precio}}</bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$mi_color->first()->f_precio}}</bdi>
 										</span>
 										@endif
 									</span>
@@ -233,19 +233,19 @@
 									@if(count($color_destacado)>1)
 										@if($color_destacado->first() == $color_destacado->last())
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->first()->precio}}</bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->first()->f_precio}}</bdi>
 										</span>
 										@else
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->first()->precio}}</bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->first()->f_precio}}</bdi>
 										</span>&ndash; 
 										<span class="woocommerce-Price-amount amount">
-											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->last()->precio}}</bdi>
+											<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->last()->f_precio}}</bdi>
 										</span>
 										@endif
 									@else
 									<span class="woocommerce-Price-amount amount">
-										<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->first()->precio}}</bdi>
+										<bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{$color_destacado->first()->f_precio}}</bdi>
 									</span>
 									@endif
 								</li>

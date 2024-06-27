@@ -7,6 +7,8 @@
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item img-1 min-vh-100 active">
@@ -16,6 +18,18 @@
                     </div>
                   </div>
                   <div class="carousel-item img-2 min-vh-100">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="font-weight-bold letra-slider">Descubre nuevos productos.</h5>
+                      <a style="font-size: 15px; color: white;" href="#" class="text-decoration-none" >Te esperamos con nuevos productos de alta calidad.</a>
+                    </div>
+                  </div>
+                  <div class="carousel-item img-3 min-vh-100">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="font-weight-bold letra-slider">Las mejores Marcas.</h5>
+                      <a style="font-size: 15px; color: white;" href="#" class=" text-decoration-none">Ven y conoce los mejores instrumentos.</a>
+                    </div>
+                  </div>
+                  <div class="carousel-item img-4 min-vh-100">
                     <div class="carousel-caption d-none d-md-block">
                       <h5 class="font-weight-bold letra-slider">Descubre nuevos productos.</h5>
                       <a style="font-size: 15px; color: white;" href="#" class="text-decoration-none" >Te esperamos con nuevos productos de alta calidad.</a>

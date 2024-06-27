@@ -47,6 +47,22 @@ Route::get('admin/clientesDetalles', function () {
     return view('admin.clientesDetalles');
 });
 
+Route::get('privacy', function () {
+    return view('pages.privacy');
+});
+
+Route::get('conditions', function () {
+    return view('pages.conditions');
+});
+
+Route::get('politica/envios', function () {
+    return view('pages.politicaEnvio');
+});
+
+Route::get('politica/devoluciones', function () {
+    return view('pages.politicaDevolucion');
+});
+
 Route::get('shop', [ShopController::class, 'index']);
 Route::post('shop', [ShopController::class, 'index']);
 Route::get('shop/{id}', [ShopController::class, 'show']);
@@ -57,6 +73,7 @@ Route::get('cart', [CarritoController::class, 'cart'])->name('cart');
 Route::get('cart-removeitem/{id}', [CarritoController::class, 'removeitem']);
 Route::post('cart-edit', [CarritoController::class, 'edit']);
 Route::post('cupon', [CarritoController::class, 'cupon']);
+Route::get('checkout', [CarritoController::class, 'checkout']);
 
 Route::group([
         'middleware' => 'admin', 
@@ -81,8 +98,9 @@ Route::group([
         Route::get('producto/{id}/edit', [ProductoController::class, "editProducto"]);
         Route::post('producto/{id}/edit', [ProductoController::class, "update"]);
         Route::post('producto/addimage', [ProductoController::class, "addImagen"]);
-        Route::get('producto/{id}/delete', [ProductoController::class, "destroy"]);
+        Route::get('producto/{id}/disable', [ProductoController::class, "disable"]);
         Route::get('producto/{id}/restore', [ProductoController::class, "restore"]);
+        Route::get('producto/{id}/delete', [ProductoController::class, "destroy"]);
         Route::get('ventas', [VentasController::class, "index"]);
         Route::post('ventas', [VentasController::class, "index"]);
         Route::get('ventas/{id}/detalle', [VentasController::class, "detalle"]);
@@ -90,7 +108,9 @@ Route::group([
         Route::post('ventas/{id}/update', [VentasController::class, "update"]);
         Route::post('ventas/pdf', [VentasController::class, "download"]);
         Route::get('clientes', [ClientesController::class, "index"]);
+        Route::get('clientes/{id}/', [ClientesController::class, "show"]);
         Route::get('clientes/{id}/ventas', [ClientesController::class, "datos"]);
+        Route::get('clientesexport', [ClientesController::class, "export"]);
         Route::get('notificacion/{id}', [VentasController::class, "notificacion"]);
         Route::get('cupones', [CuponesController::class, "index"]);
         Route::post('cupones', [CuponesController::class, "index"]);

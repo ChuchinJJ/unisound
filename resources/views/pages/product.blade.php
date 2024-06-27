@@ -83,14 +83,14 @@
                         <p class="price">
                             @if (count($colores) > 1 && $colores[0]->precio != $colores[count($colores)-1]->precio)
                                 <span class="woocommerce-Price-amount amount">
-                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->precio }}</bdi>
+                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->f_precio }}</bdi>
                                 </span> &ndash; 
                                 <span class="woocommerce-Price-amount amount"><bdi>
-                                    <span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[count($colores)-1]->precio }}</bdi>
+                                    <span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[count($colores)-1]->f_precio }}</bdi>
                                 </span>
                             @else
                                 <span class="woocommerce-Price-amount amount">
-                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->precio }}</bdi>
+                                    <bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>{{ $colores[0]->f_precio }}</bdi>
                                 </span>
                             @endif
                         </p>
@@ -345,9 +345,10 @@
     function cambiarColor(val){
         if(val != ""){
             var precio = document.getElementById("precio-"+val).value;
+            internationalNumberFormat = new Intl.NumberFormat('en-US');
             var cantidad = document.getElementById("cantidad-"+val).value;
             @if($colores[0]->precio != $colores[count($colores)-1]->precio)
-            document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+precio;
+            document.getElementById("priceByColor").innerHTML = '<span class="woocommerce-Price-currencySymbol">$</span>'+internationalNumberFormat.format(precio);
             @endif
             var unidad = " unidad disponible";
             if(parseInt(cantidad)>1){
