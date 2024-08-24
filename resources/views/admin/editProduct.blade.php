@@ -385,7 +385,7 @@
     });
     const imagen1 = "{{ $producto->imagen1 }}";
     let mockFile1 = { name: imagen1, size: 12345};
-    var host = 'http://127.0.0.1:8000/storage/img/products/'; //'http://unisound.apparte.com-mx/storage/img/products/'
+    var host = "{{ env('APP_URL') }}/storage/img/products/";
     dropzone1.displayExistingFile(mockFile1, host+imagen1);
     if("{{ $producto->imagen2 }}" != ""){
         const imagen2 = "{{ $producto->imagen2 }}";
