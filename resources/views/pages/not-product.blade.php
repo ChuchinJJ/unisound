@@ -1,0 +1,194 @@
+@extends('layouts.container')
+@section('contenido')
+<div class="panel_bottom"></div>
+<div class="mask"></div>
+<div class="top_panel_title top_panel_style_6  title_present scheme_original">
+    <div class="top_panel_title_inner top_panel_inner_style_6  title_present_inner">
+        <div class="content_wrap">
+            <h5 class="page_title">Tienda</h5>						
+        </div>
+    </div>
+</div>
+<div class="page_content_wrap page_paddings_yes">
+	<div class="content_wrap">
+	    <div class="content">
+		    <article class="itemscope post_item post_item_single post_featured_default post_format_standard post-342 page type-page status-publish hentry" itemscope itemtype="//schema.org/Article">
+			    <section class="post_content" itemprop="articleBody">
+				    <div class="vc_row wpb_row vc_row-fluid">
+						<div class="wpb_column vc_column_container vc_col-sm-12">
+							<div class="vc_column-inner">
+								<div class="wpb_wrapper">
+									<div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
+										<div class="column-1_2 sc_column_item sc_column_item_1 odd first">
+											<figure class="sc_image  sc_image_shape_square">
+												<img style="border-radius:6px;" src="/img/image-9.jpg" alt="" />
+											</figure>
+										</div>
+                                        <div class="column-1_2 sc_column_item sc_column_item_2 even" style="margin-right: -5px;">
+                                            <h5 class="sc_title sc_title_underline" style="margin-bottom:1.2em;">¡Oops!</h5>
+                                            <div class="wpb_text_column wpb_content_element " >
+                                                <div class="wpb_wrapper">
+                                                    <p>
+                                                        <strong>Lo sentimos, el producto ya no se encuentra disponible.</strong>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="vc_empty_space"   style="height: 3.7em">
+                                                <span class="vc_empty_space_inner"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_empty_space"   style="height: 4.8em">
+									    <span class="vc_empty_space_inner"></span>
+								    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vc_row wpb_row vc_row-fluid">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner">
+                                <div class="wpb_wrapper">
+                                    <div id="sc_clients_1742308914_wrap" class="sc_clients_wrap scheme_dark">
+                                        <div id="sc_clients_1742308914" class="sc_clients sc_clients_style_clients-1 " style="width:100%;">
+                                            <div class="sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_controls_side" data-interval="9874" data-slides-per-view="6" data-slides-space="30" data-slides-min-width="140">
+                                                <div class="slides swiper-wrapper">
+                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+                                                        <div id="sc_clients_1742308914_1" class="sc_clients_item sc_clients_item_1 odd first">
+                                                            <div class="sc_client_image">
+                                                                <img class="wp-post-image" width="180" height="72" alt="Client 2" src="/img/1A.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+                                                        <div id="sc_clients_1742308914_2" class="sc_clients_item sc_clients_item_2 even">
+                                                            <div class="sc_client_image">
+                                                                <img class="wp-post-image" width="180" height="72" alt="Client 3" src="/img/1B.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+                                                        <div id="sc_clients_1742308914_3" class="sc_clients_item sc_clients_item_3 odd">
+                                                            <div class="sc_client_image">
+                                                                <img class="wp-post-image" width="180" height="72" alt="Client 4" src="/img/1C.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+                                                        <div id="sc_clients_1742308914_4" class="sc_clients_item sc_clients_item_4 even">
+                                                            <div class="sc_client_image">
+                                                                <img class="wp-post-image" width="180" height="72" alt="Client 5" src="/img/1D.png">
+                                                            </div>				
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+                                                        <div id="sc_clients_1742308914_5" class="sc_clients_item sc_clients_item_5 odd">
+                                                            <div class="sc_client_image">
+                                                                <img class="wp-post-image" width="180" height="72" alt="Client 6" src="/img/1E.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">			
+                                                        <div id="sc_clients_1742308914_6" class="sc_clients_item sc_clients_item_6 even">
+                                                            <div class="sc_client_image">
+                                                                <img class="wp-post-image" width="180" height="72" alt="Client 7" src="/img/1F.png">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sc_slider_controls_wrap">
+                                                    <a class="sc_slider_prev" href="#"></a>
+                                                    <a class="sc_slider_next" href="#"></a>
+                                                </div>
+                                                <div class="sc_slider_pagination_wrap"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_empty_space"   style="height: 7em">
+                                        <span class="vc_empty_space_inner"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vc_row wpb_row vc_row-fluid">
+                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                            <div class="vc_column-inner">
+                                <div class="wpb_wrapper">
+                                    <div id="sc_services_816713937_wrap" class="sc_services_wrap">
+                                        <div id="sc_services_816713937" class="sc_services sc_services_style_services-2 sc_services_type_icons " style="width:100%;">
+                                            <h2 id="servicios" class="sc_services_title sc_item_title sc_item_title_without_descr">
+                                                <span class="title">¿Que hacemos?</span>
+                                            </h2>
+                                            <div class="sc_columns columns_wrap">
+                                                <div class="column-1_3 column_padding_bottom">			
+                                                    <div id="sc_services_816713937_1" class="sc_services_item sc_services_item_1 odd first">
+                                                        <a href="#">
+                                                            <span class="sc_icon icon-24-hours"></span>
+                                                        </a>				
+                                                        <div class="sc_services_item_content">
+                                                            <h4 class="sc_services_item_title">
+                                                                <a href="#">Tienda en Linea</a>
+                                                            </h4>
+                                                            <div class="sc_services_item_description">
+                                                                <p>Las Ventas en Linea han sido de mucha importancia para nuestras sucursales,
+                                                                    es por eso que te ofrecemos, pedidos y compras en linea a traves de nuestra pagina Web.
+                                                                </p>					
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column-1_3 column_padding_bottom">			
+                                                    <div id="sc_services_816713937_2" class="sc_services_item sc_services_item_2 even">
+                                                        <a href="#">
+                                                            <span class="sc_icon icon-double-plug"></span>
+                                                        </a>				
+                                                        <div class="sc_services_item_content">
+                                                            <h4 class="sc_services_item_title">
+                                                                <a href="#">Instalaciones</a>
+                                                            </h4>
+                                                            <div class="sc_services_item_description">
+                                                                <p>Hacemos las mejores instalaciones en pastillas electronicas, pedales, bocinas y mucho mas. Todo para tu equipo e instrumento.</p>
+                                                                                    
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="column-1_3 column_padding_bottom">			
+                                                    <div id="sc_services_816713937_3" class="sc_services_item sc_services_item_3 odd">
+                                                        <a href="#"><span class="sc_icon icon-guitar-plectrum-with-hand"></span></a>				
+                                                        <div class="sc_services_item_content">
+                                                            <h4 class="sc_services_item_title">
+                                                                <a href="#">Gran Sonido!!!</a>
+                                                            </h4>
+                                                            <div class="sc_services_item_description">
+                                                                <p>Las mejores mezcladoras, poderes, cerebros, bocinas y mucho mas. Lo encontraras aqui en UNISOUND!!!</p>
+                                                                                    
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="vc_empty_space" style="height: 3em">
+                                        <span class="vc_empty_space_inner"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vc_empty_space  hide_on_mobile"   style="height: 5.15em">
+                        <span class="vc_empty_space_inner"></span>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </div>
+</div>
+@endsection
